@@ -1,0 +1,96 @@
+name: Desktop installer
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Four-part application version
+        required: true
+        type: string
+        default: '0.5.9.0'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: desktop-installer-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  unit-tests:
+    uses: ./.github/workflows/unit-tests.yml
+  setup:
+    if: github.ref == 'refs/heads/main'
+    needs: unit-tests
+    runs-on: windows-2025
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+      - name: Restore the unchanged native runtime
+        env:
+          MANI_NATIVE_ARCHIVE_URL: ${{ vars.MANI_NATIVE_ARCHIVE_URL }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python build/restore_libmpv.py
+      - name: Restore locked installer compiler
+        run: ./build/Restore-InstallerTool.ps1
+      - name: Build signed desktop installer
+        env:
+          MANI_INTERNAL_PFX_BASE64: ${{ secrets.MANI_INTERNAL_PFX_BASE64 }}
+          MANI_SIGNING_PASSWORD: ${{ secrets.MANI_INTERNAL_PFX_PASSWORD }}
+          MANI_DESKTOP_VERSION: ${{ inputs.version }}
+        run: |
+          if (!$env:MANI_INTERNAL_PFX_BASE64) { throw 'The existing signing secret is required.' }
+          $keyPath = Join-Path $env:RUNNER_TEMP 'mani-desktop-signing.pfx'
+          if (Test-Path -LiteralPath $keyPath) { throw 'The signing path is occupied.' }
+          try {
+            [IO.File]::WriteAllBytes($keyPath, [Convert]::FromBase64String($env:MANI_INTERNAL_PFX_BASE64))
+            $env:MANI_INTERNAL_PFX_BASE64 = $null
+            ./build/Build-DesktopInstaller.ps1 -Version $env:MANI_DESKTOP_VERSION -SigningKey $keyPath -OutputDirectory artifacts/desktop-release
+          } finally {
+            $env:MANI_INTERNAL_PFX_BASE64 = $null
+            $env:MANI_SIGNING_PASSWORD = $null
+            if (Test-Path -LiteralPath $keyPath) { Remove-Item -LiteralPath $keyPath -Force }
+          }
+      - name: Capture corresponding source and checksums
+        run: |
+          python build/package_source.py --output artifacts/desktop-release
+          if ($LASTEXITCODE) { throw 'Source capture failed.' }
+          Move-Item artifacts/desktop-release/Mani-source.zip artifacts/desktop-release/Mani-Setup-source.zip
+          $source = Get-Content artifacts/desktop-release/source-info.json -Raw | ConvertFrom-Json
+          $source.archive = 'Mani-Setup-source.zip'
+          $source | ConvertTo-Json -Depth 5 | Set-Content artifacts/desktop-release/setup-source-info.json -Encoding utf8
+          Move-Item artifacts/desktop-release/source-files.json artifacts/desktop-release/setup-source-files.json
+          $names = @('Mani-Beta-0.1-Windows-x64-Setup.exe','setup-info.json','installed-files.json','Mani-Setup-source.zip','setup-source-info.json','setup-source-files.json','INSTALL.txt','INSTALL.zh-CN.txt')
+          $names | ForEach-Object {
+            (Get-FileHash -LiteralPath (Join-Path artifacts/desktop-release $_)).Hash.ToLowerInvariant() + '  ' + $_
+          } | Set-Content artifacts/desktop-release/SETUP-SHA256SUMS.txt -Encoding utf8
+          python build/verify_desktop_release.py artifacts/desktop-release --commit $env:GITHUB_SHA
+          if ($LASTEXITCODE) { throw 'Desktop release integrity checks failed.' }
+      - name: Remove temporary signing material
+        if: ${{ always() }}
+        run: |
+          $keyPath = Join-Path $env:RUNNER_TEMP 'mani-desktop-signing.pfx'
+          if (Test-Path -LiteralPath $keyPath) { Remove-Item -LiteralPath $keyPath -Force }
+      - uses: actions/upload-artifact@v7
+        with:
+          name: mani-desktop-x64-${{ github.run_number }}-${{ github.run_attempt }}
+          path: |
+            artifacts/desktop-release/Mani-Beta-0.1-Windows-x64-Setup.exe
+            artifacts/desktop-release/setup-info.json
+            artifacts/desktop-release/installed-files.json
+            artifacts/desktop-release/Mani-Setup-source.zip
+            artifacts/desktop-release/setup-source-info.json
+            artifacts/desktop-release/setup-source-files.json
+            artifacts/desktop-release/INSTALL*.txt
+            artifacts/desktop-release/SETUP-SHA256SUMS.txt
+          retention-days: 14
+          compression-level: 0
+          if-no-files-found: error

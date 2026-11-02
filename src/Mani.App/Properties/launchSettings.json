@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Mani.App (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Mani.App (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

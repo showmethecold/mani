@@ -1,0 +1,14 @@
+{
+  "1080p": {
+    "file": "1080p-sdr.mkv",
+    "sha256": "1cddd96d13f26207a6d36b75c0a1c096d37d6287ddadbab3c95af2675e4aaf10",
+    "source": "Original M0 bars; CC0-1.0",
+    "limitation": "Synthetic content; not representative high-bitrate footage."
+  },
+  "4k": {
+    "file": "4k-sdr.mkv",
+    "sha256": "3caa64edff1bb9f67df28da09f61a29881fb333fbdff8fb4917d1c0002a2a433",
+    "source": "Original M0 bars; CC0-1.0",
+    "limitation": "Synthetic content; not representative high-bitrate footage."
+  }
+}

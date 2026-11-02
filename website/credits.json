@@ -1,0 +1,27 @@
+{
+  "website": "Original Mani project website; GPL-3.0-only",
+  "playerReference": {
+    "iinaVersion": "1.5.1 / build 180",
+    "fixedSourceTreeSha256": "c79f82ae208d18bd89c136b25bfaf707cf3187659c947fe523c9a92adde59451",
+    "relationship": "Independent Windows player inspired by and reusing selected IINA work; not an official IINA release"
+  },
+  "icon": {
+    "source": "src/Mani.App/Assets/Square44x44Logo.targetsize-256.png",
+    "reuse": "Existing Mani app icon copied without changes"
+  },
+  "screenshots": {
+    "applicationCommit": "32489afa1c9128d550c58f711df5020eced61016",
+    "installerVersion": "0.5.6.0",
+    "capture": "Actual Release application; isolated development registration with unchanged application binaries, not a drawn UI mockup",
+    "profile": "Separate temporary screenshot profile; no personal library, history or settings",
+    "imageFormat": "JPEG captured directly from the inner application window rectangle; desktop shadows/corners excluded",
+    "scope": "English and Simplified Chinese playback, dual subtitle and audio panels. Screenshots illustrate the UI, not performance or hardware acceptance."
+  },
+  "demonstrationMedia": {
+    "imageTool": "OpenAI built-in image generation",
+    "imagePrompt": "Photorealistic cinematic wide landscape: a winding turquoise glacial river on a dark Icelandic volcanic plain, distant sharp mountains, pale blue sky and pink sunrise, low mist, golden light. Elevated aerial perspective; restrained cyan, midnight blue, silver and pale blush palette. No people, buildings, logos, text, UI, frames or watermarks.",
+    "video": "Original generated still encoded as a short looping video using the pinned mpv runtime",
+    "audio": "Original generated silent PCM demonstration track",
+    "subtitles": "Original short English and Chinese SRT cues"
+  }
+}

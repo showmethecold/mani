@@ -1,0 +1,31 @@
+Mani — desktop installer
+
+Requires Windows 11 24H2 or later, x64.
+Run Setup and choose the installation folder. The default is a per-user
+installation under LocalAppData/Programs/Mani. Choose installation for all
+users if you need a protected folder such as Program Files; Windows asks
+for administrator permission. Choose an empty folder for a new installation.
+
+The installer follows the Windows display language: Chinese on Chinese
+systems (Simplified or Traditional), English otherwise. You can change it
+at the language prompt. The player's own saved language remains unchanged.
+
+An upgrade uses the existing installation folder. To move an installed copy,
+uninstall it first, then install to the new folder. Settings, history and
+resume positions are stored separately in LocalAppData/Mani and are retained.
+Uninstall removes installed program files, shortcuts and file associations,
+and leaves your own files in the installation directory alone.
+
+Mani appears in Open with and Windows Settings > Apps > Default apps. Select
+Mani there to make it the default video player. Setup never replaces your
+current default choices automatically.
+
+The older MSIX installation is a separate Windows app entry. If it is still
+installed, confirm the new copy works before uninstalling the older entry.
+The new player preserves its existing user settings; it does not remove the
+old package or certificates automatically.
+
+This installer uses Inno Setup (https://jrsoftware.org/). The installer tool
+license is included under licenses/Inno-Setup.txt in the installed folder.
+Unsigned local builds are for validation only. Do not distribute them as a
+signed Beta release, and do not disable Windows security protections.

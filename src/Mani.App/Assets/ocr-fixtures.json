@@ -1,0 +1,16 @@
+{
+  "en-US": {
+    "file": "ocr-en.png",
+    "expected": "MANI PLAYER TEST 12345",
+    "sha256": "1f9da632dc5381dd4eda49add48dbbf1fe781d9cb5ec891568dab75396ce9b39",
+    "font": "Arial",
+    "license": "Original test text and generated image; no font file redistributed."
+  },
+  "zh-Hans-CN": {
+    "file": "ocr-zh.png",
+    "expected": "播放器字幕测试 12345",
+    "sha256": "527c6ef954a4aca1367354c9e9118912ed785470272abfda9441bbdecf59f9ff",
+    "font": "Microsoft YaHei",
+    "license": "Original test text and generated image; no font file redistributed."
+  }
+}

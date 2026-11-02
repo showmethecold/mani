@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:systemai="http://schemas.microsoft.com/appx/manifest/systemai/windows10"
+  IgnorableNamespaces="uap uap3 uap10 rescap systemai">
+
+  <Identity
+    Name="666BDF46-9ED5-4B57-A422-AC4454E87182"
+    Publisher="CN=AppPublisher"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="666BDF46-9ED5-4B57-A422-AC4454E87182" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>Mani</DisplayName>
+    <PublisherDisplayName>AppPublisher</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+    <uap10:PackageIntegrity>
+      <uap10:Content Enforcement="on"/>
+    </uap10:PackageIntegrity>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.26100.0" MaxVersionTested="10.0.26226.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.26100.0" MaxVersionTested="10.0.26226.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="$targetentrypoint$">
+      <uap:VisualElements
+        DisplayName="Mani"
+        Description="Mani Player"
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <!-- Fixed IINA Info.plist/Utility video types; Windows owns the user's default choice. -->
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="mani.video" MultiSelectModel="Player" Parameters="&quot;%1&quot;">
+            <uap:DisplayName>Mani</uap:DisplayName>
+            <uap:Logo>Assets\Square44x44Logo.png</uap:Logo>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.mkv</uap:FileType>
+              <uap:FileType>.mp4</uap:FileType>
+              <uap:FileType>.avi</uap:FileType>
+              <uap:FileType>.m4v</uap:FileType>
+              <uap:FileType>.mov</uap:FileType>
+              <uap:FileType>.3gp</uap:FileType>
+              <uap:FileType>.ts</uap:FileType>
+              <uap:FileType>.mts</uap:FileType>
+              <uap:FileType>.m2ts</uap:FileType>
+              <uap:FileType>.wmv</uap:FileType>
+              <uap:FileType>.flv</uap:FileType>
+              <uap:FileType>.f4v</uap:FileType>
+              <uap:FileType>.asf</uap:FileType>
+              <uap:FileType>.webm</uap:FileType>
+              <uap:FileType>.rm</uap:FileType>
+              <uap:FileType>.rmvb</uap:FileType>
+              <uap:FileType>.qt</uap:FileType>
+              <uap:FileType>.dv</uap:FileType>
+              <uap:FileType>.mpg</uap:FileType>
+              <uap:FileType>.mpeg</uap:FileType>
+              <uap:FileType>.mxf</uap:FileType>
+              <uap:FileType>.vob</uap:FileType>
+              <uap:FileType>.ogv</uap:FileType>
+              <uap:FileType>.ogm</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap3:FileTypeAssociation>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+    <systemai:Capability Name="systemAIModels"/>
+  </Capabilities>
+</Package>

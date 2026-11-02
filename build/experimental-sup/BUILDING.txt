@@ -1,0 +1,55 @@
+Mani native SUP baseline: mani-sup-msys2-ucrt64-20261101-r2
+
+The binary runtime is the already validated 2026-11-01 build. This directory
+contains its FFmpeg patch, exact dependency lock, build recipe and verification
+tools. The retained "experiment" version strings identify the original binary;
+they do not imply a different upstream mpv or FFmpeg revision.
+
+Fixed sources:
+mpv 01e2533f3143b8940857ca419b0b367f583e05ca
+FFmpeg 94cba3150c6b83057ed48b833689adc806715cc0
+FFmpeg patch SHA-256:
+714408f5abd10cf36f7bdacb0b9a61e28f6eef560a9036bbeaf416d38b01cb04
+
+Source delivery:
+The native-sup-20261101-r2 GitHub dependency release contains the runtime ZIP,
+native-engine-source.zip, native-dependency-sources.zip, a separate ANGLE source
+archive, and SOURCE-SHA256SUMS.txt. These are the corresponding engine sources,
+MSYS2 source packages/build recipes and notices. The repository source archive
+on the release page is Mani's source, not a substitute for those upstream files.
+The repository is currently private; downloads require repository access.
+
+Full engine build outline (Windows x64):
+1. Check out Mani including this directory. Verify all supplied archives with
+   SOURCE-SHA256SUMS.txt and source-packages.json before extraction/use.
+2. Put the original FFmpeg ZIP at artifacts/m5/sup-engine-ab/downloads/ffmpeg.zip
+   and the original mpv ZIP at artifacts/m5/sup-engine-integration/downloads/mpv.zip.
+   They are supplied in native-engine-source.zip. Their hashes remain unchanged.
+3. Run python build/experimental-sup/prepare_full_sources.py. It reuses the
+   existing patch preparation and whole-source verification, refuses to overwrite
+   modified source trees, and supplies the pinned mpv metadata override.
+4. Restore an isolated portable MSYS2 tree at
+   artifacts/m5/sup-engine-ab/tools/msys64 using the base archive and exact
+   package versions/URLs/hashes in dependencies.lock.json. Retain the base archive
+   at artifacts/m5/sup-engine-ab/downloads/msys2-base.tar.xz and package archives
+   at the paths recorded by the lock. Do not run an unrestricted package upgrade.
+   The MSYS2 source packages are provided separately for rebuilding dependencies.
+5. Run python build/experimental-sup/lock_environment.py. It checks all 253
+   installed package versions, the base archive and individually pinned caches.
+6. Run build/experimental-sup/Build-FullEngine.ps1 -Variant patched, or invoke
+   build-full-engine.sh patched in that portable UCRT64 environment. The recipe
+   explicitly sets FFmpeg's revision and compile options. Use baseline instead
+   of patched for the unmodified FFmpeg control build.
+7. Run collect_runtime.py patched to collect the PE import closure and dynamic
+   ANGLE dependencies. It requires a fresh output directory and never replaces
+   the product runtime. Compare behavior using libmpv_regression.py C1-C6.
+
+The recorded runtime hashes identify the delivered binaries. Byte-for-byte
+reproducibility on a fresh machine has not been established. Toolchain mirror
+availability is separate from the stored hashes; do not replace missing pinned
+packages with newer versions silently. Building the Mani app uses the prebuilt
+runtime archive and does not require rebuilding this engine.
+
+License texts remain in the upstream source archives and runtime licenses/native
+directories. The patch modifies only libavformat/supdec.c, libavformat/demux.h,
+libavformat/demux.c and libavcodec/pgssubdec.c. No upstream acceptance is claimed.

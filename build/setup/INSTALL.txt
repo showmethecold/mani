@@ -1,0 +1,28 @@
+Mani Beta 0.1 — setup installer
+
+Requirements: Windows 11 24H2 (build 26100) or later, x64.
+
+1. Open Mani-Beta-0.1-Windows-x64-Setup.exe normally. The complete MSIX is inside it.
+2. Setup starts in Simplified Chinese when your Windows display language is Chinese,
+   and English otherwise. You can switch languages. Close Mani before installing.
+3. If the beta certificate is not trusted yet, read the explanation and select the
+   certificate consent checkbox. Choose Install and approve the Windows administrator
+   prompt. The helper adds only the supplied public certificate to Trusted People.
+4. Windows installs the app for the account that started Setup. Choose Open Mani
+   after installation, or open Mani from Start.
+
+No ZIP extraction or PowerShell commands are needed. This beta is test-signed;
+Windows security or reputation prompts may still appear. The EXE wrapper does not
+make the certificate publicly trusted. Do not disable Windows security protections.
+
+Existing newer versions are kept. Settings are retained when upgrading. A running
+app is not forcibly closed; close it and retry if Windows reports it is in use.
+Uninstall through Windows Settings > Apps > Installed apps > Mani.
+
+Advanced/manual option: install Mani.Beta.Test_0.5.7.0_x64.msix directly after
+trusting Mani.Beta.Test.cer in Local Computer > Trusted People. Do not use Trusted Root.
+
+The Windows package version is 0.5.7.0. Setup embeds the signed MSIX without changes.
+Application source and native sources remain available on the Beta 0.1 release page.
+Mani-Setup-source.zip contains the corresponding source used to build the wrapper.
+SETUP-SHA256SUMS.txt lists the public files' SHA-256 hashes.

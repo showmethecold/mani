@@ -1,0 +1,373 @@
+{
+  "schemaVersion": 1,
+  "name": "Inno Setup",
+  "version": "7.1.1",
+  "sourceTag": "is-7_1_1",
+  "file": "innosetup-7.1.1-x64.exe",
+  "url": "https://github.com/jrsoftware/issrc/releases/download/is-7_1_1/innosetup-7.1.1-x64.exe",
+  "sha256": "8a5a6711c3766a6e5fb74f280ba0e3551e719ce94538d901fdbd1f8f9920b3f0",
+  "signer": "CN=Pyrsys B.V., O=Pyrsys B.V., S=Noord-Holland, C=NL",
+  "license": "https://github.com/jrsoftware/issrc/blob/is-7_1_1/license.txt",
+  "compilerFiles": [
+    {
+      "path": "Default.isl",
+      "sha256": "f2bbf8236200fd41919ac9cfde05841066ae4194deb36d06dc9445fdef99883b"
+    },
+    {
+      "path": "is7z-x64.dll",
+      "sha256": "822206aa54b53516c336300329f87236b83bf55562e63bc9a25b1ebf064e903b"
+    },
+    {
+      "path": "is7z-x64.dll.issig",
+      "sha256": "df4f2253d1debc5b3232c611689255892e3fadbbba98fad785d937f694247407"
+    },
+    {
+      "path": "is7z.dll",
+      "sha256": "8fe5114a466838da8c3b0e07c63756de57cbf030829d95a43689df33fc3d3bba"
+    },
+    {
+      "path": "is7z.dll.issig",
+      "sha256": "2ab434065f82253b20b392ebc4a4d96c318fd2c0fba27143f5c77f51faf29786"
+    },
+    {
+      "path": "is7zxa-x64.dll",
+      "sha256": "e055c22adf9e3f68f03c4c8c8c1bc175fffe319f8bc019c878f6edb3caf66acb"
+    },
+    {
+      "path": "is7zxa-x64.dll.issig",
+      "sha256": "7d293323dd4cdb1b8aa2961e0bd0dfbed142e88fc5ec6c7dd28fa675f3f6dc6c"
+    },
+    {
+      "path": "is7zxa.dll",
+      "sha256": "42cb9d5d5b2e3988225effdd1c39671503ecad3accf087e1655c5461e9ca32bb"
+    },
+    {
+      "path": "is7zxa.dll.issig",
+      "sha256": "d220f1f8bfdd1409b68b5de88281f49d3e8801290011b6103374171a2da6f2d3"
+    },
+    {
+      "path": "is7zxr-x64.dll",
+      "sha256": "b2f8baf7aec219395a18eca431b064a050d1e2d062bd341184b88f8137c41f43"
+    },
+    {
+      "path": "is7zxr-x64.dll.issig",
+      "sha256": "0d9cd5e4b6839e6814cbc983199e741b2c589af7273db40a2f1f4a36e5e82127"
+    },
+    {
+      "path": "is7zxr.dll",
+      "sha256": "0fd18e166429cac7694ac19f154fd58e86bf61340aeee1b4286cb0090464049a"
+    },
+    {
+      "path": "is7zxr.dll.issig",
+      "sha256": "8baff20e6340ade46a9f9c0db6f4e8dae40ee117f4495e44f6d3cf915c7e8109"
+    },
+    {
+      "path": "isbunzip-x64.dll",
+      "sha256": "cc49e5970dac298e0dc8464b8a4bd7180c02a4dbdbe3aba8942032672b7b1cee"
+    },
+    {
+      "path": "isbunzip-x64.dll.issig",
+      "sha256": "4a1b5c105d88829b426ad60825394be207d11303d49e14e20c69c780ea9ccd8a"
+    },
+    {
+      "path": "isbunzip.dll",
+      "sha256": "fee27b1837f741be1eb38f064fb298b79af2ee1d1423147955a032fdd3efdcf2"
+    },
+    {
+      "path": "isbunzip.dll.issig",
+      "sha256": "ac3f11a0a795bdc1387b8003480b308c8a31974b05c1751aae79870bab17a82d"
+    },
+    {
+      "path": "isbzip-x64.dll",
+      "sha256": "c93a9ae438d92616a1985e01599f6c06c5d6a1c436b69fb69fb910714f5d376b"
+    },
+    {
+      "path": "isbzip-x64.dll.issig",
+      "sha256": "356a5fedc0c466fc5dae572360cb0999b2ffc58e3acb2e9599693e5f558cf9cf"
+    },
+    {
+      "path": "ISCC.exe",
+      "sha256": "e0f9f1dc32032650c6629f6dee41eb6d20ba140e4e3c07c25d8a24f9ba781644"
+    },
+    {
+      "path": "ISCmplr.dll",
+      "sha256": "7bf5943088e20ab95863a640d99c0234cf98e57850af82cdb465589f994d87de"
+    },
+    {
+      "path": "ISCmplr.dll.issig",
+      "sha256": "3032097db70762c77a3885a407d5faa2c1bcec519baed028953ded99d188d73e"
+    },
+    {
+      "path": "ISIDE.exe",
+      "sha256": "bbfc7a41777129882e3bb9d9e957606d0dd30bb1e7501f498f0125890bb3419f"
+    },
+    {
+      "path": "islzma-Arm64EC.dll",
+      "sha256": "4f508499878e29d151806ca6a65f9c35a407ce5b226bfbc5a7ed0accbe610f57"
+    },
+    {
+      "path": "islzma-Arm64EC.dll.issig",
+      "sha256": "9044c05b807c254933cc483116f546ee44c85000e14b6e4b57c6ab9a22faf061"
+    },
+    {
+      "path": "islzma-x64.dll",
+      "sha256": "40ff69ac37464035cec3338637f360f035f69beff8263c47f5913cbac8813158"
+    },
+    {
+      "path": "islzma-x64.dll.issig",
+      "sha256": "b6993e321a02a6b3cf108ecf58cbe37a7b848922ec7e515280df0a610b2b0198"
+    },
+    {
+      "path": "ISPP.dll",
+      "sha256": "fef3c09323ffbcead73c306aa2626fc7dd1e316bf1a55d541d925286e5366015"
+    },
+    {
+      "path": "ISPP.dll.issig",
+      "sha256": "62df896806f7cf36033048f72b5237708782d7bd59784022403e09fd8bccc380"
+    },
+    {
+      "path": "ISPPBuiltins.iss",
+      "sha256": "cf7e509e2f0356b06f302d0e748bc8694a20114e5c00d7a0654183d5fe7f15a7"
+    },
+    {
+      "path": "isscint-x64.dll",
+      "sha256": "9e4fd496118127aefe132c4fdea4d133a5300a5dcfb2c86c85c686b28daf462c"
+    },
+    {
+      "path": "isscint-x64.dll.issig",
+      "sha256": "f0e85e4b215628759f6c9bff9f8528ddaab1c4a89c08da4c6b2ee4ae1d8fb4e7"
+    },
+    {
+      "path": "ISSigTool.exe",
+      "sha256": "103744f50fbe8c051d04f92876839cd0a9b6b2972901864f69611ee7a2cf86b8"
+    },
+    {
+      "path": "isunzlib-x64.dll",
+      "sha256": "372a70a4c31228f5147066e791183eb02b148da33e56dca762bae1481a932160"
+    },
+    {
+      "path": "isunzlib-x64.dll.issig",
+      "sha256": "d3f26ab6d5a2e5d493870b13e085b4069502004f306c29fc09fdcd82180b4b62"
+    },
+    {
+      "path": "isunzlib.dll",
+      "sha256": "960df5e51ead0d15b7f594b02b2782217b9b4f3221dfda293413f94cd6c0d054"
+    },
+    {
+      "path": "isunzlib.dll.issig",
+      "sha256": "58472c559cccb60d8d5a5dc542f1e6512da6f1dce0828a7fd7d37439a57d988c"
+    },
+    {
+      "path": "iszlib-x64.dll",
+      "sha256": "098ab5ab0d642c75f5266d603df394d76c5e4bc29354a8328d348d87e824bace"
+    },
+    {
+      "path": "iszlib-x64.dll.issig",
+      "sha256": "e252d8bae32ef2eb9911bc81c03b7c237994b8ef63f45fec5e9c1d3598586faf"
+    },
+    {
+      "path": "Languages/Arabic.isl",
+      "sha256": "5cfbd5fe899f7c8d9fe86b17168d8f54d86a367e2ad785fca8e557759aed660e"
+    },
+    {
+      "path": "Languages/Armenian.isl",
+      "sha256": "e505a7d1d640c51eff472b66086bee1518859249469ff41d61f1db8866f78577"
+    },
+    {
+      "path": "Languages/BrazilianPortuguese.isl",
+      "sha256": "d0bddd148bf2e8ba999e0b40a6429d0711bc6476c2c5eac9c3da2b9ac88a4be4"
+    },
+    {
+      "path": "Languages/Bulgarian.isl",
+      "sha256": "5a8165257e6cd6afcd2f938224085946944b9b7526151bc5cde4a50e9bafa060"
+    },
+    {
+      "path": "Languages/Catalan.isl",
+      "sha256": "dd8bb37666ff51f0f022cfc49e829cd8b716281787dc9c7de59abc56f426d25b"
+    },
+    {
+      "path": "Languages/ChineseSimplified.isl",
+      "sha256": "e0b0b350e2245f3c5e65586dfe43d574f6e7f06f2261149aba284954b3fc9a8d"
+    },
+    {
+      "path": "Languages/ChineseTraditional.isl",
+      "sha256": "031684fc769259291fd563338b5abe20b7753c88ab5a2976b83a80788deb8455"
+    },
+    {
+      "path": "Languages/Corsican.isl",
+      "sha256": "d34e22abac35e405277a042efd2f0bc9038c88d61a6e08e3333c712ca0b24c19"
+    },
+    {
+      "path": "Languages/Czech.isl",
+      "sha256": "9ed3e0927ea3540d953a66957a8cd0bd6440accd67655e1f564e281f4a9a3340"
+    },
+    {
+      "path": "Languages/Danish.isl",
+      "sha256": "db71823e6737e7a1adea89f4e82884c0c2a397e21665cfee747982e27c683571"
+    },
+    {
+      "path": "Languages/Dutch.isl",
+      "sha256": "5d59c3fa0634858e226e04af6337b135bc4ffe27b0469bb4bb4b4139e04a7de9"
+    },
+    {
+      "path": "Languages/Finnish.isl",
+      "sha256": "f729b72280d7ecf2432bd9f55ec832ecabef1a719c5718dd048e1e8f0aad165a"
+    },
+    {
+      "path": "Languages/French.isl",
+      "sha256": "5dd8367b662b7f250bbfb6859e32a5ff98ac98a677bc1211f635d287e23cb801"
+    },
+    {
+      "path": "Languages/German.isl",
+      "sha256": "36090e2ad4895d0f59c4716925a9739ecc9fb4fa2a7c0dc066ffcfb953d6ed59"
+    },
+    {
+      "path": "Languages/Hebrew.isl",
+      "sha256": "bf4cab68df1937b63c0ee35011e4db65ccb7e7e0d17185bed8ddbfe7bc910444"
+    },
+    {
+      "path": "Languages/Hungarian.isl",
+      "sha256": "3c5b78926266224cf35a235d595a626c0e2ae5acecd9b4e6baa1a3bc71f6fe1a"
+    },
+    {
+      "path": "Languages/Icelandic.isl",
+      "sha256": "bd971880a17e257615f37ac355523ecf755066c2f6f70777522f8a96f5d3a5e8"
+    },
+    {
+      "path": "Languages/Italian.isl",
+      "sha256": "20636321f14d4c525cd2965242f765dcb772826a07ad9b224e6e6cacf232d8c8"
+    },
+    {
+      "path": "Languages/Japanese.isl",
+      "sha256": "4b5b3343eaf1a04c768979e92648e9080b2d0888f187c7a4300cc7ac89b2fc22"
+    },
+    {
+      "path": "Languages/Korean.isl",
+      "sha256": "a9427833f1975fb13dcaa09bc38aa16eba07698ce9d9596575fdd3362f2646a1"
+    },
+    {
+      "path": "Languages/Lithuanian.isl",
+      "sha256": "c624a7d6e1fc796278d3506d8bf4ffbd4080724fc55ab2451b51a65171b2bfa6"
+    },
+    {
+      "path": "Languages/Norwegian.isl",
+      "sha256": "e4cdeecf5d4dc760e802d65a4c07307c3670d7aa8516851a1bbcaacb0328df04"
+    },
+    {
+      "path": "Languages/Polish.isl",
+      "sha256": "15f719b42c5fda5a4798b92ad38d090372e1d27c9658278148c7506a3d1f8191"
+    },
+    {
+      "path": "Languages/Portuguese.isl",
+      "sha256": "ec0ca3839b9ab94672b4969deec13db6cc297aa3504c1bf1a725019d3dc7ba7c"
+    },
+    {
+      "path": "Languages/Russian.isl",
+      "sha256": "0def13d0a979bd3d062ef7ce960264df17f908fb62af46bb81970e2abee53919"
+    },
+    {
+      "path": "Languages/Slovak.isl",
+      "sha256": "b1780bd55477bde4834e77d388dbac2b73e2e0d50ea0d0afffa618e8e7942531"
+    },
+    {
+      "path": "Languages/Slovenian.isl",
+      "sha256": "26c230a05fee4fa7eccc425757ed641c8fdb7ee5a202b426b36a75e6b5a53f42"
+    },
+    {
+      "path": "Languages/Spanish.isl",
+      "sha256": "cb071274c70d7de4b774b306c6750edef7e8b662f71bb551333a7ed84c5a2634"
+    },
+    {
+      "path": "Languages/Swedish.isl",
+      "sha256": "46abd3cfd3337bc5c40ae502844d7460c88735289e4b3715d39a0ac7f9eb906b"
+    },
+    {
+      "path": "Languages/Tamil.isl",
+      "sha256": "cc57534bb50f98abab57c5814ce800e7910374ccee37d47555432a8c08151184"
+    },
+    {
+      "path": "Languages/Thai.isl",
+      "sha256": "57ac6d49ac482c17edf1259b995077aa250f6c1b777e6f2b21e5d498c6584f66"
+    },
+    {
+      "path": "Languages/Turkish.isl",
+      "sha256": "5a27f42d9f9c2ced4b105e82e6bfd4a8e2dc08fdc12dc742fb7196be02c52a8f"
+    },
+    {
+      "path": "Languages/Ukrainian.isl",
+      "sha256": "c8ae082e671796bd399245e42fe3def7cb1c28d15270c6bd75c52f9fa62bcd1b"
+    },
+    {
+      "path": "license.txt",
+      "sha256": "2e5346868c2a18434489824e11d65c3031620f792fefc415d05f19cd441abf5c"
+    },
+    {
+      "path": "Setup.e32",
+      "sha256": "0bddcbb0d3a739a54a9e89341b4543b2df8c01ce3f93e76f6adf2388b1c59468"
+    },
+    {
+      "path": "Setup.e32.issig",
+      "sha256": "472fbb3ca0d9c9872d94b01409c78ba16b15ca9c00f528524e7bae7f550c01a1"
+    },
+    {
+      "path": "Setup.e64",
+      "sha256": "db68b336a2fdebd91850880ab51d7dd3b7a2e9e161be19e8f568a6802ad43a73"
+    },
+    {
+      "path": "Setup.e64.issig",
+      "sha256": "64c1bfdd5ce6e2dcfeabda8d0f985d5d806392747a39af1a0b6a5101a3925f9b"
+    },
+    {
+      "path": "SetupClassicIcon.ico",
+      "sha256": "fa07ed17dff186a5b46c16861158bf3a36b67d84ff7a7bf9a58eaad28143d827"
+    },
+    {
+      "path": "SetupCustomStyle.e32",
+      "sha256": "a7ecaaf4414e4b37c4fb8c52e5afc2f38dbcfd8cfe581966e10133c769377cfa"
+    },
+    {
+      "path": "SetupCustomStyle.e32.issig",
+      "sha256": "727278e5f289e35f573b79962c264479d680c1ba1b5d0a2d2bb9bc26bb2ae470"
+    },
+    {
+      "path": "SetupCustomStyle.e64",
+      "sha256": "365c27c84ca49f23709e72768001ccdb27d25894a6566159e52df715c88edd51"
+    },
+    {
+      "path": "SetupCustomStyle.e64.issig",
+      "sha256": "12e151e0ebf04f38f5e80c6951f6271d6569815f18b7a838e6e5c76ab7a3e1d5"
+    },
+    {
+      "path": "SetupLdr.e32",
+      "sha256": "3c6c29ff87a2f3bcc0f9d36a3465f39de4cdc7fbb8086b7a053c5f6d84f709f8"
+    },
+    {
+      "path": "SetupLdr.e32.issig",
+      "sha256": "8f385765ea5b414a45d936b52ac6d81d5b8d2f9ed5fb62ba65031b1299c5651c"
+    },
+    {
+      "path": "SetupLdr.e64",
+      "sha256": "9d58cb13add71e36c2057ab49549c5d1ad5005495cac93d2eb951c5d3004c9da"
+    },
+    {
+      "path": "SetupLdr.e64.issig",
+      "sha256": "25184b90dbb78674305f94f8db775d1b8cf0d30fe9a16b07bf11e1fb89c4bc2e"
+    },
+    {
+      "path": "WizClassicImage-IS.bmp",
+      "sha256": "1b73df0b89a2943f34582cf81c2d8ed7b1ce4cfb54d86ce58ebd6dd0e1e05f5d"
+    },
+    {
+      "path": "WizClassicImage.bmp",
+      "sha256": "d148dc2569e9abc4b4da650b1920ef1ffdc10bbd6bc2e20a97ce44b1f9f78aea"
+    },
+    {
+      "path": "WizClassicSmallImage-IS.bmp",
+      "sha256": "ae94cd61179bc1869d0082b1fa8c189f8487d106712b48a2a6c6a035d370bfb4"
+    },
+    {
+      "path": "WizClassicSmallImage.bmp",
+      "sha256": "a7e560d419e85daf80cce980baa124ef7c73197d0f51a59a19f1866ee8edfe8c"
+    }
+  ]
+}

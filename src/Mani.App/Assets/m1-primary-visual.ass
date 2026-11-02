@@ -1,0 +1,118 @@
+[Script Info]
+; Original Mani diagnostic content. CC0-1.0. No font files are bundled.
+Title: Mani PRIMARY visual probe
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+ScaledBorderAndShadow: yes
+WrapStyle: 2
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,42,&H0000FFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,3,1,5,20,20,20,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 01
+Dialogue: 0,0:00:04.00,0:00:08.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 02
+Dialogue: 0,0:00:08.00,0:00:12.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 03
+Dialogue: 0,0:00:12.00,0:00:16.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 04
+Dialogue: 0,0:00:16.00,0:00:20.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 05
+Dialogue: 0,0:00:20.00,0:00:24.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 06
+Dialogue: 0,0:00:24.00,0:00:28.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 07
+Dialogue: 0,0:00:28.00,0:00:32.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 08
+Dialogue: 0,0:00:32.00,0:00:36.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 09
+Dialogue: 0,0:00:36.00,0:00:40.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 10
+Dialogue: 0,0:00:40.00,0:00:44.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 11
+Dialogue: 0,0:00:44.00,0:00:48.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 12
+Dialogue: 0,0:00:48.00,0:00:52.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 13
+Dialogue: 0,0:00:52.00,0:00:56.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 14
+Dialogue: 0,0:00:56.00,0:01:00.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 15
+Dialogue: 0,0:01:00.00,0:01:04.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 16
+Dialogue: 0,0:01:04.00,0:01:08.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 17
+Dialogue: 0,0:01:08.00,0:01:12.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 18
+Dialogue: 0,0:01:12.00,0:01:16.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 19
+Dialogue: 0,0:01:16.00,0:01:20.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 20
+Dialogue: 0,0:01:20.00,0:01:24.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 21
+Dialogue: 0,0:01:24.00,0:01:28.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 22
+Dialogue: 0,0:01:28.00,0:01:32.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 23
+Dialogue: 0,0:01:32.00,0:01:36.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 24
+Dialogue: 0,0:01:36.00,0:01:40.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 25
+Dialogue: 0,0:01:40.00,0:01:44.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 26
+Dialogue: 0,0:01:44.00,0:01:48.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 27
+Dialogue: 0,0:01:48.00,0:01:52.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 28
+Dialogue: 0,0:01:52.00,0:01:56.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 29
+Dialogue: 0,0:01:56.00,0:02:00.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 30
+Dialogue: 0,0:02:00.00,0:02:04.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 31
+Dialogue: 0,0:02:04.00,0:02:08.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 32
+Dialogue: 0,0:02:08.00,0:02:12.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 33
+Dialogue: 0,0:02:12.00,0:02:16.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 34
+Dialogue: 0,0:02:16.00,0:02:20.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 35
+Dialogue: 0,0:02:20.00,0:02:24.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 36
+Dialogue: 0,0:02:24.00,0:02:28.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 37
+Dialogue: 0,0:02:28.00,0:02:32.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 38
+Dialogue: 0,0:02:32.00,0:02:36.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 39
+Dialogue: 0,0:02:36.00,0:02:40.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 40
+Dialogue: 0,0:02:40.00,0:02:44.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 41
+Dialogue: 0,0:02:44.00,0:02:48.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 42
+Dialogue: 0,0:02:48.00,0:02:52.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 43
+Dialogue: 0,0:02:52.00,0:02:56.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 44
+Dialogue: 0,0:02:56.00,0:03:00.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 45
+Dialogue: 0,0:03:00.00,0:03:04.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 46
+Dialogue: 0,0:03:04.00,0:03:08.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 47
+Dialogue: 0,0:03:08.00,0:03:12.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 48
+Dialogue: 0,0:03:12.00,0:03:16.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 49
+Dialogue: 0,0:03:16.00,0:03:20.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 50
+Dialogue: 0,0:03:20.00,0:03:24.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 51
+Dialogue: 0,0:03:24.00,0:03:28.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 52
+Dialogue: 0,0:03:28.00,0:03:32.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 53
+Dialogue: 0,0:03:32.00,0:03:36.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 54
+Dialogue: 0,0:03:36.00,0:03:40.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 55
+Dialogue: 0,0:03:40.00,0:03:44.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 56
+Dialogue: 0,0:03:44.00,0:03:48.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 57
+Dialogue: 0,0:03:48.00,0:03:52.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 58
+Dialogue: 0,0:03:52.00,0:03:56.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 59
+Dialogue: 0,0:03:56.00,0:04:00.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 60
+Dialogue: 0,0:04:00.00,0:04:04.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 61
+Dialogue: 0,0:04:04.00,0:04:08.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 62
+Dialogue: 0,0:04:08.00,0:04:12.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 63
+Dialogue: 0,0:04:12.00,0:04:16.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 64
+Dialogue: 0,0:04:16.00,0:04:20.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 65
+Dialogue: 0,0:04:20.00,0:04:24.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 66
+Dialogue: 0,0:04:24.00,0:04:28.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 67
+Dialogue: 0,0:04:28.00,0:04:32.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 68
+Dialogue: 0,0:04:32.00,0:04:36.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 69
+Dialogue: 0,0:04:36.00,0:04:40.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 70
+Dialogue: 0,0:04:40.00,0:04:44.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 71
+Dialogue: 0,0:04:44.00,0:04:48.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 72
+Dialogue: 0,0:04:48.00,0:04:52.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 73
+Dialogue: 0,0:04:52.00,0:04:56.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 74
+Dialogue: 0,0:04:56.00,0:05:00.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 75
+Dialogue: 0,0:05:00.00,0:05:04.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 76
+Dialogue: 0,0:05:04.00,0:05:08.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 77
+Dialogue: 0,0:05:08.00,0:05:12.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 78
+Dialogue: 0,0:05:12.00,0:05:16.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 79
+Dialogue: 0,0:05:16.00,0:05:20.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 80
+Dialogue: 0,0:05:20.00,0:05:24.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 81
+Dialogue: 0,0:05:24.00,0:05:28.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 82
+Dialogue: 0,0:05:28.00,0:05:32.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 83
+Dialogue: 0,0:05:32.00,0:05:36.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 84
+Dialogue: 0,0:05:36.00,0:05:40.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 85
+Dialogue: 0,0:05:40.00,0:05:44.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 86
+Dialogue: 0,0:05:44.00,0:05:48.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 87
+Dialogue: 0,0:05:48.00,0:05:52.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 88
+Dialogue: 0,0:05:52.00,0:05:56.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 89
+Dialogue: 0,0:05:56.00,0:06:00.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 90
+Dialogue: 0,0:06:00.00,0:06:04.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 91
+Dialogue: 0,0:06:04.00,0:06:08.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 92
+Dialogue: 0,0:06:08.00,0:06:12.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 93
+Dialogue: 0,0:06:12.00,0:06:16.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 94
+Dialogue: 0,0:06:16.00,0:06:20.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 95
+Dialogue: 0,0:06:20.00,0:06:24.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 96
+Dialogue: 0,0:06:24.00,0:06:28.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 97
+Dialogue: 0,0:06:28.00,0:06:32.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 98
+Dialogue: 0,0:06:32.00,0:06:36.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 99
+Dialogue: 0,0:06:36.00,0:06:40.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 100
+Dialogue: 0,0:06:40.00,0:06:44.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 101
+Dialogue: 0,0:06:44.00,0:06:48.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 102
+Dialogue: 0,0:06:48.00,0:06:52.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 103
+Dialogue: 0,0:06:52.00,0:06:56.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 104
+Dialogue: 0,0:06:56.00,0:07:00.00,Default,,0,0,0,,{\move(220,460,1060,460,0,3900)\fad(100,100)}PRIMARY 105

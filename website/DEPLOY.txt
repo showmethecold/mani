@@ -1,0 +1,53 @@
+MANI WEBSITE — deployment preparation
+
+Public release name: Beta 0.1
+Signed package version: pinned in config/beta-0.1.json
+Primary download: Mani-Beta-0.1-Windows-x64-Setup.exe (MSIX embedded)
+Advanced/manual download: the MSIX named in config/beta-0.1.json
+
+This directory is an independent, dependency-free static website. No application
+code, runtime lock, signing secret, or user profile is changed by the website.
+
+Local preview from the Mani repository root:
+  python website/build.py
+  python website/serve.py
+  Open http://127.0.0.1:4173
+
+The preview server serves only artifacts/website/dist plus one explicitly allowed
+setup EXE. It listens on loopback, not the LAN. The repository is not served.
+Preview needs the setup EXE and setup-info.json in artifacts/website/release/.
+
+Public destination:
+  Repository: showmethecold/mani
+  Pages: https://showmethecold.github.io/mani/
+  Release tag: beta-0.1
+  Existing native release: native-sup-20261101-r2
+
+The website uses the existing public Mani repository. Website commit/push, Pages
+deployment and the Beta release remain separate, explicit publication actions.
+
+Publication procedure:
+1. Commit/push the setup workflow, builder, pinned Beta inputs, tests and website
+   changes to the mani repository after authorization.
+2. Run the Beta setup installer workflow to wrap the pinned, already signed MSIX.
+   It signs the EXE with the existing signing key and includes matching wrapper source.
+   Add its EXE, setup-info.json, direct MSIX/public certificate, source archives and
+   verification files to the existing Beta 0.1 prerelease (beta-0.1).
+   Keep the original Beta ZIP available for existing links and exact application source.
+   Reuse the six existing native release assets at native-sup-20261101-r2;
+   no multi-gigabyte native source re-upload or lock-file changes are needed.
+   Do not publish PFX/private keys, personal settings, local logs, or test profiles.
+3. Enable Pages with GitHub Actions, then manually run the website workflow. The build
+   requires all public installer/source links to answer without credentials, and
+   rejects metadata for an unsigned setup. The displayed checksum comes from setup-info.json.
+   The workflow is manual-only; ordinary application pushes do not deploy Pages.
+4. Check both language URLs, image/lightbox navigation, small screens, and download
+   hashes anonymously after deployment. Add a custom domain only when requested.
+
+English is the initial default. Selecting Chinese persists in browser storage;
+the two languages also have separate, shareable static URLs. No analytics, cookies,
+third-party scripts, web fonts, or server-side service is required.
+
+The image is an original generated demo landscape captured inside the real app.
+See credits.json for capture/source identity. Product claims follow the current
+README; unimplemented roadmap features and local milestone plans are excluded.

@@ -1,0 +1,40 @@
+name: Stage Beta release assets
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Stage a verified desktop installer, legacy setup, or pinned archive without switching existing downloads
+        required: true
+        type: choice
+        options: [desktop, archive, setup]
+      artifact_id:
+        description: Artifact from a successful desktop installer, Beta MSIX, or legacy setup run
+        required: true
+        type: string
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: beta-release-stage
+  cancel-in-progress: false
+
+jobs:
+  stage:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Verify publication guards
+        run: python3 -m unittest discover -s build/tests -p test_stage_beta_assets.py -v
+      - name: Stage verified files without replacing earlier assets
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          MANI_STAGE_MODE: ${{ inputs.mode }}
+          MANI_STAGE_ARTIFACT: ${{ inputs.artifact_id }}
+        run: python3 build/stage_beta_assets.py

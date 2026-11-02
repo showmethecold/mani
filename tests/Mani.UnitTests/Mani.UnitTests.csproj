@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsTestProject>true</IsTestProject>
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+    <IsPackable>false</IsPackable>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="..\..\src\Mani.App\Strings\en-US\Resources.resw" Link="Resources\en-US.resw" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\..\src\Mani.App\Strings\zh-CN\Resources.resw" Link="Resources\zh-CN.resw" CopyToOutputDirectory="PreserveNewest" />
+    <PackageReference Include="xunit.v3.mtp-v2" />
+    <PackageReference Include="Microsoft.Testing.Extensions.TrxReport" />
+    <Using Include="Xunit" />
+    <ProjectReference Include="..\..\src\Mani.Playback\Mani.Playback.csproj" />
+    <Compile Include="..\..\src\Mani.App\MediaOpenOperation.cs" Link="Production\MediaOpenOperation.cs" />
+    <Compile Include="..\..\src\Mani.App\ChapterMarkerLayout.cs" Link="Production\ChapterMarkerLayout.cs" />
+    <Compile Include="..\..\src\Mani.App\PlaybackUiState.cs" Link="Production\PlaybackUiState.cs" />
+    <Compile Include="..\..\src\Mani.App\FloatingOscState.cs" Link="Production\FloatingOscState.cs" />
+    <Compile Include="..\..\src\Mani.App\CursorIdleState.cs" Link="Production\CursorIdleState.cs" />
+    <Compile Include="..\..\src\Mani.App\FloatingOscLayout.cs" Link="Production\FloatingOscLayout.cs" />
+    <Compile Include="..\..\src\Mani.App\OscLayout.cs" Link="Production\OscLayout.cs" />
+    <Compile Include="..\..\src\Mani.App\GlassMask.cs" Link="Production\GlassMask.cs" />
+    <Compile Include="..\..\src\Mani.App\OscDockingLayout.cs" Link="Production\OscDockingLayout.cs" />
+    <Compile Include="..\..\src\Mani.App\PlayerSurfaceState.cs" Link="Production\PlayerSurfaceState.cs" />
+    <Compile Include="..\..\src\Mani.App\OsdState.cs" Link="Production\OsdState.cs" />
+    <Compile Include="..\..\src\Mani.App\WindowSizing.cs" Link="Production\WindowSizing.cs" />
+    <Compile Include="..\..\src\Mani.App\QuickSettingsState.cs" Link="Production\QuickSettingsState.cs" />
+    <Compile Include="..\..\src\Mani.App\QuickOsdFeedback.cs" Link="Production\QuickOsdFeedback.cs" />
+    <Compile Include="..\..\src\Mani.App\PlaybackKeyMap.cs" Link="Production\PlaybackKeyMap.cs" />
+    <Compile Include="..\..\src\Mani.App\LocalMediaFile.cs" Link="Production\LocalMediaFile.cs" />
+    <Compile Include="..\..\src\Mani.App\FileActivationRequest.cs" Link="Production\FileActivationRequest.cs" />
+    <Compile Include="..\..\src\Mani.App\LegacyUserDataMigration.cs" Link="Production\LegacyUserDataMigration.cs" />
+    <Compile Include="..\..\src\Mani.App\LayoutSidebarState.cs" Link="Production\LayoutSidebarState.cs" />
+    <Compile Include="..\..\src\Mani.App\WindowFloatingState.cs" Link="Production\WindowFloatingState.cs" />
+    <Compile Include="..\..\src\Mani.App\PictureInPictureLayout.cs" Link="Production\PictureInPictureLayout.cs" />
+    <Compile Include="..\..\src\Mani.App\WindowRegistry.cs" Link="Production\WindowRegistry.cs" />
+    <Compile Include="..\..\src\Mani.App\SharedPlayerSettings.cs" Link="Production\SharedPlayerSettings.cs" />
+    <Compile Include="..\..\src\Mani.App\MusicModeState.cs" Link="Production\MusicModeState.cs" />
+    <Compile Include="..\..\src\Mani.App\PointerInputState.cs" Link="Production\PointerInputState.cs" />
+    <Compile Include="..\..\src\Mani.App\TrackpadInputState.cs" Link="Production\TrackpadInputState.cs" />
+    <Compile Include="..\..\src\Mani.App\WindowDragPolicy.cs" Link="Production\WindowDragPolicy.cs" />
+  </ItemGroup>
+</Project>
