@@ -1,0 +1,38 @@
+Mani Beta Test {VERSION} - PREVIEW BUILD
+
+Windows 11 x64 build 26100 or later. .NET and Windows App SDK are included.
+No SDK, Visual Studio, Python, or separately installed app runtime is required.
+
+1. Verify the files in a Windows PowerShell window:
+   powershell -NoProfile -ExecutionPolicy Bypass -File .\Verify-Downloads.ps1
+
+2. If the supplied internal test certificate is not already trusted, open an
+   administrator Windows PowerShell in this test directory and run:
+   Import-Certificate -FilePath .\Mani.Beta.Test.cer -CertStoreLocation Cert:\LocalMachine\TrustedPeople
+   This is a public test certificate, not a private key. Use a test machine.
+   Existing trust is sufficient; do not import the certificate again unnecessarily.
+
+3. Install Mani.Beta.Test_{VERSION}_x64.msix by double-clicking it.
+   If App Installer is unavailable, run in normal Windows PowerShell:
+   Add-AppxPackage -Path .\Mani.Beta.Test_{VERSION}_x64.msix
+   Start "Mani Beta Test" from the Start menu.
+
+4. To verify settings and upgrades, set volume to 37 and enable "Pause when
+   opening" in More > Settings > General. Switch to Simplified Chinese if desired.
+   Keep the control auto-hide delay positive (default 2.5 seconds).
+   Restart and check that the preferences were retained. Close the app, then
+   install Mani.Beta.Test_{UPGRADE_VERSION}_x64.msix WITHOUT uninstalling {VERSION}.
+   Start again and check the same preferences. The second package only tests
+   upgrade behavior; it contains the same application payload.
+
+5. Uninstall "Mani Beta Test" through Windows Settings > Apps > Installed apps.
+   Other Mani installations have separate identities and must remain intact.
+
+Report Windows version/build, the failing step and exact error text/code, and
+checksum results. Startup/playback logs are under:
+%LOCALAPPDATA%\Packages\Mani.Beta.Test_h6anv01wm286t\LocalCache\Local\Mani\Logs
+
+This directory includes the actual Mani source snapshot and public signing
+certificate. It contains no private key, user settings, history, or test media.
+Native corresponding-source materials and licenses are available with the runtime at:
+https://github.com/showmethecold/mani/releases/tag/native-sup-20261101-r2

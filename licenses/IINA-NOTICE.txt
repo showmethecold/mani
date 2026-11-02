@@ -1,0 +1,458 @@
+IINA 1.5.1 / build 180
+https://github.com/iina/iina
+
+Ported source: iina/VideoView.swift (isHDRVideo, refreshEdrMode,
+requestEdrMode, setToneMappingForHDR/SDR policy portions).
+Copyright (c) 2016 lhc. All rights reserved.
+License: GNU General Public License, version 3. See IINA-GPL-3.0.txt.
+Source SHA-256: 8808f18468beae83224ed07d890988ed52775fa636036a56691a0ee25c2a351f
+
+Modified for Mani on 2026-10-24:
+C# policy in src/Mani.Playback/ColorOutputPolicy.cs. Windows display state
+replaces NSScreen/CoreDisplay; libmpv negotiates the DXGI BT.2020/PQ
+container, including P3/HLG conversion. See docs/m1/display-validation.md
+for the implementation boundary, defaults and verification.
+
+Adapted source: iina/PlayerCore.swift (refreshSyncUITimer, syncUITime,
+syncUI time/playButton/volume separation).
+Copyright (c) 2016 lhc. All rights reserved.
+License: GNU General Public License, version 3. See IINA-GPL-3.0.txt.
+Source SHA-256: 6fb859077e1ee961ba988bf6ffb0304ba9782001f026cea845f130ae4de28fef
+
+Adapted source: iina/Logger.swift (log file-handle lifetime, locking
+and closed-writer guard).
+Copyright (c) 2018 lhc (Collider LI). All rights reserved.
+License: GNU General Public License, version 3. See IINA-GPL-3.0.txt.
+Source SHA-256: 39ddb84fc5cac31dde8626b6b5433c10315636be78b4842fd16842fcf617628c
+
+Modified for Mani on 2026-10-25:
+src/Mani.App/PlaybackUiState.cs and Diagnostics/SessionTraceLog.cs.
+C# changes-only XAML projection with user-gesture invalidation; .NET
+append writer with immediate JSONL flush and disposal after final shutdown
+evidence. Engine polling remains active for Windows composition/display
+duties. See docs/m1/ui-refresh-optimization.md for adaptation and tests.
+
+Adapted source: iina/MPVController.swift (observeProperties, readEvents,
+handlePropertyChange, and seek/playback-restart event timing).
+Copyright (c) 2016 lhc. All rights reserved.
+License: GNU General Public License, version 3. See IINA-GPL-3.0.txt.
+Source SHA-256: 179a717134c3f6bca221206a532367b6696c1b4e581dd4b2ca9fb1fbd0366c01
+
+Modified for Mani on 2026-10-25 and 2026-10-26:
+src/Mani.Playback/ObservedMetadata.cs and PlaybackTiming.cs.
+Windows/C# adaptations use copied property values, bounded event storage
+and QueryPerformanceCounter timestamps. Property reconciliation remains
+bounded and does not retain borrowed native pointers.
+
+Adapted for Mani M2 on 2026-10-27:
+MPVController asyncCommand/readEvents/getNode, PlayerCore control commands,
+backgroundQueueTicket/checkTicket, PlaybackInfo lifecycle guards, MPVNode
+recursive copying, MPVTrack/MPVChapter fields, Preference defaults and
+LegacyMigration missing-modern-key precedence.
+Copyright (c) 2016-2023 lhc and the IINA contributors.
+License: GNU General Public License, version 3. See IINA-GPL-3.0.txt.
+
+C# locations: src/Mani.Playback/MpvClient.cs, MpvEvent.cs,
+PlaybackSession.Operations.cs, PlaybackState.cs, MediaInfo.cs, and
+PlayerSettingsStore.cs. SessionTraceLog.cs moved into Mani.Playback for
+reuse by both the application and playback core.
+Windows/.NET adaptations provide request IDs and cancellation, native entry
+ownership, immutable managed data, atomic JSON storage and structured logs.
+The prototype retains its existing initial volume of 50 instead of changing
+it to IINA's default of 100. See docs/m2/playback-core.md for scope and evidence.
+
+Additional fixed-source SHA-256 values:
+MPVNode.swift: e3cbd2c4272479adb8657cd4af85bbb0d98d77f9a1de246e4346021ee12077cd
+MPVTrack.swift: 374b8351cca73066df31e5c8253e6fb553d4d61f9ca70e50c157f61f7563d0a3
+MPVChapter.swift: 1bb4935abc1b1b34946bec2b73d487ef180644257ae88246e233a941c7a7db73
+PlaybackInfo.swift: 1614c78545388adac332167e3a845556dc2daa9d775e71b797cbd01c25225ce3
+Preference.swift: 4cbfe083e8843739d0f4588611385f501d3228c40fdd9f5855896757f42c6178
+LegacyMigration.swift: bcc9d8bc8f90817058a0cf64200054f2e83389b87d373c4de1817cad1e6334c4
+
+Adapted for Mani M3 first UI slice on 2026-10-27:
+InitialWindowController.createWindow open actions; MainWindowController
+setupOnScreenController/updateTitle/showUI/hideUI/hideUIAndCursor/updateTimer;
+OSCFloatingView position, clamp and center-snap rules; Preference defaults.
+Copyright (c) 2016-2026 lhc and the IINA contributors.
+License: GNU General Public License, version 3. See IINA-GPL-3.0.txt.
+
+C# locations: src/Mani.App/FloatingOscState.cs, FloatingOscLayout.cs,
+PlayerSurfaceState.cs, MainPage.Product.cs, MainPage.Osc.cs and MainWindow.
+The existing PlayerSettingsStore gains normalized OSC position keys.
+Windows adaptations use native caption buttons, WinUI controls and keyboard
+focus/capture guards, measured control height and the existing M1 GPU shader.
+The ordinary floating layout is used, not the macOS 26 Liquid Glass variant.
+No Apple icons, SF Symbols or IINA branding are included.
+See docs/m3/first-slice.md for the source mapping and verification limits.
+
+Additional fixed-source SHA-256 values:
+InitialWindowController.swift: e0f53ab7cdbb9502422e357e85d4869bcf394d4cff8aadbaeef8c2e75c28c1ad
+MainWindowController.swift: a45a8fd634747c4f8bcf7036c1548b78b62f296177d2ec2ef45a7d68f90983a1
+OSCFloatingView.swift: a2e711a93342720cc66561f78025c7ba676704ee8333519318970fc8e25dd2a8
+FadeableViewController.swift: b96c1ce9959ea3a702b94065a63cc086a42a39f41837544355eaaf54914eba77
+LayoutValue.swift: 1effd07a34b8c23819258e5a315526b2606ffe95c86f95b7ff72abffbefece27
+
+Adapted for Mani M3 top/bottom OSC switching on 2026-10-27:
+MainWindowController.setupOnScreenController and its oscPosition observer,
+Titlebar.init/update, OSCBottomView.init/updateVerticalConstraint, and
+Preference.OSCPosition/defaults. Copyright (c) 2016-2026 lhc and contributors.
+License: GNU General Public License, version 3. See IINA-GPL-3.0.txt.
+
+Locations: src/Mani.App/OscLayout.cs, MainPage.OscModes.cs, MainPage.Osc.cs,
+MainPage.xaml, and the optional mode key in PlayerSettingsStore.cs.
+The shared fragments, edge placement and detachment priority follow IINA.
+WinUI uses the same control instances in a Grid, translated after measurement;
+native Windows caption controls remain separate. Default edge modes overlay the
+video and auto-hide; this does not implement the separate docking preference.
+More remains reachable in narrow windows for mode selection and hidden actions.
+See docs/m3/osc-modes.md for source mapping and local verification.
+
+Titlebar.swift: a4da5c5301bbc13cc8725f50d7fd88186b3f34b24834b3bd7f09acf9ad6766f1
+OSCBottomView.swift: e213ec281d9cc7889b8b6f88a069104bfa615f27ddcaf10dbeaafe49abe7ef74
+TimeLabelOverflowedStackView.swift: 743dbaabe1c8274074c0ad6dd36af56dc618cf1c915fa9e4131846f9d79e4124
+
+Adapted for Mani M3 space-reserving OSC docking on 2026-10-27:
+Preference.isDocked/defaults, SidebarLayoutPane.updateVideoSettingsStack,
+MainWindowController.setupVideoContainerConstraints and fadeable registration,
+and FadeableViewController visibility behavior. Copyright (c) 2016-2026 lhc
+and contributors. License: GNU General Public License, version 3.
+
+Locations: src/Mani.App/OscDockingLayout.cs, MainPage.OscModes.cs,
+MainPage.Osc.cs, MainPage.Product.cs, MainPage.M1.cs, MainPage.xaml, and the
+optional edge/dock settings in PlayerSettingsStore.cs. The preference gate,
+independent saved values, top/bottom video insets and fullscreen visibility
+follow IINA. WinUI reserves space around the existing video panel; native
+Windows caption space is already separate. Docked controls use an opaque
+background without a video shader mask. This does not implement automatic
+window sizing. See docs/m3/osc-docking.md for verification and limitations.
+PlayerWindowController.playButtonAction and PlayerCore pause/resume were also
+checked for the keyboard focus correction: the WinUI button stays enabled
+during a pause request while the existing pending-request guard prevents reentry.
+
+SidebarLayoutPane.swift: 741f96656fe81bb679ab395e4a4e3fae3de93067316fda1e0a57f2c6d857c15a
+
+M3 caption/UI Automation stability adaptation on 2026-10-27:
+MainWindowController.updateTitle and fullscreen transition methods were checked
+again against the same fixed snapshot. Current-media titles, the same window,
+and playback behavior are retained. MainWindow.xaml and MainWindow.xaml.cs use
+the Windows system non-client caption with DWM dark mode to avoid the pinned
+App SDK custom caption provider lifetime failure. AppKit caption code cannot
+serve as a Windows UIA provider; this replacement is confined to that platform
+boundary. No playback, video host, dependency or native binary was replaced.
+See docs/m3/uia-stability.md for source hashes, failed candidates and acceptance.
+
+Adapted for Mani M3 OSD and scoped menu input on 2026-10-27:
+OSDMessage.titleAndType, OSDView.updateViews, MainWindowController
+displayOSD/hideOSD/updatePlayTime, PlayerCore.sendOSD/pauseChanged/speedChanged/
+playbackRestarted, MPVController seek/volume/mute events and Preference defaults.
+PlayerWindowController.rightMouseUp/performMouseAction and MainWindowController
+mouseActionDisabledViews provide the default secondary-click pause and scope.
+Copyright (c) 2016-2026 lhc and contributors. GPL-3.0; see IINA-GPL-3.0.txt.
+
+Locations: src/Mani.App/OsdState.cs, MainPage.Osd.cs, MainPage.Menu.cs and the
+existing page input/layout hooks. Existing accepted snapshots and seek replies
+feed the UI without replacing the playback event consumer. A WinUI live region,
+solid system-background card and Windows Menu/Shift+F10 input replace AppKit
+views and keyboard menu access. Secondary buttons do not start slider tracking.
+The current GPU control-bar blur, system caption and playback core are retained.
+See docs/m3/osd-menu.md for timing, coalescing, appearance and acceptance limits.
+
+OSDMessage.swift: 2174d1063ff57112f6ec8c339d90fef0b0240d9e16010c912efbdf720a8199ef
+OSDView.swift: 2c43d0429d945ff68148657f2877598b28dcf24e90e15fcb4f62a53db4e34e81
+
+Adapted for Mani M3 automatic window sizing and aspect rules on 2026-10-27:
+MainWindowController.handleVideoSizeChange, setWindowScale, setWindowAspectRatio;
+MainWindowMenuActions.menuChangeWindowSize/menuLockAspectRatio;
+PlayerCore.onVideoReconfig/videoSizeForDisplay; Preference resize timing/options,
+physical resolution and implicit aspect unlock; Extensions size/rect operations;
+AppData minimum and no-video sizes. These rules are ported to WindowSizing.cs,
+MainWindow.Sizing.cs, MainPage.WindowSizing.cs and PlayerSettingsStore.cs.
+AppKit geometry is adapted to physical Windows coordinates, DPI, work areas,
+system caption metrics, WM_SIZING and presenter restoration. The existing
+playback engine and renderer are retained. The pinned Windows VO's audio-only
+virtual canvas is ignored in favor of IINA's no-video fallback. See
+docs/m3/window-sizing.md for exact source hashes, adaptations and verification.
+
+iina/MainWindowController.swift: a45a8fd634747c4f8bcf7036c1548b78b62f296177d2ec2ef45a7d68f90983a1
+iina/PlayerCore.swift: 6fb859077e1ee961ba988bf6ffb0304ba9782001f026cea845f130ae4de28fef
+iina/Preference.swift: 4cbfe083e8843739d0f4588611385f501d3228c40fdd9f5855896757f42c6178
+iina/Extensions.swift: 53b2c362b2f4853c23c9a957a8fce7b39379e10d8c480a6cdc72708dfb7ae592
+iina/AppData.swift: a0ec10ab0602ac9a297c8b384afa4ececdbe9967d0daa628d07e5214aca5a2b8
+iina/MainWindowMenuActions.swift: 73523e6c4a53bb55948086ca323ec287e2bb7b8145fb139bf94a0a89bf8e3bcb
+
+Adapted for Mani M3 layout sidebar on 2026-10-27:
+SidebarController show/hide/toggle, transition guards, width resizing, outside
+click dismissal and independent side preferences; SideBar width limits;
+SidebarLayoutPane layout controls; MainWindowController video/sidebar insets
+and removeVideoViewBlackBars. Copyright (c) 2016-2026 lhc and contributors.
+GPL-3.0; see IINA-GPL-3.0.txt. Locations: LayoutSidebarState.cs,
+MainPage.LayoutSidebar.cs, MainPage.xaml, existing OSC/window sizing adapters
+and optional fields in PlayerSettingsStore.cs. The pinned source remains intact.
+WinUI controls, physical window metrics, a bounded scroll viewport, keyboard
+width adjustment and cursor/focus handling replace AppKit views and input.
+The 80% width cap also applies during narrow-window dragging and fit commands.
+Floating controls stay in the uncovered region without rewriting saved position.
+Only the Layout pane is implemented in this slice; other quick settings remain
+separate work. See docs/m3/layout-sidebar.md for scope and validation.
+
+iina/SidebarController.swift: b9d93a393eb3d0eeaea5b7c4e936784ea05d73b77140eb9fb10ded94314c6d55
+iina/SideBar.swift: b2bd36c9c6fdb59a6732e1d90a92fe3549cb586869d965207742a62fb25bb4e0
+iina/SidebarLayoutPane.swift: 741f96656fe81bb679ab395e4a4e3fae3de93067316fda1e0a57f2c6d857c15a
+iina/QuickSettingViewController.swift: 3b1e99c8affa902d9f2587b7a0a793f99476c386df2852e3248a0d7f51b58e09
+
+Adapted for Mani M3 floating window rules on 2026-10-27:
+PlayerWindowController.isOntop/setWindowFloatingOnTop and preference observation;
+PlayerCore.pauseChanged, MainWindowController fullscreen suspension/restoration,
+MainWindowMenuActions.menuAlwaysOnTop and MenuController menu state.
+Copyright (c) 2016-2026 lhc and contributors. GPL-3.0; IINA-GPL-3.0.txt.
+Locations: WindowFloatingState.cs, MainWindow.Floating.cs,
+MainPage.WindowFloating.cs, existing page/window hooks and the optional
+alwaysFloatOnTop preference in PlayerSettingsStore.cs. AppWindow's
+OverlappedPresenter replaces NSWindow.level; the native caption, player event
+consumer and renderer are retained. Fullscreen restoration deliberately follows
+the pinned playing-only rule. The unified Windows empty host clears floating
+state after stop/failure. See docs/m3/window-floating.md for source hashes,
+scope, behavior tests and native window verification.
+
+iina/PlayerWindowController.swift: a5537fa842a277378240cdec4a4c4f98e0bcc750792688fed236726bdcd7be15
+iina/MenuController.swift: a30fde634b5b57a506211f5bf6200d7ae29cc58ea6db95e232f52dc67a0b7b33
+iina/PlayerState.swift: 0767dd22b12289324f790febe640bc66cc26b779c87bea5e8f4c0f1d7672b364
+
+Picture-in-picture adaptation (2026-10-28):
+MainWindowController enterPIP, prepareForPIPClosure, doneExitingPIP and playback
+actions; MainWindowMenuActions.menuTogglePIP; MenuController.updateVideoMenu;
+Preference PiP defaults; VideoPIPViewController paused-frame restoration.
+MainWindow.PictureInPicture.cs, MainPage.PictureInPicture.cs and
+PictureInPictureLayout.cs retain one session and the same video host while
+adapting macOS PIPViewController to a resizable Windows system-caption presenter.
+VideoPIPViewController.swift SHA-256: e56c5cf027a386dc09d23fd0e2c544fa729788b9f213f85abb39f73bfa55352d
+
+Video-surface Space routing preserves PlayerWindowController.keyDown and the
+iina/config/iina-default-input.conf SPACE cycle pause binding. Windows preview
+input prevents the transparent focus Button from consuming that command.
+
+More-menu focus restoration reuses the existing MainPage.Menu callback and the
+fixed IINA window responder / SPACE cycle pause behavior. WinUI flyout anchors,
+foreground-window checks and preservation of native control focus are local
+Windows adaptations. Music mode returns focus to its visible playback button.
+iina-default-input.conf SHA-256: 6bdb032566b5f6e6926ea3d5f8c5b095f556e93e325f7e4ff40f2069d8223aa1
+
+M3 multi-window: WindowRegistry, SharedPlayerSettings, App/MainWindow and MainPage.Windows adapt PlayerCore playerCores/newPlayerCore/findIdlePlayerCore, AppDelegate menuNewWindow/applicationShouldTerminate, MainMenu.xib, and Preference/MainWindowController observation from the pinned IINA 1.5.1/build 180 source. WinUI window lifetime, activation and ordered JSON persistence are local platform adaptations.
+
+M3 music mode: MusicModeState, MainWindow.MusicMode and MainPage.MusicMode adapt IINA PlayerCore music transitions/metadata, PlaybackInfo.isAudio and MiniPlayerWindowController layout/artwork rules. Assets/default-album-art.png is copied unchanged from iina/Assets.xcassets/Icons/default-album-art.imageset/default-album-art.png in the pinned IINA 1.5.1/build 180 source. The original artwork and adapted source retain upstream copyright and GPL-3.0 licensing. Windows caption, layout, focus and presenter lifetimes are local platform adaptations.
+
+M3 default mouse and wheel input
+-------------------------------
+PointerInputState.cs and MainPage.PointerInput.cs port the fixed IINA 1.5.1/build
+180 PlayerWindowController click arbitration and scroll rules, MainWindowController
+input scopes, MiniPlayerWindowController exceptions, Preference defaults, AppData
+step maps and PlayerCore relative seeking. WheelSlider.cs adapts PlaySlider and
+VolumeSlider wheel forwarding to WinUI. Windows wheel units and click timing are
+platform adaptations; the original playback engine and command worker are retained.
+Copyright (c) 2016-2026 lhc and contributors. GPL-3.0-only.
+
+M3 pointer inactivity: CursorIdleState and MainPage.Cursor port the fixed IINA
+1.5.1/build 180 MainWindowController createTimer, hideUIAndCursor, mouse movement
+and stationary secondary-click rules, preserving the MiniPlayer/PiP exceptions.
+VideoSurfaceButton and Interop/TransparentCursor replace NSCursor with an
+element-local WinUI cursor using the public Windows App SDK
+IInputCursorStaticsInterop interface. Native cursor creation/lifetime, window
+activation and stationary WinUI pointer-event filtering are Windows adaptations.
+Source hashes, reuse details and verification: docs/m3/cursor-hide.md.
+
+M3 video-window dragging: WindowDragPolicy and MainPage.PointerInput port
+MainWindowController's 3-point initial-drag threshold, drag-before-click release
+ordering, SidebarController input priority, and MiniPlayerWindowController /
+VideoView background movement from fixed IINA 1.5.1/build 180.
+MainWindow.WindowDrag replaces only NSWindow.performDrag with a bounded Windows
+screen-coordinate movement adapter after native move-loop handoff failed in
+WinUI testing. The existing caption, HWND, session and renderer are retained.
+
+M3 interface display preferences: MainPage.InterfaceSettings, FloatingOscState,
+OsdState/MainPage.Osd and the additional PlayerSettingsStore/SharedPlayerSettings
+keys port fixed IINA 1.5.1/build 180 Preference, PrefUIViewController.xib,
+MainWindowController.hideUI/createTimer, PlayerCore.sendOSD, OSDMessage.isDisabled
+and OSDView.updateViews. The WinUI dialog, finite timer/font bounds and JSON
+storage are local Windows adaptations. Playback sessions and rendering are retained.
+Copyright (c) 2016-2026 lhc and contributors. GPL-3.0-only.
+
+M3 quick settings: QuickSettingsState and MainPage.QuickSettings port fixed IINA
+1.5.1/build 180 QuickSettingViewController, SideBar/SidebarController,
+SidebarTrackSelector, MPVTrack, SidebarVideoPane.SpeedView, SidebarAudioPane
+and SidebarSubtitlesPane track, delay and visibility logic. WinUI replaces AppKit
+controls and polling adapts existing PlaybackSession reads; the core is retained.
+Copyright (c) 2016-2026 lhc and contributors. GPL-3.0-only.
+
+M3 delay sliders: DelayEdit and MainPage.DelaySliders port AudioDelayView,
+SubDelayView and SidebarSliderView from the same fixed IINA snapshot. DelaySlider
+adapts pointer capture, cancellation, keyboard and UIA completion to WinUI.
+Copyright (c) 2016-2026 lhc and contributors. GPL-3.0-only.
+
+M3 subtitle conflict feedback retains SidebarTrackSelector/PlayerCore.setTrack's
+write-then-read selection flow. Inline English conflict explanations and WinUI
+live-region announcements are local UI additions requested for Mani.
+
+M3 quick-setting feedback: QuickOsdFeedback, OsdState/MainPage.Osd and English
+resources port fixed IINA 1.5.1/build 180 OSDMessage, OSDView, MPVTrack,
+PlayerCore/MPVController property feedback and Extensions' six-decimal format.
+The existing accepted quick-setting reads adapt the property-event boundary.
+Copyright (c) 2016-2026 lhc and contributors. GPL-3.0-only.
+
+M3 playback keyboard: PlaybackKeyMap and MainPage.PlaybackKeyboard port the
+selected bindings from config/iina-default-input.conf and the dispatch rules
+of PlayerWindowController/MainWindow/MenuController/MainWindowMenuActions.
+Windows adapts Meta to Ctrl for the audited subset and preserves native control
+input; existing playback, relative-input and SidebarController ports are reused.
+Copyright (c) 2016-2026 lhc and contributors. GPL-3.0-only.
+
+M3 loop/capture bindings and feedback: PlaybackKeyMap, MainPage.PlaybackKeyboard,
+MainPage.Settings, MainPage screenshot routing, LoopFeedback/OsdState and English
+OSD resources port config/iina-default-input.conf, PlayerWindowController,
+PlayerCore screenshot/abLoop/getLoopMode, MPVController loop properties,
+OSDMessage and en.lproj/Localizable.strings from the fixed IINA 1.5.1/build 180.
+Windows keeps its existing screenshot-to-file destination and engine session.
+
+M3 window keyboard: PlaybackKeyMap, MainPage.PlaybackKeyboard/WindowSizing,
+MainWindow.Sizing and WindowSizing.Step port the fixed default size bindings,
+MainWindowMenuActions.menuChangeWindowSize, MainWindowController scale/aspect
+rules and Extensions minimum/center calculations. The 25-point step uses Windows
+DIPs; native caption and docked regions are retained, with existing work-area bounds
+and the currentWindowAspectRatio fallback for an unlocked window.
+
+M3 audio/subtitle property keyboard: PlaybackKeyMap and MainPage.PlaybackKeyboard
+port the default input commands, KeyCodeHelper's uppercase/shift normalization,
+and PlayerWindowController dispatch from fixed IINA 1.5.1/build 180. Existing
+QuickOsdFeedback/OSDMessage ports retain MPVController/PlayerCore property-change
+feedback; Windows adapts keyboard focus and accepted-read media identity checks.
+Copyright (c) 2016-2026 lhc and contributors. GPL-3.0-only.
+
+M3 subtitle navigation and progress: default input/KeyCodeHelper/PlayerWindowController
+commands, MainWindowController showProgress/updatePlayTime, OSDMessage/OSDView
+showTime and VideoTime millisecond formatting are ported from fixed IINA 1.5.1/build 180.
+Windows uses existing native sub-seek, relative seek, snapshots and restart counts;
+only input scope and the existing OSD card are adapted. GPL-3.0-only.
+
+M3 page-seek focus correction keeps IINA's seek +/-600 commands; only Windows
+button versus slider/list/scroll-container keyboard ownership is adapted.
+
+M3 window action keys port fixed IINA default input and PlayerWindowController
+quit routing, Main/Mini music switching, MainWindowMenuActions PiP/on-top and
+PlayerCore fullscreen handling. Windows reuses the existing window adapters and
+application shutdown; Ctrl+Meta chords are individually mapped to Ctrl+Alt.
+
+M3 track-cycle keyboard bindings (2026-10-30): ported from fixed IINA 1.5.1/build 180 iina/config/iina-default-input.conf, KeyCodeHelper.swift, PlayerWindowController.swift, MPVController.swift and PlayerCore.swift. Track feedback reuses the existing OSDMessage.swift / MPVTrack.swift / SidebarTrackSelector.swift port. Windows Ctrl+Alt maps the audited Ctrl+Meta chords; original cycle video/audio/sub commands are retained, with canonical vid/aid/sid readback. Mani locations: PlaybackKeyMap.cs, MainPage.PlaybackKeyboard.cs and QuickSettingsState.cs. The track-cycle UI skips missing track types after a confirmed media read to prevent persisting an unintended disabled track into the next file; existing tracks still use native cycle order. The observed failure and minimal deviation are recorded in docs/m3/track-cycle-keyboard.md. Copyright (c) 2016-2026 lhc and contributors; GPL-3.0 (licenses/IINA-GPL-3.0.txt).
+
+M3 current-file reveal (2026-10-30): fixed IINA 1.5.1/build 180 MainMenuActions.swift menuShowCurrentFileInFinder/validateMenuItem, MenuController.swift menu key binding, config/iina-default-input.conf and KeyCodeHelper.swift are reused in LocalMediaFile.cs, MainPage.FileReveal.cs and PlaybackKeyMap.cs. Windows replaces NSWorkspace file selection with background COM/Shell PIDL selection in Interop/FileReveal.cs, plus English menu/error resources. Playback commands and decoding are unchanged. Copyright (c) 2016-2026 lhc and contributors; GPL-3.0 (licenses/IINA-GPL-3.0.txt).
+
+M3 window zoom (2026-10-31): fixed IINA 1.5.1/build 180 MainWindowController.handleMagnifyGesture, Preference.pinchAction, AppData.mainWindowMinSize and Extensions.centeredResize are ported in WindowSizing.cs and MainWindow.Sizing.cs. MainPage.PointerInput.cs and PointerInputState.cs adapt Windows Ctrl+wheel zoom input, excluding native chrome from scaling and bounding to the current monitor work area. See docs/m3/window-zoom.md for adapter sensitivity and gesture-phase limits. Copyright (c) 2016-2026 lhc and contributors; GPL-3.0 (licenses/IINA-GPL-3.0.txt).
+
+M3 native gestures and accessibility (2026-10-31): TrackpadInputState.cs,
+MainPage.Trackpad.cs and the anchored WindowSizing.Zoom port the fixed
+PlayerWindowController.scrollWheel, MainWindowController.scrollWheel and
+handleMagnifyGesture, AppData maps and MiniPlayer control scopes. Interop/TrackpadInput.cs
+replaces AppKit phases with Windows Composition InteractionTracker callbacks.
+LayoutSidebarState keeps AccessibilityPreferences.adjustedDuration's no-animation
+behavior when the system preference changes during a transition. Existing WinUI
+system resources and text scaling provide the Windows accessibility boundary.
+Copyright (c) 2016-2026 lhc and contributors; GPL-3.0-only.
+
+M3 glass visual alignment (2026-10-31): GlassControls.xaml and the MainPage OSC /
+sidebar views adapt fixed IINA 1.5.1/build 180 OSCFloatingView, OSCToolbarButton,
+MainWindowController.setupOnScreenController, SideBar.swift, QuickSettingViewController,
+SidebarLayoutPane, LayoutValue and TranslucentView. Native WinUI buttons, sliders
+and selection peers replace AppKit controls; Windows caption and input rules remain.
+GlassMask.cs and the existing m1-blur shader adapt the material boundary using the
+existing GPU texture; NSGlassEffectView is not distributed or reimplemented as a
+macOS optical engine. Source hashes and differences: docs/m3/visual-alignment.md.
+Copyright (c) 2016-2026 lhc and contributors; GPL-3.0-only.
+
+M3 menu organization (2026-10-31): MainPage.xaml groups existing commands using
+fixed IINA 1.5.1/build 180 Base.lproj/MainMenu.xib categories. MainPage.InterfaceSettings.cs
+adapts SettingsWindow, SettingsPageGeneral.sectionBehavior and SettingsPageUI
+window/OSC/OSD sections to the existing owned WinUI settings dialog and shared
+preference store. macOS global menu and NSWindow navigation are replaced locally;
+playback commands and engine remain unchanged. See docs/m3/menu-organization.md.
+Copyright (c) 2016-2026 lhc and contributors; GPL-3.0-only.
+
+M4 navigation, persistence and bilingual UI (2026-10-31): fixed IINA 1.5.1 /
+build 180 PlayerCore, AppDelegate, DraggingDetect, PlaylistViewController,
+SidebarPlaylistPane, SidebarChaptersPane, MPVChapter, HistoryController,
+HistoryWindowController, PlaybackHistory, PlaySlider, FFmpegController,
+ThumbnailCache, ThumbnailPeekView, Preference, MPVController, default input.conf,
+and en.lproj / zh-Hans.lproj terminology are ported/adapted in Playlist.cs,
+MediaSources.cs, MediaNavigation.cs, MediaInfo.cs, PlaybackHistoryStore.cs,
+ThumbnailPreviewCache.cs, MainPage.Navigation/History/TimelinePreview/Language,
+PlayerSettingsStore, UiText and both RESW resources. Native mpv remains the list,
+chapter/edition and watch-later authority. WinUI replaces AppKit views, drag and
+resource refresh. Atomic JSON replaces NSKeyedArchiver. The existing independent
+pinned libmpv FrameCapture path replaces the macOS FFmpeg bridge, with serialized
+on-demand samples, cancellation, file invalidation and a 500 MiB budget. Manual
+application language selection is an explicit Mani product addition; English is
+the default and Simplified Chinese is saved without changing media preferences.
+Source identity, differences and validation: docs/m4/implementation.md.
+Copyright (c) 2016-2026 lhc and contributors; GPL-3.0-only.
+
+M4 chapter positions (2026-10-31): ChapterMarkerLayout.cs, WheelSlider.cs and
+MainPage.TimelinePreview.cs port PlaySliderCell.drawBar chapter boundary rules.
+Preference.showChapterPos and SettingsPageUI provide the disabled default and
+setting placement; both labels reuse settings.showChapterPos.label from the
+fixed en.lproj / zh-Hans.lproj Localizable.strings. A passive, theme-aware WinUI
+track layer replaces AppKit clipping; native thumb travel also maps hover time.
+Source hashes, platform details and validation: docs/m4/chapter-markers.md.
+Copyright (c) 2016-2026 lhc and contributors; GPL-3.0-only.
+
+M4 history, playlist export and preview management (2026-10-31): HistoryBrowser.cs
+and MainPage.History.cs port HistoryWindowController.searchFieldAction,
+prepareData and getKey, with PlaybackHistory names and grouped WinUI virtualization.
+PlaylistFile.cs and MainPage.Navigation.cs port MainMenuActions.menuSavePlaylist
+as an atomic UTF-8 M3U8 export through a Windows save picker. Native mpv performs
+playlist parsing; PlaybackSession.Operations.cs preserves known child ownership
+across MPVController-style END_FILE redirects. SettingsPageUI.sectionThumbnail,
+SettingsPageUtilities.clearCacheBtnAction, ThumbnailCache and Preference provide
+the preview default, confirmed clearing and size display in ThumbnailPreviewCache,
+shared preferences and interface settings. Decoder serialization and generation
+invalidation adapt the existing Windows on-demand cache boundary. English and
+Simplified Chinese terminology reuse the fixed language resources where present.
+Source hashes, differences and validation: docs/m4/library-tools.md.
+Copyright (c) 2016-2026 lhc and contributors; GPL-3.0-only.
+
+M4 closure (2026-10-31): SidebarPlaylistPane.addFileAction/addURLAction,
+copyToPasteboard/acceptDrop/pasteFromPasteboard and PlayerCore.addToPlaylist /
+playlistMove supply folder/URL addition, insertion and ordered selection rules
+in MainPage.Navigation.cs, MediaSources.cs and Playlist.cs. WinUI drag data,
+copy/move flags and Windows file/folder pickers replace NSPasteboard/AppKit.
+Playlist edits are serialized against authoritative mpv entry IDs; replacement
+cancels obsolete edits. HistoryController atomic persistence, Preference and
+LegacyMigration retain their rules while validated JSON backup recovery repairs
+Windows missing/damaged primary files without downgrading future schemas.
+ThumbnailCache/CacheManager ownership and eviction are adapted to the existing
+hashed PNG cache. Sources, minimal changes and validation: docs/m4/closure.md.
+Copyright (c) 2016-2026 lhc and contributors; GPL-3.0-only.
+
+M1-M4 review follow-up (2026-10-31): fixed IINA 1.5.1/build 180
+MPVController property observations, PlayerWindowController.playSliderChanges and
+Preference defaults, FFmpegController serial file contexts, DraggingDetect file
+expansion, HistoryController persistence, Logger ownership and the initial XIB
+content dimensions are reused/ported in ObservedMetadata, MainPage.InputDrain,
+MediaOpenOperation, ThumbnailFrameCapture, FrameCapture, MediaSources, shared
+settings/history/logging and MainWindow sizing. C# worker/UI ownership, bounded
+Windows logs, JSON recovery, DPI and build configuration are platform adaptations.
+Sources, reasons and validation: docs/maintenance/code-review-2026-10-31-response.md.
+Copyright (c) 2016-2026 lhc and contributors; GPL-3.0-only.
+
+Adapted for Mani M5 on 2026-11-01 from the same fixed IINA 1.5.1/build 180 snapshot:
+PlayerCore external audio/subtitle loading and reload, audio-device fallback and
+labelled ten-band equalizer; AutoFileMatcher/FileGroup/ObjcUtils matching rules;
+Equalizations.swift (22 preset gain arrays); CharEncoding.swift encoding list;
+Preference/MPVController subtitle, audio and ASS defaults/property mappings;
+SidebarAudioPane/SidebarSubtitlesPane/SettingsPageAudio/SettingsPageSubtitles,
+and en/zh-Hans resource terminology. Copyright (c) 2016-2026 lhc and contributors.
+GNU General Public License, version 3; see IINA-GPL-3.0.txt.
+Locations: Mani.Playback MediaPreferences, EqualizerProfiles, SubtitleMatcher,
+PlaybackSession.MediaControls; Mani.App MainPage.MediaControls/EqualizerProfiles,
+settings integration and bilingual resources. Windows adapters use WinUI pickers,
+the existing owning playback thread, serial replies, media/entry guards and JSON
+preferences; no upstream directory was modified. Exact source-file SHA-256 values
+and adaptation limits are recorded locally in docs/m5/implementation.md and the
+fixed docs/m0/inventory/source-manifest.json. Snapshot tree SHA-256:
+c79f82ae208d18bd89c136b25bfaf707cf3187659c947fe523c9a92adde59451.

@@ -1,0 +1,12 @@
+* text=auto
+.gitignore text eol=lf
+*.cs text eol=crlf
+*.xaml text eol=crlf
+*.csproj text eol=crlf
+*.ps1 text eol=crlf
+*.yml text eol=lf
+*.py text eol=lf
+# These native provenance hashes are byte identities, including line endings.
+build/experimental-sup/dependencies.lock.json -text whitespace=cr-at-eol
+build/experimental-sup/*.sh text eol=lf
+build/experimental-sup/*.patch text eol=lf whitespace=-blank-at-eol

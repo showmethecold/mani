@@ -1,0 +1,43 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mani.App", "src\Mani.App\Mani.App.csproj", "{B4A717A4-A164-4812-91CD-9DE9C92C6CCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mani.Playback", "src\Mani.Playback\Mani.Playback.csproj", "{FFDA9D29-3FA3-49E4-B684-4E5B19AB2B17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8F2AC672-3153-41CA-B042-D5413C28719C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mani.UnitTests", "tests\Mani.UnitTests\Mani.UnitTests.csproj", "{E82C28F2-F17E-4144-A7FD-C255BE528C6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E82C28F2-F17E-4144-A7FD-C255BE528C6D}.Debug|x64.ActiveCfg = Debug|x64
+		{E82C28F2-F17E-4144-A7FD-C255BE528C6D}.Debug|x64.Build.0 = Debug|x64
+		{E82C28F2-F17E-4144-A7FD-C255BE528C6D}.Release|x64.ActiveCfg = Release|x64
+		{E82C28F2-F17E-4144-A7FD-C255BE528C6D}.Release|x64.Build.0 = Release|x64
+		{B4A717A4-A164-4812-91CD-9DE9C92C6CCA}.Debug|x64.ActiveCfg = Debug|x64
+		{B4A717A4-A164-4812-91CD-9DE9C92C6CCA}.Debug|x64.Build.0 = Debug|x64
+		{B4A717A4-A164-4812-91CD-9DE9C92C6CCA}.Release|x64.ActiveCfg = Release|x64
+		{B4A717A4-A164-4812-91CD-9DE9C92C6CCA}.Release|x64.Build.0 = Release|x64
+		{FFDA9D29-3FA3-49E4-B684-4E5B19AB2B17}.Debug|x64.ActiveCfg = Debug|x64
+		{FFDA9D29-3FA3-49E4-B684-4E5B19AB2B17}.Debug|x64.Build.0 = Debug|x64
+		{FFDA9D29-3FA3-49E4-B684-4E5B19AB2B17}.Release|x64.ActiveCfg = Release|x64
+		{FFDA9D29-3FA3-49E4-B684-4E5B19AB2B17}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E82C28F2-F17E-4144-A7FD-C255BE528C6D} = {8F2AC672-3153-41CA-B042-D5413C28719C}
+		{B4A717A4-A164-4812-91CD-9DE9C92C6CCA} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{FFDA9D29-3FA3-49E4-B684-4E5B19AB2B17} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+	EndGlobalSection
+EndGlobal

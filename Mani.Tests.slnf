@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "path": "Mani.sln",
+    "projects": [
+      "tests\\Mani.UnitTests\\Mani.UnitTests.csproj"
+    ]
+  }
+}

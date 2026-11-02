@@ -1,0 +1,1463 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <!-- UI terminology adapted from fixed IINA 1.5.1 / build 180 en.lproj and zh-Hans.lproj resources. Copyright (c) 2016-2026 lhc and contributors. GPL-3.0; see licenses/IINA-NOTICE.txt. Windows-specific settings translations are Mani adaptations. -->
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <data name="VideoFocus.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Video area</value>
+  </data>
+  <data name="Welcome.Text" xml:space="preserve">
+    <value>Ready to play</value>
+  </data>
+  <data name="DropHint.Text" xml:space="preserve">
+    <value>Drop a media file here, or open a file or URL.</value>
+  </data>
+  <data name="OpenFile.Content" xml:space="preserve">
+    <value>Open file</value>
+  </data>
+  <data name="OpenFile.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Open media file</value>
+  </data>
+  <data name="OpenUrl.Content" xml:space="preserve">
+    <value>Open URL</value>
+  </data>
+  <data name="CancelOpen.Content" xml:space="preserve">
+    <value>Cancel opening</value>
+  </data>
+  <data name="More.Content" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="DragControls.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Drag to move controls</value>
+  </data>
+  <data name="Initializing.Text" xml:space="preserve">
+    <value>Initializing player...</value>
+  </data>
+  <data name="Mute.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Mute / Unmute</value>
+  </data>
+  <data name="Mute.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Mute / Unmute</value>
+  </data>
+  <data name="Volume.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Volume.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="SeekBack.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Back 5 seconds</value>
+  </data>
+  <data name="SeekBack.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Back 5 seconds</value>
+  </data>
+  <data name="SeekForward.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Forward 5 seconds</value>
+  </data>
+  <data name="SeekForward.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Forward 5 seconds</value>
+  </data>
+  <data name="PlayButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="PlayButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="FullscreenButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Fullscreen (F11)</value>
+  </data>
+  <data name="FullscreenButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Fullscreen (F11)</value>
+  </data>
+  <data name="MoreButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="MoreButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="Timeline.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Playback position</value>
+  </data>
+  <data name="Timeline.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Playback position</value>
+  </data>
+  <data name="OpenFileMenu.Text" xml:space="preserve">
+    <value>Open file...</value>
+  </data>
+  <data name="PlaybackInfoMenu.Text" xml:space="preserve">
+    <value>Playback info</value>
+  </data>
+  <data name="OpenUrlMenu.Text" xml:space="preserve">
+    <value>Open URL...</value>
+  </data>
+  <data name="PauseWhenOpenMenu.Text" xml:space="preserve">
+    <value>Pause when opening</value>
+  </data>
+  <data name="SpeedMenu.Text" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="HalfSpeed.Text" xml:space="preserve">
+    <value>0.5x</value>
+  </data>
+  <data name="NormalSpeed.Text" xml:space="preserve">
+    <value>1x</value>
+  </data>
+  <data name="DoubleSpeed.Text" xml:space="preserve">
+    <value>2x</value>
+  </data>
+  <data name="LoopFileMenu.Text" xml:space="preserve">
+    <value>Loop current file</value>
+  </data>
+  <data name="LoopOffMenu.Text" xml:space="preserve">
+    <value>Turn off looping</value>
+  </data>
+  <data name="NextFrameMenu.Text" xml:space="preserve">
+    <value>Next frame</value>
+  </data>
+  <data name="PreviousFrameMenu.Text" xml:space="preserve">
+    <value>Previous frame</value>
+  </data>
+  <data name="AbLoopMenu.Text" xml:space="preserve">
+    <value>A-B loop: Set A / Set B / Clear</value>
+  </data>
+  <data name="ScreenshotMenu.Text" xml:space="preserve">
+    <value>Save screenshot</value>
+  </data>
+  <data name="FullscreenMenu.Text" xml:space="preserve">
+    <value>Fullscreen</value>
+  </data>
+  <data name="ResetOscMenu.Text" xml:space="preserve">
+    <value>Reset control position</value>
+  </data>
+  <data name="StopMenu.Text" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="AboutMenu.Text" xml:space="preserve">
+    <value>About Mani</value>
+  </data>
+  <data name="Text_Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="Text_Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="Text_Ready" xml:space="preserve">
+    <value>Ready to play</value>
+  </data>
+  <data name="Text_DropHint" xml:space="preserve">
+    <value>Drop a media file here, or open a file or URL.</value>
+  </data>
+  <data name="Text_Loading" xml:space="preserve">
+    <value>Opening media...</value>
+  </data>
+  <data name="Text_LoadingHint" xml:space="preserve">
+    <value>Please wait. You can cancel or open another file.</value>
+  </data>
+  <data name="Text_Failed" xml:space="preserve">
+    <value>Could not open media</value>
+  </data>
+  <data name="Text_FailedHint" xml:space="preserve">
+    <value>Try another file or check the media URL.</value>
+  </data>
+  <data name="Text_Stopped" xml:space="preserve">
+    <value>Playback stopped</value>
+  </data>
+  <data name="Text_Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Text_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Text_OpenUrlTitle" xml:space="preserve">
+    <value>Open URL</value>
+  </data>
+  <data name="Text_UrlHeader" xml:space="preserve">
+    <value>HTTP or HTTPS media URL</value>
+  </data>
+  <data name="Text_InvalidUrl" xml:space="preserve">
+    <value>Enter an HTTP or HTTPS media URL.</value>
+  </data>
+  <data name="Text_Initializing" xml:space="preserve">
+    <value>Initializing player...</value>
+  </data>
+  <data name="Text_Buffering" xml:space="preserve">
+    <value>Buffering...</value>
+  </data>
+  <data name="Text_Seeking" xml:space="preserve">
+    <value>Seeking...</value>
+  </data>
+  <data name="Text_Ended" xml:space="preserve">
+    <value>Playback ended</value>
+  </data>
+  <data name="Text_Paused" xml:space="preserve">
+    <value>Paused</value>
+  </data>
+  <data name="Text_Playing" xml:space="preserve">
+    <value>Playing</value>
+  </data>
+  <data name="Text_OpenError" xml:space="preserve">
+    <value>Could not open the file picker</value>
+  </data>
+  <data name="Text_OperationError" xml:space="preserve">
+    <value>The operation failed</value>
+  </data>
+  <data name="Text_PauseError" xml:space="preserve">
+    <value>Could not change playback state</value>
+  </data>
+  <data name="Text_ErrorFormat" xml:space="preserve">
+    <value>{0} (0x{1:X8}). See the log folder for details.</value>
+  </data>
+  <data name="Text_ScreenshotSaved" xml:space="preserve">
+    <value>Screenshot saved: {0}</value>
+  </data>
+  <data name="Text_SpeedFormat" xml:space="preserve">
+    <value>Speed ({0:0.##}x)</value>
+  </data>
+  <data name="Text_Mute" xml:space="preserve">
+    <value>Mute</value>
+  </data>
+  <data name="Text_Unmute" xml:space="preserve">
+    <value>Unmute</value>
+  </data>
+  <data name="VolumeMenu.Text" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="VolumeUp.Text" xml:space="preserve">
+    <value>Increase volume</value>
+  </data>
+  <data name="VolumeDown.Text" xml:space="preserve">
+    <value>Decrease volume</value>
+  </data>
+  <data name="MuteMenu.Text" xml:space="preserve">
+    <value>Mute / Unmute</value>
+  </data>
+  <data name="OscPositionMenu.Text" xml:space="preserve">
+    <value>Control bar</value>
+  </data>
+  <data name="FloatingOscOption.Text" xml:space="preserve">
+    <value>Floating</value>
+  </data>
+  <data name="TopOscOption.Text" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="BottomOscOption.Text" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="EdgeToEdgeOption.Text" xml:space="preserve">
+    <value>Edge-to-edge video</value>
+  </data>
+  <data name="DockControlsOption.Text" xml:space="preserve">
+    <value>Dock controls</value>
+  </data>
+  <data name="Text_OsdPause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="Text_OsdResume" xml:space="preserve">
+    <value>Resume</value>
+  </data>
+  <data name="Text_OsdVolume" xml:space="preserve">
+    <value>Volume: {0:0}</value>
+  </data>
+  <data name="Text_OsdSpeed" xml:space="preserve">
+    <value>Speed: {0:0.######}x</value>
+  </data>
+  <data name="Text_OsdMute" xml:space="preserve">
+    <value>Mute</value>
+  </data>
+  <data name="Text_OsdUnmute" xml:space="preserve">
+    <value>Unmute</value>
+  </data>
+  <data name="Text_OsdStop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="SeekBackMenu.Text" xml:space="preserve">
+    <value>Seek backward 5 seconds</value>
+  </data>
+  <data name="SeekForwardMenu.Text" xml:space="preserve">
+    <value>Seek forward 5 seconds</value>
+  </data>
+  <data name="WindowMenu.Text" xml:space="preserve">
+    <value>Window</value>
+  </data>
+  <data name="WindowSizeMenu.Text" xml:space="preserve">
+    <value>Set size</value>
+  </data>
+  <data name="LockWindowAspect.Text" xml:space="preserve">
+    <value>Lock video aspect ratio</value>
+  </data>
+  <data name="PhysicalWindowSize.Text" xml:space="preserve">
+    <value>Use physical resolution</value>
+  </data>
+  <data name="ResizeTimingMenu.Text" xml:space="preserve">
+    <value>Automatically resize</value>
+  </data>
+  <data name="OpeningSizeMenu.Text" xml:space="preserve">
+    <value>Size when opening</value>
+  </data>
+  <data name="WindowScale0.Text" xml:space="preserve">
+    <value>Fit to screen</value>
+  </data>
+  <data name="WindowScale1.Text" xml:space="preserve">
+    <value>Half size</value>
+  </data>
+  <data name="WindowScale2.Text" xml:space="preserve">
+    <value>Normal size</value>
+  </data>
+  <data name="WindowScale3.Text" xml:space="preserve">
+    <value>1.5× size</value>
+  </data>
+  <data name="WindowScale4.Text" xml:space="preserve">
+    <value>Double size</value>
+  </data>
+  <data name="ResizeTiming0.Text" xml:space="preserve">
+    <value>Always</value>
+  </data>
+  <data name="ResizeTiming1.Text" xml:space="preserve">
+    <value>Only when opening</value>
+  </data>
+  <data name="ResizeTiming2.Text" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="LayoutMenu.Text" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="LayoutSidebar.AutomationProperties.Name" xml:space="preserve">
+    <value>Quick settings</value>
+  </data>
+  <data name="LayoutHeading.Text" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="SidebarClose.AutomationProperties.Name" xml:space="preserve">
+    <value>Close settings</value>
+  </data>
+  <data name="SidebarClose.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Close settings</value>
+  </data>
+  <data name="LayoutVideoHeading.Text" xml:space="preserve">
+    <value>Video area</value>
+  </data>
+  <data name="LayoutEdge.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Edge-to-edge video</value>
+  </data>
+  <data name="LayoutLock.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Lock video aspect ratio</value>
+  </data>
+  <data name="LayoutDock.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Dock controls</value>
+  </data>
+  <data name="FitVideoButton.Content" xml:space="preserve">
+    <value>Fit window to video</value>
+  </data>
+  <data name="LayoutOscMode.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Control bar</value>
+  </data>
+  <data name="LayoutFloating.Content" xml:space="preserve">
+    <value>Floating</value>
+  </data>
+  <data name="LayoutTop.Content" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="LayoutBottom.Content" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="LayoutSide.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Settings sidebar position</value>
+  </data>
+  <data name="LayoutLeft.Content" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="LayoutRight.Content" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="LayoutWidthHeading.Text" xml:space="preserve">
+    <value>Sidebar width</value>
+  </data>
+  <data name="LayoutWidthSlider.AutomationProperties.Name" xml:space="preserve">
+    <value>Sidebar width</value>
+  </data>
+  <data name="AlwaysOnTopOption.Text" xml:space="preserve">
+    <value>Always on top</value>
+  </data>
+  <data name="FloatWhilePlayingOption.Text" xml:space="preserve">
+    <value>Always float on top while playing</value>
+  </data>
+  <data name="Text_PictureInPicture" xml:space="preserve">
+    <value>Picture in picture</value>
+  </data>
+  <data name="Text_ReturnToMainWindow" xml:space="preserve">
+    <value>Return to main window</value>
+  </data>
+  <data name="PipReturnButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Return to main window</value>
+  </data>
+  <data name="PipReturnButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Return to main window</value>
+  </data>
+  <data name="NewWindowMenu.Text" xml:space="preserve">
+    <value>New window</value>
+  </data>
+  <data name="SwitchWindowMenu.Text" xml:space="preserve">
+    <value>Switch window</value>
+  </data>
+  <data name="CloseWindowMenu.Text" xml:space="preserve">
+    <value>Close window</value>
+  </data>
+  <data name="ExitMenu.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Text_MusicMode" xml:space="preserve">
+    <value>Music mode</value>
+  </data>
+  <data name="Text_ExitMusicMode" xml:space="preserve">
+    <value>Return to main window</value>
+  </data>
+  <data name="Text_HideMusicArtwork" xml:space="preserve">
+    <value>Hide artwork / video</value>
+  </data>
+  <data name="Text_ShowMusicArtwork" xml:space="preserve">
+    <value>Show artwork / video</value>
+  </data>
+  <data name="Text_MusicVolumeFormat" xml:space="preserve">
+    <value>Volume: {0:0}</value>
+  </data>
+  <data name="AutomaticMusicOption.Text" xml:space="preserve">
+    <value>Switch to music mode for audio</value>
+  </data>
+  <data name="MusicArtworkOption.Text" xml:space="preserve">
+    <value>Show artwork / video</value>
+  </data>
+  <data name="MusicReturnButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Return to main window</value>
+  </data>
+  <data name="MusicReturnButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Return to main window</value>
+  </data>
+  <data name="MusicVolumeButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="MusicVolumeButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="MusicArtworkButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Hide artwork / video</value>
+  </data>
+  <data name="MusicBar.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Music controls</value>
+  </data>
+  <data name="InterfaceMenu.Text" xml:space="preserve">
+    <value>Interface…</value>
+  </data>
+  <data name="Text_InterfaceTitle" xml:space="preserve">
+    <value>Interface</value>
+  </data>
+  <data name="Text_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="Text_InterfaceControlBar" xml:space="preserve">
+    <value>Control bar</value>
+  </data>
+  <data name="Text_ControlAutoHide" xml:space="preserve">
+    <value>Automatically hide controls</value>
+  </data>
+  <data name="Text_ControlHideDelay" xml:space="preserve">
+    <value>Hide after (seconds)</value>
+  </data>
+  <data name="Text_InterfaceOsd" xml:space="preserve">
+    <value>On-screen display</value>
+  </data>
+  <data name="Text_OsdEnabled" xml:space="preserve">
+    <value>Show on-screen messages</value>
+  </data>
+  <data name="Text_OsdHideDelay" xml:space="preserve">
+    <value>Message duration (seconds)</value>
+  </data>
+  <data name="Text_OsdTextSize" xml:space="preserve">
+    <value>Text size</value>
+  </data>
+  <data name="Text_OsdSuppress" xml:space="preserve">
+    <value>Suppress messages</value>
+  </data>
+  <data name="Text_OsdSuppressFile" xml:space="preserve">
+    <value>File start</value>
+  </data>
+  <data name="Text_OsdSuppressPause" xml:space="preserve">
+    <value>Pause / Resume</value>
+  </data>
+  <data name="Text_OsdSuppressSeek" xml:space="preserve">
+    <value>Seek</value>
+  </data>
+  <data name="Text_OsdSuppressSpeed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="QuickSettingsMenu.Text" xml:space="preserve">
+    <value>Quick settings…</value>
+  </data>
+  <data name="QuickPage.AutomationProperties.Name" xml:space="preserve">
+    <value>Settings page</value>
+  </data>
+  <data name="QuickLayout.Content" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="QuickVideo.Content" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="QuickAudio.Content" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="QuickSubtitles.Content" xml:space="preserve">
+    <value>Subtitles</value>
+  </data>
+  <data name="QuickVideoTrack.Header" xml:space="preserve">
+    <value>Video track</value>
+  </data>
+  <data name="QuickAudioTrack.Header" xml:space="preserve">
+    <value>Audio track</value>
+  </data>
+  <data name="QuickPrimaryTrack.Header" xml:space="preserve">
+    <value>Primary subtitle</value>
+  </data>
+  <data name="QuickSecondaryTrack.Header" xml:space="preserve">
+    <value>Secondary subtitle</value>
+  </data>
+  <data name="QuickSpeed.Header" xml:space="preserve">
+    <value>Playback speed</value>
+  </data>
+  <data name="QuickSpeedSlider.AutomationProperties.Name" xml:space="preserve">
+    <value>Playback speed steps</value>
+  </data>
+  <data name="QuickResetSpeed.Content" xml:space="preserve">
+    <value>Reset speed</value>
+  </data>
+  <data name="QuickResetDelay.Content" xml:space="preserve">
+    <value>Reset delay</value>
+  </data>
+  <data name="QuickAudioDelay.Header" xml:space="preserve">
+    <value>Audio delay (seconds)</value>
+  </data>
+  <data name="QuickPrimaryDelay.Header" xml:space="preserve">
+    <value>Primary delay (seconds)</value>
+  </data>
+  <data name="QuickSecondaryDelay.Header" xml:space="preserve">
+    <value>Secondary delay (seconds)</value>
+  </data>
+  <data name="QuickPrimaryVisible.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Show primary subtitle</value>
+  </data>
+  <data name="QuickSecondaryVisible.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Show secondary subtitle</value>
+  </data>
+  <data name="Text_TrackNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Text_TrackNoTitle" xml:space="preserve">
+    <value>No Title</value>
+  </data>
+  <data name="Text_TrackDefault" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="QuickAudioDelaySlider.AutomationProperties.Name" xml:space="preserve">
+    <value>Audio delay slider (seconds)</value>
+  </data>
+  <data name="QuickAudioDelaySlider.AutomationProperties.HelpText" xml:space="preserve">
+    <value>Range -5 to +5 seconds. Drag to preview, release to apply.</value>
+  </data>
+  <data name="QuickPrimaryDelaySlider.AutomationProperties.Name" xml:space="preserve">
+    <value>Primary subtitle delay slider (seconds)</value>
+  </data>
+  <data name="QuickPrimaryDelaySlider.AutomationProperties.HelpText" xml:space="preserve">
+    <value>Range -5 to +5 seconds. Drag to preview, release to apply.</value>
+  </data>
+  <data name="QuickSecondaryDelaySlider.AutomationProperties.Name" xml:space="preserve">
+    <value>Secondary subtitle delay slider (seconds)</value>
+  </data>
+  <data name="QuickSecondaryDelaySlider.AutomationProperties.HelpText" xml:space="preserve">
+    <value>Range -5 to +5 seconds. Drag to preview, release to apply.</value>
+  </data>
+  <data name="DelayScaleMinimum.Text" xml:space="preserve">
+    <value>-5s</value>
+  </data>
+  <data name="DelayScaleZero.Text" xml:space="preserve">
+    <value>0s</value>
+  </data>
+  <data name="DelayScaleMaximum.Text" xml:space="preserve">
+    <value>+5s</value>
+  </data>
+  <data name="Text_SubtitleUsedBySecondary" xml:space="preserve">
+    <value>Track #{0} is already selected as the secondary subtitle. Select None or a different secondary track first.</value>
+  </data>
+  <data name="Text_SubtitleUsedByPrimary" xml:space="preserve">
+    <value>Track #{0} is already selected as the primary subtitle. Select None or a different primary track first.</value>
+  </data>
+  <data name="Text_OsdTrackNone" xml:space="preserve">
+    <value>&lt;None&gt;</value>
+  </data>
+  <data name="Text_OsdVideoTrack" xml:space="preserve">
+    <value>Video: {0}</value>
+  </data>
+  <data name="Text_OsdAudioTrack" xml:space="preserve">
+    <value>Audio: {0}</value>
+  </data>
+  <data name="Text_OsdSubtitleTrack" xml:space="preserve">
+    <value>Subtitle: {0}</value>
+  </data>
+  <data name="Text_OsdAudioDelayNone" xml:space="preserve">
+    <value>Audio Delay: No Delay</value>
+  </data>
+  <data name="Text_OsdAudioDelayLater" xml:space="preserve">
+    <value>Audio Delay: {0}s Later</value>
+  </data>
+  <data name="Text_OsdAudioDelayEarlier" xml:space="preserve">
+    <value>Audio Delay: {0}s Earlier</value>
+  </data>
+  <data name="Text_OsdSubDelayNone" xml:space="preserve">
+    <value>Subtitle Delay: No Delay</value>
+  </data>
+  <data name="Text_OsdSubDelayLater" xml:space="preserve">
+    <value>Subtitle Delay: {0}s Later</value>
+  </data>
+  <data name="Text_OsdSubDelayEarlier" xml:space="preserve">
+    <value>Subtitle Delay: {0}s Earlier</value>
+  </data>
+  <data name="Text_OsdSecondarySubDelayNone" xml:space="preserve">
+    <value>Secondary Subtitle Delay: No Delay</value>
+  </data>
+  <data name="Text_OsdSecondarySubDelayLater" xml:space="preserve">
+    <value>Secondary Subtitle Delay: {0}s Later</value>
+  </data>
+  <data name="Text_OsdSecondarySubDelayEarlier" xml:space="preserve">
+    <value>Secondary Subtitle Delay: {0}s Earlier</value>
+  </data>
+  <data name="Text_OsdSubHidden" xml:space="preserve">
+    <value>Subtitles Hidden</value>
+  </data>
+  <data name="Text_OsdSubVisible" xml:space="preserve">
+    <value>Subtitles Visible</value>
+  </data>
+  <data name="Text_OsdSecondarySubHidden" xml:space="preserve">
+    <value>Secondary Subtitles Hidden</value>
+  </data>
+  <data name="Text_OsdSecondarySubVisible" xml:space="preserve">
+    <value>Secondary Subtitles Visible</value>
+  </data>
+  <data name="Text_OsdAbLoopA" xml:space="preserve">
+    <value>AB-Loop: A</value>
+  </data>
+  <data name="Text_OsdAbLoopB" xml:space="preserve">
+    <value>AB-Loop: B</value>
+  </data>
+  <data name="Text_OsdAbLoopClear" xml:space="preserve">
+    <value>AB-Loop: Cleared</value>
+  </data>
+  <data name="Text_OsdFileLoop" xml:space="preserve">
+    <value>Loop Single File</value>
+  </data>
+  <data name="Text_OsdPlaylistLoop" xml:space="preserve">
+    <value>Loop Playlist</value>
+  </data>
+  <data name="Text_OsdLoopOff" xml:space="preserve">
+    <value>Disable Looping</value>
+  </data>
+  <data name="Text_OsdScreenshot" xml:space="preserve">
+    <value>Screenshot Captured</value>
+  </data>
+  <data name="SmallerWindowMenu.Text" xml:space="preserve">
+    <value>Smaller size</value>
+  </data>
+  <data name="BiggerWindowMenu.Text" xml:space="preserve">
+    <value>Bigger size</value>
+  </data>
+  <data name="RevealFileMenu.Text" xml:space="preserve">
+    <value>Show in File Explorer</value>
+  </data>
+  <data name="Text_RevealFileError" xml:space="preserve">
+    <value>Unable to show file</value>
+  </data>
+  <data name="Text_RevealFileHint" xml:space="preserve">
+    <value>Check that the file still exists and its location is available.</value>
+  </data>
+  <data name="LayoutEdgeLabel.Text" xml:space="preserve">
+    <value>Edge-to-edge video</value>
+  </data>
+  <data name="LayoutLockLabel.Text" xml:space="preserve">
+    <value>Lock video aspect ratio</value>
+  </data>
+  <data name="LayoutDockLabel.Text" xml:space="preserve">
+    <value>Dock controls</value>
+  </data>
+  <data name="QuickPrimaryVisibleLabel.Text" xml:space="preserve">
+    <value>Show primary subtitle</value>
+  </data>
+  <data name="QuickSecondaryVisibleLabel.Text" xml:space="preserve">
+    <value>Show secondary subtitle</value>
+  </data>
+  <data name="ControlBarHeading.Text" xml:space="preserve">
+    <value>On Screen Controller</value>
+  </data>
+  <data name="SidebarPositionHeading.Text" xml:space="preserve">
+    <value>Settings Sidebar Position</value>
+  </data>
+  <data name="SideLeft.Content" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="SideRight.Content" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="TabLayout.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="TabLayout.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="TabLayoutLabel.Text" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="TabVideo.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="TabVideo.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="TabVideoLabel.Text" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="TabAudio.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="TabAudio.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="TabAudioLabel.Text" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="TabSubtitles.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Subtitles</value>
+  </data>
+  <data name="TabSubtitles.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Subtitles</value>
+  </data>
+  <data name="TabSubtitlesLabel.Text" xml:space="preserve">
+    <value>Subtitles</value>
+  </data>
+  <data name="ModeFloating.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Floating</value>
+  </data>
+  <data name="ModeFloating.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Floating</value>
+  </data>
+  <data name="ModeFloatingLabel.Text" xml:space="preserve">
+    <value>Floating</value>
+  </data>
+  <data name="ModeTop.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="ModeTop.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="ModeTopLabel.Text" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="ModeBottom.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="ModeBottom.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="ModeBottomLabel.Text" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="PipToolbarButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Picture in picture</value>
+  </data>
+  <data name="PipToolbarButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Picture in picture</value>
+  </data>
+  <data name="SettingsToolbarButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Quick settings</value>
+  </data>
+  <data name="SettingsToolbarButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Quick settings</value>
+  </data>
+  <data name="FileMenu.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="PlaybackMenu.Text" xml:space="preserve">
+    <value>Playback</value>
+  </data>
+  <data name="VideoMenu.Text" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="AudioMenu.Text" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="LoopMenu.Text" xml:space="preserve">
+    <value>Loop</value>
+  </data>
+  <data name="VideoSettingsMenu.Text" xml:space="preserve">
+    <value>Video settings…</value>
+  </data>
+  <data name="AudioSettingsMenu.Text" xml:space="preserve">
+    <value>Audio settings…</value>
+  </data>
+  <data name="SubtitlesSettingsMenu.Text" xml:space="preserve">
+    <value>Subtitles…</value>
+  </data>
+  <data name="SettingsMenu.Text" xml:space="preserve">
+    <value>Settings…</value>
+  </data>
+  <data name="Text_SettingsTitle" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Text_SettingsCategory" xml:space="preserve">
+    <value>Settings category</value>
+  </data>
+  <data name="Text_SettingsGeneral" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Text_SettingsWindow" xml:space="preserve">
+    <value>Window</value>
+  </data>
+  <data name="Text_SettingsInterface" xml:space="preserve">
+    <value>Interface</value>
+  </data>
+  <data name="Text_SettingsOpening" xml:space="preserve">
+    <value>When media opens</value>
+  </data>
+  <data name="Text_PauseWhenOpen" xml:space="preserve">
+    <value>Pause playback when opening media</value>
+  </data>
+  <data name="Text_AutomaticMusic" xml:space="preserve">
+    <value>Automatically switch to music mode for audio</value>
+  </data>
+  <data name="Text_SettingsWindowBehavior" xml:space="preserve">
+    <value>Window behavior</value>
+  </data>
+  <data name="Text_SettingsWindowSize" xml:space="preserve">
+    <value>Window size</value>
+  </data>
+  <data name="Text_FloatWhilePlaying" xml:space="preserve">
+    <value>Keep the window on top while playing</value>
+  </data>
+  <data name="Text_PhysicalResolution" xml:space="preserve">
+    <value>Use physical pixels for video size</value>
+  </data>
+  <data name="Text_ResizeTiming" xml:space="preserve">
+    <value>Automatically resize the window</value>
+  </data>
+  <data name="Text_OpeningSize" xml:space="preserve">
+    <value>Size when opening media</value>
+  </data>
+  <data name="Text_ResizeAlways" xml:space="preserve">
+    <value>Always</value>
+  </data>
+  <data name="Text_ResizeWhenOpening" xml:space="preserve">
+    <value>Only when opening</value>
+  </data>
+  <data name="Text_ResizeNever" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="Text_SizeFitScreen" xml:space="preserve">
+    <value>Fit to screen</value>
+  </data>
+  <data name="Text_SizeHalf" xml:space="preserve">
+    <value>Half size</value>
+  </data>
+  <data name="Text_SizeNormal" xml:space="preserve">
+    <value>Normal size</value>
+  </data>
+  <data name="Text_SizeOneAndHalf" xml:space="preserve">
+    <value>1.5× size</value>
+  </data>
+  <data name="Text_SizeDouble" xml:space="preserve">
+    <value>Double size</value>
+  </data>
+  <data name="Text_Static103" xml:space="preserve">
+    <value>Video area</value>
+  </data>
+  <data name="Text_Static104" xml:space="preserve">
+    <value>Open file</value>
+  </data>
+  <data name="Text_Static105" xml:space="preserve">
+    <value>Open media file</value>
+  </data>
+  <data name="Text_Static106" xml:space="preserve">
+    <value>Cancel opening</value>
+  </data>
+  <data name="Text_Static107" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="Text_Static108" xml:space="preserve">
+    <value>Drag to move controls</value>
+  </data>
+  <data name="Text_Static109" xml:space="preserve">
+    <value>Mute / Unmute</value>
+  </data>
+  <data name="Text_Static110" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Text_Static111" xml:space="preserve">
+    <value>Back 5 seconds</value>
+  </data>
+  <data name="Text_Static112" xml:space="preserve">
+    <value>Forward 5 seconds</value>
+  </data>
+  <data name="Text_Static113" xml:space="preserve">
+    <value>Fullscreen (F11)</value>
+  </data>
+  <data name="Text_Static114" xml:space="preserve">
+    <value>Quick settings</value>
+  </data>
+  <data name="Text_Static115" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Text_Static116" xml:space="preserve">
+    <value>Open file...</value>
+  </data>
+  <data name="Text_Static117" xml:space="preserve">
+    <value>Open URL...</value>
+  </data>
+  <data name="Text_Static118" xml:space="preserve">
+    <value>Show in File Explorer</value>
+  </data>
+  <data name="Text_Static119" xml:space="preserve">
+    <value>New window</value>
+  </data>
+  <data name="Text_Static120" xml:space="preserve">
+    <value>Close window</value>
+  </data>
+  <data name="Text_Static121" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Text_Static122" xml:space="preserve">
+    <value>Playback</value>
+  </data>
+  <data name="Text_Static123" xml:space="preserve">
+    <value>Seek backward 5 seconds</value>
+  </data>
+  <data name="Text_Static124" xml:space="preserve">
+    <value>Seek forward 5 seconds</value>
+  </data>
+  <data name="Text_Static125" xml:space="preserve">
+    <value>Previous frame</value>
+  </data>
+  <data name="Text_Static126" xml:space="preserve">
+    <value>Next frame</value>
+  </data>
+  <data name="Text_Static127" xml:space="preserve">
+    <value>0.5x</value>
+  </data>
+  <data name="Text_Static128" xml:space="preserve">
+    <value>1x</value>
+  </data>
+  <data name="Text_Static129" xml:space="preserve">
+    <value>2x</value>
+  </data>
+  <data name="Text_Static130" xml:space="preserve">
+    <value>Loop</value>
+  </data>
+  <data name="Text_Static131" xml:space="preserve">
+    <value>Loop current file</value>
+  </data>
+  <data name="Text_Static132" xml:space="preserve">
+    <value>A-B loop: Set A / Set B / Clear</value>
+  </data>
+  <data name="Text_Static133" xml:space="preserve">
+    <value>Turn off looping</value>
+  </data>
+  <data name="Text_Static134" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="Text_Static135" xml:space="preserve">
+    <value>Video settings…</value>
+  </data>
+  <data name="Text_Static136" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="Text_Static137" xml:space="preserve">
+    <value>Floating</value>
+  </data>
+  <data name="Text_Static138" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="Text_Static139" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="Text_Static140" xml:space="preserve">
+    <value>Edge-to-edge video</value>
+  </data>
+  <data name="Text_Static141" xml:space="preserve">
+    <value>Dock controls</value>
+  </data>
+  <data name="Text_Static142" xml:space="preserve">
+    <value>Reset control position</value>
+  </data>
+  <data name="Text_Static143" xml:space="preserve">
+    <value>Set size</value>
+  </data>
+  <data name="Text_Static144" xml:space="preserve">
+    <value>Smaller size</value>
+  </data>
+  <data name="Text_Static145" xml:space="preserve">
+    <value>Bigger size</value>
+  </data>
+  <data name="Text_Static146" xml:space="preserve">
+    <value>Lock video aspect ratio</value>
+  </data>
+  <data name="Text_Static147" xml:space="preserve">
+    <value>Fullscreen</value>
+  </data>
+  <data name="Text_Static148" xml:space="preserve">
+    <value>Save screenshot</value>
+  </data>
+  <data name="Text_Static149" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="Text_Static150" xml:space="preserve">
+    <value>Audio settings…</value>
+  </data>
+  <data name="Text_Static151" xml:space="preserve">
+    <value>Increase volume</value>
+  </data>
+  <data name="Text_Static152" xml:space="preserve">
+    <value>Decrease volume</value>
+  </data>
+  <data name="Text_Static153" xml:space="preserve">
+    <value>Subtitles…</value>
+  </data>
+  <data name="Text_Static154" xml:space="preserve">
+    <value>Switch window</value>
+  </data>
+  <data name="Text_Static155" xml:space="preserve">
+    <value>Always on top</value>
+  </data>
+  <data name="Text_Static156" xml:space="preserve">
+    <value>Playback info</value>
+  </data>
+  <data name="Text_Static157" xml:space="preserve">
+    <value>Settings…</value>
+  </data>
+  <data name="Text_Static158" xml:space="preserve">
+    <value>About Mani</value>
+  </data>
+  <data name="Text_Static159" xml:space="preserve">
+    <value>Playback position</value>
+  </data>
+  <data name="Text_Static160" xml:space="preserve">
+    <value>Music controls</value>
+  </data>
+  <data name="Text_Static161" xml:space="preserve">
+    <value>Close settings</value>
+  </data>
+  <data name="Text_Static162" xml:space="preserve">
+    <value>Settings page</value>
+  </data>
+  <data name="Text_Static163" xml:space="preserve">
+    <value>Subtitles</value>
+  </data>
+  <data name="Text_Static164" xml:space="preserve">
+    <value>Fit window to video</value>
+  </data>
+  <data name="Text_Static165" xml:space="preserve">
+    <value>On Screen Controller</value>
+  </data>
+  <data name="Text_Static166" xml:space="preserve">
+    <value>Settings Sidebar Position</value>
+  </data>
+  <data name="Text_Static167" xml:space="preserve">
+    <value>Settings sidebar position</value>
+  </data>
+  <data name="Text_Static168" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Text_Static169" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Text_Static170" xml:space="preserve">
+    <value>Sidebar width</value>
+  </data>
+  <data name="Text_Static171" xml:space="preserve">
+    <value>Video track</value>
+  </data>
+  <data name="Text_Static172" xml:space="preserve">
+    <value>Playback speed</value>
+  </data>
+  <data name="Text_Static173" xml:space="preserve">
+    <value>Playback speed steps</value>
+  </data>
+  <data name="Text_Static174" xml:space="preserve">
+    <value>Reset speed</value>
+  </data>
+  <data name="Text_Static175" xml:space="preserve">
+    <value>Audio track</value>
+  </data>
+  <data name="Text_Static176" xml:space="preserve">
+    <value>Audio delay (seconds)</value>
+  </data>
+  <data name="Text_Static177" xml:space="preserve">
+    <value>Audio delay slider (seconds)</value>
+  </data>
+  <data name="Text_Static178" xml:space="preserve">
+    <value>Range -5 to +5 seconds. Drag to preview, release to apply.</value>
+  </data>
+  <data name="Text_Static179" xml:space="preserve">
+    <value>-5s</value>
+  </data>
+  <data name="Text_Static180" xml:space="preserve">
+    <value>0s</value>
+  </data>
+  <data name="Text_Static181" xml:space="preserve">
+    <value>+5s</value>
+  </data>
+  <data name="Text_Static182" xml:space="preserve">
+    <value>Reset delay</value>
+  </data>
+  <data name="Text_Static183" xml:space="preserve">
+    <value>Primary subtitle</value>
+  </data>
+  <data name="Text_Static184" xml:space="preserve">
+    <value>Show primary subtitle</value>
+  </data>
+  <data name="Text_Static185" xml:space="preserve">
+    <value>Primary delay (seconds)</value>
+  </data>
+  <data name="Text_Static186" xml:space="preserve">
+    <value>Primary subtitle delay slider (seconds)</value>
+  </data>
+  <data name="Text_Static187" xml:space="preserve">
+    <value>Secondary subtitle</value>
+  </data>
+  <data name="Text_Static188" xml:space="preserve">
+    <value>Show secondary subtitle</value>
+  </data>
+  <data name="Text_Static189" xml:space="preserve">
+    <value>Secondary delay (seconds)</value>
+  </data>
+  <data name="Text_Static190" xml:space="preserve">
+    <value>Secondary subtitle delay slider (seconds)</value>
+  </data>
+  <data name="Text_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Text_LanguageEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Text_LanguageChinese" xml:space="preserve">
+    <value>简体中文</value>
+  </data>
+  <data name="Text_Playlist" xml:space="preserve">
+    <value>Playlist</value>
+  </data>
+  <data name="Text_Chapters" xml:space="preserve">
+    <value>Chapters</value>
+  </data>
+  <data name="Text_History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="Text_OpenFolder" xml:space="preserve">
+    <value>Open folder…</value>
+  </data>
+  <data name="Text_AddFiles" xml:space="preserve">
+    <value>Add files…</value>
+  </data>
+  <data name="Text_Remove" xml:space="preserve">
+    <value>Remove selected</value>
+  </data>
+  <data name="Text_ClearPlaylist" xml:space="preserve">
+    <value>Clear playlist (keep playing item)</value>
+  </data>
+  <data name="Text_Shuffle" xml:space="preserve">
+    <value>Shuffle / Restore order</value>
+  </data>
+  <data name="Text_SortName" xml:space="preserve">
+    <value>Sort by filename</value>
+  </data>
+  <data name="Text_SortPath" xml:space="preserve">
+    <value>File path ascending</value>
+  </data>
+  <data name="Text_SortDescending" xml:space="preserve">
+    <value>Filename descending</value>
+  </data>
+  <data name="Text_PreviousItem" xml:space="preserve">
+    <value>Previous item</value>
+  </data>
+  <data name="Text_NextItem" xml:space="preserve">
+    <value>Next item</value>
+  </data>
+  <data name="Text_PreviousChapter" xml:space="preserve">
+    <value>Previous chapter</value>
+  </data>
+  <data name="Text_NextChapter" xml:space="preserve">
+    <value>Next chapter</value>
+  </data>
+  <data name="Text_Edition" xml:space="preserve">
+    <value>Edition</value>
+  </data>
+  <data name="Text_EditionFormat" xml:space="preserve">
+    <value>Edition {0}</value>
+  </data>
+  <data name="Text_ChapterFormat" xml:space="preserve">
+    <value>Chapter {0}</value>
+  </data>
+  <data name="Text_NoChapters" xml:space="preserve">
+    <value>No chapters</value>
+  </data>
+  <data name="Text_NoPlaylist" xml:space="preserve">
+    <value>Add files to build a playlist.</value>
+  </data>
+  <data name="Text_NoPlayableFiles" xml:space="preserve">
+    <value>No playable files were found.</value>
+  </data>
+  <data name="Text_PlayingMarker" xml:space="preserve">
+    <value>Playing</value>
+  </data>
+  <data name="Text_MoveUp" xml:space="preserve">
+    <value>Move up</value>
+  </data>
+  <data name="Text_MoveDown" xml:space="preserve">
+    <value>Move down</value>
+  </data>
+  <data name="Text_LoopPlaylist" xml:space="preserve">
+    <value>Loop playlist</value>
+  </data>
+  <data name="Text_RecentFiles" xml:space="preserve">
+    <value>Recent files</value>
+  </data>
+  <data name="Text_ClearHistory" xml:space="preserve">
+    <value>Clear history</value>
+  </data>
+  <data name="Text_ResumeLast" xml:space="preserve">
+    <value>Resume last playback</value>
+  </data>
+  <data name="Text_MissingFile" xml:space="preserve">
+    <value>File is missing or has moved.</value>
+  </data>
+  <data name="Text_HistoryEmpty" xml:space="preserve">
+    <value>No playback history.</value>
+  </data>
+  <data name="Text_HistoryClearConfirm" xml:space="preserve">
+    <value>Clear all playback history?</value>
+  </data>
+  <data name="Text_RecordHistory" xml:space="preserve">
+    <value>Save playback history</value>
+  </data>
+  <data name="Text_ResumePosition" xml:space="preserve">
+    <value>Resume last playback position</value>
+  </data>
+  <data name="Text_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Text_LicenseError" xml:space="preserve">
+    <value>Could not display license information</value>
+  </data>
+  <data name="Text_About" xml:space="preserve">
+    <value>About Mani</value>
+  </data>
+  <data name="Text_PlaybackInfoFormat" xml:space="preserve">
+    <value>{0}
+
+Video output: {1}
+Hardware decoder: {2}
+Format: {3}
+Primaries: {4}
+Transfer: {5}
+Dropped frames: {6}
+Audio output: {7}
+Audio device: {8}
+Audio buffer: {9}
+A/V sync: {10}
+Buffering: {11}
+Volume: {12:F0}%
+Panel: {13:F0} x {14:F0} DIP
+Scale: {15:F2}
+
+{16}</value>
+  </data>
+  <data name="Text_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Text_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Text_SortPathDescending" xml:space="preserve">
+    <value>File path descending</value>
+  </data>
+  <data name="Text_OpenLogFolder" xml:space="preserve">
+    <value>Open log folder</value>
+  </data>
+  <data name="Text_ShowChapterPositions" xml:space="preserve"><value>Show chapter position in progress bar</value></data>
+  <data name="Text_HistorySearch" xml:space="preserve"><value>Search history</value></data>
+  <data name="Text_HistorySearchIn" xml:space="preserve"><value>Search in</value></data>
+  <data name="Text_HistoryFullPath" xml:space="preserve"><value>Full Path</value></data>
+  <data name="Text_HistoryFilename" xml:space="preserve"><value>Filename</value></data>
+  <data name="Text_HistoryGroupBy" xml:space="preserve"><value>Group By</value></data>
+  <data name="Text_HistoryDate" xml:space="preserve"><value>Date</value></data>
+  <data name="Text_HistoryLocation" xml:space="preserve"><value>Folder and Website</value></data>
+  <data name="Text_HistoryNoResults" xml:space="preserve"><value>No matching history</value></data>
+  <data name="Text_SavePlaylist" xml:space="preserve"><value>Save Current Playlist…</value></data>
+  <data name="Text_SavePlaylistError" xml:space="preserve"><value>Could not save the playlist.</value></data>
+  <data name="Text_ThumbnailPreview" xml:space="preserve"><value>Thumbnail Preview</value></data>
+  <data name="Text_EnableThumbnailPreview" xml:space="preserve"><value>Enable thumbnail preview</value></data>
+  <data name="Text_ThumbnailCacheSize" xml:space="preserve"><value>{0:F1} MiB used · 500 MiB limit</value></data>
+  <data name="Text_ClearThumbnailCache" xml:space="preserve"><value>Clear Thumbnail Cache</value></data>
+  <data name="Text_ConfirmClearThumbnailCache" xml:space="preserve"><value>Confirm Clear Thumbnail Cache</value></data>
+  <data name="Text_AddFolder" xml:space="preserve"><value>Add Folder…</value></data>
+  <data name="Text_AddUrl" xml:space="preserve"><value>Add URL…</value></data>
+  <data name="Text_AddUrlTitle" xml:space="preserve"><value>Add URL</value></data>
+  <data name="Text_Add" xml:space="preserve"><value>Add</value></data>
+  <data name="Text_AddToPlaylist" xml:space="preserve"><value>Add to Playlist</value></data>
+  <data name="Text_SettingsUnavailable" xml:space="preserve"><value>Settings could not be loaded. Existing preferences are protected; restart after restoring a valid settings file.</value></data>
+  <data name="Text_SessionUnavailable" xml:space="preserve"><value>The playback session has stopped. Open a new window (Ctrl+N) to continue, then close this window.</value></data>
+  <data name="Text_M5Audio" xml:space="preserve"><value>Audio</value></data>
+  <data name="Text_M5Subtitles" xml:space="preserve"><value>Subtitles</value></data>
+  <data name="Text_M5GroupAudio" xml:space="preserve"><value>Audio output</value></data>
+  <data name="Text_M5GroupEqualizer" xml:space="preserve"><value>Equalizer</value></data>
+  <data name="Text_M5GroupSubtitleLoad" xml:space="preserve"><value>Subtitle loading</value></data>
+  <data name="Text_M5GroupSubtitleChannels" xml:space="preserve"><value>Primary / Secondary</value></data>
+  <data name="Text_M5GroupSubtitleStyle" xml:space="preserve"><value>Shared text-style defaults</value></data>
+  <data name="Text_M5MaximumVolume" xml:space="preserve"><value>Maximum volume (%)</value></data>
+  <data name="Text_M5AudioLanguage" xml:space="preserve"><value>Preferred audio languages (e.g. eng,zho)</value></data>
+  <data name="Text_M5AudioDevice" xml:space="preserve"><value>Preferred output device</value></data>
+  <data name="Text_M5SpdifAc3" xml:space="preserve"><value>AC3 passthrough</value></data>
+  <data name="Text_M5SpdifDts" xml:space="preserve"><value>DTS passthrough</value></data>
+  <data name="Text_M5SpdifDtsHd" xml:space="preserve"><value>DTS-HD passthrough</value></data>
+  <data name="Text_M5SpdifEac3" xml:space="preserve"><value>EAC3 passthrough</value></data>
+  <data name="Text_M5SpdifTrueHd" xml:space="preserve"><value>TrueHD passthrough</value></data>
+  <data name="Text_M5EqualizerEnabled" xml:space="preserve"><value>Enable equalizer</value></data>
+  <data name="Text_M5SubtitleMatching" xml:space="preserve"><value>Automatically load subtitles</value></data>
+  <data name="Text_M5SubtitleSearchPaths" xml:space="preserve"><value>Additional folders (; separated, ./* for subfolders)</value></data>
+  <data name="Text_M5SubtitlePriority" xml:space="preserve"><value>Filename priority words (comma separated)</value></data>
+  <data name="Text_M5SubtitleLanguage" xml:space="preserve"><value>Preferred subtitle languages (e.g. zho,eng)</value></data>
+  <data name="Text_M5SubtitleEncoding" xml:space="preserve"><value>Encoding (reloads external subtitles)</value></data>
+  <data name="Text_M5PrimaryOverride" xml:space="preserve"><value>Primary ASS override</value></data>
+  <data name="Text_M5SecondaryOverride" xml:space="preserve"><value>Secondary ASS override</value></data>
+  <data name="Text_M5PrimaryPosition" xml:space="preserve"><value>Primary vertical position (%)</value></data>
+  <data name="Text_M5SecondaryPosition" xml:space="preserve"><value>Secondary vertical position (%)</value></data>
+  <data name="Text_M5PrimaryScale" xml:space="preserve"><value>Primary scale</value></data>
+  <data name="Text_M5SecondaryScale" xml:space="preserve"><value>Secondary scale</value></data>
+  <data name="Text_M5Font" xml:space="preserve"><value>Font family</value></data>
+  <data name="Text_M5FontSize" xml:space="preserve"><value>Font size</value></data>
+  <data name="Text_M5Bold" xml:space="preserve"><value>Bold</value></data>
+  <data name="Text_M5Italic" xml:space="preserve"><value>Italic</value></data>
+  <data name="Text_M5TextColor" xml:space="preserve"><value>Text color (#AARRGGBB)</value></data>
+  <data name="Text_M5BorderStyle" xml:space="preserve"><value>Border style</value></data>
+  <data name="Text_M5BorderSize" xml:space="preserve"><value>Outline size</value></data>
+  <data name="Text_M5BorderColor" xml:space="preserve"><value>Outline color (#AARRGGBB)</value></data>
+  <data name="Text_M5ShadowOffset" xml:space="preserve"><value>Shadow offset</value></data>
+  <data name="Text_M5ShadowColor" xml:space="preserve"><value>Shadow / box color (#AARRGGBB)</value></data>
+  <data name="Text_M5Blur" xml:space="preserve"><value>Blur</value></data>
+  <data name="Text_M5Spacing" xml:space="preserve"><value>Character spacing</value></data>
+  <data name="Text_M5MarginX" xml:space="preserve"><value>Horizontal margin</value></data>
+  <data name="Text_M5MarginY" xml:space="preserve"><value>Vertical margin</value></data>
+  <data name="Text_M5AlignX" xml:space="preserve"><value>Horizontal alignment</value></data>
+  <data name="Text_M5AlignY" xml:space="preserve"><value>Vertical alignment</value></data>
+  <data name="Text_M5ScaleWithWindow" xml:space="preserve"><value>Scale subtitles with window</value></data>
+  <data name="Text_M5Letterbox" xml:space="preserve"><value>Display subtitles in letterboxes</value></data>
+  <data name="Text_M5LoadAudio" xml:space="preserve"><value>Load external audio…</value></data>
+  <data name="Text_M5LoadPrimary" xml:space="preserve"><value>Load primary subtitle…</value></data>
+  <data name="Text_M5LoadSecondary" xml:space="preserve"><value>Load secondary subtitle…</value></data>
+  <data name="Text_M5Reload" xml:space="preserve"><value>Reload external subtitles</value></data>
+  <data name="Text_M5RefreshDevices" xml:space="preserve"><value>Refresh devices</value></data>
+  <data name="Text_M5DefaultDevice" xml:space="preserve"><value>System default (automatic)</value></data>
+  <data name="Text_M5MissingDevice" xml:space="preserve"><value>Unavailable preference:</value></data>
+  <data name="Text_M5Auto" xml:space="preserve"><value>Automatic</value></data>
+  <data name="Text_M5Choiceno" xml:space="preserve"><value>Off</value></data>
+  <data name="Text_M5Choiceyes" xml:space="preserve"><value>On</value></data>
+  <data name="Text_M5Choiceleft" xml:space="preserve"><value>Left</value></data>
+  <data name="Text_M5Choicecenter" xml:space="preserve"><value>Center</value></data>
+  <data name="Text_M5Choiceright" xml:space="preserve"><value>Right</value></data>
+  <data name="Text_M5Choicetop" xml:space="preserve"><value>Top</value></data>
+  <data name="Text_M5Choicebottom" xml:space="preserve"><value>Bottom</value></data>
+  <data name="Text_M5Choiceoutlineandshadow" xml:space="preserve"><value>Outline and shadow</value></data>
+  <data name="Text_M5Choiceopaquebox" xml:space="preserve"><value>Opaque box</value></data>
+  <data name="Text_M5Choicebackgroundbox" xml:space="preserve"><value>Background box</value></data>
+  <data name="Text_M5Overrideno" xml:space="preserve"><value>Preserve script styling</value></data>
+  <data name="Text_M5Overridescale" xml:space="preserve"><value>Scale only</value></data>
+  <data name="Text_M5Overrideyes" xml:space="preserve"><value>Override normal dialogue</value></data>
+  <data name="Text_M5Overrideforce" xml:space="preserve"><value>Force all styles</value></data>
+  <data name="Text_M5Overridestrip" xml:space="preserve"><value>Plain text (strip ASS tags)</value></data>
+  <data name="Text_M5Matchingno" xml:space="preserve"><value>Disabled</value></data>
+  <data name="Text_M5Matchingname" xml:space="preserve"><value>Filename matching with fallback</value></data>
+  <data name="Text_M5Matchingiina" xml:space="preserve"><value>IINA matching (series, filename and fallback)</value></data>
+  <data name="Text_M5HintAudio" xml:space="preserve"><value>Language preferences apply to the next file. Automatic output follows the Windows default device. Passthrough requires a compatible receiver; volume, speed and equalizer processing may be bypassed.</value></data>
+  <data name="Text_M5HintSubtitleLoad" xml:space="preserve"><value>Search beside the media and in these folders on opening. Language choices are independent of the interface language. Use the encoding selector to reload external text subtitles.</value></data>
+  <data name="Text_M5HintSubtitleChannels" xml:space="preserve"><value>These controls affect only this session. Other windows and saved defaults stay unchanged. Font and text appearance are shared defaults; ASS override controls apply to ASS/SSA, not bitmap subtitles.</value></data>
+  <data name="Text_M5HintSubtitleStyle" xml:space="preserve"><value>These settings are shared by both channels. They style plain text; ASS requires an override mode. Preserve and Scale only retain ASS fonts and colors. Image subtitles retain their own artwork; font and text styling do not apply. Embedded fonts are loaded by the player.</value></data>
+  <data name="Text_M5InvalidValue" xml:space="preserve"><value>That value is not valid. Check the range, language list or #AARRGGBB color.</value></data>
+  <data name="Text_M5Unsupported" xml:space="preserve"><value>Some settings are unavailable in this engine and have been disabled.</value></data>
+  <data name="Text_M5SettingsError" xml:space="preserve"><value>Audio or subtitle settings could not be applied.</value></data>
+  <data name="Text_M5TrackLoaded" xml:space="preserve"><value>External track loaded. The other subtitle channel is unchanged.</value></data>
+  <data name="Text_M5TrackConflict" xml:space="preserve"><value>That subtitle is already used by the other channel. Choose None there before selecting it here.</value></data>
+  <data name="Text_M5TrackFailed" xml:space="preserve"><value>Could not load this external track. Playback is still available; choose another file.</value></data>
+  <data name="Text_M5Reloaded" xml:space="preserve"><value>External subtitles reloaded; primary and secondary selections restored.</value></data>
+  <data name="Text_M5ReloadFailed" xml:space="preserve"><value>Some subtitles could not be reloaded. Playback is still available; choose the file again.</value></data>
+  <data name="Text_M5MatchFailed" xml:space="preserve"><value>A matching subtitle could not be loaded. You can choose a subtitle manually.</value></data>
+  <data name="Text_M5AudioStatus" xml:space="preserve"><value>Current output: {0}
+Driver: {1} · Format: {2}</value></data>
+  <data name="Text_M5NoOutput" xml:space="preserve"><value>Not active</value></data>
+  <data name="Text_M5DeviceFallback" xml:space="preserve"><value>The selected device disappeared. Using automatic output; playback pause state is retained.</value></data>
+  <data name="Text_M5PassthroughActive" xml:space="preserve"><value>Encoded output is active. Processing controls may not affect the receiver output.</value></data>
+  <data name="Text_M5PassthroughRequested" xml:space="preserve"><value>Passthrough is requested. The current output is not confirmed as encoded passthrough; check the receiver. Speed or filters may cause decoded output.</value></data>
+  <data name="Text_M5PositionChanged" xml:space="preserve"><value>Subtitle position: {0}%</value></data>
+  <data name="Text_M5ScaleChanged" xml:space="preserve"><value>Subtitle scale: {0}×</value></data>
+  <data name="Text_M5Eq32" xml:space="preserve"><value>32 Hz gain (dB)</value></data>
+  <data name="Text_M5Eq64" xml:space="preserve"><value>64 Hz gain (dB)</value></data>
+  <data name="Text_M5Eq125" xml:space="preserve"><value>125 Hz gain (dB)</value></data>
+  <data name="Text_M5Eq250" xml:space="preserve"><value>250 Hz gain (dB)</value></data>
+  <data name="Text_M5Eq500" xml:space="preserve"><value>500 Hz gain (dB)</value></data>
+  <data name="Text_M5Eq1000" xml:space="preserve"><value>1000 Hz gain (dB)</value></data>
+  <data name="Text_M5Eq2000" xml:space="preserve"><value>2000 Hz gain (dB)</value></data>
+  <data name="Text_M5Eq4000" xml:space="preserve"><value>4000 Hz gain (dB)</value></data>
+  <data name="Text_M5Eq8000" xml:space="preserve"><value>8000 Hz gain (dB)</value></data>
+  <data name="Text_M5Eq16000" xml:space="preserve"><value>16000 Hz gain (dB)</value></data>
+  <data name="Text_OsdSubPosition" xml:space="preserve"><value>Subtitle position: {0}%</value></data>
+  <data name="Text_OsdSubScale" xml:space="preserve"><value>Subtitle scale: {0:0.0}×</value></data>
+  <data name="Text_M5EqProfile" xml:space="preserve"><value>Equalizer preset</value></data>
+  <data name="Text_M5EqCustom" xml:space="preserve"><value>Custom</value></data>
+  <data name="Text_M5EqName" xml:space="preserve"><value>Profile name</value></data>
+  <data name="Text_M5EqSave" xml:space="preserve"><value>Save current gains</value></data>
+  <data name="Text_M5EqDelete" xml:space="preserve"><value>Delete selected profile</value></data>
+  <data name="Text_M5EqRename" xml:space="preserve"><value>Rename selected profile</value></data>
+  <data name="Text_M5EqInvalid" xml:space="preserve"><value>Enter a unique name (1–80 characters).</value></data>
+  <data name="Text_M5Presetflat" xml:space="preserve"><value>Flat</value></data>
+  <data name="Text_M5Presetacoustic" xml:space="preserve"><value>Acoustic</value></data>
+  <data name="Text_M5Presetclassical" xml:space="preserve"><value>Classical</value></data>
+  <data name="Text_M5Presetdance" xml:space="preserve"><value>Dance</value></data>
+  <data name="Text_M5Presetdeep" xml:space="preserve"><value>Deep</value></data>
+  <data name="Text_M5Presetelectronic" xml:space="preserve"><value>Electronic</value></data>
+  <data name="Text_M5Presethip_hop" xml:space="preserve"><value>Hip Hop</value></data>
+  <data name="Text_M5Presetincrease_bass" xml:space="preserve"><value>Increase Bass</value></data>
+  <data name="Text_M5Presetincrease_treble" xml:space="preserve"><value>Increase Treble</value></data>
+  <data name="Text_M5Presetincrease_vocal" xml:space="preserve"><value>Increase Vocal</value></data>
+  <data name="Text_M5Presetjazz" xml:space="preserve"><value>Jazz</value></data>
+  <data name="Text_M5Presetlatin" xml:space="preserve"><value>Latin</value></data>
+  <data name="Text_M5Presetloundness" xml:space="preserve"><value>Loundness</value></data>
+  <data name="Text_M5Presetlounge" xml:space="preserve"><value>Lounge</value></data>
+  <data name="Text_M5Presetpiano" xml:space="preserve"><value>Piano</value></data>
+  <data name="Text_M5Presetpop" xml:space="preserve"><value>Pop</value></data>
+  <data name="Text_M5Presetrnb" xml:space="preserve"><value>R&amp;B</value></data>
+  <data name="Text_M5Presetreduce_bass" xml:space="preserve"><value>Reduce Bass</value></data>
+  <data name="Text_M5Presetreduce_treble" xml:space="preserve"><value>Reduce Treble</value></data>
+  <data name="Text_M5Presetrock" xml:space="preserve"><value>Rock</value></data>
+  <data name="Text_M5Presetsmall_speaker" xml:space="preserve"><value>Small Speaker</value></data>
+  <data name="Text_M5Presetspoken_word" xml:space="preserve"><value>Spoken Word</value></data>
+  <data name="Text_M5StyleContext" xml:space="preserve"><value>Current primary: {0}
+Current secondary: {1}</value></data>
+  <data name="Text_M5StyleNoTrack" xml:space="preserve"><value>No subtitle selected</value></data>
+  <data name="Text_M5StyleBitmap" xml:space="preserve"><value>Bitmap — text style and ASS override do not apply</value></data>
+  <data name="Text_M5StyleText" xml:space="preserve"><value>Text — shared defaults apply</value></data>
+  <data name="Text_M5StylePreserved" xml:space="preserve"><value>ASS — script fonts and colors are retained</value></data>
+  <data name="Text_M5StyleOverridden" xml:space="preserve"><value>ASS — selected override controls styling</value></data>
+  <data name="Text_M5DeviceRetry" xml:space="preserve"><value>The output device is temporarily unavailable. Retrying automatically; playback remains paused if it was paused.</value></data>
+  <data name="Text_M5GroupSubtitleDefaults" xml:space="preserve"><value>Subtitle defaults</value></data>
+  <data name="Text_M5HintSubtitleDefaults" xml:space="preserve"><value>Saved defaults apply to new windows. Changing a default also updates that setting in open windows. Quick settings and shortcuts change only the current session.</value></data>
+  <data name="Text_M5DefaultPrimaryPosition" xml:space="preserve"><value>Default primary position (%)</value></data>
+  <data name="Text_M5DefaultPrimaryOverride" xml:space="preserve"><value>Default primary ASS override</value></data>
+  <data name="Text_M5DefaultSecondaryOverride" xml:space="preserve"><value>Default secondary ASS override</value></data>
+  <data name="Text_M5EqCount" xml:space="preserve"><value>Saved presets: {0} / {1}. Names may contain 1–80 characters.</value></data>
+  <data name="Text_M5EqLimit" xml:space="preserve"><value>You can save up to 32 presets. Delete a preset before adding another.</value></data>
+  <data name="Text_M5EqCapacity" xml:space="preserve"><value>The preset library exceeds its storage limit. Shorten a name or remove a preset.</value></data>
+  <data name="Text_M5EqData" xml:space="preserve"><value>The preset contains invalid equalizer values. Each of the ten bands must be between −12 and +12 dB.</value></data>
+</root>

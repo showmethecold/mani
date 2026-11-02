@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "displayVersion": "Beta 0.1",
+  "packageVersion": "0.5.6.0",
+  "applicationCommit": "32489afa1c9128d550c58f711df5020eced61016",
+  "archiveUrl": "https://github.com/showmethecold/mani/releases/download/beta-0.1/Mani-Beta-0.1-Windows-x64.zip",
+  "archiveSha256": "ffba00a2c6b9132a574765f653e7c33d7063a8c80dfbd887d531ad8b04e77353",
+  "archiveBytes": 179758571,
+  "files": [
+    {
+      "file": "Mani.Beta.Test_0.5.6.0_x64.msix",
+      "bytes": 163263009,
+      "sha256": "8564433219e860950e96b54efccb4057efcd4c8ce0d9584981727aed0f30ad3d"
+    },
+    {
+      "file": "Mani.Beta.Test.cer",
+      "bytes": 1017,
+      "sha256": "f982413a9718f002cd8a293fc317d57fbd150149a5be5dadb0d1cadb3efdd875"
+    }
+  ]
+}

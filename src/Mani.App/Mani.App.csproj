@@ -1,0 +1,111 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\config\libmpv.props" />
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.26100.0</TargetPlatformMinVersion>
+    <RootNamespace>Mani_App</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon Condition="Exists('Assets\AppIcon.ico')">Assets\AppIcon.ico</ApplicationIcon>
+    <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <UseWinUI>true</UseWinUI>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <WinUISDKReferences>false</WinUISDKReferences>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\LICENSE" Link="LICENSE" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="..\..\licenses\*.txt" Link="licenses\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Condition="'$(EnableDiagnostics)' == 'true'" Include="Assets\baseline-media.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Condition="'$(EnableDiagnostics)' == 'true'" Include="Assets\m1-*-visual.ass" CopyToOutputDirectory="PreserveNewest" />
+    <Content Condition="'$(EnableDiagnostics)' == 'true'" Include="Assets\subtitle-fixtures.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Condition="'$(EnableDiagnostics)' == 'true'" Include="Assets\display-media.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Condition="'$(EnableDiagnostics)' == 'true'" Include="..\..\tests\media\generated\m1\hdr-av-motion.mkv" Link="Assets\hdr-av-motion.mkv" CopyToOutputDirectory="PreserveNewest" />
+    <Content Condition="'$(EnableDiagnostics)' == 'true'" Include="..\..\tests\media\generated\m1\hdr-pq-ramp.mkv" Link="Assets\hdr-pq-ramp.mkv" CopyToOutputDirectory="PreserveNewest" />
+    <Content Condition="'$(EnableDiagnostics)' == 'true'" Include="..\..\tests\media\generated\m1\1080p-sdr.mkv" Link="Assets\1080p-sdr.mkv" CopyToOutputDirectory="PreserveNewest" />
+    <Content Condition="'$(EnableDiagnostics)' == 'true'" Include="..\..\tests\media\generated\m1\4k-sdr.mkv" Link="Assets\4k-sdr.mkv" CopyToOutputDirectory="PreserveNewest" />
+    <Content Condition="'$(EnableDiagnostics)' == 'true'" Include="Assets\ocr-*.png" CopyToOutputDirectory="PreserveNewest" />
+    <Content Condition="'$(EnableDiagnostics)' == 'true'" Include="Assets\ocr-fixtures.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Assets\m1-blur.glsl" CopyToOutputDirectory="PreserveNewest" />
+    <Content Condition="'$(EnableDiagnostics)' == 'true'" Include="Assets\m1-web-probe.html" CopyToOutputDirectory="PreserveNewest" />
+    <!-- B2 branding: preserve scale, target-size and theme qualifiers in the package. -->
+    <Content Include="Assets\SplashScreen*.png" />
+    <Content Include="Assets\Square150x150Logo*.png" />
+    <Content Include="Assets\Square44x44Logo*.png" />
+    <Content Include="Assets\StoreLogo*.png" />
+    <Content Include="Assets\default-album-art.png" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="Assets\AppIcon.ico" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Assets\Wide310x150Logo*.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+
+  <!--
+    Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+    Tools extension to be activated for this project even if the Windows App SDK Nuget
+    package has not yet been restored.
+  -->
+  <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <ProjectCapability Include="Msix"/>
+  </ItemGroup>
+
+  <!--
+    Microsoft.Windows.SDK.BuildTools.WinApp adds first-class support for
+    `dotnet run` on packaged WinUI apps: it hooks the .NET CLI Run target to
+    register a debug identity via the winapp CLI and launch the app with
+    package identity (AUMID).
+    Set <EnableWinAppRunSupport>false</EnableWinAppRunSupport> in a
+    <PropertyGroup> above to opt out.
+  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools.WinApp" />
+  </ItemGroup>
+
+  <!--
+    Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution
+    Explorer "Package and Publish" context menu entry to be enabled for this project even if
+    the Windows App SDK Nuget package has not yet been restored.
+  -->
+  <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
+  </PropertyGroup>
+
+  <!-- Publish Properties -->
+  <PropertyGroup>
+    <!-- Match the validated internal profile; R2R needs a separately restored runtime pack and startup evidence. -->
+    <PublishReadyToRun>False</PublishReadyToRun>
+    <!-- WinUI and the current JSON stores use reflection. Enable trimming only
+         after all reflection paths have generated serialization metadata. -->
+    <PublishTrimmed>False</PublishTrimmed>
+    <EnableDiagnostics Condition="'$(EnableDiagnostics)' == '' and '$(Configuration)' == 'Debug'">true</EnableDiagnostics>
+    <DefineConstants Condition="'$(EnableDiagnostics)' == 'true'">$(DefineConstants);MANI_DIAGNOSTICS</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mani.Playback\Mani.Playback.csproj" />
+    <!-- Runtime files are not localized WinUI resources. Keep their exact paths. -->
+    <None Include="@(ManiMpvFile)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="..\..\config\mpv-runtime.json" Link="mpv-runtime.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+  <Target Name="VerifyMpvBinary" BeforeTargets="PrepareForBuild" Condition="'$(DesignTimeBuild)' != 'true'">
+    <Error Condition="'$(Platform)' != 'x64' or '$(RuntimeIdentifier)' != 'win-x64'" Text="Mani currently supports Windows x64 only; use the win-x64 publishing profile." />
+    <Error Condition="!Exists('$(ManiMpvDll)')" Text="Pinned libmpv DLL missing. Follow the native dependency setup in README.md and check config/libmpv.props." />
+    <Error Condition="'@(ManiMpvFile)' == ''" Text="The native runtime inventory is missing." />
+    <Error Condition="!Exists('%(ManiMpvFile.Identity)')" Text="Pinned native file missing: %(ManiMpvFile.RelativePath). Run build/restore_libmpv.py." />
+    <GetFileHash Files="@(ManiMpvFile)" Algorithm="SHA256">
+      <Output TaskParameter="Items" ItemName="MpvCheckedFile" />
+    </GetFileHash>
+    <Error Condition="'%(MpvCheckedFile.FileHash)' != '%(MpvCheckedFile.Sha256)'" Text="Pinned native SHA-256 mismatch: %(MpvCheckedFile.RelativePath); refusing to build." />
+  </Target>
+</Project>

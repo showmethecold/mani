@@ -1,0 +1,99 @@
+name: Beta setup installer
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: beta-setup-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  setup:
+    name: Build signed Beta 0.1 setup
+    if: github.ref == 'refs/heads/main'
+    runs-on: windows-2025
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Verify bootstrapper behavior without changing installed apps or trust
+        run: ./build/tests/Test-Setup.ps1 -OutputDirectory artifacts/setup-tests
+      - name: Restore the existing published and signed Beta package
+        run: python build/restore_beta_payload.py --output artifacts/setup-input
+      - name: Build and sign the setup wrapper
+        env:
+          MANI_INTERNAL_PFX_BASE64: ${{ secrets.MANI_INTERNAL_PFX_BASE64 }}
+          MANI_SIGNING_PASSWORD: ${{ secrets.MANI_INTERNAL_PFX_PASSWORD }}
+        run: |
+          if (!$env:MANI_INTERNAL_PFX_BASE64) { throw 'The existing Mani signing secret is required.' }
+          $keyPath = Join-Path $env:RUNNER_TEMP 'mani-setup-signing.pfx'
+          if (Test-Path -LiteralPath $keyPath) { throw 'The temporary signing path is occupied.' }
+          try {
+            [IO.File]::WriteAllBytes($keyPath, [Convert]::FromBase64String($env:MANI_INTERNAL_PFX_BASE64))
+            $env:MANI_INTERNAL_PFX_BASE64 = $null
+            ./build/Build-Setup.ps1 -Package artifacts/setup-input/Mani.Beta.Test_0.5.6.0_x64.msix -Certificate artifacts/setup-input/Mani.Beta.Test.cer -SigningKey $keyPath -OutputDirectory artifacts/setup-release
+          } finally {
+            $env:MANI_INTERNAL_PFX_BASE64 = $null
+            $env:MANI_SIGNING_PASSWORD = $null
+            if (Test-Path -LiteralPath $keyPath) { Remove-Item -LiteralPath $keyPath -Force }
+          }
+      - name: Verify the real embedded payload without installing
+        run: |
+          $setup = (Resolve-Path artifacts/setup-release/Mani-Beta-0.1-Windows-x64-Setup.exe).Path
+          $report = Join-Path (Split-Path -Parent $setup) 'payload-verification.json'
+          $process = Start-Process -FilePath $setup -ArgumentList @('--verify-payload', ('"' + $report + '"')) -WindowStyle Hidden -PassThru -Wait
+          if ($process.ExitCode) { throw 'Embedded Beta verification failed.' }
+      - name: Package corresponding installer source and direct-install files
+        run: |
+          New-Item -ItemType Directory -Path artifacts/setup-source | Out-Null
+          python build/package_source.py --output artifacts/setup-source
+          if ($LASTEXITCODE) { throw 'Source capture failed.' }
+          Copy-Item artifacts/setup-input/Mani.Beta.Test_0.5.6.0_x64.msix, artifacts/setup-input/Mani.Beta.Test.cer artifacts/setup-release/
+          Copy-Item artifacts/setup-source/Mani-source.zip artifacts/setup-release/Mani-Setup-source.zip
+          $source = Get-Content artifacts/setup-source/source-info.json -Raw | ConvertFrom-Json
+          $source.archive = 'Mani-Setup-source.zip'
+          $source | ConvertTo-Json -Depth 5 | Set-Content artifacts/setup-release/setup-source-info.json -Encoding utf8
+          Copy-Item artifacts/setup-source/source-files.json artifacts/setup-release/setup-source-files.json
+          Copy-Item build/setup/INSTALL.txt, build/setup/INSTALL.zh-CN.txt artifacts/setup-release/
+          $names = @('Mani-Beta-0.1-Windows-x64-Setup.exe','setup-info.json','Mani.Beta.Test_0.5.6.0_x64.msix','Mani.Beta.Test.cer','Mani-Setup-source.zip','setup-source-info.json','setup-source-files.json','INSTALL.txt','INSTALL.zh-CN.txt')
+          $names | ForEach-Object { (Get-FileHash -LiteralPath (Join-Path artifacts/setup-release $_) -Algorithm SHA256).Hash.ToLowerInvariant() + '  ' + $_ } | Set-Content artifacts/setup-release/SETUP-SHA256SUMS.txt -Encoding utf8
+      - name: Remove any remaining temporary signing key
+        if: ${{ always() }}
+        run: |
+          $keyPath = Join-Path $env:RUNNER_TEMP 'mani-setup-signing.pfx'
+          if (Test-Path -LiteralPath $keyPath) { Remove-Item -LiteralPath $keyPath -Force }
+      - uses: actions/upload-artifact@v7
+        if: ${{ always() }}
+        with:
+          name: mani-setup-checks-${{ github.run_number }}-${{ github.run_attempt }}
+          path: |
+            artifacts/setup-tests/results.json
+            artifacts/setup-tests/embedded.json
+            artifacts/setup-tests/layout/*.png
+            artifacts/setup-tests/layout/*.txt
+          if-no-files-found: ignore
+          retention-days: 14
+      - uses: actions/upload-artifact@v7
+        with:
+          name: mani-beta-0.1-setup-x64-${{ github.run_number }}-${{ github.run_attempt }}
+          path: |
+            artifacts/setup-release/Mani-Beta-0.1-Windows-x64-Setup.exe
+            artifacts/setup-release/setup-info.json
+            artifacts/setup-release/payload-verification.json
+            artifacts/setup-release/Mani.Beta.Test_0.5.6.0_x64.msix
+            artifacts/setup-release/Mani.Beta.Test.cer
+            artifacts/setup-release/Mani-Setup-source.zip
+            artifacts/setup-release/setup-source-info.json
+            artifacts/setup-release/setup-source-files.json
+            artifacts/setup-release/INSTALL*.txt
+            artifacts/setup-release/SETUP-SHA256SUMS.txt
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14

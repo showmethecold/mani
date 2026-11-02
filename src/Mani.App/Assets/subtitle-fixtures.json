@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "license": "CC0-1.0",
+  "authorship": "Original Mani diagnostic subtitles",
+  "cue_seconds": 4,
+  "duration_seconds": 420,
+  "font": "Arial (system font; not redistributed)",
+  "tracks": {
+    "primary": {
+      "file": "m1-primary-visual.ass",
+      "sha256": "1f8cf94f7b54a073be0c9a14affcaeaef8865949752d6dab42f0c5a7e92a8aac",
+      "label": "PRIMARY",
+      "script_y": 460,
+      "ass_color": "&H0000FFFF"
+    },
+    "secondary": {
+      "file": "m1-secondary-visual.ass",
+      "sha256": "88b0360e9a293d4478de5c6ccad055faef1f404ede3fd7bdf78f4e9ec214d1e1",
+      "label": "SECONDARY",
+      "script_y": 220,
+      "ass_color": "&H00FFFF00"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'">
+<style>body{margin:16px;background:#20202b;color:#eee;font:14px system-ui}button,input{font:inherit;padding:7px;border-radius:6px}button{margin-right:8px}pre{white-space:pre-wrap;font-size:12px}input{width:90%;margin-top:12px}</style></head>
+<body><strong>WebView2 playback probe</strong><p><button id="pause">Pause</button><button id="play">Play</button></p>
+<input id="focus-test" aria-label="Focus test" placeholder="Type here to test keyboard focus"><pre id="state">Waiting for player state...</pre>
+<script>
+const token = window.__maniSessionToken; let requestId = 0;
+window.maniProbe = {state:null,response:null,sent:0,lastSendError:null};
+// Passive diagnostic counters only. Never store field text, event.data or arbitrary key values.
+const field = document.getElementById('focus-test');
+const input = {trustedKeydowns:0,spaces:0,enters:0,arrows:0,composingKeys:0,
+  compositionStarts:0,compositionEnds:0,committedCompositions:0,trustedInputs:0,pastes:0,
+  syntheticEvents:0,textLength:0,lastEventAt:null};
+window.maniProbe.input = input;
+function observeInput(e){
+  if(!e.isTrusted){input.syntheticEvents++;return;}
+  input.lastEventAt = new Date().toISOString();
+  if(e.type === 'keydown'){
+    input.trustedKeydowns++;
+    if(e.key === ' ')input.spaces++;
+    if(e.key === 'Enter')input.enters++;
+    if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))input.arrows++;
+    if(e.isComposing)input.composingKeys++;
+  } else if(e.type === 'compositionstart')input.compositionStarts++;
+  else if(e.type === 'compositionend'){
+    input.compositionEnds++;
+    if(typeof e.data === 'string' && e.data.length > 0)input.committedCompositions++;
+  } else if(e.type === 'input')input.trustedInputs++;
+  else if(e.type === 'paste')input.pastes++;
+  input.textLength = Array.from(field.value).length;
+}
+for(const type of ['keydown','compositionstart','compositionend','input','paste'])field.addEventListener(type,observeInput);
+
+function send(paused){
+  const id = ++requestId;
+  window.maniProbe.lastSendError = null;
+  try {
+    chrome.webview.postMessage({version:1,token,type:'set-pause',requestId:id,paused});
+    window.maniProbe.sent = id;
+  } catch(error) { window.maniProbe.lastSendError = String(error); }
+}
+document.getElementById('pause').onclick=()=>send(true);document.getElementById('play').onclick=()=>send(false);
+chrome.webview.addEventListener('message',e=>{const m=e.data;if(m.type==='response')window.maniProbe.response=m;if(m.type==='state'){window.maniProbe.state=m;document.getElementById('state').textContent=JSON.stringify(m,null,2);}});
+</script></body></html>

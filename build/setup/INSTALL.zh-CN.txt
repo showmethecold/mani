@@ -1,0 +1,25 @@
+Mani Beta 0.1 — 安装向导
+
+系统要求：Windows 11 24H2（内部版本 26100）或更新版本，x64 电脑。
+
+1. 正常打开 Mani-Beta-0.1-Windows-x64-Setup.exe，里面已包含完整 MSIX 安装包。
+2. 可选择英文或简体中文。开始安装前，请先关闭 Mani Beta Test。
+3. 如果尚未信任 Beta 证书，阅读说明并勾选同意信任证书，再点击“安装”。
+   按 Windows 提示批准管理员权限。辅助进程只将随包公开证书加入“受信任人”。
+4. Windows 将应用安装到最初启动安装程序的账户。完成后可点击“打开 Mani”，
+   或从开始菜单打开 Mani Beta Test。
+
+无需解压 ZIP，也无需手动运行 PowerShell 命令。此 Beta 仍使用测试签名，
+Windows 可能显示安全或信誉提示；包装为 EXE 不会让测试证书获得公共信任。
+请勿为安装而关闭 Windows 安全保护。
+
+已安装的更新版本会被保留。升级会保留设置，不会强制关闭正在运行的应用；
+如果 Windows 提示应用正在使用，请关闭 Mani 后重试。
+卸载入口：Windows 设置 > 应用 > 已安装的应用 > Mani Beta Test。
+
+高级/手动安装：在“本地计算机 > 受信任人”信任 Mani.Beta.Test.cer 后，
+可直接安装 Mani.Beta.Test_0.5.6.0_x64.msix。请勿导入受信任的根证书存储区。
+
+Windows 安装包版本仍为 0.5.6.0，MSIX 签名原包没有改动。
+Beta 0.1 发行页继续提供应用和原生组件对应源码。
+Mani-Setup-source.zip 是安装向导对应源码；SETUP-SHA256SUMS.txt 提供文件校验值。

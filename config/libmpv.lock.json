@@ -1,0 +1,1409 @@
+{
+  "schemaVersion": 2,
+  "baseline": "mani-sup-msys2-ucrt64-20261101-r2",
+  "architecture": "x86_64",
+  "dll": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libmpv-2.dll",
+  "source": {
+    "mpvCommit": "01e2533f3143b8940857ca419b0b367f583e05ca",
+    "mpvArchiveSha256": "980c603587121256800a5851f3f13af8a57a4e8cdd906a03413b5ef189fd3433",
+    "ffmpegCommit": "94cba3150c6b83057ed48b833689adc806715cc0",
+    "mpvMetadataOverride": {
+      "file": "MPV_VERSION",
+      "original": "0.41.0-UNKNOWN",
+      "experimental": "0.41.0-1205-g01e2533f3-mani-experiment",
+      "reason": "archive has no Git metadata; display actual fixed source identity"
+    },
+    "supPatchSha256": "714408f5abd10cf36f7bdacb0b9a61e28f6eef560a9036bbeaf416d38b01cb04"
+  },
+  "dependencyLockSha256": "6577e02c7d94d6590ecde8ca339b9f522a2258f286d8e0e6411691c252aac8de",
+  "buildRecipeSha256": "0e6098706049d1a505eb9c5dfe2593918077da5b9cd442f19d6a0be9c5a35849",
+  "archives": {
+    "dev": {
+      "name": "mani-sup-msys2-ucrt64-20261101-r2.zip",
+      "url": "https://github.com/showmethecold/mani/releases/download/native-sup-20261101-r2/mani-sup-msys2-ucrt64-20261101-r2.zip",
+      "bytes": 66452227,
+      "sha256": "95e254e26329043dcd26c3963cf82f61ad591168254548db010218f4e1543a33",
+      "githubRelease": {
+        "repository": "showmethecold/mani",
+        "tag": "native-sup-20261101-r2"
+      }
+    }
+  },
+  "files": [
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/SDL2.dll",
+      "bytes": 2401788,
+      "sha256": "2e44d5bae9a97859eccde14ad4467df14bae7468594bba7fe8eb417f517ce31b"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/avcodec-63.dll",
+      "bytes": 20461568,
+      "sha256": "e5891fb6a4bccb113b9f58436436f1862dcb5af5e5ceda5fa78f010e06aad8bb"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/avdevice-63.dll",
+      "bytes": 151040,
+      "sha256": "bdbdb58c7a450dfc902d3d0c8fcdeec4d5b720351ab44a8c63792086741eb797"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/avfilter-12.dll",
+      "bytes": 6656512,
+      "sha256": "b9291c6b072c883fb55e5773425395e5a39d24ba74fdf90fc328ef701ff2e00d"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/avformat-63.dll",
+      "bytes": 3036672,
+      "sha256": "cbf08619781e38d1745dc98d67d7ca6c6e738474be1915751c8d988ec3defb5a"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/avutil-61.dll",
+      "bytes": 1201664,
+      "sha256": "2ec14c27170d147f907778c36ed0431a8dea2dfc8f224eb16997f9ec4a11931b"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libEGL.dll",
+      "bytes": 252928,
+      "sha256": "625af4e343a115422c906ecee1cc1c7cb9d9f1a5b3827620f80f30e6577f8a4a"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libGLESv2.dll",
+      "bytes": 11592704,
+      "sha256": "710e246f405a6f63005c0d91f385a1b7e62fb1cfc566fd0fbde01b7319a0d6a4"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libaom.dll",
+      "bytes": 9682038,
+      "sha256": "9b2bf9122f924b9ad7f9c2be31133758331fd7a7fd33261a63a6d620b31f1883"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libarchive-13.dll",
+      "bytes": 1001421,
+      "sha256": "3f7754632098af48f8c30f628e3f344939b78160be953e9e45dca62b26eb0168"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libass-9.dll",
+      "bytes": 345174,
+      "sha256": "cb2b46133b3bd9630384148bd7229e987af9703208d4329fc2215f4170b8dc6b"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libb2-1.dll",
+      "bytes": 35323,
+      "sha256": "01bbf64090367d511f41d9fc8f34c557f61d4a227b7c9e47ce04052cbfdc3e7d"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libbluray-4.dll",
+      "bytes": 373421,
+      "sha256": "24870a1b32ff8b36cfa94479d802dfabc55a12e7bbde8584606f7e2d44d3c6dd"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libbrotlicommon.dll",
+      "bytes": 140697,
+      "sha256": "7b0047dc16dd92a7932124dfd5a6e698d342f533a15d37d61f710def66091436"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libbrotlidec.dll",
+      "bytes": 60224,
+      "sha256": "c4c987a01597ddf969d93023f933f999a20f285588b0decb4deeb780c9e9cdf8"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libbrotlienc.dll",
+      "bytes": 786797,
+      "sha256": "03f9a82d293caf5b4065a9641dd5309e27aefc5c8111eeec25f906e47ec6c934"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libbz2-1.dll",
+      "bytes": 107741,
+      "sha256": "1790bf6473c9d48db14c1f0ee8124142327556d281299ea2a72ee361118ee01a"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libcaca-0.dll",
+      "bytes": 859225,
+      "sha256": "4ab7b69e156b77a76776237ad37054dc9558f18dc2cd4a9c2a4287a8811002b2"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libcdio-21.dll",
+      "bytes": 217127,
+      "sha256": "3c420104ef8cc9c914712d0c137cc1b34697aacf747952ca4bbd74be0dd81736"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libcdio_cdda-2.dll",
+      "bytes": 61113,
+      "sha256": "acddc934acf082350de46298c22cff44509de02c4e446cae2a2b64347a6d63dd"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libcdio_paranoia-2.dll",
+      "bytes": 36018,
+      "sha256": "5240faf7da48bad81b7c15d09b62641a2516edd677871d76807ef1b230ff4fba"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libcrypto-3-x64.dll",
+      "bytes": 5501287,
+      "sha256": "97308feea369b305e562c0098638a1b02a06f52ee9fcc4b8cf3da362ff563cf4"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libcurl-4.dll",
+      "bytes": 1417088,
+      "sha256": "529af2acc6ce7507dbc96fd96e196555bb9a38d9cbb47dee441ea2cce325428d"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libdav1d-7.dll",
+      "bytes": 1929830,
+      "sha256": "bbe67862f77c22f6f509684207b5363542e5b52c1a1faa354e12a11d072ad766"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libdovi.dll",
+      "bytes": 1370861,
+      "sha256": "75988509f0d2166e2060ed548913bd7b34556bc16b3f9a02469de1dd2347a7fb"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libdvdcss-2.dll",
+      "bytes": 119905,
+      "sha256": "a691f36e9f4dd1dac01e841cada8d4f5500c3f8ad3171a129424a2194151b8e8"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libdvdnav-4.dll",
+      "bytes": 130954,
+      "sha256": "37cf3d8555ec2f00f50a6bef46b952bd0576c2db41d4debd6133a6c6bdeca02e"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libdvdread-8.dll",
+      "bytes": 189874,
+      "sha256": "658acc812360cf6c24d684ad250b2d0021d4c74a2e1229b477d66843906c351b"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libexpat-1.dll",
+      "bytes": 239251,
+      "sha256": "8a10cf7e89524b621d5f74bd4aedc659c47c7ce397d489f323a1065ba695027a"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libfftw3-3.dll",
+      "bytes": 4288807,
+      "sha256": "0d600147b2479b83a5f437d3f8033e3607addb1bbd0c95f522d933564a2c7485"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libfontconfig-1.dll",
+      "bytes": 505833,
+      "sha256": "be30a200fa4000d0a7a1d3911391969627440148f01d0028a319bcb9fa112202"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libfreetype-6.dll",
+      "bytes": 808305,
+      "sha256": "19604dde573cbb8a13053fc231eee99b91cd972e0e9a3e1465f44ad6985e83ee"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libfribidi-0.dll",
+      "bytes": 153053,
+      "sha256": "4c775e98b38991c93affaf71f088306b37fd2c0d94ff8a90c4906db4669746c9"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libgcc_s_seh-1.dll",
+      "bytes": 150537,
+      "sha256": "791ebf66e99c7c1b4ed3666468cec45a0172b4c8942ac6c84c3e9cab3e1b5270"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libglib-2.0-0.dll",
+      "bytes": 1568604,
+      "sha256": "3a1abec0184b238db54399cb9243393d9436d96b8fdb9bd9f2875da207c5b458"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libgomp-1.dll",
+      "bytes": 327456,
+      "sha256": "ccaf59dc8cff15ace88ab47acd68a5b014167cad8f960e7683466a4c821e41c4"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libgraphite2.dll",
+      "bytes": 167857,
+      "sha256": "93953e4744bcfce9a7bc439b956544bc213095cb1349c3602a58370f32b25c18"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libharfbuzz-0.dll",
+      "bytes": 1829497,
+      "sha256": "574ef797d2480d73283ecc993e272092bdb1dda45c4db5d36bf72a5a91baeec8"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libhwy.dll",
+      "bytes": 87628,
+      "sha256": "9ba0ac7bad82c4c88e9bb8d6ca8c6a83877adc1f71cc48590c65b8d26108a41c"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libiconv-2.dll",
+      "bytes": 1141951,
+      "sha256": "94ec68fb8d342b6c91b6b48a8d95092819cdcd006a7166e0b68062f946afd08a"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libidn2-0.dll",
+      "bytes": 246525,
+      "sha256": "a054a6bb69aaf4666157f968740412e9697085cbc1e48a78f8dd9622169c5aaf"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libintl-8.dll",
+      "bytes": 298164,
+      "sha256": "0e5a178731e6be6d115442a6ade3df7f03265cd1fc4338f8b6f86a8001cbf582"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libjpeg-8.dll",
+      "bytes": 963471,
+      "sha256": "22286acc18b907d03eec1177c99f54a802a6f8437888d1abb79e65a7ecd14605"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libjxl.dll",
+      "bytes": 6201782,
+      "sha256": "f0db8ef57af445a5b807a5b6d27f9a3c4c7441af61cebfee5542fb7529fb35a5"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libjxl_cms.dll",
+      "bytes": 137640,
+      "sha256": "da3bf1847c40b66ffc036212d83f5e9acb0770de737d0383c8f1efbef65388c9"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libjxl_threads.dll",
+      "bytes": 23033,
+      "sha256": "b065e2464cf13626d2ad95f82091b4bd988dcc8aeb7fd65b364b59d4bdf4199e"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/liblcms2-2.dll",
+      "bytes": 448202,
+      "sha256": "03314471fadd04cdd63c108472ff85d058903d236a0356c14eda363f0e1ccb65"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/liblz4.dll",
+      "bytes": 161286,
+      "sha256": "5e83fd34144fa033c12e22718317ec2123f8a3460903932b0bfddb8aad379cfd"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/liblzma-5.dll",
+      "bytes": 190872,
+      "sha256": "d97a260b8bb4f6affc34ec47249429240068b94bb6f7dc30c4d64daaafb3ac69"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libmp3lame-0.dll",
+      "bytes": 280370,
+      "sha256": "d28ee2c6d87346e3a4d96b03731362273c6ee24ee14d7b861be57c5b366aab79"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libmpg123-0.dll",
+      "bytes": 450706,
+      "sha256": "bd63359e95781ce1a9f4e1d0d7c98be32583731e34d09df0c6a020d215048ff5"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libmpv-2.dll",
+      "bytes": 4235084,
+      "sha256": "ced71f12a6c5743ca3980b21f186c70b9199fd74c39c49093c51b2cfc12cce58"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libmujs.dll",
+      "bytes": 373325,
+      "sha256": "ee43a74b49fef7cf64c642d2951d4371aa8d00a61d9ce7178f437c61d27a8baf"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libnghttp2-14.dll",
+      "bytes": 214379,
+      "sha256": "550b9933ce54833ebb2c0e24b43e1463006c6c62305c471570c6bf18095581bd"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libnghttp3-9.dll",
+      "bytes": 206693,
+      "sha256": "eed257dd6092a2f67a760f3f75103ec27cec929281bb2d7b51afabf21a2cad70"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libngtcp2-16.dll",
+      "bytes": 392518,
+      "sha256": "e77294cc542bfa35a932217ab0130b19cb45f232fb257d8869d967e750e40b31"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libngtcp2_crypto_ossl-0.dll",
+      "bytes": 54925,
+      "sha256": "e63698046730c9dfcaee49d52298c489ae4c0b28770bcc3ba7f612d35d031dd8"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libogg-0.dll",
+      "bytes": 41748,
+      "sha256": "2f102fba6f2a49516be85cb2643f6a9ba394dc5657aedb3ea235b6603c12d3d2"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libopenal-1.dll",
+      "bytes": 2719658,
+      "sha256": "cb33f3a9505f38b4a82510bf303547e5e66c525eff591085c752e3d81dfc51cb"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libopus-0.dll",
+      "bytes": 491630,
+      "sha256": "e747edad6bf02cf5cdcce417b95be3b7ba108f93df1b024778be5d73fa6dae39"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libpcre2-8-0.dll",
+      "bytes": 706022,
+      "sha256": "1f609cde2ce432efb7d2b0c7b84a14a6dbfc9622d1ac1a3cbadf51c5b0b4dada"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libplacebo-387.dll",
+      "bytes": 1328772,
+      "sha256": "ebdc2d898ee396db8f342427f77a0af59b0823f853001eedefc801f05bd791b3"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libpng16-16.dll",
+      "bytes": 254777,
+      "sha256": "28db7a8c6fcc579ce621729d27f1952324cd3a2b4e24da121611bb586346e732"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libpsl-5.dll",
+      "bytes": 105846,
+      "sha256": "a531e72de3c64d43fb83cbfb6fa63e5ee982a970292ec51314e29d0acabf1dd5"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/librubberband-3.dll",
+      "bytes": 425087,
+      "sha256": "8ff9e6c1ddb42ed87ebed217aaadcde439e4be1f84b8963f45a8ac7116af0551"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libsamplerate-0.dll",
+      "bytes": 1505256,
+      "sha256": "4f7f9b2ecea84bb8f5b27c8f36e85e8a100663c745ac25e82a512f485b663ac7"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libshaderc_shared.dll",
+      "bytes": 10657197,
+      "sha256": "331df8a45983735b823c893a9b872c3414af6eadca9fa189d0b6dfe97960b3cf"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libsharpyuv-0.dll",
+      "bytes": 48938,
+      "sha256": "d29380c7056383f3e7a80bf9e150f0b8c425c1cf2568d1336e88979ddc2307af"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libsoxr.dll",
+      "bytes": 344576,
+      "sha256": "47f6a0fbaa08f7ba38b051de741ebc7a2613bfb3ed276ebbe6fbafb6ee47b445"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libspirv-cross-c-shared.dll",
+      "bytes": 3433687,
+      "sha256": "bc4bdcf63b9bbf60777bc10340050ae6edfbb3be3faf3fa636af53ecf7d2bbc8"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libssh2-1.dll",
+      "bytes": 311537,
+      "sha256": "7c9b4edb678b738b919950492c4a390482fdd644d1276d4728990fdd3c3ea989"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libssl-3-x64.dll",
+      "bytes": 998449,
+      "sha256": "8b71cd694f8edfbddc76674111278db6bcdcde0dcd63b99238420193848e6dbf"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libstdc++-6.dll",
+      "bytes": 2659194,
+      "sha256": "4e4822dc4aaa99383f581dae7ab9464ae89346c5ca742f7efbcdebe20b0fe7b5"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libuchardet.dll",
+      "bytes": 202040,
+      "sha256": "75f34913b3c3fe264c4471a47f4f3e3a14fed397824122936f1ba40a7712a7a4"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libunibreak-7.dll",
+      "bytes": 141442,
+      "sha256": "f1f4bb5b5bb3dbf8d142df3012f13e4b5b0246565496d43718a6f33321e96283"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libunistring-5.dll",
+      "bytes": 2256134,
+      "sha256": "ee39258fa1086269674a8179d3cfaf7c4e380ada14441b5dd9ed53d82d15c4e3"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libva.dll",
+      "bytes": 285777,
+      "sha256": "20591e45edfcbf7f4b5735f9096b19be9796b0f61d1ab041f39d2732357593ae"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libva_win32.dll",
+      "bytes": 17779,
+      "sha256": "2721e9c28099699b6d723d3d56671ca46db21a5bdb9e2c41df516da17d6539b7"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libvorbis-0.dll",
+      "bytes": 179630,
+      "sha256": "d1b40d7f33171ccb8cd2a238bea36c01176c54de5bf22afae332fb33f26a008f"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libvorbisenc-2.dll",
+      "bytes": 577914,
+      "sha256": "971cfa7c8866653aae9760a317dc3838e821f3911d9c6a8a8ef90f4a13de798f"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libvpx-1.dll",
+      "bytes": 4405542,
+      "sha256": "759bb95b0cd6c75bfce910f003b26a2d95ed3c94ef1a20dcfd4c89a0569f2016"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libwebp-7.dll",
+      "bytes": 746378,
+      "sha256": "8dfe40c4e0abc90ddf18f080898987e01253d099b2b2d6daf7db521e55c00446"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libwebpmux-3.dll",
+      "bytes": 78875,
+      "sha256": "9bd85116a22923d648d6b0ad09f21d08df7bd3d8860b24a5b4a6d4ac788b7340"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libwinpthread-1.dll",
+      "bytes": 73820,
+      "sha256": "ee4f503512b09d7e2668518c41d6c176755a354523ae15aa4d36220c9cb31791"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libx264-165.dll",
+      "bytes": 2017572,
+      "sha256": "a58995b5af6d0fcf5d17f354bfa54bb05d99056ed167eec9c8e86a3a63478ec1"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libx265-217.dll",
+      "bytes": 22658774,
+      "sha256": "48a6c942cab3196d740d7af3cfc8359dc7bd833c87c1ca24b8d231b70daa9e18"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libxml2-16.dll",
+      "bytes": 1246528,
+      "sha256": "2c971559c9bedb5459b35043de25886c9b36fc07536b6d84dfb84d938c46d5a4"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libzimg-2.dll",
+      "bytes": 631148,
+      "sha256": "99625f39de8de654a90077362aafaa4e565c97908b39c0e9614562f9dfb57200"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libzstd.dll",
+      "bytes": 1217412,
+      "sha256": "48368ab0ca622d0ec12f41ce85d91f22866bf5da92c77a69a06483564c93816c"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/Native-NOTICE.txt",
+      "bytes": 1198,
+      "sha256": "c4024ad04b3dfbce21a7d241858545d2e652adb1246c31ad487f67dcfc8f959c"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies.lock.json",
+      "bytes": 118404,
+      "sha256": "6577e02c7d94d6590ecde8ca339b9f522a2258f286d8e0e6411691c252aac8de"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/OpenBLAS/LICENSE",
+      "bytes": 1548,
+      "sha256": "190b5a9c8d9723fe958ad33916bd7346d96fab3c5ea90832bb02d854f620fcff"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/OpenBLAS/LICENSE-lapack",
+      "bytes": 2266,
+      "sha256": "978539245c405775bf347b1256c36df4daf8b69a64b099e94b1d53742201621e"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/SDL2/LICENSE.txt",
+      "bytes": 884,
+      "sha256": "97f35b302b361680ec1e891e95d2d52097bb95abff361434916d99dc1305f127"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/angleproject/LICENSE",
+      "bytes": 1643,
+      "sha256": "bf4da21bd20bcfb5b60b7ecc67fa864a79be049e21d6178076887f178dd6c71a"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/aom/LICENSE",
+      "bytes": 1316,
+      "sha256": "4764a286d8b2faeaf42f4418e7d7a28d58fc8fd4d00a3d0a7f44b0a4099de7f2"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/aom/PATENTS",
+      "bytes": 5701,
+      "sha256": "661fb8e504744e95587b556b94a58343448300606a41bea8c7a9b97125696e61"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/binutils/COPYING",
+      "bytes": 18002,
+      "sha256": "231f7edcc7352d7734a96eef0b8030f77982678c516876fcb81e25b32d68564c"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/binutils/COPYING.LIB",
+      "bytes": 25291,
+      "sha256": "56bdea73b6145ef6ac5259b3da390b981d840c24cb03b8e1cbc678de7ecfa18d"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/binutils/COPYING3",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/binutils/COPYING3.LIB",
+      "bytes": 7639,
+      "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/brotli/LICENSE",
+      "bytes": 1084,
+      "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/bzip2/LICENSE",
+      "bytes": 1896,
+      "sha256": "c6dbbf828498be844a89eaa3b84adbab3199e342eb5cb2ed2f0d4ba7ec0f38a3"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/c-ares/LICENSE.md",
+      "bytes": 1211,
+      "sha256": "460f5e768fda3752ca2169a95df062578a10fb126bfd65f3b9b1a1bed2f84807"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/cairo/COPYING",
+      "bytes": 1576,
+      "sha256": "67228a9f7c5f9b67c58f556f1be178f62da4d9e2e6285318d8c74d567255abdf"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/cairo/COPYING-LGPL-2.1",
+      "bytes": 26533,
+      "sha256": "9e9e8608c4cdda51a78cc3a385f4ec9a2e4c96d5ecad74ac8bca5fca3e563b7d"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/cairo/COPYING-MPL-1.1",
+      "bytes": 25755,
+      "sha256": "53692a2ed6c6a2c6ec9b32dd0b820dfae91e0a1fcdf625ca9ed0bdf8705fcc4f"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/crt/COPYING",
+      "bytes": 2326,
+      "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/crt/COPYING.MinGW-w64-runtime.txt",
+      "bytes": 12155,
+      "sha256": "1db8da07b436c68833c0673ffee3d9fcb2526047f3820b81661865dfedc79a1f"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/crt/COPYING.MinGW-w64.txt",
+      "bytes": 5905,
+      "sha256": "f38e6194bd3bfa1b654f118e5acefe0aead437bbe669eee43957ccc65a7127f1"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/curl/LICENSE",
+      "bytes": 1088,
+      "sha256": "82f2f4427d6545ee5aaac4f0b80428da6cc8ba41c2cf5da3a03680ec327b9681"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/dav1d/COPYING",
+      "bytes": 1317,
+      "sha256": "dd92c3c2247c5651606fc23a5e2d6a1ebc5ace9a3e49cbde0e12f05ad1cb1ee5"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/dav1d/PATENTS",
+      "bytes": 5730,
+      "sha256": "335eca574598bf4ca181b12f708d6669e5a5e78c8e1513e5b35fa1f03901484b"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/expat/COPYING",
+      "bytes": 1144,
+      "sha256": "31b15de82aa19a845156169a17a5488bf597e561b2c318d159ed583139b25e87"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/flac/COPYING.Xiph",
+      "bytes": 1509,
+      "sha256": "7866ee98760fc1f0156b4fe6bf530257e02be487ab3fd94e2b63799dd32d6b2c"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/fontconfig/COPYING",
+      "bytes": 8616,
+      "sha256": "51a51aa9823704fd90bccc616cdd17ebabb5b2b3e9cbde886ca02c7002288067"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/freetype/FTL.TXT",
+      "bytes": 6743,
+      "sha256": "5a5ee54c5001bbad1cdc1a57cc3dd4c42199b2da09d39c7ee41fab002d02967f"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/freetype/GPLv2.TXT",
+      "bytes": 17994,
+      "sha256": "c4120c6752c910c299e3bd9cb3a46ff262c268303ca2069b61f92f10a5656c18"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/fribidi/COPYING",
+      "bytes": 26419,
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gcc/COPYING.RUNTIME",
+      "bytes": 3324,
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gcc/COPYING3",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gdk-pixbuf2/COPYING",
+      "bytes": 26530,
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gettext-runtime/COPYING",
+      "bytes": 495,
+      "sha256": "7ef2cdfe58e0c0460657b6598b49af29d4e03c1e41cbaf0e1da1eb8ad74b95d0"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gettext-runtime/intl/COPYING.LIB",
+      "bytes": 26419,
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gettext-runtime/libasprintf/COPYING",
+      "bytes": 65,
+      "sha256": "03133addae5b99a6148c538300e6d97074453089be1423b741bd081f18e2b298"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gettext-runtime/libasprintf/COPYING.LIB",
+      "bytes": 26419,
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/ggml/LICENSE",
+      "bytes": 1078,
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/glib2/COPYING",
+      "bytes": 25967,
+      "sha256": "fa6f36630bb1e0c571d34b2bbdf188d08495c9dbf58f28cac112f303fc1f58fb"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/glslang/LICENSE.txt",
+      "bytes": 54615,
+      "sha256": "17e70c676e1521ff3e4686f04a2053d93a7e28a33be8de7ec37ab0ff72feb677"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/graphite2/COPYING",
+      "bytes": 1235,
+      "sha256": "2c272829ff23f182c8bf7ea12fedea69b0ae148663123ed5240c117cb129c9c1"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/graphite2/LICENSE",
+      "bytes": 29228,
+      "sha256": "cab46cd45adbfea4b1d0f14b033c70062c73074fa0b56532c2f351576ddf455e"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gsm/license.txt",
+      "bytes": 1450,
+      "sha256": "81c68a3374937ed9b5e4929c709e81a2c4b35b5d1f450ecf8c473e2daea46ff6"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/harfbuzz/COPYING",
+      "bytes": 1971,
+      "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/headers/COPYING",
+      "bytes": 2326,
+      "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/headers/COPYING.MinGW-w64-runtime.txt",
+      "bytes": 12155,
+      "sha256": "1db8da07b436c68833c0673ffee3d9fcb2526047f3820b81661865dfedc79a1f"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/headers/COPYING.MinGW-w64.txt",
+      "bytes": 5905,
+      "sha256": "f38e6194bd3bfa1b654f118e5acefe0aead437bbe669eee43957ccc65a7127f1"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/headers/ddk-readme.txt",
+      "bytes": 650,
+      "sha256": "8d8f9924e4ea5466932000bdb9a4104da1d8ca3e4c979bb8207225522ba63826"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/highway/LICENSE",
+      "bytes": 20785,
+      "sha256": "e340270d4f64384569a91d546acb5b094d69ce47f0c015db77abb74dc6f815af"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/imath/LICENSE.md",
+      "bytes": 1497,
+      "sha256": "c20236d3b39fd20eba8e3d1fb3b892a5483df2e7d8d61bf43f165d3fac22f601"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/jbigkit/COPYING",
+      "bytes": 17982,
+      "sha256": "91df39d1816bfb17a4dda2d3d2c83b1f6f2d38d53e53e41e8f97ad5ac46a0cad"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/jsoncpp/LICENSE",
+      "bytes": 2714,
+      "sha256": "cec0db5f6d7ed6b3a72647bd50aed02e13c3377fd44382b96dc2915534c042ad"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/lcms2/LICENSE",
+      "bytes": 1080,
+      "sha256": "6dbd60437f8ef91d8de1f08ad75882547fd4931bfcc3566a0735f28db1484d31"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/lcms2/LICENSE-fast_float",
+      "bytes": 35146,
+      "sha256": "c53a65c2fd561c87eaabf1072ef5dcab8653042bc15308465f52413585eb6271"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/lerc/LICENSE",
+      "bytes": 9198,
+      "sha256": "77a8b761727c75e2167b15bfdf61b2c0bcf8792271228bebe80779106ad00671"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libarchive/LICENSE",
+      "bytes": 3089,
+      "sha256": "30e556b3959e3985d66efefec5eaac51d4995053caa1d3cffe6eb916f146f229"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libb2/LICENSE",
+      "bytes": 6556,
+      "sha256": "6a1ee543e5282cd9061881edf462e6fdab181f328da71fc2c9a6950a80e94d01"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libbluray/COPYING",
+      "bytes": 24478,
+      "sha256": "b3aa400aca6d2ba1f0bd03bd98d03d1fe7489a3bbb26969d72016360af8a5c9d"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libdatrie/COPYING",
+      "bytes": 26527,
+      "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libdeflate/COPYING",
+      "bytes": 1078,
+      "sha256": "4ad69099cb4374836fd27583d9991e2838cd86b6e4666ab26b2d32582c91e73a"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libdovi/LICENSE",
+      "bytes": 1066,
+      "sha256": "e9d76c149b1176de4aa0202cfb6a4a266a0c4cb71959f429d670c3a857f95e52"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libdvdcss/COPYING",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libdvdnav/COPYING",
+      "bytes": 17992,
+      "sha256": "32b1062f7da84967e7019d01ab805935caa7ab7321a7ced0e30ebe75e5df1670"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libdvdread/COPYING",
+      "bytes": 18097,
+      "sha256": "d6cb0e9e560f51085556949a84af12b79a00f10ab8b66c752537faf7cd665572"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libexif/COPYING",
+      "bytes": 26434,
+      "sha256": "36b6d3fa47916943fd5fec313c584784946047ec1337a78b440e5992cb595f89"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libffi/LICENSE",
+      "bytes": 1132,
+      "sha256": "17b64dc60f3b6897a60f971e288b973f655c2edcdf08b25f3c3dd5549857881c"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgcc/COPYING.RUNTIME",
+      "bytes": 3324,
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgcc/COPYING3",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgfortran/COPYING.RUNTIME",
+      "bytes": 3324,
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgfortran/COPYING3",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgme/license.txt",
+      "bytes": 26938,
+      "sha256": "d2efc89fbb7533572a472d34e07964951810a3a4f8d3159ecc2dcaa1452c5c26"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgomp/COPYING.RUNTIME",
+      "bytes": 3324,
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgomp/COPYING3",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libiconv/COPYING",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libiconv/COPYING.LIB",
+      "bytes": 26419,
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libiconv/README",
+      "bytes": 5741,
+      "sha256": "4ae66e61d1c6593c84c47105b368d579bcee1af566dbb959ec63a0c48425dcf4"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libiconv/libcharset/COPYING.LIB",
+      "bytes": 26419,
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libjpeg-turbo/LICENSE.md",
+      "bytes": 6077,
+      "sha256": "ba6bceebcba0fdd35488477c2cca8c4632ce82c74dbfbc87d886ce6fc4433579"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libjpeg-turbo/README.ijg",
+      "bytes": 12799,
+      "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libjpeg-turbo/README.md",
+      "bytes": 17831,
+      "sha256": "bd71f6ebae1c151e4b5fe7072dc2cedcf33671fa40d91ad5f9058ecdc0b01721"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libjpeg-turbo/simd/jsimdext.inc",
+      "bytes": 15563,
+      "sha256": "68c5d236785edf75344cebe8b9bec36568bd35c96eb72cc67ffecd66c17dbd74"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libjxl/LICENSE",
+      "bytes": 1508,
+      "sha256": "8405932022a556380c2d8c272eff154a923feb197233f348ce5f7334fb0a5ede"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/liblc3/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libmodplug/LICENSE",
+      "bytes": 57,
+      "sha256": "49942e7b3b175f549e751feb08b5270ca6f6c5fb7a1be9f9517db275ec32c92e"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libmysofa/LICENSE",
+      "bytes": 1453,
+      "sha256": "9c8713ccc5d6d93d20c7a1cfcb876e64baf551bfbe67faa4e60d39cda9ffd023"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libogg/COPYING",
+      "bytes": 1466,
+      "sha256": "d2ab5758336489da61c12cc5bb757da5339c4ae9001f9bb0562b4370249af814"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libplacebo/LICENSE",
+      "bytes": 24478,
+      "sha256": "b3aa400aca6d2ba1f0bd03bd98d03d1fe7489a3bbb26969d72016360af8a5c9d"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libpng/LICENSE",
+      "bytes": 5345,
+      "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libpsl/COPYING",
+      "bytes": 1060,
+      "sha256": "322392e6001b2b3b0fca705dc9f11f26e12441188ecde50eb1d22909980b2925"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libquadmath/COPYING.LIB",
+      "bytes": 26440,
+      "sha256": "32434afcc8666ba060e111d715bfdb6c2d5dd8a35fa4d3ab8ad67d8f850d2f2b"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/librsvg/COPYING.LIB",
+      "bytes": 26530,
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libsamplerate/COPYING",
+      "bytes": 1334,
+      "sha256": "2c1f76ce2effdddb425018405d5690c0b1ab4e6976e35296b0a6db65c5e1a55d"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libsndfile/COPYING",
+      "bytes": 26518,
+      "sha256": "ad01ea5cd2755f6048383c8d54c88459cd6fcb17757c5c8892f8c5ea060f6140"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libsoxr/COPYING.LGPL",
+      "bytes": 26432,
+      "sha256": "f2f118b9029ec1871b953639ecc46651b2fc7b62e295e6cf3ef2ac4c9a058b33"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libsoxr/LICENSE",
+      "bytes": 1024,
+      "sha256": "dc98676341fdcd29d9f279c9679d6a75288785b174ded8d1b2e316c366166135"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libsoxr/LICENSE-PFFFT",
+      "bytes": 2122,
+      "sha256": "a9f3d236f3c14a41a1293f176d4c7c46d85404403417fcb8df6d6c9707104e42"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libssh2/LICENSE",
+      "bytes": 1959,
+      "sha256": "f7f9633cf9ff2f1333f3d7ce46973a8716a4d2a2815ad56f30d437d5fea7bafe"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libstdc++/COPYING.RUNTIME",
+      "bytes": 3324,
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libstdc++/COPYING3",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libsystre/LICENSE",
+      "bytes": 1445,
+      "sha256": "3200024286eb0a33c22da3a31c470df07c7b8cfbead2b9528195d67d107264ec"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libtasn1/COPYING",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libtasn1/COPYING.LESSERv2",
+      "bytes": 26419,
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libthai/COPYING",
+      "bytes": 26419,
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libtiff/LICENSE.md",
+      "bytes": 2416,
+      "sha256": "0e27c2382d7b8147972bbb746e04059a1152c8d0fda9d03ef1399d1a433c4ade"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libtre/LICENSE",
+      "bytes": 1479,
+      "sha256": "6a50ab50d856b30c965cf2dd899e577ec108c938242fd3a2e7a7a25eed996200"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libunibreak/LICENCE",
+      "bytes": 1045,
+      "sha256": "0c57e2ec42ece17791a75d2f9b2f8e0663181be008667a507f765b3ef22522db"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libunistring/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libunistring/LICENSE.LIB",
+      "bytes": 7639,
+      "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libva/COPYING",
+      "bytes": 1130,
+      "sha256": "c86a782ee845b52472dae9b9d79fb915d333628ac0efe49cdce63644814931de"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libvpl/LICENSE",
+      "bytes": 1074,
+      "sha256": "bf1cfac2e2792b6e1e995ce103d70796aecaf2ec7e4c5fe5474f7acec7b4a677"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libwebp/COPYING",
+      "bytes": 1496,
+      "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libwinpthread/COPYING",
+      "bytes": 2883,
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libxml2/COPYING",
+      "bytes": 1314,
+      "sha256": "5d4873884a890122a4b9b20ad56ac6f7da1d796a5bfcf04a427970ac96217626"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/llama.cpp/LICENSE",
+      "bytes": 1078,
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/lua51/COPYRIGHT",
+      "bytes": 1528,
+      "sha256": "ee5e3e82af1e1b543c4f216e399d7c8cfee797711913f349e385101c4ae60a79"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/lzo2/LICENSE",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/meson/COPYING",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/mpdecimal/LICENSE",
+      "bytes": 1285,
+      "sha256": "dba079e24a0286052f9f36a5e0b4f6cc95bc83ada657eb26bef8c0b6473f6512"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/mpg123/COPYING",
+      "bytes": 40718,
+      "sha256": "c22482728a634a8dfdb4ff72a96d4c1ed64cd8f3e79335c401751ac591609366"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/mujs/COPYING",
+      "bytes": 759,
+      "sha256": "0ca9b4fbfbcab8ac7d32475890d866efc02f4cffb6b6da5c0e9a0615cc3d82fe"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/nasm/LICENSE",
+      "bytes": 1554,
+      "sha256": "7436a7c46b6e4d969b41e1ce387885ae4ced25710662189ff2983665253729ac"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/ncurses/LICENSE",
+      "bytes": 1447,
+      "sha256": "708999f95527e1ffa670c6fce288c6c600cb477dd04afcc1171422b3dd4ee226"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/nghttp2/COPYING",
+      "bytes": 1156,
+      "sha256": "6b94f3abc1aabd0c72a7c7d92a77f79dda7c8a0cb3df839a97890b4116a2de2a"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/nghttp3/COPYING",
+      "bytes": 1081,
+      "sha256": "58cc3fc8c6d6cb2485ab35eb5918e849b5bf1e56522974e106d7a39a88d61dcd"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/ngtcp2/COPYING",
+      "bytes": 1080,
+      "sha256": "542dd526d2ea23565f0571cc68df6f05ed11248a90ff0f32de19d8ba589db513"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/ninja/COPYING",
+      "bytes": 11358,
+      "sha256": "eb7e9ab9690124c5c9f42bdc81383d886a3dede26345b6ed15bbad7caf81f7ea"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/opencl-icd/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/openexr/LICENSE.md",
+      "bytes": 1501,
+      "sha256": "84853c91d4c2e0310741d4773469d98bb93e61029608e0ba0882a3fffdf330bd"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/openjpeg/LICENSE",
+      "bytes": 2112,
+      "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/openjph/LICENSE",
+      "bytes": 1448,
+      "sha256": "5ddf5177863dfc9ab65fa129d587db651241f00e21ed2427b218bea997591f98"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/openssl/LICENSE",
+      "bytes": 10175,
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/opus/COPYING",
+      "bytes": 1945,
+      "sha256": "01e1167d54a096d123cf6dfbbeb19587278845c6481d2d66d545669846079551"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/pango/COPYING",
+      "bytes": 25292,
+      "sha256": "d245807f90032872d1438d741ed21e2490e1175dc8aa3afa5ddb6c8e529b58e5"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/pcre2/COPYING",
+      "bytes": 97,
+      "sha256": "99272c55f3dcfa07a8a7e15a5c1a33096e4727de74241d65fa049fccfdd59507"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/pcre2/LICENCE.md",
+      "bytes": 4011,
+      "sha256": "197d8a73ffee0d6b09adba2f9c677b5f5aede24edf89258a68e48248d010d811"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/pixman/COPYING",
+      "bytes": 2087,
+      "sha256": "fac9270f0987b96ff4533fca3548c633e02083cbba4a0172a3b149b2e4019793"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/python-packaging/LICENSE",
+      "bytes": 197,
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/python-packaging/LICENSE.APACHE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/python-packaging/LICENSE.BSD",
+      "bytes": 1344,
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/python3.14/LICENSE",
+      "bytes": 13804,
+      "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/rapidjson/license.txt",
+      "bytes": 5152,
+      "sha256": "a140e5d46fe734a1c78f1a3c3ef207871dd75648be71fdda8e309b23ab8b1f32"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/rav1e/LICENSE",
+      "bytes": 1332,
+      "sha256": "2dd0a109751e939dec3f80ddcfbc1ba91553f18c574399e85c159632182a2c0a"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/rav1e/PATENTS",
+      "bytes": 5702,
+      "sha256": "7b14a70c194b19dbd0625e7eac839a63200f67484521ce5e8d8244b127e8907a"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/rubberband/COPYING",
+      "bytes": 30260,
+      "sha256": "cedd4c1885d75991bf1077cc6e33359103cf04fbc996f20d30ab043d5fc5fcc5"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/shaderc/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/speex/LICENSE",
+      "bytes": 1773,
+      "sha256": "2654a4264b2bfe298dedc508748d140111840c315cc8eb646a3a68c13fa75b01"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/speexdsp/LICENSE",
+      "bytes": 1773,
+      "sha256": "2654a4264b2bfe298dedc508748d140111840c315cc8eb646a3a68c13fa75b01"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/spirv-cross/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/spirv-tools/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/sqlite3/LICENSE",
+      "bytes": 1528,
+      "sha256": "0b76663a90e034f3d7f2af5bfada4cedec5ebc275361899eccc5c18e6f01ff1f"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/srt/LICENSE",
+      "bytes": 16726,
+      "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/svt-av1/LICENSE",
+      "bytes": 1709,
+      "sha256": "0acc2fcb27472bdc9aaf8b71f37055bbdac4f54671b7d922f241bd7fcd0dd3e6"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/svt-av1/PATENTS.md",
+      "bytes": 5767,
+      "sha256": "20678ab10402659106dc4c147c97b2a6e94b5c0695415e15a8f195ebc3547922"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/tzdata/LICENSE",
+      "bytes": 252,
+      "sha256": "0613408568889f5739e5ae252b722a2659c02002839ad970a63dc5e9174b27cf"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/uchardet/COPYING",
+      "bytes": 70517,
+      "sha256": "107a29ccdd2d778aa2df5462f85dddfa099059abd22e064e07ec2cc9bafc37cd"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/vamp-plugin-sdk/LICENSE",
+      "bytes": 3153,
+      "sha256": "91572fd197f7333fc1f94b02e66cbaf6e804451d0f59ba85488fb22777b2a52a"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/vapoursynth/COPYING.LESSER",
+      "bytes": 26526,
+      "sha256": "b634ab5640e258563c536e658cad87080553df6f34f62269a21d554844e58bfe"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/vid.stab/LICENSE",
+      "bytes": 1135,
+      "sha256": "03f095c5c70ea18ffb2b89dd58e4ee57e4f613d04632993f90c890f4cc125b99"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/vulkan-headers/LICENSE",
+      "bytes": 495,
+      "sha256": "95ad366d23fadf701d355bc45fb8b82ae2d700239471d35d41286ac3b08ff903"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/vulkan-loader/LICENSE",
+      "bytes": 11661,
+      "sha256": "43c0a37e6a0fa7ff3c843b3ec5a4fac84b712558ddac103fbd4c1649662a9ece"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/whisper.cpp/LICENSE",
+      "bytes": 1078,
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/wineditline/LICENSE",
+      "bytes": 1588,
+      "sha256": "e1a9520a9b3143ad64adb356c5d2fca6bb09a3ad3950cf1f7213946543582440"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/winpthreads/COPYING",
+      "bytes": 2883,
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/xz/COPYING",
+      "bytes": 3119,
+      "sha256": "616a3ad264ce29b8f1cb97e53037b139d406899ca8d1f799651e17bfa09830b8"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/xz/COPYING.0BSD",
+      "bytes": 607,
+      "sha256": "0b01625d853911cd0e2e088dcfb743261034a091bb379246cb25a14cc4c74bf1"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/xz/COPYING.GPLv2",
+      "bytes": 17984,
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/xz/COPYING.GPLv3",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/xz/COPYING.LGPLv2.1",
+      "bytes": 26419,
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/zlib/LICENSE",
+      "bytes": 1002,
+      "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/zstd/LICENSE",
+      "bytes": 1549,
+      "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/zvbi/COPYING.md",
+      "bytes": 78695,
+      "sha256": "6d679539253897582d38fcd1eabfa670c01c0ece73d8cd3dc97869fcf723f106"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/ffmpeg/COPYING.GPLv2",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/ffmpeg/COPYING.GPLv3",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/ffmpeg/COPYING.LGPLv2.1",
+      "bytes": 26517,
+      "sha256": "246041b6ecf9bc32d718a62c57877c78b5eb397b6467e74ed7ae2626ab189c30"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/ffmpeg/COPYING.LGPLv3",
+      "bytes": 7651,
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/ffmpeg/LICENSE.md",
+      "bytes": 4352,
+      "sha256": "e6dc72d5665a1ebd6dcc841de59278dad4ca77ecc47b03f1064a55c3e9ea8bb8"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/mpv/Copyright",
+      "bytes": 4096,
+      "sha256": "bfe9ee4cceabcb8ecbfadf208d04156f73d801e6a57369a5606bb8341e204a23"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/mpv/LICENSE.GPL",
+      "bytes": 17984,
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/mpv/LICENSE.LGPL",
+      "bytes": 26410,
+      "sha256": "72b672113d642cbb8ef5dcc76938db801983c56e50b1400ab930f1a64d6dc8d9"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/ffmpeg-sup-keyframes-flush.patch",
+      "bytes": 3238,
+      "sha256": "714408f5abd10cf36f7bdacb0b9a61e28f6eef560a9036bbeaf416d38b01cb04"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/lua51.dll",
+      "bytes": 237118,
+      "sha256": "a8e7e60a412a5815ff38a9f5a116a452bff5b89e3d7019ed3ff45123b2aa8464"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/mpv.exe",
+      "bytes": 4248834,
+      "sha256": "8b8c6163d4d15620075755e98a9d7b314cbadc5062c29e5bcce29b54e3263c6b"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/swresample-7.dll",
+      "bytes": 182784,
+      "sha256": "9faabb200db5169e24cbf51c6774f2b7e6d906a4f1a8aa846d98703a25ad06f5"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/swscale-10.dll",
+      "bytes": 2242560,
+      "sha256": "aee9b1c3e89d4770615adb40f426c7fe016c3419fd18788d37115cbe7eb8f857"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/vulkan-1.dll",
+      "bytes": 724189,
+      "sha256": "31862137c4179dcdbba782760f3e401f9fb526477947079d7f63987864f9b0eb"
+    },
+    {
+      "path": "native/mpv/mani-sup-msys2-ucrt64-20261101-r2/zlib1.dll",
+      "bytes": 121530,
+      "sha256": "8ae7aeb0467763a1e271cd831ca8e2f7fd101602adb9923100ea26c6be2a559b"
+    }
+  ]
+}

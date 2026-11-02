@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page x:Class="Mani_App.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Mani_App"
+      Loaded="Page_Loaded" RequestedTheme="Dark" Language="en-US" KeyboardAcceleratorPlacementMode="Hidden" PreviewKeyDown="Page_PreviewKeyDown">
+  <Page.Resources>
+    <local:DelaySecondsConverter x:Key="DelaySeconds" />
+    <DataTemplate x:Key="QuickTrackTemplate">
+      <TextBlock Text="{Binding Label}" TextTrimming="CharacterEllipsis" ToolTipService.ToolTip="{Binding Label}" />
+    </DataTemplate>
+  </Page.Resources>
+  <Page.KeyboardAccelerators>
+    <KeyboardAccelerator Key="N" Modifiers="Control" Invoked="NewWindowShortcut_Invoked" />
+    <KeyboardAccelerator Key="W" Modifiers="Control" Invoked="CloseWindowShortcut_Invoked" />
+    <KeyboardAccelerator Key="M" Modifiers="Control,Shift" Invoked="MusicShortcut_Invoked" />
+    <KeyboardAccelerator Key="Space" Invoked="PlayShortcut_Invoked" />
+    <KeyboardAccelerator Key="O" Modifiers="Control" Invoked="OpenShortcut_Invoked" />
+    <KeyboardAccelerator Key="O" Modifiers="Control,Shift" Invoked="OpenUrlShortcut_Invoked" />
+    <KeyboardAccelerator Key="F11" Invoked="FullscreenShortcut_Invoked" />
+  </Page.KeyboardAccelerators>
+  <Grid Background="Black">
+    <Grid x:Name="VideoArea" Background="Black" AllowDrop="True" DragOver="Video_DragOver" Drop="Video_Drop" SizeChanged="Video_SizeChanged">
+      <Grid x:Name="VideoViewport">
+      <SwapChainPanel x:Name="VideoPanel" IsHitTestVisible="False" SizeChanged="Video_SizeChanged" CompositionScaleChanged="Video_ScaleChanged" />
+      <Image x:Name="DefaultMusicArtwork" Source="Assets/default-album-art.png" Stretch="Uniform" Visibility="Collapsed" IsHitTestVisible="False" AutomationProperties.AccessibilityView="Raw" />
+      <local:VideoSurfaceButton x:Name="VideoFocus" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+              Background="Transparent" BorderThickness="0" Padding="0" TabIndex="0" KeyboardAcceleratorPlacementMode="Hidden"
+              x:Uid="VideoFocus" AutomationProperties.AutomationId="VideoFocus" Click="VideoFocus_Click"
+              RightTapped="Video_RightTapped" ContextRequested="Video_ContextRequested">
+        <Button.KeyboardAccelerators>
+          <KeyboardAccelerator Key="F10" Modifiers="Shift" Invoked="Video_MenuShortcut" />
+          <KeyboardAccelerator Key="Application" Invoked="Video_MenuShortcut" />
+        </Button.KeyboardAccelerators>
+        <Button.Template><ControlTemplate TargetType="Button"><Grid Background="Transparent" /></ControlTemplate></Button.Template>
+      </local:VideoSurfaceButton>
+      <Border x:Name="EmptyBackdrop" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+          <StackPanel x:Name="EmptyState" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="16" Margin="24" MaxWidth="420">
+            <Image Source="Assets/Square150x150Logo.png" Width="88" Height="88" AutomationProperties.AccessibilityView="Raw" />
+            <TextBlock Text="Mani" FontSize="32" FontWeight="SemiBold" HorizontalAlignment="Center" />
+            <TextBlock x:Name="EmptyHeading" x:Uid="Welcome" FontSize="20" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" />
+            <TextBlock x:Name="EmptyMessage" x:Uid="DropHint" Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap" TextAlignment="Center" />
+            <ProgressRing x:Name="LoadingRing" Width="24" Height="24" IsActive="False" Visibility="Collapsed" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="12">
+              <Button x:Name="OpenButton" x:Uid="OpenFile" IsEnabled="False" Click="Open_Click" AutomationProperties.AutomationId="OpenFile" />
+              <Button x:Name="OpenUrlButton" x:Uid="OpenUrl" IsEnabled="False" Click="OpenUrl_Click" AutomationProperties.AutomationId="OpenUrl" />
+            </StackPanel>
+            <Button x:Name="CancelOpenButton" x:Uid="CancelOpen" HorizontalAlignment="Center" Visibility="Collapsed" Click="Stop_Click" />
+            <Button x:Name="WelcomeMore" x:Uid="More" HorizontalAlignment="Center" Click="WelcomeMore_Click" />
+          </StackPanel>
+        </ScrollViewer>
+      </Border>
+      <TextBlock x:Name="MediaTitle" Visibility="Collapsed" />
+      <Border x:Name="InfoPanel" Width="280" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="12,60,16,200"
+              Background="#E0202028" CornerRadius="12" Padding="16" Visibility="Collapsed">
+        <ScrollViewer><StackPanel Spacing="12">
+          <TextBlock x:Name="InfoHeading" FontSize="20" />
+          <TextBlock x:Name="Diagnostics" FontFamily="Consolas" TextWrapping="Wrap" IsTextSelectionEnabled="True" />
+          <Button x:Name="OpenLogsButton" Click="Logs_Click" />
+        </StackPanel></ScrollViewer>
+      </Border>
+      <Border x:Name="WebProbePanel" Width="320" Height="260" HorizontalAlignment="Left" VerticalAlignment="Top"
+              Margin="12" Background="#20202B" BorderBrush="#606070" BorderThickness="1" Visibility="Collapsed">
+        <Grid x:Name="WebProbeContainer" />
+      </Border>
+      <Border x:Name="WindowCheckBanner" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Top"
+              Margin="12" Padding="12" Background="#E0202028" CornerRadius="8">
+        <StackPanel Spacing="6">
+          <TextBlock x:Name="WindowCheckProgress" Text="Window checks" TextWrapping="Wrap" MaxWidth="560" />
+          <TextBlock Text="Watch and listen. Do not move or resize the window." />
+          <Button x:Name="SleepContinueButton" Content="Continue after wake" Visibility="Collapsed" IsEnabled="False" Click="SleepContinue_Click" />
+          <Button Content="Cancel window check" Click="CancelProbe_Click" />
+        </StackPanel>
+      </Border>
+      <Border x:Name="SubtitleCheckBanner" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Top"
+              Margin="12" Padding="12" MaxWidth="760" Background="#F0202028" CornerRadius="8">
+        <StackPanel Spacing="6">
+          <TextBlock x:Name="SubtitleCheckProgress" Text="Subtitle checks" FontSize="18" />
+          <TextBlock x:Name="SubtitleCheckHint" Text="Watch the two subtitle tracks." TextWrapping="Wrap" />
+          <Button Content="Cancel subtitle check" Click="CancelProbe_Click" />
+        </StackPanel>
+      </Border>
+      <Border x:Name="LabPanel" Width="360" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="12,12,12,190"
+              Background="#F0202028" CornerRadius="12" Padding="14" Visibility="Collapsed">
+        <ScrollViewer><StackPanel Spacing="10">
+          <TextBlock Text="M1 diagnostics" FontSize="20" />
+          <TextBlock Text="Technical probes. Results are saved in the log folder." TextWrapping="Wrap" />
+          <Button Content="Run M1 window and 4K checks" Click="WindowAnd4kChecks_Click" />
+          <TextBlock Text="Use this after HDR timing has already been collected. Open your 4K SDR video with audio first. Keep Windows HDR on. Runs the window and overlay checks, then pauses; about two minutes plus file verification." TextWrapping="Wrap" />
+          <Button Content="Run M1 combined checks" Click="CombinedChecks_Click" />
+          <TextBlock Text="Keep Windows HDR on. Runs HDR GPU timing, then WebView2 and blur through window sizes and fullscreen. About three minutes, then pauses. Optionally open a real 4K SDR video with audio first to include it (about one extra minute). No multi-monitor or sleep checks." TextWrapping="Wrap" />
+          <Button Content="Measure HDR GPU blur" Click="HdrGpuTiming_Click" />
+          <TextBlock Text="Keep Windows HDR on. Automatically opens the HDR sample and compares blur off/on/on/off, then pauses. About two minutes. Keep the window and display unchanged; pauses between stages are expected." TextWrapping="Wrap" />
+          <Button Content="Measure current video GPU blur" Click="GpuTiming_Click" />
+          <TextBlock Text="Open an SDR video with audio first. Compares blur off/on/on/off using the same scene, then pauses. About two minutes plus file verification. Keep the window and display unchanged; pauses between stages are expected." TextWrapping="Wrap" />
+          <Button Content="Run HDR overlay checks" Click="HdrOverlay_Click" />
+          <TextBlock Text="Keep Windows HDR on. Automatically checks HDR, HDR-to-SDR and restored HDR with five overlay states each, then pauses. Watch the picture and blur; listen during playback. About one to two minutes." TextWrapping="Wrap" />
+          <Button Content="Run current video overlay checks" Click="CurrentVideoOverlay_Click" />
+          <TextBlock Text="Open an SDR video with audio and choose a scene first. Checks five overlay states using about 10 seconds from that position each time, then pauses. Watch and listen; pauses between stages are expected. About one minute plus file verification." TextWrapping="Wrap" />
+          <Button Content="Run 1080p / 4K overlay matrix" Click="OverlayMatrix_Click" />
+          <TextBlock Text="Automatically checks both silent SDR samples with WebView2, GPU blur and both together. Watch the picture and control background; do not operate the player. About one minute." TextWrapping="Wrap" />
+          <Button Content="Run automated host checks" Click="AutomatedHostChecks_Click" />
+          <TextBlock Text="Checks WebView2, capture and 50 panel rebuilds. Playback is restored afterward. Visual and hardware checks remain separate." TextWrapping="Wrap" />
+          <Button Content="Refresh display / HDR details" Click="DisplayProbe_Click" />
+          <Button Content="Run window / fullscreen checks" Click="WindowChecks_Click" />
+          <Button Content="Run minimize / restore checks" Click="MinimizeChecks_Click" />
+          <TextBlock Text="Automatically minimizes and restores twice: once playing, once paused. Audio should continue during the first minimize and stop during the paused stages. Takes about one minute." TextWrapping="Wrap" />
+          <Button Content="Run lock / unlock checks" Click="SessionLockChecks_Click" />
+          <TextBlock Text="Follow the banner: lock Windows with Win+L twice, wait 10 seconds each time, then unlock. First playing, then paused. Keep the computer awake. Takes about two minutes." TextWrapping="Wrap" />
+          <Button Content="Run sleep / wake checks" Click="SleepChecks_Click" />
+          <TextBlock Text="Follow the banner: choose Windows Start > Power > Sleep, wait 10 seconds, then wake and unlock. Click Continue after wake. Playback pauses for sleep; the check then tests playback recovery." TextWrapping="Wrap" />
+          <Button Content="Run DPI / scale checks" Click="DpiChecks_Click" />
+          <TextBlock Text="Follow the banner: set Windows display Scale to 100%, 150%, 200%, then restore the original value. Keep resolution and HDR unchanged. Takes about two minutes." TextWrapping="Wrap" />
+          <TextBlock x:Name="WindowCheckStatus" Text="Automatically resizes the window and enters/exits fullscreen, then restores it. Keep Windows HDR and scale unchanged; watch and listen. Takes about 20 seconds." TextWrapping="Wrap" />
+          <Button Content="Run SDR / HDR checks" Click="DisplayChecks_Click" />
+          <TextBlock Text="Opens four short test cases and saves display evidence. Target settings are restored; the test video stays paused." TextWrapping="Wrap" />
+          <Button Content="Run HDR switch checks" Click="HdrSwitchChecks_Click" />
+          <Button Content="Run playing HDR switch checks" Tag="playing" Click="HdrSwitchChecks_Click" />
+          <TextBlock Text="Plays moving HDR bars with a quiet steady tone. Follow the HDR off/on prompts below and watch/listen for interruptions. Stops paused when done." TextWrapping="Wrap" />
+          <TextBlock x:Name="HdrSwitchStatus" Text="Start with Windows HDR on. This check will ask you to turn it off, then on. Keep the window on one display. The sample stays paused." TextWrapping="Wrap" />
+          <Button Content="Cancel HDR switch check" Click="CancelProbe_Click" />
+          <Button Content="Run dual-subtitle visual checks" Click="SubtitleChecks_Click" />
+          <TextBlock x:Name="SubtitleCheckStatus" Text="Automatically opens a sample and checks two ASS tracks. Watch the text, movement and positions for about one minute. The sample stays paused when done." TextWrapping="Wrap" />
+          <Button Content="Load primary subtitle" Tag="primary" Click="SubtitleProbe_Click" />
+          <NumberBox x:Name="PrimaryDelay" Header="Primary delay (seconds)" Value="0" SmallChange="0.1" SpinButtonPlacementMode="Inline" Tag="sub-delay" ValueChanged="SubtitleNumber_Changed" />
+          <NumberBox x:Name="PrimaryPosition" Header="Primary position (%)" Value="100" Minimum="0" Maximum="150" Tag="sub-pos" ValueChanged="SubtitleNumber_Changed" />
+          <ComboBox x:Name="PrimaryStyle" Header="Primary ASS mode" SelectedIndex="2" Tag="sub-ass-override" SelectionChanged="SubtitleStyle_Changed">
+            <ComboBoxItem Content="Preserve ASS" Tag="no"/><ComboBoxItem Content="Default override" Tag="yes"/><ComboBoxItem Content="Scale override" Tag="scale"/><ComboBoxItem Content="Force styles" Tag="force"/><ComboBoxItem Content="Plain text" Tag="strip"/>
+          </ComboBox>
+          <Button Content="Load secondary subtitle" Tag="secondary" Click="SubtitleProbe_Click" />
+          <NumberBox x:Name="SecondaryDelay" Header="Secondary delay (seconds)" Value="0" SmallChange="0.1" SpinButtonPlacementMode="Inline" Tag="secondary-sub-delay" ValueChanged="SubtitleNumber_Changed" />
+          <NumberBox x:Name="SecondaryPosition" Header="Secondary position (%)" Value="0" Minimum="0" Maximum="150" Tag="secondary-sub-pos" ValueChanged="SubtitleNumber_Changed" />
+          <ComboBox x:Name="SecondaryStyle" Header="Secondary ASS mode" SelectedIndex="4" Tag="secondary-sub-ass-override" SelectionChanged="SubtitleStyle_Changed">
+            <ComboBoxItem Content="Preserve ASS" Tag="no"/><ComboBoxItem Content="Default override" Tag="yes"/><ComboBoxItem Content="Scale override" Tag="scale"/><ComboBoxItem Content="Force styles" Tag="force"/><ComboBoxItem Content="Plain text" Tag="strip"/>
+          </ComboBox>
+          <Button Content="Clear A-B loop" Click="ClearLoop_Click" />
+          <Button Content="Toggle GPU blur experiment" Click="BlurProbe_Click" />
+          <TextBlock Text="Rounded GPU blur experiment. HDR, resizing and animation require visual acceptance." TextWrapping="Wrap" />
+          <Button Content="Toggle WebView2 overlay" Click="WebProbe_Click" />
+          <Button Content="Check WebView2 only" Click="WebHostChecks_Click" />
+          <Button Content="Prepare interaction checks" Click="PrepareInteraction_Click" />
+          <TextBlock Text="Opens the test video and enables WebView2 and GPU blur. Keeps your volume and display settings." TextWrapping="Wrap" />
+          <TextBlock x:Name="InteractionStatus" Text="Prepare first, then type in the web input and save a snapshot." TextWrapping="Wrap" />
+          <Button Content="Save interaction snapshot" Click="InteractionSnapshot_Click" />
+          <TextBlock Text="Save after typing in WebView2, with blur enabled, and after closing both overlays. Captures counters and rendering state; does not record typed text." TextWrapping="Wrap" />
+          <Expander Header="Deferred: OCR (M6)" IsExpanded="False">
+            <StackPanel Spacing="8">
+          <ComboBox x:Name="OcrLanguage" Header="OCR language" SelectedIndex="0">
+            <ComboBoxItem Content="English (United States)" Tag="en-US"/><ComboBoxItem Content="Chinese (Simplified)" Tag="zh-Hans-CN"/>
+          </ComboBox>
+          <Button Content="Capture independent frame + OCR" Click="OcrProbe_Click" />
+            </StackPanel>
+          </Expander>
+          <Button Content="Measure fresh playback baseline" Click="PlaybackBaseline_Click" />
+          <Button Content="Open and measure 1080p test video" Tag="1080p" Click="ResolutionBaseline_Click" />
+          <Button Content="Open and measure 4K test video" Tag="4k" Click="ResolutionBaseline_Click" />
+          <TextBlock Text="Start a fresh Mani session and run python scripts/run_m1_baselines.py --collect-host. Measure your video, then 1080p and 4K. Close Mani after all three finish. No panel rebuilds." TextWrapping="Wrap" />
+          <Button Content="Measure 30-minute playback" Click="LongPlayback_Click" />
+          <TextBlock Text="Use a fresh session and a real movie with over 30 minutes remaining. Start python scripts/run_m1_long_playback.py first. Keep the window and display unchanged." TextWrapping="Wrap" />
+          <Button Content="Run stability + performance" Click="StabilityAndPerformance_Click" />
+          <TextBlock Text="Two rounds of 50 rebuilds, idle recovery samples, then playback metrics. Use a 15-second or longer video. Turn off blur and WebView2 first. Allow several minutes." TextWrapping="Wrap" />
+          <Button Content="Measure seek / playback performance" Click="BenchmarkProbe_Click" />
+          <Button Content="Run 50 video-host cycles" Click="HostStress_Click" />
+          <Button Content="Cancel running probe" Click="CancelProbe_Click" />
+          <TextBox x:Name="LabResults" Header="Probe result" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" MinHeight="120" />
+          <Button Content="Open log folder" Click="Logs_Click" />
+          <Button Content="Close diagnostics" Click="Lab_Click" />
+        </StackPanel></ScrollViewer>
+      </Border>
+      <Border x:Name="OsdOverlay" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8" Padding="16,8" CornerRadius="10"
+              Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" IsHitTestVisible="False" Visibility="Collapsed"
+              AutomationProperties.AutomationId="OsdOverlay">
+        <StackPanel Spacing="4" FlowDirection="LeftToRight">
+          <TextBlock x:Name="OsdTitle" FontSize="20" TextTrimming="CharacterEllipsis" AutomationProperties.AutomationId="OsdTitle" AutomationProperties.LiveSetting="Polite" />
+          <TextBlock x:Name="OsdDetail" FontSize="11" TextTrimming="CharacterEllipsis" Visibility="Collapsed" AutomationProperties.AutomationId="OsdDetail" />
+          <ProgressBar x:Name="OsdProgress" Minimum="0" Maximum="1" Height="12" Visibility="Collapsed" AutomationProperties.AutomationId="OsdProgress" />
+        </StackPanel>
+      </Border>
+      <Border x:Name="StatusOverlay" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16" Padding="10,6" CornerRadius="6"
+              Background="#D0202028" IsHitTestVisible="False" Visibility="Collapsed" MaxWidth="520">
+        <TextBlock x:Name="Status" x:Uid="Initializing" TextWrapping="Wrap" />
+      </Border>
+      </Grid>
+      <Border x:Name="Controls" VerticalAlignment="Top" HorizontalAlignment="Left" Width="460"
+              Visibility="Collapsed" IsHitTestVisible="False" Opacity="0"
+              Background="#AA25252E" BorderBrush="#60606068" BorderThickness="1" CornerRadius="12" Padding="8,0,8,8"
+              SizeChanged="Controls_SizeChanged" PointerEntered="Controls_PointerEntered" PointerExited="Controls_PointerExited">
+        <Border.RenderTransform><TranslateTransform x:Name="OscTranslation" /></Border.RenderTransform>
+        <UserControl x:Name="ControlsHost"><UserControl.Resources><ResourceDictionary><ResourceDictionary.ThemeDictionaries><ResourceDictionary x:Key="Default">
+      <SolidColorBrush x:Key="SliderThumbBackground" Color="#FFE5E5E8" />
+      <SolidColorBrush x:Key="SliderThumbBackgroundPointerOver" Color="#FFFFFFFF" />
+      <SolidColorBrush x:Key="SliderThumbBackgroundPressed" Color="#FFCCCCD2" />
+      <SolidColorBrush x:Key="SliderTrackValueFill" Color="#FFB8B8C0" />
+      <SolidColorBrush x:Key="SliderTrackValueFillPointerOver" Color="#FFDADAE0" />
+      <SolidColorBrush x:Key="SliderTrackValueFillPressed" Color="#FFB8B8C0" />
+    </ResourceDictionary><ResourceDictionary x:Key="HighContrast"><SolidColorBrush x:Key="SliderThumbBackground" Color="{ThemeResource SystemColorWindowTextColor}"/><SolidColorBrush x:Key="SliderThumbBackgroundPointerOver" Color="{ThemeResource SystemColorHighlightColor}"/><SolidColorBrush x:Key="SliderThumbBackgroundPressed" Color="{ThemeResource SystemColorHighlightColor}"/><SolidColorBrush x:Key="SliderTrackValueFill" Color="{ThemeResource SystemColorWindowTextColor}"/><SolidColorBrush x:Key="SliderTrackValueFillPointerOver" Color="{ThemeResource SystemColorHighlightColor}"/><SolidColorBrush x:Key="SliderTrackValueFillPressed" Color="{ThemeResource SystemColorHighlightColor}"/></ResourceDictionary></ResourceDictionary.ThemeDictionaries>
+    <x:Double x:Key="SliderTrackThemeHeight">3</x:Double>
+    <x:Double x:Key="SliderHorizontalThumbWidth">12</x:Double>
+    <x:Double x:Key="SliderHorizontalThumbHeight">12</x:Double></ResourceDictionary></UserControl.Resources>
+        <Grid x:Name="OscFragments" ColumnSpacing="4">
+          <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="32"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+          <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="0"/></Grid.ColumnDefinitions>
+          <Grid x:Name="OscDragHandle" Grid.ColumnSpan="4" Height="14" Background="Transparent"
+                PointerPressed="OscDrag_Pressed" PointerMoved="OscDrag_Moved" PointerReleased="OscDrag_Released" PointerCaptureLost="OscDrag_Released"
+                x:Uid="DragControls">
+              <!-- IINA uses the empty top padding as its drag region. Keep the tested hit target without a separate grip mark. -->
+          </Grid>
+            <StackPanel x:Name="OscVolume" Grid.Row="1" Orientation="Horizontal" Spacing="4" VerticalAlignment="Center">
+              <Button Style="{StaticResource GlassIconButton}" x:Name="MainMuteButton" AutomationProperties.AutomationId="MuteButton" x:Uid="Mute" Width="32" Height="32" Padding="0" Click="Mute_Click"><FontIcon x:Name="MainMuteIcon" Glyph="&#xE767;" FontSize="16" /></Button>
+              <local:WheelSlider Style="{StaticResource DefaultSliderStyle}" x:Name="MainVolume" Width="70" Minimum="0" Maximum="100" Value="50" IsEnabled="False" ValueChanged="Volume_Changed" x:Uid="Volume" AutomationProperties.AutomationId="Volume" />
+            </StackPanel>
+            <StackPanel x:Name="OscPlayback" Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+              <Button Style="{StaticResource GlassIconButton}" x:Name="MainSeekBackButton" AutomationProperties.AutomationId="SeekBackButton" x:Uid="SeekBack" Width="32" Height="32" Padding="0" Tag="-5" Click="RelativeSeek_Click"><FontIcon Glyph="&#xE892;" FontSize="16" /></Button>
+              <Button Style="{StaticResource GlassIconButton}" x:Name="MainPlayButton" x:Uid="PlayButton" Width="32" Height="32" Padding="0" IsEnabled="False" Click="Play_Click" AutomationProperties.AutomationId="PlayButton"><FontIcon x:Name="MainPlayIcon" Glyph="&#xE768;" FontSize="20" /></Button>
+              <Button Style="{StaticResource GlassIconButton}" x:Name="MainSeekForwardButton" AutomationProperties.AutomationId="SeekForwardButton" x:Uid="SeekForward" Width="32" Height="32" Padding="0" Tag="5" Click="RelativeSeek_Click"><FontIcon Glyph="&#xE893;" FontSize="16" /></Button>
+            </StackPanel>
+            <StackPanel x:Name="OscToolbar" Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Spacing="4">
+              <Button Style="{StaticResource GlassIconButton}" x:Name="PipReturnButton" x:Uid="PipReturnButton" Width="32" Height="32" Padding="0" Visibility="Collapsed" Click="PictureInPicture_Click" AutomationProperties.AutomationId="PipReturnButton"><FontIcon Glyph="&#xE8A7;" FontSize="16" /></Button>
+              <Button Style="{StaticResource GlassIconButton}" x:Name="FullscreenButton" x:Uid="FullscreenButton" MinWidth="28" Width="28" Height="32" Padding="0" Click="Fullscreen_Click"><FontIcon Glyph="&#xE740;" FontSize="16" /></Button>
+              <Button x:Name="PipToolbarButton" Style="{StaticResource GlassIconButton}" x:Uid="PipToolbarButton" Width="28" Height="32" MinWidth="28" Click="PictureInPicture_Click" AutomationProperties.AutomationId="PipToolbarButton"><FontIcon Glyph="&#xE8A7;" FontSize="15" /></Button>
+              <Button x:Name="SettingsToolbarButton" Style="{StaticResource GlassIconButton}" x:Uid="SettingsToolbarButton" Width="28" Height="32" MinWidth="28" Click="QuickToolbar_Click" AutomationProperties.AutomationId="SettingsToolbarButton"><FontIcon Glyph="&#xE713;" FontSize="15" /></Button>
+              <Button Style="{StaticResource GlassIconButton}" x:Name="MoreButton" x:Uid="MoreButton" MinWidth="28" Width="28" Height="32" Padding="0"><FontIcon Glyph="&#xE712;" FontSize="16" />
+              <Button.Flyout><MenuFlyout x:Name="MainMenu" Opened="OscMenu_Opened" Closed="OscMenu_Closed">
+  <MenuFlyoutSubItem x:Name="FileMenu" x:Uid="FileMenu" AutomationProperties.AutomationId="FileMenu">
+    <MenuFlyoutItem x:Name="OpenFileMenu" x:Uid="OpenFileMenu" Click="Open_Click"/>
+    <MenuFlyoutItem x:Name="OpenUrlMenu" x:Uid="OpenUrlMenu" Click="OpenUrl_Click"/>
+    <MenuFlyoutItem x:Name="RevealFileMenu" x:Uid="RevealFileMenu" KeyboardAcceleratorTextOverride="Ctrl+Shift+R" Click="RevealFile_Click"/>
+    <MenuFlyoutSeparator/>
+    <MenuFlyoutItem x:Name="NewWindowMenu" x:Uid="NewWindowMenu" Click="NewWindow_Click" AutomationProperties.AutomationId="NewWindowMenu" KeyboardAcceleratorTextOverride="Ctrl+N"/>
+    <MenuFlyoutItem x:Name="LocalizedControl1" x:Uid="CloseWindowMenu" Click="CloseWindow_Click" AutomationProperties.AutomationId="CloseWindowMenu" KeyboardAcceleratorTextOverride="Ctrl+W"/>
+    <MenuFlyoutSeparator/>
+    <MenuFlyoutItem x:Name="LocalizedControl2" x:Uid="ExitMenu" Click="Exit_Click" AutomationProperties.AutomationId="ExitMenu" KeyboardAcceleratorTextOverride="Q"/>
+  </MenuFlyoutSubItem>
+  <MenuFlyoutSubItem x:Name="PlaybackMenu" x:Uid="PlaybackMenu" AutomationProperties.AutomationId="PlaybackMenu">
+    <MenuFlyoutItem x:Name="PlayPauseMenu" KeyboardAcceleratorTextOverride="Space" Click="MenuPlay_Click"/>
+    <MenuFlyoutItem x:Name="StopMenu" x:Uid="StopMenu" Click="Stop_Click" KeyboardAcceleratorTextOverride="Ctrl+."/>
+    <MenuFlyoutSeparator/>
+    <MenuFlyoutItem x:Name="SeekBackMenu" KeyboardAcceleratorTextOverride="Left" x:Uid="SeekBackMenu" Tag="-5" Click="RelativeSeek_Click"/>
+    <MenuFlyoutItem x:Name="SeekForwardMenu" KeyboardAcceleratorTextOverride="Right" x:Uid="SeekForwardMenu" Tag="5" Click="RelativeSeek_Click"/>
+    <MenuFlyoutItem x:Name="FrameBackMenu" KeyboardAcceleratorTextOverride="Alt+Left" x:Uid="PreviousFrameMenu" Click="FrameBack_Click"/>
+    <MenuFlyoutItem x:Name="FrameForwardMenu" KeyboardAcceleratorTextOverride="Alt+Right" x:Uid="NextFrameMenu" Click="FrameForward_Click"/>
+    <MenuFlyoutSeparator/>
+    <MenuFlyoutSubItem x:Name="SpeedMenu" x:Uid="SpeedMenu">
+      <MenuFlyoutItem x:Name="LocalizedControl3" x:Uid="HalfSpeed" Tag="0.5" Click="Speed_Click"/>
+      <MenuFlyoutItem x:Name="LocalizedControl4" x:Uid="NormalSpeed" Tag="1" Click="Speed_Click"/>
+      <MenuFlyoutItem x:Name="LocalizedControl5" x:Uid="DoubleSpeed" Tag="2" Click="Speed_Click"/>
+    </MenuFlyoutSubItem>
+    <MenuFlyoutSubItem x:Name="LoopMenu" x:Uid="LoopMenu" AutomationProperties.AutomationId="LoopMenu">
+      <ToggleMenuFlyoutItem x:Name="FileLoopMenu" KeyboardAcceleratorTextOverride="Ctrl+Shift+L" x:Uid="LoopFileMenu" Click="FileLoop_Click"/>
+      <MenuFlyoutItem x:Name="AbLoopMenu" KeyboardAcceleratorTextOverride="Ctrl+L" x:Uid="AbLoopMenu" Click="Loop_Click"/>
+      <MenuFlyoutItem x:Name="LoopOffMenu" x:Uid="LoopOffMenu" Click="LoopOff_Click"/>
+    </MenuFlyoutSubItem>
+  </MenuFlyoutSubItem>
+  <MenuFlyoutSubItem x:Name="VideoMenu" x:Uid="VideoMenu" AutomationProperties.AutomationId="VideoMenu">
+    <MenuFlyoutItem x:Name="QuickSettingsMenu" x:Uid="VideoSettingsMenu" Tag="Video" Click="QuickSettingsMenu_Click"/>
+    <MenuFlyoutItem x:Name="LayoutMenu" x:Uid="LayoutMenu" Click="LayoutMenu_Click"/>
+    <MenuFlyoutSeparator/>
+    <MenuFlyoutSubItem x:Name="ControlBarMenu" x:Uid="OscPositionMenu">
+      <ToggleMenuFlyoutItem x:Name="FloatingOscOption" x:Uid="FloatingOscOption" Tag="0" IsChecked="True" Click="OscPosition_Click"/>
+      <ToggleMenuFlyoutItem x:Name="TopOscOption" x:Uid="TopOscOption" Tag="1" Click="OscPosition_Click"/>
+      <ToggleMenuFlyoutItem x:Name="BottomOscOption" x:Uid="BottomOscOption" Tag="2" Click="OscPosition_Click"/>
+      <MenuFlyoutSeparator/>
+      <ToggleMenuFlyoutItem x:Name="EdgeToEdgeOption" x:Uid="EdgeToEdgeOption" IsChecked="True" Click="EdgeToEdge_Click"/>
+      <ToggleMenuFlyoutItem x:Name="DockControlsOption" x:Uid="DockControlsOption" Visibility="Collapsed" Click="DockControls_Click"/>
+      <MenuFlyoutSeparator/>
+      <MenuFlyoutItem x:Name="ResetOscMenu" x:Uid="ResetOscMenu" Click="ResetOsc_Click"/>
+    </MenuFlyoutSubItem>
+    <MenuFlyoutSubItem x:Name="WindowSizeMenu" x:Uid="WindowSizeMenu">
+      <MenuFlyoutItem x:Name="LocalizedControl6" x:Uid="WindowScale0" KeyboardAcceleratorTextOverride="Ctrl+3" Tag="0" Click="WindowSize_Click"/>
+      <MenuFlyoutItem x:Name="LocalizedControl7" x:Uid="WindowScale1" KeyboardAcceleratorTextOverride="Ctrl+0" Tag="1" Click="WindowSize_Click"/>
+      <MenuFlyoutItem x:Name="LocalizedControl8" x:Uid="WindowScale2" KeyboardAcceleratorTextOverride="Ctrl+1" Tag="2" Click="WindowSize_Click"/>
+      <MenuFlyoutItem x:Name="LocalizedControl9" x:Uid="WindowScale3" Tag="3" Click="WindowSize_Click"/>
+      <MenuFlyoutItem x:Name="LocalizedControl10" x:Uid="WindowScale4" KeyboardAcceleratorTextOverride="Ctrl+2" Tag="4" Click="WindowSize_Click"/>
+      <MenuFlyoutSeparator/>
+      <MenuFlyoutItem x:Name="SmallerWindowMenu" x:Uid="SmallerWindowMenu" KeyboardAcceleratorTextOverride="Ctrl+-" Tag="-1" Click="WindowStep_Click"/>
+      <MenuFlyoutItem x:Name="BiggerWindowMenu" x:Uid="BiggerWindowMenu" KeyboardAcceleratorTextOverride="Ctrl+=" Tag="1" Click="WindowStep_Click"/>
+    </MenuFlyoutSubItem>
+    <ToggleMenuFlyoutItem x:Name="LockWindowAspect" x:Uid="LockWindowAspect" Click="WindowSetting_Click"/>
+    <MenuFlyoutItem x:Name="LocalizedControl11" x:Uid="FullscreenMenu" Click="Fullscreen_Click"/>
+    <MenuFlyoutSeparator/>
+    <MenuFlyoutItem x:Name="ScreenshotMenu" KeyboardAcceleratorTextOverride="Ctrl+S" x:Uid="ScreenshotMenu" Click="Screenshot_Click"/>
+  </MenuFlyoutSubItem>
+  <MenuFlyoutSubItem x:Name="VolumeMenu" x:Uid="AudioMenu" AutomationProperties.AutomationId="VolumeMenu">
+    <MenuFlyoutItem x:Name="AudioSettingsMenu" x:Uid="AudioSettingsMenu" Tag="Audio" Click="QuickSettingsMenu_Click"/>
+    <MenuFlyoutSeparator/>
+    <MenuFlyoutItem x:Name="LocalizedControl12" x:Uid="VolumeUp" Tag="5" Click="VolumeStep_Click"/>
+    <MenuFlyoutItem x:Name="LocalizedControl13" x:Uid="VolumeDown" Tag="-5" Click="VolumeStep_Click"/>
+    <MenuFlyoutItem x:Name="MuteMenu" KeyboardAcceleratorTextOverride="Ctrl+/" x:Uid="MuteMenu" Click="Mute_Click"/>
+  </MenuFlyoutSubItem>
+  <MenuFlyoutItem x:Name="SubtitlesSettingsMenu" x:Uid="SubtitlesSettingsMenu" Tag="Subtitles" Click="QuickSettingsMenu_Click"/>
+  <MenuFlyoutSubItem x:Name="WindowMenu" x:Uid="WindowMenu" AutomationProperties.AutomationId="WindowMenu">
+    <MenuFlyoutSubItem x:Name="SwitchWindowMenu" x:Uid="SwitchWindowMenu"/>
+    <MenuFlyoutSeparator/>
+    <MenuFlyoutItem x:Name="MusicModeMenu" Click="MusicMode_Click" AutomationProperties.AutomationId="MusicModeMenu" KeyboardAcceleratorTextOverride="Ctrl+Shift+M"/>
+    <ToggleMenuFlyoutItem x:Name="MusicArtworkOption" x:Uid="MusicArtworkOption" Click="MusicArtwork_Click"/>
+    <MenuFlyoutItem x:Name="PictureInPictureMenu" Click="PictureInPicture_Click" AutomationProperties.AutomationId="PictureInPictureMenu" KeyboardAcceleratorTextOverride="Ctrl+Alt+P"/>
+    <ToggleMenuFlyoutItem x:Name="AlwaysOnTopOption" x:Uid="AlwaysOnTopOption" Click="WindowFloating_Click" KeyboardAcceleratorTextOverride="Ctrl+Alt+T"/>
+    <MenuFlyoutSeparator/>
+    <MenuFlyoutItem x:Name="PlaybackInfoMenu" x:Uid="PlaybackInfoMenu" Click="Info_Click"/>
+  </MenuFlyoutSubItem>
+  <MenuFlyoutSeparator/>
+  <MenuFlyoutItem x:Name="InterfaceMenu" x:Uid="SettingsMenu" Click="InterfaceSettings_Click" AutomationProperties.AutomationId="InterfaceMenu"/>
+  <MenuFlyoutItem x:Name="LocalizedControl14" x:Uid="AboutMenu" Click="About_Click"/>
+</MenuFlyout></Button.Flyout>
+              </Button>
+            </StackPanel>
+          <Grid x:Name="OscTimeline" Grid.Row="2" Grid.ColumnSpan="3" ColumnSpacing="4" Margin="0,4,0,0" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+            <TextBlock x:Name="MainTimeLabel" Text="00:00" FontSize="11" MinWidth="38" VerticalAlignment="Center" />
+            <local:WheelSlider Style="{StaticResource DefaultSliderStyle}" x:Name="MainTimeline" Grid.Column="1" Minimum="0" Maximum="1" IsEnabled="False" ValueChanged="Timeline_Changed"
+                    x:Uid="Timeline" AutomationProperties.AutomationId="Timeline" KeyUp="Timeline_KeyUp" />
+            <TextBlock x:Name="MainDurationLabel" Grid.Column="2" Text="00:00" FontSize="11" MinWidth="38" VerticalAlignment="Center" TextAlignment="Right" />
+          </Grid>
+        </Grid>
+        </UserControl>
+      </Border>
+      <UserControl x:Name="MusicBar" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" x:Uid="MusicBar" Height="72" VerticalAlignment="Bottom" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Visibility="Collapsed" Padding="6,0" AutomationProperties.AutomationId="MusicBar"><UserControl.Resources><ResourceDictionary><ResourceDictionary.ThemeDictionaries><ResourceDictionary x:Key="Default">
+      <SolidColorBrush x:Key="SliderThumbBackground" Color="#FFE5E5E8" />
+      <SolidColorBrush x:Key="SliderThumbBackgroundPointerOver" Color="#FFFFFFFF" />
+      <SolidColorBrush x:Key="SliderThumbBackgroundPressed" Color="#FFCCCCD2" />
+      <SolidColorBrush x:Key="SliderTrackValueFill" Color="#FFB8B8C0" />
+      <SolidColorBrush x:Key="SliderTrackValueFillPointerOver" Color="#FFDADAE0" />
+      <SolidColorBrush x:Key="SliderTrackValueFillPressed" Color="#FFB8B8C0" />
+    </ResourceDictionary><ResourceDictionary x:Key="HighContrast"><SolidColorBrush x:Key="SliderThumbBackground" Color="{ThemeResource SystemColorWindowTextColor}"/><SolidColorBrush x:Key="SliderThumbBackgroundPointerOver" Color="{ThemeResource SystemColorHighlightColor}"/><SolidColorBrush x:Key="SliderThumbBackgroundPressed" Color="{ThemeResource SystemColorHighlightColor}"/><SolidColorBrush x:Key="SliderTrackValueFill" Color="{ThemeResource SystemColorWindowTextColor}"/><SolidColorBrush x:Key="SliderTrackValueFillPointerOver" Color="{ThemeResource SystemColorHighlightColor}"/><SolidColorBrush x:Key="SliderTrackValueFillPressed" Color="{ThemeResource SystemColorHighlightColor}"/></ResourceDictionary></ResourceDictionary.ThemeDictionaries>
+    <x:Double x:Key="SliderTrackThemeHeight">3</x:Double>
+    <x:Double x:Key="SliderHorizontalThumbWidth">12</x:Double>
+    <x:Double x:Key="SliderHorizontalThumbHeight">12</x:Double></ResourceDictionary></UserControl.Resources>
+        <Grid Background="Transparent">
+        <Grid.RowDefinitions><RowDefinition x:Name="MusicHeaderRow" Height="40"/><RowDefinition x:Name="MusicTimelineRow" Height="32"/></Grid.RowDefinitions>
+        <StackPanel x:Name="MusicLabels" VerticalAlignment="Center" IsHitTestVisible="False" Spacing="0">
+          <TextBlock x:Name="MusicTitle" FontSize="13" TextTrimming="CharacterEllipsis" TextAlignment="Center" AutomationProperties.AutomationId="MusicTitle" />
+          <TextBlock x:Name="MusicArtistAlbum" FontSize="11" TextTrimming="CharacterEllipsis" TextAlignment="Center" Foreground="{ThemeResource TextFillColorSecondaryBrush}" AutomationProperties.AutomationId="MusicArtistAlbum" />
+        </StackPanel>
+        <StackPanel x:Name="MusicButtons" Orientation="Horizontal" Spacing="4" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0" IsHitTestVisible="False" AutomationProperties.AutomationId="MusicButtons">
+          <Button Style="{StaticResource GlassIconButton}" x:Name="MusicReturnButton" x:Uid="MusicReturnButton" Width="32" Height="32" Padding="0" Click="MusicMode_Click" AutomationProperties.AutomationId="MusicReturnButton"><FontIcon Glyph="&#xE8A7;" FontSize="16"/></Button>
+          <Button Style="{StaticResource GlassIconButton}" x:Name="MusicSeekBackButton" AutomationProperties.AutomationId="SeekBackButton" x:Uid="SeekBack" Width="32" Height="32" Padding="0" Tag="-5" Click="RelativeSeek_Click"><FontIcon Glyph="&#xE892;" FontSize="16" /></Button>
+<Button Style="{StaticResource GlassIconButton}" x:Name="MusicPlayButton" x:Uid="PlayButton" Width="32" Height="32" Padding="0" IsEnabled="False" Click="Play_Click" AutomationProperties.AutomationId="PlayButton"><FontIcon x:Name="MusicPlayIcon" Glyph="&#xE768;" FontSize="20" /></Button>
+<Button Style="{StaticResource GlassIconButton}" x:Name="MusicSeekForwardButton" AutomationProperties.AutomationId="SeekForwardButton" x:Uid="SeekForward" Width="32" Height="32" Padding="0" Tag="5" Click="RelativeSeek_Click"><FontIcon Glyph="&#xE893;" FontSize="16" /></Button>
+          <Button Style="{StaticResource GlassIconButton}" x:Name="MusicVolumeButton" x:Uid="MusicVolumeButton" Width="32" Height="32" Padding="0" AutomationProperties.AutomationId="MusicVolumeButton">
+            <FontIcon x:Name="MusicVolumeIcon" Glyph="&#xE767;" FontSize="16"/>
+            <Button.Flyout><Flyout x:Name="MusicVolumeFlyout" Opened="MusicVolume_Opened" Closed="MusicVolume_Closed"><StackPanel x:Name="MusicVolumeContent" Orientation="Horizontal" Spacing="4"><Button Style="{StaticResource GlassIconButton}" x:Name="MusicMuteButton" AutomationProperties.AutomationId="MuteButton" x:Uid="Mute" Width="32" Height="32" Padding="0" Click="Mute_Click"><FontIcon x:Name="MusicMuteIcon" Glyph="&#xE767;" FontSize="16" /></Button>
+<local:WheelSlider Style="{StaticResource DefaultSliderStyle}" x:Name="MusicVolume" Width="70" Minimum="0" Maximum="100" Value="50" IsEnabled="False" ValueChanged="Volume_Changed" x:Uid="Volume" AutomationProperties.AutomationId="Volume" /></StackPanel></Flyout></Button.Flyout>
+          </Button>
+          <Button Style="{StaticResource GlassIconButton}" x:Name="MusicArtworkButton" x:Uid="MusicArtworkButton" Width="32" Height="32" Padding="0" Click="MusicArtwork_Click" AutomationProperties.AutomationId="MusicArtworkButton"><FontIcon Glyph="&#xEB9F;" FontSize="16"/></Button>
+          <Button Style="{StaticResource GlassIconButton}" x:Name="MusicMoreButton" x:Uid="MoreButton" Width="32" Height="32" Padding="0" Click="MusicMore_Click" AutomationProperties.AutomationId="MoreButton"><FontIcon Glyph="&#xE712;" FontSize="16"/></Button>
+        </StackPanel>
+<Grid x:Name="MusicTimelineHost" Grid.Row="1" ColumnSpacing="4" Margin="0" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+            <TextBlock x:Name="MusicTimeLabel" Text="00:00" FontSize="10" MinWidth="38" VerticalAlignment="Center" />
+            <local:WheelSlider Style="{StaticResource DefaultSliderStyle}" x:Name="MusicTimeline" Grid.Column="1" Minimum="0" Maximum="1" IsEnabled="False" ValueChanged="Timeline_Changed"
+                    x:Uid="Timeline" AutomationProperties.AutomationId="Timeline" KeyUp="Timeline_KeyUp" />
+            <TextBlock x:Name="MusicDurationLabel" Grid.Column="2" Text="00:00" FontSize="10" MinWidth="38" VerticalAlignment="Center" TextAlignment="Right" />
+          </Grid>
+        </Grid>
+      </UserControl>
+      <Border x:Name="LayoutSidebar" Width="360" HorizontalAlignment="Right" VerticalAlignment="Stretch"
+              Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" BorderBrush="{ThemeResource DividerStrokeColorDefaultBrush}"
+              BorderThickness="1,0,0,0" Visibility="Collapsed" IsHitTestVisible="False">
+        <Border.RenderTransform><TranslateTransform x:Name="SidebarTranslation" /></Border.RenderTransform>
+        <UserControl x:Name="SidebarControls" IsEnabled="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" AutomationProperties.AutomationId="LayoutSidebar" x:Uid="LayoutSidebar">
+        <Grid x:Name="SidebarPageGrid" RowSpacing="8">
+          <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+          <Grid x:Name="SidebarHeader" Margin="10,12,10,0" ColumnSpacing="8">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+            <Button x:Name="SidebarClose" Style="{StaticResource GlassIconButton}" x:Uid="SidebarClose" Width="32" Height="32" CornerRadius="16" AutomationProperties.AutomationId="SidebarClose" Click="SidebarClose_Click"><FontIcon x:Name="SidebarCloseIcon" Glyph="&#xE76C;" FontSize="12" /></Button>
+            <Border Grid.Column="1" x:Name="SidebarTabsBorder" Background="{ThemeResource GlassGroupFill}" CornerRadius="20" HorizontalAlignment="Right">
+              <ListBox x:Name="QuickPage" x:Uid="QuickPage" AutomationProperties.AutomationId="QuickPage" Style="{StaticResource GlassSegments}" ItemContainerStyle="{StaticResource GlassSegment}" SelectionChanged="QuickPage_Changed">
+                <ListBoxItem x:Name="LocalizedControl15" x:Uid="TabLayout" AutomationProperties.AutomationId="TabLayout"><StackPanel Orientation="Horizontal" Spacing="6"><FontIcon Glyph="&#xE790;" FontSize="14"/><TextBlock x:Name="TabLayoutLabel" x:Uid="TabLayoutLabel" FontSize="12" VerticalAlignment="Center" Visibility="Collapsed"/></StackPanel></ListBoxItem>
+                <ListBoxItem x:Name="LocalizedControl16" x:Uid="TabVideo" AutomationProperties.AutomationId="TabVideo"><StackPanel Orientation="Horizontal" Spacing="6"><FontIcon Glyph="&#xE714;" FontSize="14"/><TextBlock x:Name="TabVideoLabel" x:Uid="TabVideoLabel" FontSize="12" VerticalAlignment="Center" Visibility="Collapsed"/></StackPanel></ListBoxItem>
+                <ListBoxItem x:Name="LocalizedControl17" x:Uid="TabAudio" AutomationProperties.AutomationId="TabAudio"><StackPanel Orientation="Horizontal" Spacing="6"><FontIcon Glyph="&#xE8D6;" FontSize="14"/><TextBlock x:Name="TabAudioLabel" x:Uid="TabAudioLabel" FontSize="12" VerticalAlignment="Center" Visibility="Collapsed"/></StackPanel></ListBoxItem>
+                <ListBoxItem x:Name="LocalizedControl18" x:Uid="TabSubtitles" AutomationProperties.AutomationId="TabSubtitles"><StackPanel Orientation="Horizontal" Spacing="6"><FontIcon Glyph="&#xE8F2;" FontSize="14"/><TextBlock x:Name="TabSubtitlesLabel" x:Uid="TabSubtitlesLabel" FontSize="12" VerticalAlignment="Center" Visibility="Collapsed"/></StackPanel></ListBoxItem>
+              </ListBox>
+            </Border>
+          </Grid>
+          <ScrollViewer x:Name="QuickScroll" Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+           <StackPanel Margin="16,8,16,20" Spacing="16">
+            <StackPanel x:Name="LayoutPane" Spacing="18">
+              <Border Style="{StaticResource GlassGroup}"><StackPanel Spacing="12">
+                <Grid x:Name="LayoutEdgeRow" ColumnSpacing="12"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock x:Name="LocalizedControl19" x:Uid="LayoutEdgeLabel" TextWrapping="Wrap" VerticalAlignment="Center"/><ToggleSwitch x:Name="LayoutEdge" Grid.Column="1" x:Uid="LayoutEdge" MinWidth="40" OnContent="" OffContent="" AutomationProperties.AutomationId="LayoutEdge" Toggled="LayoutToggle_Toggled" /></Grid>
+                <Grid x:Name="LayoutLockRow" ColumnSpacing="12"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock x:Name="LocalizedControl20" x:Uid="LayoutLockLabel" TextWrapping="Wrap" VerticalAlignment="Center"/><ToggleSwitch x:Name="LayoutLock" Grid.Column="1" x:Uid="LayoutLock" MinWidth="40" OnContent="" OffContent="" AutomationProperties.AutomationId="LayoutLock" Toggled="LayoutToggle_Toggled" /></Grid>
+                <Grid x:Name="LayoutDockRow" ColumnSpacing="12"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock x:Name="LocalizedControl21" x:Uid="LayoutDockLabel" TextWrapping="Wrap" VerticalAlignment="Center"/><ToggleSwitch x:Name="LayoutDock" Grid.Column="1" x:Uid="LayoutDock" MinWidth="40" OnContent="" OffContent="" AutomationProperties.AutomationId="LayoutDock" Toggled="LayoutToggle_Toggled" /></Grid>
+                <Button x:Name="FitVideoButton" x:Uid="FitVideoButton" AutomationProperties.AutomationId="FitVideoButton" HorizontalAlignment="Stretch" Click="FitVideo_Click" />
+              </StackPanel></Border>
+              <Border Style="{StaticResource GlassGroup}"><StackPanel Spacing="10">
+                <TextBlock x:Name="LocalizedControl22" x:Uid="ControlBarHeading" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}" HorizontalAlignment="Center"/>
+                <ListBox x:Name="LayoutOscMode" x:Uid="LayoutOscMode" AutomationProperties.AutomationId="LayoutOscMode" Style="{StaticResource GlassSegments}" ItemContainerStyle="{StaticResource GlassLayoutTile}" HorizontalAlignment="Center" SelectionChanged="LayoutOsc_Changed">
+                  <ListBox.Resources><ResourceDictionary><ResourceDictionary.ThemeDictionaries>
+                    <ResourceDictionary x:Key="Default"><SolidColorBrush x:Key="GlassDiagramBacking" Color="Transparent"/><SolidColorBrush x:Key="GlassSelectionFill" Color="{ThemeResource SystemAccentColor}" Opacity="0.12"/><SolidColorBrush x:Key="GlassGroupStroke" Color="{ThemeResource SystemAccentColor}"/></ResourceDictionary>
+                    <ResourceDictionary x:Key="HighContrast"><SolidColorBrush x:Key="GlassDiagramBacking" Color="{ThemeResource SystemColorWindowColor}"/><SolidColorBrush x:Key="GlassSelectionFill" Color="{ThemeResource SystemColorHighlightColor}"/><SolidColorBrush x:Key="GlassGroupStroke" Color="{ThemeResource SystemColorWindowTextColor}"/></ResourceDictionary>
+                  </ResourceDictionary.ThemeDictionaries></ResourceDictionary></ListBox.Resources>
+                  <ListBox.ItemsPanel><ItemsPanelTemplate><StackPanel Orientation="Horizontal" /></ItemsPanelTemplate></ListBox.ItemsPanel>
+                  <ListBoxItem x:Name="LocalizedControl23" x:Uid="ModeFloating" AutomationProperties.AutomationId="ModeFloating"><StackPanel Spacing="6"><Grid Width="34" Height="24" Background="{ThemeResource GlassDiagramBacking}"><Border BorderThickness="1.5" BorderBrush="{ThemeResource TextFillColorSecondaryBrush}" CornerRadius="3"/><Border Width="20" Height="4" CornerRadius="1" Background="{ThemeResource TextFillColorSecondaryBrush}" VerticalAlignment="Top" Margin="0,13,0,0" /></Grid><TextBlock x:Name="LocalizedControl24" x:Uid="ModeFloatingLabel" FontSize="11" TextAlignment="Center" /></StackPanel></ListBoxItem>
+                  <ListBoxItem x:Name="LocalizedControl25" x:Uid="ModeTop" AutomationProperties.AutomationId="ModeTop"><StackPanel Spacing="6"><Grid Width="34" Height="24" Background="{ThemeResource GlassDiagramBacking}"><Border BorderThickness="1.5" BorderBrush="{ThemeResource TextFillColorSecondaryBrush}" CornerRadius="3"/><Border Width="28" Height="4" CornerRadius="1" Background="{ThemeResource TextFillColorSecondaryBrush}" VerticalAlignment="Top" Margin="0,3,0,0" /></Grid><TextBlock x:Name="LocalizedControl26" x:Uid="ModeTopLabel" FontSize="11" TextAlignment="Center" /></StackPanel></ListBoxItem>
+                  <ListBoxItem x:Name="LocalizedControl27" x:Uid="ModeBottom" AutomationProperties.AutomationId="ModeBottom"><StackPanel Spacing="6"><Grid Width="34" Height="24" Background="{ThemeResource GlassDiagramBacking}"><Border BorderThickness="1.5" BorderBrush="{ThemeResource TextFillColorSecondaryBrush}" CornerRadius="3"/><Border Width="28" Height="4" CornerRadius="1" Background="{ThemeResource TextFillColorSecondaryBrush}" VerticalAlignment="Top" Margin="0,17,0,0" /></Grid><TextBlock x:Name="LocalizedControl28" x:Uid="ModeBottomLabel" FontSize="11" TextAlignment="Center" /></StackPanel></ListBoxItem>
+                </ListBox>
+              </StackPanel></Border>
+              <Border Style="{StaticResource GlassGroup}"><StackPanel Spacing="12">
+                <TextBlock x:Name="LocalizedControl29" x:Uid="SidebarPositionHeading" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                <ListBox x:Name="LayoutSide" x:Uid="LayoutSide" AutomationProperties.AutomationId="LayoutSide" Style="{StaticResource GlassSegments}" ItemContainerStyle="{StaticResource GlassSegment}" SelectionChanged="LayoutSide_Changed">
+                  <ListBoxItem x:Name="LocalizedControl30" x:Uid="SideLeft" AutomationProperties.AutomationId="SideLeft"/><ListBoxItem x:Name="LocalizedControl31" x:Uid="SideRight" AutomationProperties.AutomationId="SideRight"/>
+                </ListBox>
+                <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock x:Name="LocalizedControl32" x:Uid="LayoutWidthHeading"/><TextBlock x:Name="LayoutWidthValue" Grid.Column="1" /></Grid>
+                <Slider x:Name="LayoutWidthSlider" Minimum="300" Maximum="500" SmallChange="1" LargeChange="10" Value="360" x:Uid="LayoutWidthSlider" AutomationProperties.AutomationId="LayoutWidthSlider" ValueChanged="SidebarWidth_Changed" />
+              </StackPanel></Border>
+            </StackPanel>
+            <StackPanel x:Name="QuickVideoPane" Spacing="16" Visibility="Collapsed"><Border Style="{StaticResource GlassGroup}"><StackPanel Spacing="12">
+              <ComboBox x:Name="QuickVideoTrack" x:Uid="QuickVideoTrack" AutomationProperties.AutomationId="QuickVideoTrack" Tag="vid" HorizontalAlignment="Stretch" ItemTemplate="{StaticResource QuickTrackTemplate}" HorizontalContentAlignment="Stretch" SelectionChanged="QuickTrack_Changed" />
+              <NumberBox x:Name="QuickSpeed" x:Uid="QuickSpeed" AutomationProperties.AutomationId="QuickSpeed" Tag="speed" Minimum="0.01" SmallChange="0.1" SpinButtonPlacementMode="Inline" ValueChanged="QuickNumber_Changed" />
+              <Slider x:Name="QuickSpeedSlider" x:Uid="QuickSpeedSlider" AutomationProperties.AutomationId="QuickSpeedSlider" Minimum="0" Maximum="24" StepFrequency="1" SmallChange="1" LargeChange="4" ValueChanged="QuickSpeed_Changed" />
+              <Button x:Name="LocalizedControl33" x:Uid="QuickResetSpeed" Tag="speed" Click="QuickReset_Click" />
+            </StackPanel></Border></StackPanel>
+            <StackPanel x:Name="QuickAudioPane" Spacing="16" Visibility="Collapsed"><Border Style="{StaticResource GlassGroup}"><StackPanel Spacing="12">
+              <ComboBox x:Name="QuickAudioTrack" x:Uid="QuickAudioTrack" AutomationProperties.AutomationId="QuickAudioTrack" Tag="aid" HorizontalAlignment="Stretch" ItemTemplate="{StaticResource QuickTrackTemplate}" HorizontalContentAlignment="Stretch" SelectionChanged="QuickTrack_Changed" />
+              <NumberBox x:Name="QuickAudioDelay" x:Uid="QuickAudioDelay" AutomationProperties.AutomationId="QuickAudioDelay" Tag="audio-delay" SmallChange="0.05" SpinButtonPlacementMode="Inline" ValueChanged="QuickNumber_Changed" />
+              <local:DelaySlider Style="{StaticResource DefaultSliderStyle}" x:Name="QuickAudioDelaySlider" x:Uid="QuickAudioDelaySlider" AutomationProperties.AutomationId="QuickAudioDelaySlider"
+                    Tag="audio-delay" Minimum="-5" Maximum="5" Value="0" SmallChange="0.05" LargeChange="0.5" StepFrequency="0.000001"
+                    TickFrequency="0.5" TickPlacement="BottomRight" ThumbToolTipValueConverter="{StaticResource DelaySeconds}" ValueChanged="QuickDelay_Changed" />
+              <Grid Margin="0,-12,0,0" IsHitTestVisible="False" AutomationProperties.AccessibilityView="Raw">
+                <TextBlock x:Name="LocalizedControl34" x:Uid="DelayScaleMinimum" HorizontalAlignment="Left" FontSize="12" />
+                <TextBlock x:Name="LocalizedControl35" x:Uid="DelayScaleZero" HorizontalAlignment="Center" FontSize="12" />
+                <TextBlock x:Name="LocalizedControl36" x:Uid="DelayScaleMaximum" HorizontalAlignment="Right" FontSize="12" />
+              </Grid>
+              <Button x:Name="LocalizedControl37" x:Uid="QuickResetDelay" AutomationProperties.AutomationId="QuickAudioReset" Tag="audio-delay" Click="QuickReset_Click" />
+            </StackPanel></Border></StackPanel>
+            <StackPanel x:Name="QuickSubtitlesPane" Spacing="16" Visibility="Collapsed"><Border Style="{StaticResource GlassGroup}"><StackPanel Spacing="12">
+              <ComboBox x:Name="QuickPrimaryTrack" x:Uid="QuickPrimaryTrack" AutomationProperties.AutomationId="QuickPrimaryTrack" Tag="sid" HorizontalAlignment="Stretch" ItemTemplate="{StaticResource QuickTrackTemplate}" HorizontalContentAlignment="Stretch" SelectionChanged="QuickTrack_Changed" />
+              <TextBlock x:Name="QuickPrimaryConflict" AutomationProperties.AutomationId="QuickPrimaryConflict" AutomationProperties.LiveSetting="Polite" TextWrapping="Wrap" Visibility="Collapsed" />
+              <Grid ColumnSpacing="12"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock x:Name="LocalizedControl38" x:Uid="QuickPrimaryVisibleLabel" TextWrapping="Wrap" VerticalAlignment="Center"/><ToggleSwitch Grid.Column="1" MinWidth="40" OnContent="" OffContent="" x:Name="QuickPrimaryVisible" x:Uid="QuickPrimaryVisible" AutomationProperties.AutomationId="QuickPrimaryVisible" Tag="sub-visibility" Toggled="QuickVisibility_Toggled" /></Grid>
+              <NumberBox x:Name="QuickPrimaryDelay" x:Uid="QuickPrimaryDelay" AutomationProperties.AutomationId="QuickPrimaryDelay" Tag="sub-delay" SmallChange="0.1" SpinButtonPlacementMode="Inline" ValueChanged="QuickNumber_Changed" />
+              <local:DelaySlider Style="{StaticResource DefaultSliderStyle}" x:Name="QuickPrimaryDelaySlider" x:Uid="QuickPrimaryDelaySlider" AutomationProperties.AutomationId="QuickPrimaryDelaySlider"
+                    Tag="sub-delay" Minimum="-5" Maximum="5" Value="0" SmallChange="0.1" LargeChange="0.5" StepFrequency="0.000001"
+                    TickFrequency="0.5" TickPlacement="BottomRight" ThumbToolTipValueConverter="{StaticResource DelaySeconds}" ValueChanged="QuickDelay_Changed" />
+              <Grid Margin="0,-12,0,0" IsHitTestVisible="False" AutomationProperties.AccessibilityView="Raw">
+                <TextBlock x:Name="LocalizedControl39" x:Uid="DelayScaleMinimum" HorizontalAlignment="Left" FontSize="12" />
+                <TextBlock x:Name="LocalizedControl40" x:Uid="DelayScaleZero" HorizontalAlignment="Center" FontSize="12" />
+                <TextBlock x:Name="LocalizedControl41" x:Uid="DelayScaleMaximum" HorizontalAlignment="Right" FontSize="12" />
+              </Grid>
+              <Button x:Name="LocalizedControl42" x:Uid="QuickResetDelay" AutomationProperties.AutomationId="QuickPrimaryReset" Tag="sub-delay" Click="QuickReset_Click" />
+              </StackPanel></Border><Border Style="{StaticResource GlassGroup}"><StackPanel Spacing="12">
+              <ComboBox x:Name="QuickSecondaryTrack" x:Uid="QuickSecondaryTrack" AutomationProperties.AutomationId="QuickSecondaryTrack" Tag="secondary-sid" HorizontalAlignment="Stretch" ItemTemplate="{StaticResource QuickTrackTemplate}" HorizontalContentAlignment="Stretch" SelectionChanged="QuickTrack_Changed" />
+              <TextBlock x:Name="QuickSecondaryConflict" AutomationProperties.AutomationId="QuickSecondaryConflict" AutomationProperties.LiveSetting="Polite" TextWrapping="Wrap" Visibility="Collapsed" />
+              <Grid ColumnSpacing="12"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock x:Name="LocalizedControl43" x:Uid="QuickSecondaryVisibleLabel" TextWrapping="Wrap" VerticalAlignment="Center"/><ToggleSwitch Grid.Column="1" MinWidth="40" OnContent="" OffContent="" x:Name="QuickSecondaryVisible" x:Uid="QuickSecondaryVisible" AutomationProperties.AutomationId="QuickSecondaryVisible" Tag="secondary-sub-visibility" Toggled="QuickVisibility_Toggled" /></Grid>
+              <NumberBox x:Name="QuickSecondaryDelay" x:Uid="QuickSecondaryDelay" AutomationProperties.AutomationId="QuickSecondaryDelay" Tag="secondary-sub-delay" SmallChange="0.1" SpinButtonPlacementMode="Inline" ValueChanged="QuickNumber_Changed" />
+              <local:DelaySlider Style="{StaticResource DefaultSliderStyle}" x:Name="QuickSecondaryDelaySlider" x:Uid="QuickSecondaryDelaySlider" AutomationProperties.AutomationId="QuickSecondaryDelaySlider"
+                    Tag="secondary-sub-delay" Minimum="-5" Maximum="5" Value="0" SmallChange="0.1" LargeChange="0.5" StepFrequency="0.000001"
+                    TickFrequency="0.5" TickPlacement="BottomRight" ThumbToolTipValueConverter="{StaticResource DelaySeconds}" ValueChanged="QuickDelay_Changed" />
+              <Grid Margin="0,-12,0,0" IsHitTestVisible="False" AutomationProperties.AccessibilityView="Raw">
+                <TextBlock x:Name="LocalizedControl44" x:Uid="DelayScaleMinimum" HorizontalAlignment="Left" FontSize="12" />
+                <TextBlock x:Name="LocalizedControl45" x:Uid="DelayScaleZero" HorizontalAlignment="Center" FontSize="12" />
+                <TextBlock x:Name="LocalizedControl46" x:Uid="DelayScaleMaximum" HorizontalAlignment="Right" FontSize="12" />
+              </Grid>
+              <Button x:Name="LocalizedControl47" x:Uid="QuickResetDelay" AutomationProperties.AutomationId="QuickSecondaryReset" Tag="secondary-sub-delay" Click="QuickReset_Click" /></StackPanel></Border>
+            </StackPanel>
+           </StackPanel>
+          </ScrollViewer>
+        </Grid>
+        </UserControl>
+      </Border>
+      <local:SidebarResizeHandle x:Name="SidebarResizeGrip" Width="4" HorizontalAlignment="Left" VerticalAlignment="Stretch"
+              Background="Transparent" Visibility="Collapsed" AutomationProperties.AccessibilityView="Raw"
+              PointerPressed="SidebarResize_Pressed" PointerMoved="SidebarResize_Moved"
+              PointerReleased="SidebarResize_Released" PointerCaptureLost="SidebarResize_Released">
+        <local:SidebarResizeHandle.RenderTransform><TranslateTransform x:Name="SidebarGripTranslation" /></local:SidebarResizeHandle.RenderTransform>
+        <Grid Background="Transparent" />
+      </local:SidebarResizeHandle>
+    </Grid>
+  </Grid>
+</Page>

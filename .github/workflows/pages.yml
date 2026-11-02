@@ -1,0 +1,38 @@
+# Run explicitly after the repository, Beta ZIP and existing native release are public.
+# Application pushes alone do not publish the website.
+name: Mani website
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        id: pages
+      - name: Build bilingual site and verify public downloads
+        run: python3 website/build.py --public --base-url '${{ steps.pages.outputs.base_url }}'
+      - name: Verify static site
+        run: python3 website/validate.py
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: artifacts/website/dist
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

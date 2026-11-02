@@ -1,0 +1,1658 @@
+<Project>
+  <PropertyGroup>
+    <ManiMpvDll>$(MSBuildThisFileDirectory)..\native\mpv\mani-sup-msys2-ucrt64-20261101-r2\libmpv-2.dll</ManiMpvDll>
+    <ManiMpvSha256>CED71F12A6C5743CA3980B21F186C70B9199FD74C39C49093C51B2CFC12CCE58</ManiMpvSha256>
+  </PropertyGroup>
+  <ItemGroup>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/SDL2.dll">
+      <RelativePath>SDL2.dll</RelativePath>
+      <Sha256>2E44D5BAE9A97859ECCDE14AD4467DF14BAE7468594BBA7FE8EB417F517CE31B</Sha256>
+      <Link>SDL2.dll</Link>
+      <TargetPath>SDL2.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/avcodec-63.dll">
+      <RelativePath>avcodec-63.dll</RelativePath>
+      <Sha256>E5891FB6A4BCCB113B9F58436436F1862DCB5AF5E5CEDA5FA78F010E06AAD8BB</Sha256>
+      <Link>avcodec-63.dll</Link>
+      <TargetPath>avcodec-63.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/avdevice-63.dll">
+      <RelativePath>avdevice-63.dll</RelativePath>
+      <Sha256>BDBDB58C7A450DFC902D3D0C8FCDEEC4D5B720351AB44A8C63792086741EB797</Sha256>
+      <Link>avdevice-63.dll</Link>
+      <TargetPath>avdevice-63.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/avfilter-12.dll">
+      <RelativePath>avfilter-12.dll</RelativePath>
+      <Sha256>B9291C6B072C883FB55E5773425395E5A39D24BA74FDF90FC328EF701FF2E00D</Sha256>
+      <Link>avfilter-12.dll</Link>
+      <TargetPath>avfilter-12.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/avformat-63.dll">
+      <RelativePath>avformat-63.dll</RelativePath>
+      <Sha256>CBF08619781E38D1745DC98D67D7CA6C6E738474BE1915751C8D988EC3DEFB5A</Sha256>
+      <Link>avformat-63.dll</Link>
+      <TargetPath>avformat-63.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/avutil-61.dll">
+      <RelativePath>avutil-61.dll</RelativePath>
+      <Sha256>2EC14C27170D147F907778C36ED0431A8DEA2DFC8F224EB16997F9EC4A11931B</Sha256>
+      <Link>avutil-61.dll</Link>
+      <TargetPath>avutil-61.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libEGL.dll">
+      <RelativePath>libEGL.dll</RelativePath>
+      <Sha256>625AF4E343A115422C906ECEE1CC1C7CB9D9F1A5B3827620F80F30E6577F8A4A</Sha256>
+      <Link>libEGL.dll</Link>
+      <TargetPath>libEGL.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libGLESv2.dll">
+      <RelativePath>libGLESv2.dll</RelativePath>
+      <Sha256>710E246F405A6F63005C0D91F385A1B7E62FB1CFC566FD0FBDE01B7319A0D6A4</Sha256>
+      <Link>libGLESv2.dll</Link>
+      <TargetPath>libGLESv2.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libaom.dll">
+      <RelativePath>libaom.dll</RelativePath>
+      <Sha256>9B2BF9122F924B9AD7F9C2BE31133758331FD7A7FD33261A63A6D620B31F1883</Sha256>
+      <Link>libaom.dll</Link>
+      <TargetPath>libaom.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libarchive-13.dll">
+      <RelativePath>libarchive-13.dll</RelativePath>
+      <Sha256>3F7754632098AF48F8C30F628E3F344939B78160BE953E9E45DCA62B26EB0168</Sha256>
+      <Link>libarchive-13.dll</Link>
+      <TargetPath>libarchive-13.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libass-9.dll">
+      <RelativePath>libass-9.dll</RelativePath>
+      <Sha256>CB2B46133B3BD9630384148BD7229E987AF9703208D4329FC2215F4170B8DC6B</Sha256>
+      <Link>libass-9.dll</Link>
+      <TargetPath>libass-9.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libb2-1.dll">
+      <RelativePath>libb2-1.dll</RelativePath>
+      <Sha256>01BBF64090367D511F41D9FC8F34C557F61D4A227B7C9E47CE04052CBFDC3E7D</Sha256>
+      <Link>libb2-1.dll</Link>
+      <TargetPath>libb2-1.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libbluray-4.dll">
+      <RelativePath>libbluray-4.dll</RelativePath>
+      <Sha256>24870A1B32FF8B36CFA94479D802DFABC55A12E7BBDE8584606F7E2D44D3C6DD</Sha256>
+      <Link>libbluray-4.dll</Link>
+      <TargetPath>libbluray-4.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libbrotlicommon.dll">
+      <RelativePath>libbrotlicommon.dll</RelativePath>
+      <Sha256>7B0047DC16DD92A7932124DFD5A6E698D342F533A15D37D61F710DEF66091436</Sha256>
+      <Link>libbrotlicommon.dll</Link>
+      <TargetPath>libbrotlicommon.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libbrotlidec.dll">
+      <RelativePath>libbrotlidec.dll</RelativePath>
+      <Sha256>C4C987A01597DDF969D93023F933F999A20F285588B0DECB4DEEB780C9E9CDF8</Sha256>
+      <Link>libbrotlidec.dll</Link>
+      <TargetPath>libbrotlidec.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libbrotlienc.dll">
+      <RelativePath>libbrotlienc.dll</RelativePath>
+      <Sha256>03F9A82D293CAF5B4065A9641DD5309E27AEFC5C8111EEEC25F906E47EC6C934</Sha256>
+      <Link>libbrotlienc.dll</Link>
+      <TargetPath>libbrotlienc.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libbz2-1.dll">
+      <RelativePath>libbz2-1.dll</RelativePath>
+      <Sha256>1790BF6473C9D48DB14C1F0EE8124142327556D281299EA2A72EE361118EE01A</Sha256>
+      <Link>libbz2-1.dll</Link>
+      <TargetPath>libbz2-1.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libcaca-0.dll">
+      <RelativePath>libcaca-0.dll</RelativePath>
+      <Sha256>4AB7B69E156B77A76776237AD37054DC9558F18DC2CD4A9C2A4287A8811002B2</Sha256>
+      <Link>libcaca-0.dll</Link>
+      <TargetPath>libcaca-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libcdio-21.dll">
+      <RelativePath>libcdio-21.dll</RelativePath>
+      <Sha256>3C420104EF8CC9C914712D0C137CC1B34697AACF747952CA4BBD74BE0DD81736</Sha256>
+      <Link>libcdio-21.dll</Link>
+      <TargetPath>libcdio-21.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libcdio_cdda-2.dll">
+      <RelativePath>libcdio_cdda-2.dll</RelativePath>
+      <Sha256>ACDDC934ACF082350DE46298C22CFF44509DE02C4E446CAE2A2B64347A6D63DD</Sha256>
+      <Link>libcdio_cdda-2.dll</Link>
+      <TargetPath>libcdio_cdda-2.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libcdio_paranoia-2.dll">
+      <RelativePath>libcdio_paranoia-2.dll</RelativePath>
+      <Sha256>5240FAF7DA48BAD81B7C15D09B62641A2516EDD677871D76807EF1B230FF4FBA</Sha256>
+      <Link>libcdio_paranoia-2.dll</Link>
+      <TargetPath>libcdio_paranoia-2.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libcrypto-3-x64.dll">
+      <RelativePath>libcrypto-3-x64.dll</RelativePath>
+      <Sha256>97308FEEA369B305E562C0098638A1B02A06F52EE9FCC4B8CF3DA362FF563CF4</Sha256>
+      <Link>libcrypto-3-x64.dll</Link>
+      <TargetPath>libcrypto-3-x64.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libcurl-4.dll">
+      <RelativePath>libcurl-4.dll</RelativePath>
+      <Sha256>529AF2ACC6CE7507DBC96FD96E196555BB9A38D9CBB47DEE441EA2CCE325428D</Sha256>
+      <Link>libcurl-4.dll</Link>
+      <TargetPath>libcurl-4.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libdav1d-7.dll">
+      <RelativePath>libdav1d-7.dll</RelativePath>
+      <Sha256>BBE67862F77C22F6F509684207B5363542E5B52C1A1FAA354E12A11D072AD766</Sha256>
+      <Link>libdav1d-7.dll</Link>
+      <TargetPath>libdav1d-7.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libdovi.dll">
+      <RelativePath>libdovi.dll</RelativePath>
+      <Sha256>75988509F0D2166E2060ED548913BD7B34556BC16B3F9A02469DE1DD2347A7FB</Sha256>
+      <Link>libdovi.dll</Link>
+      <TargetPath>libdovi.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libdvdcss-2.dll">
+      <RelativePath>libdvdcss-2.dll</RelativePath>
+      <Sha256>A691F36E9F4DD1DAC01E841CADA8D4F5500C3F8AD3171A129424A2194151B8E8</Sha256>
+      <Link>libdvdcss-2.dll</Link>
+      <TargetPath>libdvdcss-2.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libdvdnav-4.dll">
+      <RelativePath>libdvdnav-4.dll</RelativePath>
+      <Sha256>37CF3D8555EC2F00F50A6BEF46B952BD0576C2DB41D4DEBD6133A6C6BDECA02E</Sha256>
+      <Link>libdvdnav-4.dll</Link>
+      <TargetPath>libdvdnav-4.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libdvdread-8.dll">
+      <RelativePath>libdvdread-8.dll</RelativePath>
+      <Sha256>658ACC812360CF6C24D684AD250B2D0021D4C74A2E1229B477D66843906C351B</Sha256>
+      <Link>libdvdread-8.dll</Link>
+      <TargetPath>libdvdread-8.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libexpat-1.dll">
+      <RelativePath>libexpat-1.dll</RelativePath>
+      <Sha256>8A10CF7E89524B621D5F74BD4AEDC659C47C7CE397D489F323A1065BA695027A</Sha256>
+      <Link>libexpat-1.dll</Link>
+      <TargetPath>libexpat-1.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libfftw3-3.dll">
+      <RelativePath>libfftw3-3.dll</RelativePath>
+      <Sha256>0D600147B2479B83A5F437D3F8033E3607ADDB1BBD0C95F522D933564A2C7485</Sha256>
+      <Link>libfftw3-3.dll</Link>
+      <TargetPath>libfftw3-3.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libfontconfig-1.dll">
+      <RelativePath>libfontconfig-1.dll</RelativePath>
+      <Sha256>BE30A200FA4000D0A7A1D3911391969627440148F01D0028A319BCB9FA112202</Sha256>
+      <Link>libfontconfig-1.dll</Link>
+      <TargetPath>libfontconfig-1.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libfreetype-6.dll">
+      <RelativePath>libfreetype-6.dll</RelativePath>
+      <Sha256>19604DDE573CBB8A13053FC231EEE99B91CD972E0E9A3E1465F44AD6985E83EE</Sha256>
+      <Link>libfreetype-6.dll</Link>
+      <TargetPath>libfreetype-6.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libfribidi-0.dll">
+      <RelativePath>libfribidi-0.dll</RelativePath>
+      <Sha256>4C775E98B38991C93AFFAF71F088306B37FD2C0D94FF8A90C4906DB4669746C9</Sha256>
+      <Link>libfribidi-0.dll</Link>
+      <TargetPath>libfribidi-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libgcc_s_seh-1.dll">
+      <RelativePath>libgcc_s_seh-1.dll</RelativePath>
+      <Sha256>791EBF66E99C7C1B4ED3666468CEC45A0172B4C8942AC6C84C3E9CAB3E1B5270</Sha256>
+      <Link>libgcc_s_seh-1.dll</Link>
+      <TargetPath>libgcc_s_seh-1.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libglib-2.0-0.dll">
+      <RelativePath>libglib-2.0-0.dll</RelativePath>
+      <Sha256>3A1ABEC0184B238DB54399CB9243393D9436D96B8FDB9BD9F2875DA207C5B458</Sha256>
+      <Link>libglib-2.0-0.dll</Link>
+      <TargetPath>libglib-2.0-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libgomp-1.dll">
+      <RelativePath>libgomp-1.dll</RelativePath>
+      <Sha256>CCAF59DC8CFF15ACE88AB47ACD68A5B014167CAD8F960E7683466A4C821E41C4</Sha256>
+      <Link>libgomp-1.dll</Link>
+      <TargetPath>libgomp-1.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libgraphite2.dll">
+      <RelativePath>libgraphite2.dll</RelativePath>
+      <Sha256>93953E4744BCFCE9A7BC439B956544BC213095CB1349C3602A58370F32B25C18</Sha256>
+      <Link>libgraphite2.dll</Link>
+      <TargetPath>libgraphite2.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libharfbuzz-0.dll">
+      <RelativePath>libharfbuzz-0.dll</RelativePath>
+      <Sha256>574EF797D2480D73283ECC993E272092BDB1DDA45C4DB5D36BF72A5A91BAEEC8</Sha256>
+      <Link>libharfbuzz-0.dll</Link>
+      <TargetPath>libharfbuzz-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libhwy.dll">
+      <RelativePath>libhwy.dll</RelativePath>
+      <Sha256>9BA0AC7BAD82C4C88E9BB8D6CA8C6A83877ADC1F71CC48590C65B8D26108A41C</Sha256>
+      <Link>libhwy.dll</Link>
+      <TargetPath>libhwy.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libiconv-2.dll">
+      <RelativePath>libiconv-2.dll</RelativePath>
+      <Sha256>94EC68FB8D342B6C91B6B48A8D95092819CDCD006A7166E0B68062F946AFD08A</Sha256>
+      <Link>libiconv-2.dll</Link>
+      <TargetPath>libiconv-2.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libidn2-0.dll">
+      <RelativePath>libidn2-0.dll</RelativePath>
+      <Sha256>A054A6BB69AAF4666157F968740412E9697085CBC1E48A78F8DD9622169C5AAF</Sha256>
+      <Link>libidn2-0.dll</Link>
+      <TargetPath>libidn2-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libintl-8.dll">
+      <RelativePath>libintl-8.dll</RelativePath>
+      <Sha256>0E5A178731E6BE6D115442A6ADE3DF7F03265CD1FC4338F8B6F86A8001CBF582</Sha256>
+      <Link>libintl-8.dll</Link>
+      <TargetPath>libintl-8.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libjpeg-8.dll">
+      <RelativePath>libjpeg-8.dll</RelativePath>
+      <Sha256>22286ACC18B907D03EEC1177C99F54A802A6F8437888D1ABB79E65A7ECD14605</Sha256>
+      <Link>libjpeg-8.dll</Link>
+      <TargetPath>libjpeg-8.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libjxl.dll">
+      <RelativePath>libjxl.dll</RelativePath>
+      <Sha256>F0DB8EF57AF445A5B807A5B6D27F9A3C4C7441AF61CEBFEE5542FB7529FB35A5</Sha256>
+      <Link>libjxl.dll</Link>
+      <TargetPath>libjxl.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libjxl_cms.dll">
+      <RelativePath>libjxl_cms.dll</RelativePath>
+      <Sha256>DA3BF1847C40B66FFC036212D83F5E9ACB0770DE737D0383C8F1EFBEF65388C9</Sha256>
+      <Link>libjxl_cms.dll</Link>
+      <TargetPath>libjxl_cms.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libjxl_threads.dll">
+      <RelativePath>libjxl_threads.dll</RelativePath>
+      <Sha256>B065E2464CF13626D2AD95F82091B4BD988DCC8AEB7FD65B364B59D4BDF4199E</Sha256>
+      <Link>libjxl_threads.dll</Link>
+      <TargetPath>libjxl_threads.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/liblcms2-2.dll">
+      <RelativePath>liblcms2-2.dll</RelativePath>
+      <Sha256>03314471FADD04CDD63C108472FF85D058903D236A0356C14EDA363F0E1CCB65</Sha256>
+      <Link>liblcms2-2.dll</Link>
+      <TargetPath>liblcms2-2.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/liblz4.dll">
+      <RelativePath>liblz4.dll</RelativePath>
+      <Sha256>5E83FD34144FA033C12E22718317EC2123F8A3460903932B0BFDDB8AAD379CFD</Sha256>
+      <Link>liblz4.dll</Link>
+      <TargetPath>liblz4.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/liblzma-5.dll">
+      <RelativePath>liblzma-5.dll</RelativePath>
+      <Sha256>D97A260B8BB4F6AFFC34EC47249429240068B94BB6F7DC30C4D64DAAAFB3AC69</Sha256>
+      <Link>liblzma-5.dll</Link>
+      <TargetPath>liblzma-5.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libmp3lame-0.dll">
+      <RelativePath>libmp3lame-0.dll</RelativePath>
+      <Sha256>D28EE2C6D87346E3A4D96B03731362273C6EE24EE14D7B861BE57C5B366AAB79</Sha256>
+      <Link>libmp3lame-0.dll</Link>
+      <TargetPath>libmp3lame-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libmpg123-0.dll">
+      <RelativePath>libmpg123-0.dll</RelativePath>
+      <Sha256>BD63359E95781CE1A9F4E1D0D7C98BE32583731E34D09DF0C6A020D215048FF5</Sha256>
+      <Link>libmpg123-0.dll</Link>
+      <TargetPath>libmpg123-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libmpv-2.dll">
+      <RelativePath>libmpv-2.dll</RelativePath>
+      <Sha256>CED71F12A6C5743CA3980B21F186C70B9199FD74C39C49093C51B2CFC12CCE58</Sha256>
+      <Link>libmpv-2.dll</Link>
+      <TargetPath>libmpv-2.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libmujs.dll">
+      <RelativePath>libmujs.dll</RelativePath>
+      <Sha256>EE43A74B49FEF7CF64C642D2951D4371AA8D00A61D9CE7178F437C61D27A8BAF</Sha256>
+      <Link>libmujs.dll</Link>
+      <TargetPath>libmujs.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libnghttp2-14.dll">
+      <RelativePath>libnghttp2-14.dll</RelativePath>
+      <Sha256>550B9933CE54833EBB2C0E24B43E1463006C6C62305C471570C6BF18095581BD</Sha256>
+      <Link>libnghttp2-14.dll</Link>
+      <TargetPath>libnghttp2-14.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libnghttp3-9.dll">
+      <RelativePath>libnghttp3-9.dll</RelativePath>
+      <Sha256>EED257DD6092A2F67A760F3F75103EC27CEC929281BB2D7B51AFABF21A2CAD70</Sha256>
+      <Link>libnghttp3-9.dll</Link>
+      <TargetPath>libnghttp3-9.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libngtcp2-16.dll">
+      <RelativePath>libngtcp2-16.dll</RelativePath>
+      <Sha256>E77294CC542BFA35A932217AB0130B19CB45F232FB257D8869D967E750E40B31</Sha256>
+      <Link>libngtcp2-16.dll</Link>
+      <TargetPath>libngtcp2-16.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libngtcp2_crypto_ossl-0.dll">
+      <RelativePath>libngtcp2_crypto_ossl-0.dll</RelativePath>
+      <Sha256>E63698046730C9DFCAEE49D52298C489AE4C0B28770BCC3BA7F612D35D031DD8</Sha256>
+      <Link>libngtcp2_crypto_ossl-0.dll</Link>
+      <TargetPath>libngtcp2_crypto_ossl-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libogg-0.dll">
+      <RelativePath>libogg-0.dll</RelativePath>
+      <Sha256>2F102FBA6F2A49516BE85CB2643F6A9BA394DC5657AEDB3EA235B6603C12D3D2</Sha256>
+      <Link>libogg-0.dll</Link>
+      <TargetPath>libogg-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libopenal-1.dll">
+      <RelativePath>libopenal-1.dll</RelativePath>
+      <Sha256>CB33F3A9505F38B4A82510BF303547E5E66C525EFF591085C752E3D81DFC51CB</Sha256>
+      <Link>libopenal-1.dll</Link>
+      <TargetPath>libopenal-1.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libopus-0.dll">
+      <RelativePath>libopus-0.dll</RelativePath>
+      <Sha256>E747EDAD6BF02CF5CDCCE417B95BE3B7BA108F93DF1B024778BE5D73FA6DAE39</Sha256>
+      <Link>libopus-0.dll</Link>
+      <TargetPath>libopus-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libpcre2-8-0.dll">
+      <RelativePath>libpcre2-8-0.dll</RelativePath>
+      <Sha256>1F609CDE2CE432EFB7D2B0C7B84A14A6DBFC9622D1AC1A3CBADF51C5B0B4DADA</Sha256>
+      <Link>libpcre2-8-0.dll</Link>
+      <TargetPath>libpcre2-8-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libplacebo-387.dll">
+      <RelativePath>libplacebo-387.dll</RelativePath>
+      <Sha256>EBDC2D898EE396DB8F342427F77A0AF59B0823F853001EEDEFC801F05BD791B3</Sha256>
+      <Link>libplacebo-387.dll</Link>
+      <TargetPath>libplacebo-387.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libpng16-16.dll">
+      <RelativePath>libpng16-16.dll</RelativePath>
+      <Sha256>28DB7A8C6FCC579CE621729D27F1952324CD3A2B4E24DA121611BB586346E732</Sha256>
+      <Link>libpng16-16.dll</Link>
+      <TargetPath>libpng16-16.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libpsl-5.dll">
+      <RelativePath>libpsl-5.dll</RelativePath>
+      <Sha256>A531E72DE3C64D43FB83CBFB6FA63E5EE982A970292EC51314E29D0ACABF1DD5</Sha256>
+      <Link>libpsl-5.dll</Link>
+      <TargetPath>libpsl-5.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/librubberband-3.dll">
+      <RelativePath>librubberband-3.dll</RelativePath>
+      <Sha256>8FF9E6C1DDB42ED87EBED217AAADCDE439E4BE1F84B8963F45A8AC7116AF0551</Sha256>
+      <Link>librubberband-3.dll</Link>
+      <TargetPath>librubberband-3.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libsamplerate-0.dll">
+      <RelativePath>libsamplerate-0.dll</RelativePath>
+      <Sha256>4F7F9B2ECEA84BB8F5B27C8F36E85E8A100663C745AC25E82A512F485B663AC7</Sha256>
+      <Link>libsamplerate-0.dll</Link>
+      <TargetPath>libsamplerate-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libshaderc_shared.dll">
+      <RelativePath>libshaderc_shared.dll</RelativePath>
+      <Sha256>331DF8A45983735B823C893A9B872C3414AF6EADCA9FA189D0B6DFE97960B3CF</Sha256>
+      <Link>libshaderc_shared.dll</Link>
+      <TargetPath>libshaderc_shared.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libsharpyuv-0.dll">
+      <RelativePath>libsharpyuv-0.dll</RelativePath>
+      <Sha256>D29380C7056383F3E7A80BF9E150F0B8C425C1CF2568D1336E88979DDC2307AF</Sha256>
+      <Link>libsharpyuv-0.dll</Link>
+      <TargetPath>libsharpyuv-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libsoxr.dll">
+      <RelativePath>libsoxr.dll</RelativePath>
+      <Sha256>47F6A0FBAA08F7BA38B051DE741EBC7A2613BFB3ED276EBBE6FBAFB6EE47B445</Sha256>
+      <Link>libsoxr.dll</Link>
+      <TargetPath>libsoxr.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libspirv-cross-c-shared.dll">
+      <RelativePath>libspirv-cross-c-shared.dll</RelativePath>
+      <Sha256>BC4BDCF63B9BBF60777BC10340050AE6EDFBB3BE3FAF3FA636AF53ECF7D2BBC8</Sha256>
+      <Link>libspirv-cross-c-shared.dll</Link>
+      <TargetPath>libspirv-cross-c-shared.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libssh2-1.dll">
+      <RelativePath>libssh2-1.dll</RelativePath>
+      <Sha256>7C9B4EDB678B738B919950492C4A390482FDD644D1276D4728990FDD3C3EA989</Sha256>
+      <Link>libssh2-1.dll</Link>
+      <TargetPath>libssh2-1.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libssl-3-x64.dll">
+      <RelativePath>libssl-3-x64.dll</RelativePath>
+      <Sha256>8B71CD694F8EDFBDDC76674111278DB6BCDCDE0DCD63B99238420193848E6DBF</Sha256>
+      <Link>libssl-3-x64.dll</Link>
+      <TargetPath>libssl-3-x64.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libstdc++-6.dll">
+      <RelativePath>libstdc++-6.dll</RelativePath>
+      <Sha256>4E4822DC4AAA99383F581DAE7AB9464AE89346C5CA742F7EFBCDEBE20B0FE7B5</Sha256>
+      <Link>libstdc++-6.dll</Link>
+      <TargetPath>libstdc++-6.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libuchardet.dll">
+      <RelativePath>libuchardet.dll</RelativePath>
+      <Sha256>75F34913B3C3FE264C4471A47F4F3E3A14FED397824122936F1BA40A7712A7A4</Sha256>
+      <Link>libuchardet.dll</Link>
+      <TargetPath>libuchardet.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libunibreak-7.dll">
+      <RelativePath>libunibreak-7.dll</RelativePath>
+      <Sha256>F1F4BB5B5BB3DBF8D142DF3012F13E4B5B0246565496D43718A6F33321E96283</Sha256>
+      <Link>libunibreak-7.dll</Link>
+      <TargetPath>libunibreak-7.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libunistring-5.dll">
+      <RelativePath>libunistring-5.dll</RelativePath>
+      <Sha256>EE39258FA1086269674A8179D3CFAF7C4E380ADA14441B5DD9ED53D82D15C4E3</Sha256>
+      <Link>libunistring-5.dll</Link>
+      <TargetPath>libunistring-5.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libva.dll">
+      <RelativePath>libva.dll</RelativePath>
+      <Sha256>20591E45EDFCBF7F4B5735F9096B19BE9796B0F61D1AB041F39D2732357593AE</Sha256>
+      <Link>libva.dll</Link>
+      <TargetPath>libva.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libva_win32.dll">
+      <RelativePath>libva_win32.dll</RelativePath>
+      <Sha256>2721E9C28099699B6D723D3D56671CA46DB21A5BDB9E2C41DF516DA17D6539B7</Sha256>
+      <Link>libva_win32.dll</Link>
+      <TargetPath>libva_win32.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libvorbis-0.dll">
+      <RelativePath>libvorbis-0.dll</RelativePath>
+      <Sha256>D1B40D7F33171CCB8CD2A238BEA36C01176C54DE5BF22AFAE332FB33F26A008F</Sha256>
+      <Link>libvorbis-0.dll</Link>
+      <TargetPath>libvorbis-0.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libvorbisenc-2.dll">
+      <RelativePath>libvorbisenc-2.dll</RelativePath>
+      <Sha256>971CFA7C8866653AAE9760A317DC3838E821F3911D9C6A8A8EF90F4A13DE798F</Sha256>
+      <Link>libvorbisenc-2.dll</Link>
+      <TargetPath>libvorbisenc-2.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libvpx-1.dll">
+      <RelativePath>libvpx-1.dll</RelativePath>
+      <Sha256>759BB95B0CD6C75BFCE910F003B26A2D95ED3C94EF1A20DCFD4C89A0569F2016</Sha256>
+      <Link>libvpx-1.dll</Link>
+      <TargetPath>libvpx-1.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libwebp-7.dll">
+      <RelativePath>libwebp-7.dll</RelativePath>
+      <Sha256>8DFE40C4E0ABC90DDF18F080898987E01253D099B2B2D6DAF7DB521E55C00446</Sha256>
+      <Link>libwebp-7.dll</Link>
+      <TargetPath>libwebp-7.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libwebpmux-3.dll">
+      <RelativePath>libwebpmux-3.dll</RelativePath>
+      <Sha256>9BD85116A22923D648D6B0AD09F21D08DF7BD3D8860B24A5B4A6D4AC788B7340</Sha256>
+      <Link>libwebpmux-3.dll</Link>
+      <TargetPath>libwebpmux-3.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libwinpthread-1.dll">
+      <RelativePath>libwinpthread-1.dll</RelativePath>
+      <Sha256>EE4F503512B09D7E2668518C41D6C176755A354523AE15AA4D36220C9CB31791</Sha256>
+      <Link>libwinpthread-1.dll</Link>
+      <TargetPath>libwinpthread-1.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libx264-165.dll">
+      <RelativePath>libx264-165.dll</RelativePath>
+      <Sha256>A58995B5AF6D0FCF5D17F354BFA54BB05D99056ED167EEC9C8E86A3A63478EC1</Sha256>
+      <Link>libx264-165.dll</Link>
+      <TargetPath>libx264-165.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libx265-217.dll">
+      <RelativePath>libx265-217.dll</RelativePath>
+      <Sha256>48A6C942CAB3196D740D7AF3CFC8359DC7BD833C87C1CA24B8D231B70DAA9E18</Sha256>
+      <Link>libx265-217.dll</Link>
+      <TargetPath>libx265-217.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libxml2-16.dll">
+      <RelativePath>libxml2-16.dll</RelativePath>
+      <Sha256>2C971559C9BEDB5459B35043DE25886C9B36FC07536B6D84DFB84D938C46D5A4</Sha256>
+      <Link>libxml2-16.dll</Link>
+      <TargetPath>libxml2-16.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libzimg-2.dll">
+      <RelativePath>libzimg-2.dll</RelativePath>
+      <Sha256>99625F39DE8DE654A90077362AAFAA4E565C97908B39C0E9614562F9DFB57200</Sha256>
+      <Link>libzimg-2.dll</Link>
+      <TargetPath>libzimg-2.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/libzstd.dll">
+      <RelativePath>libzstd.dll</RelativePath>
+      <Sha256>48368AB0CA622D0EC12F41CE85D91F22866BF5DA92C77A69A06483564C93816C</Sha256>
+      <Link>libzstd.dll</Link>
+      <TargetPath>libzstd.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/Native-NOTICE.txt">
+      <RelativePath>licenses/native/Native-NOTICE.txt</RelativePath>
+      <Sha256>C4024AD04B3DFBCE21A7D241858545D2E652ADB1246C31AD487F67DCFC8F959C</Sha256>
+      <Link>licenses\native\Native-NOTICE.txt</Link>
+      <TargetPath>licenses\native\Native-NOTICE.txt</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies.lock.json">
+      <RelativePath>licenses/native/dependencies.lock.json</RelativePath>
+      <Sha256>6577E02C7D94D6590ECDE8CA339B9F522A2258F286D8E0E6411691C252AAC8DE</Sha256>
+      <Link>licenses\native\dependencies.lock.json</Link>
+      <TargetPath>licenses\native\dependencies.lock.json</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/OpenBLAS/LICENSE">
+      <RelativePath>licenses/native/dependencies/OpenBLAS/LICENSE</RelativePath>
+      <Sha256>190B5A9C8D9723FE958AD33916BD7346D96FAB3C5EA90832BB02D854F620FCFF</Sha256>
+      <Link>licenses\native\dependencies\OpenBLAS\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\OpenBLAS\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/OpenBLAS/LICENSE-lapack">
+      <RelativePath>licenses/native/dependencies/OpenBLAS/LICENSE-lapack</RelativePath>
+      <Sha256>978539245C405775BF347B1256C36DF4DAF8B69A64B099E94B1D53742201621E</Sha256>
+      <Link>licenses\native\dependencies\OpenBLAS\LICENSE-lapack</Link>
+      <TargetPath>licenses\native\dependencies\OpenBLAS\LICENSE-lapack</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/SDL2/LICENSE.txt">
+      <RelativePath>licenses/native/dependencies/SDL2/LICENSE.txt</RelativePath>
+      <Sha256>97F35B302B361680EC1E891E95D2D52097BB95ABFF361434916D99DC1305F127</Sha256>
+      <Link>licenses\native\dependencies\SDL2\LICENSE.txt</Link>
+      <TargetPath>licenses\native\dependencies\SDL2\LICENSE.txt</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/angleproject/LICENSE">
+      <RelativePath>licenses/native/dependencies/angleproject/LICENSE</RelativePath>
+      <Sha256>BF4DA21BD20BCFB5B60B7ECC67FA864A79BE049E21D6178076887F178DD6C71A</Sha256>
+      <Link>licenses\native\dependencies\angleproject\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\angleproject\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/aom/LICENSE">
+      <RelativePath>licenses/native/dependencies/aom/LICENSE</RelativePath>
+      <Sha256>4764A286D8B2FAEAF42F4418E7D7A28D58FC8FD4D00A3D0A7F44B0A4099DE7F2</Sha256>
+      <Link>licenses\native\dependencies\aom\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\aom\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/aom/PATENTS">
+      <RelativePath>licenses/native/dependencies/aom/PATENTS</RelativePath>
+      <Sha256>661FB8E504744E95587B556B94A58343448300606A41BEA8C7A9B97125696E61</Sha256>
+      <Link>licenses\native\dependencies\aom\PATENTS</Link>
+      <TargetPath>licenses\native\dependencies\aom\PATENTS</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/binutils/COPYING">
+      <RelativePath>licenses/native/dependencies/binutils/COPYING</RelativePath>
+      <Sha256>231F7EDCC7352D7734A96EEF0B8030F77982678C516876FCB81E25B32D68564C</Sha256>
+      <Link>licenses\native\dependencies\binutils\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\binutils\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/binutils/COPYING.LIB">
+      <RelativePath>licenses/native/dependencies/binutils/COPYING.LIB</RelativePath>
+      <Sha256>56BDEA73B6145EF6AC5259B3DA390B981D840C24CB03B8E1CBC678DE7ECFA18D</Sha256>
+      <Link>licenses\native\dependencies\binutils\COPYING.LIB</Link>
+      <TargetPath>licenses\native\dependencies\binutils\COPYING.LIB</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/binutils/COPYING3">
+      <RelativePath>licenses/native/dependencies/binutils/COPYING3</RelativePath>
+      <Sha256>8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903</Sha256>
+      <Link>licenses\native\dependencies\binutils\COPYING3</Link>
+      <TargetPath>licenses\native\dependencies\binutils\COPYING3</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/binutils/COPYING3.LIB">
+      <RelativePath>licenses/native/dependencies/binutils/COPYING3.LIB</RelativePath>
+      <Sha256>A853C2FFEC17057872340EEE242AE4D96CBF2B520AE27D903E1B2FEF1A5F9D1C</Sha256>
+      <Link>licenses\native\dependencies\binutils\COPYING3.LIB</Link>
+      <TargetPath>licenses\native\dependencies\binutils\COPYING3.LIB</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/brotli/LICENSE">
+      <RelativePath>licenses/native/dependencies/brotli/LICENSE</RelativePath>
+      <Sha256>3D180008E36922A4E8DAEC11C34C7AF264FED5962D07924AEA928C38E8663C94</Sha256>
+      <Link>licenses\native\dependencies\brotli\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\brotli\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/bzip2/LICENSE">
+      <RelativePath>licenses/native/dependencies/bzip2/LICENSE</RelativePath>
+      <Sha256>C6DBBF828498BE844A89EAA3B84ADBAB3199E342EB5CB2ED2F0D4BA7EC0F38A3</Sha256>
+      <Link>licenses\native\dependencies\bzip2\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\bzip2\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/c-ares/LICENSE.md">
+      <RelativePath>licenses/native/dependencies/c-ares/LICENSE.md</RelativePath>
+      <Sha256>460F5E768FDA3752CA2169A95DF062578A10FB126BFD65F3B9B1A1BED2F84807</Sha256>
+      <Link>licenses\native\dependencies\c-ares\LICENSE.md</Link>
+      <TargetPath>licenses\native\dependencies\c-ares\LICENSE.md</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/cairo/COPYING">
+      <RelativePath>licenses/native/dependencies/cairo/COPYING</RelativePath>
+      <Sha256>67228A9F7C5F9B67C58F556F1BE178F62DA4D9E2E6285318D8C74D567255ABDF</Sha256>
+      <Link>licenses\native\dependencies\cairo\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\cairo\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/cairo/COPYING-LGPL-2.1">
+      <RelativePath>licenses/native/dependencies/cairo/COPYING-LGPL-2.1</RelativePath>
+      <Sha256>9E9E8608C4CDDA51A78CC3A385F4EC9A2E4C96D5ECAD74AC8BCA5FCA3E563B7D</Sha256>
+      <Link>licenses\native\dependencies\cairo\COPYING-LGPL-2.1</Link>
+      <TargetPath>licenses\native\dependencies\cairo\COPYING-LGPL-2.1</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/cairo/COPYING-MPL-1.1">
+      <RelativePath>licenses/native/dependencies/cairo/COPYING-MPL-1.1</RelativePath>
+      <Sha256>53692A2ED6C6A2C6EC9B32DD0B820DFAE91E0A1FCDF625CA9ED0BDF8705FCC4F</Sha256>
+      <Link>licenses\native\dependencies\cairo\COPYING-MPL-1.1</Link>
+      <TargetPath>licenses\native\dependencies\cairo\COPYING-MPL-1.1</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/crt/COPYING">
+      <RelativePath>licenses/native/dependencies/crt/COPYING</RelativePath>
+      <Sha256>99A69660981156C21336FDB5661F89341B013C94E4BF9E1C7467B4745718397F</Sha256>
+      <Link>licenses\native\dependencies\crt\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\crt\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/crt/COPYING.MinGW-w64-runtime.txt">
+      <RelativePath>licenses/native/dependencies/crt/COPYING.MinGW-w64-runtime.txt</RelativePath>
+      <Sha256>1DB8DA07B436C68833C0673FFEE3D9FCB2526047F3820B81661865DFEDC79A1F</Sha256>
+      <Link>licenses\native\dependencies\crt\COPYING.MinGW-w64-runtime.txt</Link>
+      <TargetPath>licenses\native\dependencies\crt\COPYING.MinGW-w64-runtime.txt</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/crt/COPYING.MinGW-w64.txt">
+      <RelativePath>licenses/native/dependencies/crt/COPYING.MinGW-w64.txt</RelativePath>
+      <Sha256>F38E6194BD3BFA1B654F118E5ACEFE0AEAD437BBE669EEE43957CCC65A7127F1</Sha256>
+      <Link>licenses\native\dependencies\crt\COPYING.MinGW-w64.txt</Link>
+      <TargetPath>licenses\native\dependencies\crt\COPYING.MinGW-w64.txt</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/curl/LICENSE">
+      <RelativePath>licenses/native/dependencies/curl/LICENSE</RelativePath>
+      <Sha256>82F2F4427D6545EE5AAAC4F0B80428DA6CC8BA41C2CF5DA3A03680EC327B9681</Sha256>
+      <Link>licenses\native\dependencies\curl\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\curl\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/dav1d/COPYING">
+      <RelativePath>licenses/native/dependencies/dav1d/COPYING</RelativePath>
+      <Sha256>DD92C3C2247C5651606FC23A5E2D6A1EBC5ACE9A3E49CBDE0E12F05AD1CB1EE5</Sha256>
+      <Link>licenses\native\dependencies\dav1d\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\dav1d\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/dav1d/PATENTS">
+      <RelativePath>licenses/native/dependencies/dav1d/PATENTS</RelativePath>
+      <Sha256>335ECA574598BF4CA181B12F708D6669E5A5E78C8E1513E5B35FA1F03901484B</Sha256>
+      <Link>licenses\native\dependencies\dav1d\PATENTS</Link>
+      <TargetPath>licenses\native\dependencies\dav1d\PATENTS</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/expat/COPYING">
+      <RelativePath>licenses/native/dependencies/expat/COPYING</RelativePath>
+      <Sha256>31B15DE82AA19A845156169A17A5488BF597E561B2C318D159ED583139B25E87</Sha256>
+      <Link>licenses\native\dependencies\expat\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\expat\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/flac/COPYING.Xiph">
+      <RelativePath>licenses/native/dependencies/flac/COPYING.Xiph</RelativePath>
+      <Sha256>7866EE98760FC1F0156B4FE6BF530257E02BE487AB3FD94E2B63799DD32D6B2C</Sha256>
+      <Link>licenses\native\dependencies\flac\COPYING.Xiph</Link>
+      <TargetPath>licenses\native\dependencies\flac\COPYING.Xiph</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/fontconfig/COPYING">
+      <RelativePath>licenses/native/dependencies/fontconfig/COPYING</RelativePath>
+      <Sha256>51A51AA9823704FD90BCCC616CDD17EBABB5B2B3E9CBDE886CA02C7002288067</Sha256>
+      <Link>licenses\native\dependencies\fontconfig\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\fontconfig\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/freetype/FTL.TXT">
+      <RelativePath>licenses/native/dependencies/freetype/FTL.TXT</RelativePath>
+      <Sha256>5A5EE54C5001BBAD1CDC1A57CC3DD4C42199B2DA09D39C7EE41FAB002D02967F</Sha256>
+      <Link>licenses\native\dependencies\freetype\FTL.TXT</Link>
+      <TargetPath>licenses\native\dependencies\freetype\FTL.TXT</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/freetype/GPLv2.TXT">
+      <RelativePath>licenses/native/dependencies/freetype/GPLv2.TXT</RelativePath>
+      <Sha256>C4120C6752C910C299E3BD9CB3A46FF262C268303CA2069B61F92F10A5656C18</Sha256>
+      <Link>licenses\native\dependencies\freetype\GPLv2.TXT</Link>
+      <TargetPath>licenses\native\dependencies\freetype\GPLv2.TXT</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/fribidi/COPYING">
+      <RelativePath>licenses/native/dependencies/fribidi/COPYING</RelativePath>
+      <Sha256>20E50FE7AAE3E56378EBF0417D9DE904F55A0E61E4DF315333E632A4D3555D95</Sha256>
+      <Link>licenses\native\dependencies\fribidi\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\fribidi\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gcc/COPYING.RUNTIME">
+      <RelativePath>licenses/native/dependencies/gcc/COPYING.RUNTIME</RelativePath>
+      <Sha256>9D6B43CE4D8DE0C878BF16B54D8E7A10D9BD42B75178153E3AF6A815BDC90F74</Sha256>
+      <Link>licenses\native\dependencies\gcc\COPYING.RUNTIME</Link>
+      <TargetPath>licenses\native\dependencies\gcc\COPYING.RUNTIME</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gcc/COPYING3">
+      <RelativePath>licenses/native/dependencies/gcc/COPYING3</RelativePath>
+      <Sha256>8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903</Sha256>
+      <Link>licenses\native\dependencies\gcc\COPYING3</Link>
+      <TargetPath>licenses\native\dependencies\gcc\COPYING3</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gdk-pixbuf2/COPYING">
+      <RelativePath>licenses/native/dependencies/gdk-pixbuf2/COPYING</RelativePath>
+      <Sha256>DC626520DCD53A22F727AF3EE42C770E56C97A64FE3ADB063799D8AB032FE551</Sha256>
+      <Link>licenses\native\dependencies\gdk-pixbuf2\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\gdk-pixbuf2\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gettext-runtime/COPYING">
+      <RelativePath>licenses/native/dependencies/gettext-runtime/COPYING</RelativePath>
+      <Sha256>7EF2CDFE58E0C0460657B6598B49AF29D4E03C1E41CBAF0E1DA1EB8AD74B95D0</Sha256>
+      <Link>licenses\native\dependencies\gettext-runtime\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\gettext-runtime\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gettext-runtime/intl/COPYING.LIB">
+      <RelativePath>licenses/native/dependencies/gettext-runtime/intl/COPYING.LIB</RelativePath>
+      <Sha256>20E50FE7AAE3E56378EBF0417D9DE904F55A0E61E4DF315333E632A4D3555D95</Sha256>
+      <Link>licenses\native\dependencies\gettext-runtime\intl\COPYING.LIB</Link>
+      <TargetPath>licenses\native\dependencies\gettext-runtime\intl\COPYING.LIB</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gettext-runtime/libasprintf/COPYING">
+      <RelativePath>licenses/native/dependencies/gettext-runtime/libasprintf/COPYING</RelativePath>
+      <Sha256>03133ADDAE5B99A6148C538300E6D97074453089BE1423B741BD081F18E2B298</Sha256>
+      <Link>licenses\native\dependencies\gettext-runtime\libasprintf\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\gettext-runtime\libasprintf\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gettext-runtime/libasprintf/COPYING.LIB">
+      <RelativePath>licenses/native/dependencies/gettext-runtime/libasprintf/COPYING.LIB</RelativePath>
+      <Sha256>20E50FE7AAE3E56378EBF0417D9DE904F55A0E61E4DF315333E632A4D3555D95</Sha256>
+      <Link>licenses\native\dependencies\gettext-runtime\libasprintf\COPYING.LIB</Link>
+      <TargetPath>licenses\native\dependencies\gettext-runtime\libasprintf\COPYING.LIB</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/ggml/LICENSE">
+      <RelativePath>licenses/native/dependencies/ggml/LICENSE</RelativePath>
+      <Sha256>94F29BBED6A22C35B992C5C6EBF0E7C92F13B836B90F36F461C9CF2F0F1D010D</Sha256>
+      <Link>licenses\native\dependencies\ggml\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\ggml\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/glib2/COPYING">
+      <RelativePath>licenses/native/dependencies/glib2/COPYING</RelativePath>
+      <Sha256>FA6F36630BB1E0C571D34B2BBDF188D08495C9DBF58F28CAC112F303FC1F58FB</Sha256>
+      <Link>licenses\native\dependencies\glib2\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\glib2\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/glslang/LICENSE.txt">
+      <RelativePath>licenses/native/dependencies/glslang/LICENSE.txt</RelativePath>
+      <Sha256>17E70C676E1521FF3E4686F04A2053D93A7E28A33BE8DE7EC37AB0FF72FEB677</Sha256>
+      <Link>licenses\native\dependencies\glslang\LICENSE.txt</Link>
+      <TargetPath>licenses\native\dependencies\glslang\LICENSE.txt</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/graphite2/COPYING">
+      <RelativePath>licenses/native/dependencies/graphite2/COPYING</RelativePath>
+      <Sha256>2C272829FF23F182C8BF7EA12FEDEA69B0AE148663123ED5240C117CB129C9C1</Sha256>
+      <Link>licenses\native\dependencies\graphite2\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\graphite2\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/graphite2/LICENSE">
+      <RelativePath>licenses/native/dependencies/graphite2/LICENSE</RelativePath>
+      <Sha256>CAB46CD45ADBFEA4B1D0F14B033C70062C73074FA0B56532C2F351576DDF455E</Sha256>
+      <Link>licenses\native\dependencies\graphite2\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\graphite2\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/gsm/license.txt">
+      <RelativePath>licenses/native/dependencies/gsm/license.txt</RelativePath>
+      <Sha256>81C68A3374937ED9B5E4929C709E81A2C4B35B5D1F450ECF8C473E2DAEA46FF6</Sha256>
+      <Link>licenses\native\dependencies\gsm\license.txt</Link>
+      <TargetPath>licenses\native\dependencies\gsm\license.txt</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/harfbuzz/COPYING">
+      <RelativePath>licenses/native/dependencies/harfbuzz/COPYING</RelativePath>
+      <Sha256>BA8F810F2455C2F08E2D56BB49B72F37FCF68F1F4FADE38977CFD7372050AD64</Sha256>
+      <Link>licenses\native\dependencies\harfbuzz\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\harfbuzz\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/headers/COPYING">
+      <RelativePath>licenses/native/dependencies/headers/COPYING</RelativePath>
+      <Sha256>99A69660981156C21336FDB5661F89341B013C94E4BF9E1C7467B4745718397F</Sha256>
+      <Link>licenses\native\dependencies\headers\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\headers\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/headers/COPYING.MinGW-w64-runtime.txt">
+      <RelativePath>licenses/native/dependencies/headers/COPYING.MinGW-w64-runtime.txt</RelativePath>
+      <Sha256>1DB8DA07B436C68833C0673FFEE3D9FCB2526047F3820B81661865DFEDC79A1F</Sha256>
+      <Link>licenses\native\dependencies\headers\COPYING.MinGW-w64-runtime.txt</Link>
+      <TargetPath>licenses\native\dependencies\headers\COPYING.MinGW-w64-runtime.txt</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/headers/COPYING.MinGW-w64.txt">
+      <RelativePath>licenses/native/dependencies/headers/COPYING.MinGW-w64.txt</RelativePath>
+      <Sha256>F38E6194BD3BFA1B654F118E5ACEFE0AEAD437BBE669EEE43957CCC65A7127F1</Sha256>
+      <Link>licenses\native\dependencies\headers\COPYING.MinGW-w64.txt</Link>
+      <TargetPath>licenses\native\dependencies\headers\COPYING.MinGW-w64.txt</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/headers/ddk-readme.txt">
+      <RelativePath>licenses/native/dependencies/headers/ddk-readme.txt</RelativePath>
+      <Sha256>8D8F9924E4EA5466932000BDB9A4104DA1D8CA3E4C979BB8207225522BA63826</Sha256>
+      <Link>licenses\native\dependencies\headers\ddk-readme.txt</Link>
+      <TargetPath>licenses\native\dependencies\headers\ddk-readme.txt</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/highway/LICENSE">
+      <RelativePath>licenses/native/dependencies/highway/LICENSE</RelativePath>
+      <Sha256>E340270D4F64384569A91D546ACB5B094D69CE47F0C015DB77ABB74DC6F815AF</Sha256>
+      <Link>licenses\native\dependencies\highway\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\highway\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/imath/LICENSE.md">
+      <RelativePath>licenses/native/dependencies/imath/LICENSE.md</RelativePath>
+      <Sha256>C20236D3B39FD20EBA8E3D1FB3B892A5483DF2E7D8D61BF43F165D3FAC22F601</Sha256>
+      <Link>licenses\native\dependencies\imath\LICENSE.md</Link>
+      <TargetPath>licenses\native\dependencies\imath\LICENSE.md</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/jbigkit/COPYING">
+      <RelativePath>licenses/native/dependencies/jbigkit/COPYING</RelativePath>
+      <Sha256>91DF39D1816BFB17A4DDA2D3D2C83B1F6F2D38D53E53E41E8F97AD5AC46A0CAD</Sha256>
+      <Link>licenses\native\dependencies\jbigkit\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\jbigkit\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/jsoncpp/LICENSE">
+      <RelativePath>licenses/native/dependencies/jsoncpp/LICENSE</RelativePath>
+      <Sha256>CEC0DB5F6D7ED6B3A72647BD50AED02E13C3377FD44382B96DC2915534C042AD</Sha256>
+      <Link>licenses\native\dependencies\jsoncpp\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\jsoncpp\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/lcms2/LICENSE">
+      <RelativePath>licenses/native/dependencies/lcms2/LICENSE</RelativePath>
+      <Sha256>6DBD60437F8EF91D8DE1F08AD75882547FD4931BFCC3566A0735F28DB1484D31</Sha256>
+      <Link>licenses\native\dependencies\lcms2\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\lcms2\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/lcms2/LICENSE-fast_float">
+      <RelativePath>licenses/native/dependencies/lcms2/LICENSE-fast_float</RelativePath>
+      <Sha256>C53A65C2FD561C87EAABF1072EF5DCAB8653042BC15308465F52413585EB6271</Sha256>
+      <Link>licenses\native\dependencies\lcms2\LICENSE-fast_float</Link>
+      <TargetPath>licenses\native\dependencies\lcms2\LICENSE-fast_float</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/lerc/LICENSE">
+      <RelativePath>licenses/native/dependencies/lerc/LICENSE</RelativePath>
+      <Sha256>77A8B761727C75E2167B15BFDF61B2C0BCF8792271228BEBE80779106AD00671</Sha256>
+      <Link>licenses\native\dependencies\lerc\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\lerc\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libarchive/LICENSE">
+      <RelativePath>licenses/native/dependencies/libarchive/LICENSE</RelativePath>
+      <Sha256>30E556B3959E3985D66EFEFEC5EAAC51D4995053CAA1D3CFFE6EB916F146F229</Sha256>
+      <Link>licenses\native\dependencies\libarchive\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libarchive\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libb2/LICENSE">
+      <RelativePath>licenses/native/dependencies/libb2/LICENSE</RelativePath>
+      <Sha256>6A1EE543E5282CD9061881EDF462E6FDAB181F328DA71FC2C9A6950A80E94D01</Sha256>
+      <Link>licenses\native\dependencies\libb2\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libb2\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libbluray/COPYING">
+      <RelativePath>licenses/native/dependencies/libbluray/COPYING</RelativePath>
+      <Sha256>B3AA400ACA6D2BA1F0BD03BD98D03D1FE7489A3BBB26969D72016360AF8A5C9D</Sha256>
+      <Link>licenses\native\dependencies\libbluray\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libbluray\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libdatrie/COPYING">
+      <RelativePath>licenses/native/dependencies/libdatrie/COPYING</RelativePath>
+      <Sha256>A9BDDE5616ECDD1E980B44F360600EE8783B1F99B8CC83A2BEB163A0A390E861</Sha256>
+      <Link>licenses\native\dependencies\libdatrie\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libdatrie\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libdeflate/COPYING">
+      <RelativePath>licenses/native/dependencies/libdeflate/COPYING</RelativePath>
+      <Sha256>4AD69099CB4374836FD27583D9991E2838CD86B6E4666AB26B2D32582C91E73A</Sha256>
+      <Link>licenses\native\dependencies\libdeflate\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libdeflate\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libdovi/LICENSE">
+      <RelativePath>licenses/native/dependencies/libdovi/LICENSE</RelativePath>
+      <Sha256>E9D76C149B1176DE4AA0202CFB6A4A266A0C4CB71959F429D670C3A857F95E52</Sha256>
+      <Link>licenses\native\dependencies\libdovi\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libdovi\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libdvdcss/COPYING">
+      <RelativePath>licenses/native/dependencies/libdvdcss/COPYING</RelativePath>
+      <Sha256>8177F97513213526DF2CF6184D8FF986C675AFB514D4E68A404010521B880643</Sha256>
+      <Link>licenses\native\dependencies\libdvdcss\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libdvdcss\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libdvdnav/COPYING">
+      <RelativePath>licenses/native/dependencies/libdvdnav/COPYING</RelativePath>
+      <Sha256>32B1062F7DA84967E7019D01AB805935CAA7AB7321A7CED0E30EBE75E5DF1670</Sha256>
+      <Link>licenses\native\dependencies\libdvdnav\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libdvdnav\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libdvdread/COPYING">
+      <RelativePath>licenses/native/dependencies/libdvdread/COPYING</RelativePath>
+      <Sha256>D6CB0E9E560F51085556949A84AF12B79A00F10AB8B66C752537FAF7CD665572</Sha256>
+      <Link>licenses\native\dependencies\libdvdread\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libdvdread\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libexif/COPYING">
+      <RelativePath>licenses/native/dependencies/libexif/COPYING</RelativePath>
+      <Sha256>36B6D3FA47916943FD5FEC313C584784946047EC1337A78B440E5992CB595F89</Sha256>
+      <Link>licenses\native\dependencies\libexif\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libexif\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libffi/LICENSE">
+      <RelativePath>licenses/native/dependencies/libffi/LICENSE</RelativePath>
+      <Sha256>17B64DC60F3B6897A60F971E288B973F655C2EDCDF08B25F3C3DD5549857881C</Sha256>
+      <Link>licenses\native\dependencies\libffi\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libffi\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgcc/COPYING.RUNTIME">
+      <RelativePath>licenses/native/dependencies/libgcc/COPYING.RUNTIME</RelativePath>
+      <Sha256>9D6B43CE4D8DE0C878BF16B54D8E7A10D9BD42B75178153E3AF6A815BDC90F74</Sha256>
+      <Link>licenses\native\dependencies\libgcc\COPYING.RUNTIME</Link>
+      <TargetPath>licenses\native\dependencies\libgcc\COPYING.RUNTIME</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgcc/COPYING3">
+      <RelativePath>licenses/native/dependencies/libgcc/COPYING3</RelativePath>
+      <Sha256>8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903</Sha256>
+      <Link>licenses\native\dependencies\libgcc\COPYING3</Link>
+      <TargetPath>licenses\native\dependencies\libgcc\COPYING3</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgfortran/COPYING.RUNTIME">
+      <RelativePath>licenses/native/dependencies/libgfortran/COPYING.RUNTIME</RelativePath>
+      <Sha256>9D6B43CE4D8DE0C878BF16B54D8E7A10D9BD42B75178153E3AF6A815BDC90F74</Sha256>
+      <Link>licenses\native\dependencies\libgfortran\COPYING.RUNTIME</Link>
+      <TargetPath>licenses\native\dependencies\libgfortran\COPYING.RUNTIME</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgfortran/COPYING3">
+      <RelativePath>licenses/native/dependencies/libgfortran/COPYING3</RelativePath>
+      <Sha256>8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903</Sha256>
+      <Link>licenses\native\dependencies\libgfortran\COPYING3</Link>
+      <TargetPath>licenses\native\dependencies\libgfortran\COPYING3</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgme/license.txt">
+      <RelativePath>licenses/native/dependencies/libgme/license.txt</RelativePath>
+      <Sha256>D2EFC89FBB7533572A472D34E07964951810A3A4F8D3159ECC2DCAA1452C5C26</Sha256>
+      <Link>licenses\native\dependencies\libgme\license.txt</Link>
+      <TargetPath>licenses\native\dependencies\libgme\license.txt</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgomp/COPYING.RUNTIME">
+      <RelativePath>licenses/native/dependencies/libgomp/COPYING.RUNTIME</RelativePath>
+      <Sha256>9D6B43CE4D8DE0C878BF16B54D8E7A10D9BD42B75178153E3AF6A815BDC90F74</Sha256>
+      <Link>licenses\native\dependencies\libgomp\COPYING.RUNTIME</Link>
+      <TargetPath>licenses\native\dependencies\libgomp\COPYING.RUNTIME</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libgomp/COPYING3">
+      <RelativePath>licenses/native/dependencies/libgomp/COPYING3</RelativePath>
+      <Sha256>8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903</Sha256>
+      <Link>licenses\native\dependencies\libgomp\COPYING3</Link>
+      <TargetPath>licenses\native\dependencies\libgomp\COPYING3</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libiconv/COPYING">
+      <RelativePath>licenses/native/dependencies/libiconv/COPYING</RelativePath>
+      <Sha256>8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903</Sha256>
+      <Link>licenses\native\dependencies\libiconv\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libiconv\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libiconv/COPYING.LIB">
+      <RelativePath>licenses/native/dependencies/libiconv/COPYING.LIB</RelativePath>
+      <Sha256>20E50FE7AAE3E56378EBF0417D9DE904F55A0E61E4DF315333E632A4D3555D95</Sha256>
+      <Link>licenses\native\dependencies\libiconv\COPYING.LIB</Link>
+      <TargetPath>licenses\native\dependencies\libiconv\COPYING.LIB</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libiconv/README">
+      <RelativePath>licenses/native/dependencies/libiconv/README</RelativePath>
+      <Sha256>4AE66E61D1C6593C84C47105B368D579BCEE1AF566DBB959EC63A0C48425DCF4</Sha256>
+      <Link>licenses\native\dependencies\libiconv\README</Link>
+      <TargetPath>licenses\native\dependencies\libiconv\README</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libiconv/libcharset/COPYING.LIB">
+      <RelativePath>licenses/native/dependencies/libiconv/libcharset/COPYING.LIB</RelativePath>
+      <Sha256>20E50FE7AAE3E56378EBF0417D9DE904F55A0E61E4DF315333E632A4D3555D95</Sha256>
+      <Link>licenses\native\dependencies\libiconv\libcharset\COPYING.LIB</Link>
+      <TargetPath>licenses\native\dependencies\libiconv\libcharset\COPYING.LIB</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libjpeg-turbo/LICENSE.md">
+      <RelativePath>licenses/native/dependencies/libjpeg-turbo/LICENSE.md</RelativePath>
+      <Sha256>BA6BCEEBCBA0FDD35488477C2CCA8C4632CE82C74DBFBC87D886CE6FC4433579</Sha256>
+      <Link>licenses\native\dependencies\libjpeg-turbo\LICENSE.md</Link>
+      <TargetPath>licenses\native\dependencies\libjpeg-turbo\LICENSE.md</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libjpeg-turbo/README.ijg">
+      <RelativePath>licenses/native/dependencies/libjpeg-turbo/README.ijg</RelativePath>
+      <Sha256>75815E3BF6484201A3C3D17A1BBF10F2E8E3237F84DF10A2357EA896DB2A81D6</Sha256>
+      <Link>licenses\native\dependencies\libjpeg-turbo\README.ijg</Link>
+      <TargetPath>licenses\native\dependencies\libjpeg-turbo\README.ijg</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libjpeg-turbo/README.md">
+      <RelativePath>licenses/native/dependencies/libjpeg-turbo/README.md</RelativePath>
+      <Sha256>BD71F6EBAE1C151E4B5FE7072DC2CEDCF33671FA40D91AD5F9058ECDC0B01721</Sha256>
+      <Link>licenses\native\dependencies\libjpeg-turbo\README.md</Link>
+      <TargetPath>licenses\native\dependencies\libjpeg-turbo\README.md</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libjpeg-turbo/simd/jsimdext.inc">
+      <RelativePath>licenses/native/dependencies/libjpeg-turbo/simd/jsimdext.inc</RelativePath>
+      <Sha256>68C5D236785EDF75344CEBE8B9BEC36568BD35C96EB72CC67FFECD66C17DBD74</Sha256>
+      <Link>licenses\native\dependencies\libjpeg-turbo\simd\jsimdext.inc</Link>
+      <TargetPath>licenses\native\dependencies\libjpeg-turbo\simd\jsimdext.inc</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libjxl/LICENSE">
+      <RelativePath>licenses/native/dependencies/libjxl/LICENSE</RelativePath>
+      <Sha256>8405932022A556380C2D8C272EFF154A923FEB197233F348CE5F7334FB0A5EDE</Sha256>
+      <Link>licenses\native\dependencies\libjxl\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libjxl\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/liblc3/LICENSE">
+      <RelativePath>licenses/native/dependencies/liblc3/LICENSE</RelativePath>
+      <Sha256>CFC7749B96F63BD31C3C42B5C471BF756814053E847C10F3EB003417BC523D30</Sha256>
+      <Link>licenses\native\dependencies\liblc3\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\liblc3\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libmodplug/LICENSE">
+      <RelativePath>licenses/native/dependencies/libmodplug/LICENSE</RelativePath>
+      <Sha256>49942E7B3B175F549E751FEB08B5270CA6F6C5FB7A1BE9F9517DB275EC32C92E</Sha256>
+      <Link>licenses\native\dependencies\libmodplug\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libmodplug\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libmysofa/LICENSE">
+      <RelativePath>licenses/native/dependencies/libmysofa/LICENSE</RelativePath>
+      <Sha256>9C8713CCC5D6D93D20C7A1CFCB876E64BAF551BFBE67FAA4E60D39CDA9FFD023</Sha256>
+      <Link>licenses\native\dependencies\libmysofa\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libmysofa\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libogg/COPYING">
+      <RelativePath>licenses/native/dependencies/libogg/COPYING</RelativePath>
+      <Sha256>D2AB5758336489DA61C12CC5BB757DA5339C4AE9001F9BB0562B4370249AF814</Sha256>
+      <Link>licenses\native\dependencies\libogg\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libogg\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libplacebo/LICENSE">
+      <RelativePath>licenses/native/dependencies/libplacebo/LICENSE</RelativePath>
+      <Sha256>B3AA400ACA6D2BA1F0BD03BD98D03D1FE7489A3BBB26969D72016360AF8A5C9D</Sha256>
+      <Link>licenses\native\dependencies\libplacebo\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libplacebo\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libpng/LICENSE">
+      <RelativePath>licenses/native/dependencies/libpng/LICENSE</RelativePath>
+      <Sha256>BDB0A645EA18C60507D0368379B1AC5474B92255FCC2D115E07486A7672BA526</Sha256>
+      <Link>licenses\native\dependencies\libpng\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libpng\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libpsl/COPYING">
+      <RelativePath>licenses/native/dependencies/libpsl/COPYING</RelativePath>
+      <Sha256>322392E6001B2B3B0FCA705DC9F11F26E12441188ECDE50EB1D22909980B2925</Sha256>
+      <Link>licenses\native\dependencies\libpsl\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libpsl\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libquadmath/COPYING.LIB">
+      <RelativePath>licenses/native/dependencies/libquadmath/COPYING.LIB</RelativePath>
+      <Sha256>32434AFCC8666BA060E111D715BFDB6C2D5DD8A35FA4D3AB8AD67D8F850D2F2B</Sha256>
+      <Link>licenses\native\dependencies\libquadmath\COPYING.LIB</Link>
+      <TargetPath>licenses\native\dependencies\libquadmath\COPYING.LIB</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/librsvg/COPYING.LIB">
+      <RelativePath>licenses/native/dependencies/librsvg/COPYING.LIB</RelativePath>
+      <Sha256>DC626520DCD53A22F727AF3EE42C770E56C97A64FE3ADB063799D8AB032FE551</Sha256>
+      <Link>licenses\native\dependencies\librsvg\COPYING.LIB</Link>
+      <TargetPath>licenses\native\dependencies\librsvg\COPYING.LIB</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libsamplerate/COPYING">
+      <RelativePath>licenses/native/dependencies/libsamplerate/COPYING</RelativePath>
+      <Sha256>2C1F76CE2EFFDDDB425018405D5690C0B1AB4E6976E35296B0A6DB65C5E1A55D</Sha256>
+      <Link>licenses\native\dependencies\libsamplerate\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libsamplerate\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libsndfile/COPYING">
+      <RelativePath>licenses/native/dependencies/libsndfile/COPYING</RelativePath>
+      <Sha256>AD01EA5CD2755F6048383C8D54C88459CD6FCB17757C5C8892F8C5EA060F6140</Sha256>
+      <Link>licenses\native\dependencies\libsndfile\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libsndfile\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libsoxr/COPYING.LGPL">
+      <RelativePath>licenses/native/dependencies/libsoxr/COPYING.LGPL</RelativePath>
+      <Sha256>F2F118B9029EC1871B953639ECC46651B2FC7B62E295E6CF3EF2AC4C9A058B33</Sha256>
+      <Link>licenses\native\dependencies\libsoxr\COPYING.LGPL</Link>
+      <TargetPath>licenses\native\dependencies\libsoxr\COPYING.LGPL</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libsoxr/LICENSE">
+      <RelativePath>licenses/native/dependencies/libsoxr/LICENSE</RelativePath>
+      <Sha256>DC98676341FDCD29D9F279C9679D6A75288785B174DED8D1B2E316C366166135</Sha256>
+      <Link>licenses\native\dependencies\libsoxr\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libsoxr\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libsoxr/LICENSE-PFFFT">
+      <RelativePath>licenses/native/dependencies/libsoxr/LICENSE-PFFFT</RelativePath>
+      <Sha256>A9F3D236F3C14A41A1293F176D4C7C46D85404403417FCB8DF6D6C9707104E42</Sha256>
+      <Link>licenses\native\dependencies\libsoxr\LICENSE-PFFFT</Link>
+      <TargetPath>licenses\native\dependencies\libsoxr\LICENSE-PFFFT</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libssh2/LICENSE">
+      <RelativePath>licenses/native/dependencies/libssh2/LICENSE</RelativePath>
+      <Sha256>F7F9633CF9FF2F1333F3D7CE46973A8716A4D2A2815AD56F30D437D5FEA7BAFE</Sha256>
+      <Link>licenses\native\dependencies\libssh2\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libssh2\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libstdc++/COPYING.RUNTIME">
+      <RelativePath>licenses/native/dependencies/libstdc++/COPYING.RUNTIME</RelativePath>
+      <Sha256>9D6B43CE4D8DE0C878BF16B54D8E7A10D9BD42B75178153E3AF6A815BDC90F74</Sha256>
+      <Link>licenses\native\dependencies\libstdc++\COPYING.RUNTIME</Link>
+      <TargetPath>licenses\native\dependencies\libstdc++\COPYING.RUNTIME</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libstdc++/COPYING3">
+      <RelativePath>licenses/native/dependencies/libstdc++/COPYING3</RelativePath>
+      <Sha256>8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903</Sha256>
+      <Link>licenses\native\dependencies\libstdc++\COPYING3</Link>
+      <TargetPath>licenses\native\dependencies\libstdc++\COPYING3</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libsystre/LICENSE">
+      <RelativePath>licenses/native/dependencies/libsystre/LICENSE</RelativePath>
+      <Sha256>3200024286EB0A33C22DA3A31C470DF07C7B8CFBEAD2B9528195D67D107264EC</Sha256>
+      <Link>licenses\native\dependencies\libsystre\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libsystre\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libtasn1/COPYING">
+      <RelativePath>licenses/native/dependencies/libtasn1/COPYING</RelativePath>
+      <Sha256>3972DC9744F6499F0F9B2DBF76696F2AE7AD8AF9B23DDE66D6AF86C9DFB36986</Sha256>
+      <Link>licenses\native\dependencies\libtasn1\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libtasn1\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libtasn1/COPYING.LESSERv2">
+      <RelativePath>licenses/native/dependencies/libtasn1/COPYING.LESSERv2</RelativePath>
+      <Sha256>20E50FE7AAE3E56378EBF0417D9DE904F55A0E61E4DF315333E632A4D3555D95</Sha256>
+      <Link>licenses\native\dependencies\libtasn1\COPYING.LESSERv2</Link>
+      <TargetPath>licenses\native\dependencies\libtasn1\COPYING.LESSERv2</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libthai/COPYING">
+      <RelativePath>licenses/native/dependencies/libthai/COPYING</RelativePath>
+      <Sha256>20E50FE7AAE3E56378EBF0417D9DE904F55A0E61E4DF315333E632A4D3555D95</Sha256>
+      <Link>licenses\native\dependencies\libthai\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libthai\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libtiff/LICENSE.md">
+      <RelativePath>licenses/native/dependencies/libtiff/LICENSE.md</RelativePath>
+      <Sha256>0E27C2382D7B8147972BBB746E04059A1152C8D0FDA9D03EF1399D1A433C4ADE</Sha256>
+      <Link>licenses\native\dependencies\libtiff\LICENSE.md</Link>
+      <TargetPath>licenses\native\dependencies\libtiff\LICENSE.md</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libtre/LICENSE">
+      <RelativePath>licenses/native/dependencies/libtre/LICENSE</RelativePath>
+      <Sha256>6A50AB50D856B30C965CF2DD899E577EC108C938242FD3A2E7A7A25EED996200</Sha256>
+      <Link>licenses\native\dependencies\libtre\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libtre\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libunibreak/LICENCE">
+      <RelativePath>licenses/native/dependencies/libunibreak/LICENCE</RelativePath>
+      <Sha256>0C57E2EC42ECE17791A75D2F9B2F8E0663181BE008667A507F765B3EF22522DB</Sha256>
+      <Link>licenses\native\dependencies\libunibreak\LICENCE</Link>
+      <TargetPath>licenses\native\dependencies\libunibreak\LICENCE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libunistring/LICENSE">
+      <RelativePath>licenses/native/dependencies/libunistring/LICENSE</RelativePath>
+      <Sha256>3972DC9744F6499F0F9B2DBF76696F2AE7AD8AF9B23DDE66D6AF86C9DFB36986</Sha256>
+      <Link>licenses\native\dependencies\libunistring\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libunistring\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libunistring/LICENSE.LIB">
+      <RelativePath>licenses/native/dependencies/libunistring/LICENSE.LIB</RelativePath>
+      <Sha256>A853C2FFEC17057872340EEE242AE4D96CBF2B520AE27D903E1B2FEF1A5F9D1C</Sha256>
+      <Link>licenses\native\dependencies\libunistring\LICENSE.LIB</Link>
+      <TargetPath>licenses\native\dependencies\libunistring\LICENSE.LIB</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libva/COPYING">
+      <RelativePath>licenses/native/dependencies/libva/COPYING</RelativePath>
+      <Sha256>C86A782EE845B52472DAE9B9D79FB915D333628AC0EFE49CDCE63644814931DE</Sha256>
+      <Link>licenses\native\dependencies\libva\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libva\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libvpl/LICENSE">
+      <RelativePath>licenses/native/dependencies/libvpl/LICENSE</RelativePath>
+      <Sha256>BF1CFAC2E2792B6E1E995CE103D70796AECAF2EC7E4C5FE5474F7ACEC7B4A677</Sha256>
+      <Link>licenses\native\dependencies\libvpl\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\libvpl\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libwebp/COPYING">
+      <RelativePath>licenses/native/dependencies/libwebp/COPYING</RelativePath>
+      <Sha256>5AEC868F669E384A22372A4E8A1A6CD7D44C64CD451F960CA69CC170D1E13ACF</Sha256>
+      <Link>licenses\native\dependencies\libwebp\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libwebp\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libwinpthread/COPYING">
+      <RelativePath>licenses/native/dependencies/libwinpthread/COPYING</RelativePath>
+      <Sha256>63263614CDD29F2F93CBA85E992F041B31F9FC7B4033692F31269489A8A1B177</Sha256>
+      <Link>licenses\native\dependencies\libwinpthread\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libwinpthread\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/libxml2/COPYING">
+      <RelativePath>licenses/native/dependencies/libxml2/COPYING</RelativePath>
+      <Sha256>5D4873884A890122A4B9B20AD56AC6F7DA1D796A5BFCF04A427970AC96217626</Sha256>
+      <Link>licenses\native\dependencies\libxml2\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\libxml2\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/llama.cpp/LICENSE">
+      <RelativePath>licenses/native/dependencies/llama.cpp/LICENSE</RelativePath>
+      <Sha256>94F29BBED6A22C35B992C5C6EBF0E7C92F13B836B90F36F461C9CF2F0F1D010D</Sha256>
+      <Link>licenses\native\dependencies\llama.cpp\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\llama.cpp\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/lua51/COPYRIGHT">
+      <RelativePath>licenses/native/dependencies/lua51/COPYRIGHT</RelativePath>
+      <Sha256>EE5E3E82AF1E1B543C4F216E399D7C8CFEE797711913F349E385101C4AE60A79</Sha256>
+      <Link>licenses\native\dependencies\lua51\COPYRIGHT</Link>
+      <TargetPath>licenses\native\dependencies\lua51\COPYRIGHT</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/lzo2/LICENSE">
+      <RelativePath>licenses/native/dependencies/lzo2/LICENSE</RelativePath>
+      <Sha256>8177F97513213526DF2CF6184D8FF986C675AFB514D4E68A404010521B880643</Sha256>
+      <Link>licenses\native\dependencies\lzo2\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\lzo2\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/meson/COPYING">
+      <RelativePath>licenses/native/dependencies/meson/COPYING</RelativePath>
+      <Sha256>CFC7749B96F63BD31C3C42B5C471BF756814053E847C10F3EB003417BC523D30</Sha256>
+      <Link>licenses\native\dependencies\meson\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\meson\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/mpdecimal/LICENSE">
+      <RelativePath>licenses/native/dependencies/mpdecimal/LICENSE</RelativePath>
+      <Sha256>DBA079E24A0286052F9F36A5E0B4F6CC95BC83ADA657EB26BEF8C0B6473F6512</Sha256>
+      <Link>licenses\native\dependencies\mpdecimal\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\mpdecimal\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/mpg123/COPYING">
+      <RelativePath>licenses/native/dependencies/mpg123/COPYING</RelativePath>
+      <Sha256>C22482728A634A8DFDB4FF72A96D4C1ED64CD8F3E79335C401751AC591609366</Sha256>
+      <Link>licenses\native\dependencies\mpg123\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\mpg123\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/mujs/COPYING">
+      <RelativePath>licenses/native/dependencies/mujs/COPYING</RelativePath>
+      <Sha256>0CA9B4FBFBCAB8AC7D32475890D866EFC02F4CFFB6B6DA5C0E9A0615CC3D82FE</Sha256>
+      <Link>licenses\native\dependencies\mujs\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\mujs\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/nasm/LICENSE">
+      <RelativePath>licenses/native/dependencies/nasm/LICENSE</RelativePath>
+      <Sha256>7436A7C46B6E4D969B41E1CE387885AE4CED25710662189FF2983665253729AC</Sha256>
+      <Link>licenses\native\dependencies\nasm\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\nasm\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/ncurses/LICENSE">
+      <RelativePath>licenses/native/dependencies/ncurses/LICENSE</RelativePath>
+      <Sha256>708999F95527E1FFA670C6FCE288C6C600CB477DD04AFCC1171422B3DD4EE226</Sha256>
+      <Link>licenses\native\dependencies\ncurses\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\ncurses\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/nghttp2/COPYING">
+      <RelativePath>licenses/native/dependencies/nghttp2/COPYING</RelativePath>
+      <Sha256>6B94F3ABC1AABD0C72A7C7D92A77F79DDA7C8A0CB3DF839A97890B4116A2DE2A</Sha256>
+      <Link>licenses\native\dependencies\nghttp2\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\nghttp2\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/nghttp3/COPYING">
+      <RelativePath>licenses/native/dependencies/nghttp3/COPYING</RelativePath>
+      <Sha256>58CC3FC8C6D6CB2485AB35EB5918E849B5BF1E56522974E106D7A39A88D61DCD</Sha256>
+      <Link>licenses\native\dependencies\nghttp3\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\nghttp3\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/ngtcp2/COPYING">
+      <RelativePath>licenses/native/dependencies/ngtcp2/COPYING</RelativePath>
+      <Sha256>542DD526D2EA23565F0571CC68DF6F05ED11248A90FF0F32DE19D8BA589DB513</Sha256>
+      <Link>licenses\native\dependencies\ngtcp2\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\ngtcp2\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/ninja/COPYING">
+      <RelativePath>licenses/native/dependencies/ninja/COPYING</RelativePath>
+      <Sha256>EB7E9AB9690124C5C9F42BDC81383D886A3DEDE26345B6ED15BBAD7CAF81F7EA</Sha256>
+      <Link>licenses\native\dependencies\ninja\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\ninja\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/opencl-icd/LICENSE">
+      <RelativePath>licenses/native/dependencies/opencl-icd/LICENSE</RelativePath>
+      <Sha256>C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4</Sha256>
+      <Link>licenses\native\dependencies\opencl-icd\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\opencl-icd\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/openexr/LICENSE.md">
+      <RelativePath>licenses/native/dependencies/openexr/LICENSE.md</RelativePath>
+      <Sha256>84853C91D4C2E0310741D4773469D98BB93E61029608E0BA0882A3FFFDF330BD</Sha256>
+      <Link>licenses\native\dependencies\openexr\LICENSE.md</Link>
+      <TargetPath>licenses\native\dependencies\openexr\LICENSE.md</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/openjpeg/LICENSE">
+      <RelativePath>licenses/native/dependencies/openjpeg/LICENSE</RelativePath>
+      <Sha256>A6AF136F3E15038A666B61F376612A07D9A4E48CB7C01ADBF3E33B3F14AB49B6</Sha256>
+      <Link>licenses\native\dependencies\openjpeg\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\openjpeg\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/openjph/LICENSE">
+      <RelativePath>licenses/native/dependencies/openjph/LICENSE</RelativePath>
+      <Sha256>5DDF5177863DFC9AB65FA129D587DB651241F00E21ED2427B218BEA997591F98</Sha256>
+      <Link>licenses\native\dependencies\openjph\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\openjph\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/openssl/LICENSE">
+      <RelativePath>licenses/native/dependencies/openssl/LICENSE</RelativePath>
+      <Sha256>7D5450CB2D142651B8AFA315B5F238EFC805DAD827D91BA367D8516BC9D49E7A</Sha256>
+      <Link>licenses\native\dependencies\openssl\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\openssl\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/opus/COPYING">
+      <RelativePath>licenses/native/dependencies/opus/COPYING</RelativePath>
+      <Sha256>01E1167D54A096D123CF6DFBBEB19587278845C6481D2D66D545669846079551</Sha256>
+      <Link>licenses\native\dependencies\opus\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\opus\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/pango/COPYING">
+      <RelativePath>licenses/native/dependencies/pango/COPYING</RelativePath>
+      <Sha256>D245807F90032872D1438D741ED21E2490E1175DC8AA3AFA5DDB6C8E529B58E5</Sha256>
+      <Link>licenses\native\dependencies\pango\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\pango\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/pcre2/COPYING">
+      <RelativePath>licenses/native/dependencies/pcre2/COPYING</RelativePath>
+      <Sha256>99272C55F3DCFA07A8A7E15A5C1A33096E4727DE74241D65FA049FCCFDD59507</Sha256>
+      <Link>licenses\native\dependencies\pcre2\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\pcre2\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/pcre2/LICENCE.md">
+      <RelativePath>licenses/native/dependencies/pcre2/LICENCE.md</RelativePath>
+      <Sha256>197D8A73FFEE0D6B09ADBA2F9C677B5F5AEDE24EDF89258A68E48248D010D811</Sha256>
+      <Link>licenses\native\dependencies\pcre2\LICENCE.md</Link>
+      <TargetPath>licenses\native\dependencies\pcre2\LICENCE.md</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/pixman/COPYING">
+      <RelativePath>licenses/native/dependencies/pixman/COPYING</RelativePath>
+      <Sha256>FAC9270F0987B96FF4533FCA3548C633E02083CBBA4A0172A3B149B2E4019793</Sha256>
+      <Link>licenses\native\dependencies\pixman\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\pixman\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/python-packaging/LICENSE">
+      <RelativePath>licenses/native/dependencies/python-packaging/LICENSE</RelativePath>
+      <Sha256>CAD1EF5BD340D73E074BA614D26F7DEACA5C7940C3D8C34852E65C4909686C48</Sha256>
+      <Link>licenses\native\dependencies\python-packaging\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\python-packaging\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/python-packaging/LICENSE.APACHE">
+      <RelativePath>licenses/native/dependencies/python-packaging/LICENSE.APACHE</RelativePath>
+      <Sha256>0D542E0C8804E39AA7F37EB00DA5A762149DC682D7829451287E11B938E94594</Sha256>
+      <Link>licenses\native\dependencies\python-packaging\LICENSE.APACHE</Link>
+      <TargetPath>licenses\native\dependencies\python-packaging\LICENSE.APACHE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/python-packaging/LICENSE.BSD">
+      <RelativePath>licenses/native/dependencies/python-packaging/LICENSE.BSD</RelativePath>
+      <Sha256>B70E7E9B742F1CC6F948B34C16AA39FFECE94196364BC88FF0D2180F0028FAC5</Sha256>
+      <Link>licenses\native\dependencies\python-packaging\LICENSE.BSD</Link>
+      <TargetPath>licenses\native\dependencies\python-packaging\LICENSE.BSD</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/python3.14/LICENSE">
+      <RelativePath>licenses/native/dependencies/python3.14/LICENSE</RelativePath>
+      <Sha256>B0E25A78CFFB43F4D92DE8B61CCFA1F1F98ECBC22330B54B5251E7B6BA010231</Sha256>
+      <Link>licenses\native\dependencies\python3.14\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\python3.14\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/rapidjson/license.txt">
+      <RelativePath>licenses/native/dependencies/rapidjson/license.txt</RelativePath>
+      <Sha256>A140E5D46FE734A1C78F1A3C3EF207871DD75648BE71FDDA8E309B23AB8B1F32</Sha256>
+      <Link>licenses\native\dependencies\rapidjson\license.txt</Link>
+      <TargetPath>licenses\native\dependencies\rapidjson\license.txt</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/rav1e/LICENSE">
+      <RelativePath>licenses/native/dependencies/rav1e/LICENSE</RelativePath>
+      <Sha256>2DD0A109751E939DEC3F80DDCFBC1BA91553F18C574399E85C159632182A2C0A</Sha256>
+      <Link>licenses\native\dependencies\rav1e\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\rav1e\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/rav1e/PATENTS">
+      <RelativePath>licenses/native/dependencies/rav1e/PATENTS</RelativePath>
+      <Sha256>7B14A70C194B19DBD0625E7EAC839A63200F67484521CE5E8D8244B127E8907A</Sha256>
+      <Link>licenses\native\dependencies\rav1e\PATENTS</Link>
+      <TargetPath>licenses\native\dependencies\rav1e\PATENTS</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/rubberband/COPYING">
+      <RelativePath>licenses/native/dependencies/rubberband/COPYING</RelativePath>
+      <Sha256>CEDD4C1885D75991BF1077CC6E33359103CF04FBC996F20D30AB043D5FC5FCC5</Sha256>
+      <Link>licenses\native\dependencies\rubberband\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\rubberband\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/shaderc/LICENSE">
+      <RelativePath>licenses/native/dependencies/shaderc/LICENSE</RelativePath>
+      <Sha256>C71D239DF91726FC519C6EB72D318EC65820627232B2F796219E87DCF35D0AB4</Sha256>
+      <Link>licenses\native\dependencies\shaderc\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\shaderc\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/speex/LICENSE">
+      <RelativePath>licenses/native/dependencies/speex/LICENSE</RelativePath>
+      <Sha256>2654A4264B2BFE298DEDC508748D140111840C315CC8EB646A3A68C13FA75B01</Sha256>
+      <Link>licenses\native\dependencies\speex\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\speex\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/speexdsp/LICENSE">
+      <RelativePath>licenses/native/dependencies/speexdsp/LICENSE</RelativePath>
+      <Sha256>2654A4264B2BFE298DEDC508748D140111840C315CC8EB646A3A68C13FA75B01</Sha256>
+      <Link>licenses\native\dependencies\speexdsp\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\speexdsp\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/spirv-cross/LICENSE">
+      <RelativePath>licenses/native/dependencies/spirv-cross/LICENSE</RelativePath>
+      <Sha256>CFC7749B96F63BD31C3C42B5C471BF756814053E847C10F3EB003417BC523D30</Sha256>
+      <Link>licenses\native\dependencies\spirv-cross\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\spirv-cross\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/spirv-tools/LICENSE">
+      <RelativePath>licenses/native/dependencies/spirv-tools/LICENSE</RelativePath>
+      <Sha256>CFC7749B96F63BD31C3C42B5C471BF756814053E847C10F3EB003417BC523D30</Sha256>
+      <Link>licenses\native\dependencies\spirv-tools\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\spirv-tools\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/sqlite3/LICENSE">
+      <RelativePath>licenses/native/dependencies/sqlite3/LICENSE</RelativePath>
+      <Sha256>0B76663A90E034F3D7F2AF5BFADA4CEDEC5EBC275361899ECCC5C18E6F01FF1F</Sha256>
+      <Link>licenses\native\dependencies\sqlite3\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\sqlite3\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/srt/LICENSE">
+      <RelativePath>licenses/native/dependencies/srt/LICENSE</RelativePath>
+      <Sha256>FAB3DD6BDAB226F1C08630B1DD917E11FCB4EC5E1E020E2C16F83A0A13863E85</Sha256>
+      <Link>licenses\native\dependencies\srt\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\srt\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/svt-av1/LICENSE">
+      <RelativePath>licenses/native/dependencies/svt-av1/LICENSE</RelativePath>
+      <Sha256>0ACC2FCB27472BDC9AAF8B71F37055BBDAC4F54671B7D922F241BD7FCD0DD3E6</Sha256>
+      <Link>licenses\native\dependencies\svt-av1\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\svt-av1\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/svt-av1/PATENTS.md">
+      <RelativePath>licenses/native/dependencies/svt-av1/PATENTS.md</RelativePath>
+      <Sha256>20678AB10402659106DC4C147C97B2A6E94B5C0695415E15A8F195EBC3547922</Sha256>
+      <Link>licenses\native\dependencies\svt-av1\PATENTS.md</Link>
+      <TargetPath>licenses\native\dependencies\svt-av1\PATENTS.md</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/tzdata/LICENSE">
+      <RelativePath>licenses/native/dependencies/tzdata/LICENSE</RelativePath>
+      <Sha256>0613408568889F5739E5AE252B722A2659C02002839AD970A63DC5E9174B27CF</Sha256>
+      <Link>licenses\native\dependencies\tzdata\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\tzdata\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/uchardet/COPYING">
+      <RelativePath>licenses/native/dependencies/uchardet/COPYING</RelativePath>
+      <Sha256>107A29CCDD2D778AA2DF5462F85DDDFA099059ABD22E064E07EC2CC9BAFC37CD</Sha256>
+      <Link>licenses\native\dependencies\uchardet\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\uchardet\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/vamp-plugin-sdk/LICENSE">
+      <RelativePath>licenses/native/dependencies/vamp-plugin-sdk/LICENSE</RelativePath>
+      <Sha256>91572FD197F7333FC1F94B02E66CBAF6E804451D0F59BA85488FB22777B2A52A</Sha256>
+      <Link>licenses\native\dependencies\vamp-plugin-sdk\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\vamp-plugin-sdk\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/vapoursynth/COPYING.LESSER">
+      <RelativePath>licenses/native/dependencies/vapoursynth/COPYING.LESSER</RelativePath>
+      <Sha256>B634AB5640E258563C536E658CAD87080553DF6F34F62269A21D554844E58BFE</Sha256>
+      <Link>licenses\native\dependencies\vapoursynth\COPYING.LESSER</Link>
+      <TargetPath>licenses\native\dependencies\vapoursynth\COPYING.LESSER</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/vid.stab/LICENSE">
+      <RelativePath>licenses/native/dependencies/vid.stab/LICENSE</RelativePath>
+      <Sha256>03F095C5C70EA18FFB2B89DD58E4EE57E4F613D04632993F90C890F4CC125B99</Sha256>
+      <Link>licenses\native\dependencies\vid.stab\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\vid.stab\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/vulkan-headers/LICENSE">
+      <RelativePath>licenses/native/dependencies/vulkan-headers/LICENSE</RelativePath>
+      <Sha256>95AD366D23FADF701D355BC45FB8B82AE2D700239471D35D41286AC3B08FF903</Sha256>
+      <Link>licenses\native\dependencies\vulkan-headers\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\vulkan-headers\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/vulkan-loader/LICENSE">
+      <RelativePath>licenses/native/dependencies/vulkan-loader/LICENSE</RelativePath>
+      <Sha256>43C0A37E6A0FA7FF3C843B3EC5A4FAC84B712558DDAC103FBD4C1649662A9ECE</Sha256>
+      <Link>licenses\native\dependencies\vulkan-loader\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\vulkan-loader\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/whisper.cpp/LICENSE">
+      <RelativePath>licenses/native/dependencies/whisper.cpp/LICENSE</RelativePath>
+      <Sha256>94F29BBED6A22C35B992C5C6EBF0E7C92F13B836B90F36F461C9CF2F0F1D010D</Sha256>
+      <Link>licenses\native\dependencies\whisper.cpp\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\whisper.cpp\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/wineditline/LICENSE">
+      <RelativePath>licenses/native/dependencies/wineditline/LICENSE</RelativePath>
+      <Sha256>E1A9520A9B3143AD64ADB356C5D2FCA6BB09A3AD3950CF1F7213946543582440</Sha256>
+      <Link>licenses\native\dependencies\wineditline\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\wineditline\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/winpthreads/COPYING">
+      <RelativePath>licenses/native/dependencies/winpthreads/COPYING</RelativePath>
+      <Sha256>63263614CDD29F2F93CBA85E992F041B31F9FC7B4033692F31269489A8A1B177</Sha256>
+      <Link>licenses\native\dependencies\winpthreads\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\winpthreads\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/xz/COPYING">
+      <RelativePath>licenses/native/dependencies/xz/COPYING</RelativePath>
+      <Sha256>616A3AD264CE29B8F1CB97E53037B139D406899CA8D1F799651E17BFA09830B8</Sha256>
+      <Link>licenses\native\dependencies\xz\COPYING</Link>
+      <TargetPath>licenses\native\dependencies\xz\COPYING</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/xz/COPYING.0BSD">
+      <RelativePath>licenses/native/dependencies/xz/COPYING.0BSD</RelativePath>
+      <Sha256>0B01625D853911CD0E2E088DCFB743261034A091BB379246CB25A14CC4C74BF1</Sha256>
+      <Link>licenses\native\dependencies\xz\COPYING.0BSD</Link>
+      <TargetPath>licenses\native\dependencies\xz\COPYING.0BSD</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/xz/COPYING.GPLv2">
+      <RelativePath>licenses/native/dependencies/xz/COPYING.GPLv2</RelativePath>
+      <Sha256>EDAEF632CBB643E4E7A221717A6C441A4C1A7C918E6E4D56DEBC3D8739B233F6</Sha256>
+      <Link>licenses\native\dependencies\xz\COPYING.GPLv2</Link>
+      <TargetPath>licenses\native\dependencies\xz\COPYING.GPLv2</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/xz/COPYING.GPLv3">
+      <RelativePath>licenses/native/dependencies/xz/COPYING.GPLv3</RelativePath>
+      <Sha256>3972DC9744F6499F0F9B2DBF76696F2AE7AD8AF9B23DDE66D6AF86C9DFB36986</Sha256>
+      <Link>licenses\native\dependencies\xz\COPYING.GPLv3</Link>
+      <TargetPath>licenses\native\dependencies\xz\COPYING.GPLv3</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/xz/COPYING.LGPLv2.1">
+      <RelativePath>licenses/native/dependencies/xz/COPYING.LGPLv2.1</RelativePath>
+      <Sha256>20E50FE7AAE3E56378EBF0417D9DE904F55A0E61E4DF315333E632A4D3555D95</Sha256>
+      <Link>licenses\native\dependencies\xz\COPYING.LGPLv2.1</Link>
+      <TargetPath>licenses\native\dependencies\xz\COPYING.LGPLv2.1</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/zlib/LICENSE">
+      <RelativePath>licenses/native/dependencies/zlib/LICENSE</RelativePath>
+      <Sha256>E32FF4E00D9D94930537635291DA39E7E612703334BF6FDE8C7F1686FE8A45A2</Sha256>
+      <Link>licenses\native\dependencies\zlib\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\zlib\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/zstd/LICENSE">
+      <RelativePath>licenses/native/dependencies/zstd/LICENSE</RelativePath>
+      <Sha256>7055266497633C9025B777C78EB7235AF13922117480ED5C674677ADC381C9D8</Sha256>
+      <Link>licenses\native\dependencies\zstd\LICENSE</Link>
+      <TargetPath>licenses\native\dependencies\zstd\LICENSE</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/dependencies/zvbi/COPYING.md">
+      <RelativePath>licenses/native/dependencies/zvbi/COPYING.md</RelativePath>
+      <Sha256>6D679539253897582D38FCD1EABFA670C01C0ECE73D8CD3DC97869FCF723F106</Sha256>
+      <Link>licenses\native\dependencies\zvbi\COPYING.md</Link>
+      <TargetPath>licenses\native\dependencies\zvbi\COPYING.md</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/ffmpeg/COPYING.GPLv2">
+      <RelativePath>licenses/native/engine/ffmpeg/COPYING.GPLv2</RelativePath>
+      <Sha256>8177F97513213526DF2CF6184D8FF986C675AFB514D4E68A404010521B880643</Sha256>
+      <Link>licenses\native\engine\ffmpeg\COPYING.GPLv2</Link>
+      <TargetPath>licenses\native\engine\ffmpeg\COPYING.GPLv2</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/ffmpeg/COPYING.GPLv3">
+      <RelativePath>licenses/native/engine/ffmpeg/COPYING.GPLv3</RelativePath>
+      <Sha256>8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903</Sha256>
+      <Link>licenses\native\engine\ffmpeg\COPYING.GPLv3</Link>
+      <TargetPath>licenses\native\engine\ffmpeg\COPYING.GPLv3</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/ffmpeg/COPYING.LGPLv2.1">
+      <RelativePath>licenses/native/engine/ffmpeg/COPYING.LGPLv2.1</RelativePath>
+      <Sha256>246041B6ECF9BC32D718A62C57877C78B5EB397B6467E74ED7AE2626AB189C30</Sha256>
+      <Link>licenses\native\engine\ffmpeg\COPYING.LGPLv2.1</Link>
+      <TargetPath>licenses\native\engine\ffmpeg\COPYING.LGPLv2.1</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/ffmpeg/COPYING.LGPLv3">
+      <RelativePath>licenses/native/engine/ffmpeg/COPYING.LGPLv3</RelativePath>
+      <Sha256>DA7EABB7BAFDF7D3AE5E9F223AA5BDC1EECE45AC569DC21B3B037520B4464768</Sha256>
+      <Link>licenses\native\engine\ffmpeg\COPYING.LGPLv3</Link>
+      <TargetPath>licenses\native\engine\ffmpeg\COPYING.LGPLv3</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/ffmpeg/LICENSE.md">
+      <RelativePath>licenses/native/engine/ffmpeg/LICENSE.md</RelativePath>
+      <Sha256>E6DC72D5665A1EBD6DCC841DE59278DAD4CA77ECC47B03F1064A55C3E9EA8BB8</Sha256>
+      <Link>licenses\native\engine\ffmpeg\LICENSE.md</Link>
+      <TargetPath>licenses\native\engine\ffmpeg\LICENSE.md</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/mpv/Copyright">
+      <RelativePath>licenses/native/engine/mpv/Copyright</RelativePath>
+      <Sha256>BFE9EE4CCEABCB8ECBFADF208D04156F73D801E6A57369A5606BB8341E204A23</Sha256>
+      <Link>licenses\native\engine\mpv\Copyright</Link>
+      <TargetPath>licenses\native\engine\mpv\Copyright</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/mpv/LICENSE.GPL">
+      <RelativePath>licenses/native/engine/mpv/LICENSE.GPL</RelativePath>
+      <Sha256>EDAEF632CBB643E4E7A221717A6C441A4C1A7C918E6E4D56DEBC3D8739B233F6</Sha256>
+      <Link>licenses\native\engine\mpv\LICENSE.GPL</Link>
+      <TargetPath>licenses\native\engine\mpv\LICENSE.GPL</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/engine/mpv/LICENSE.LGPL">
+      <RelativePath>licenses/native/engine/mpv/LICENSE.LGPL</RelativePath>
+      <Sha256>72B672113D642CBB8EF5DCC76938DB801983C56E50B1400AB930F1A64D6DC8D9</Sha256>
+      <Link>licenses\native\engine\mpv\LICENSE.LGPL</Link>
+      <TargetPath>licenses\native\engine\mpv\LICENSE.LGPL</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/licenses/native/ffmpeg-sup-keyframes-flush.patch">
+      <RelativePath>licenses/native/ffmpeg-sup-keyframes-flush.patch</RelativePath>
+      <Sha256>714408F5ABD10CF36F7BDACB0B9A61E28F6EEF560A9036BBEAF416D38B01CB04</Sha256>
+      <Link>licenses\native\ffmpeg-sup-keyframes-flush.patch</Link>
+      <TargetPath>licenses\native\ffmpeg-sup-keyframes-flush.patch</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/lua51.dll">
+      <RelativePath>lua51.dll</RelativePath>
+      <Sha256>A8E7E60A412A5815FF38A9F5A116A452BFF5B89E3D7019ED3FF45123B2AA8464</Sha256>
+      <Link>lua51.dll</Link>
+      <TargetPath>lua51.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/mpv.exe">
+      <RelativePath>mpv.exe</RelativePath>
+      <Sha256>8B8C6163D4D15620075755E98A9D7B314CBADC5062C29E5BCCE29B54E3263C6B</Sha256>
+      <Link>mpv.exe</Link>
+      <TargetPath>mpv.exe</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/swresample-7.dll">
+      <RelativePath>swresample-7.dll</RelativePath>
+      <Sha256>9FAABB200DB5169E24CBF51C6774F2B7E6D906A4F1A8AA846D98703A25AD06F5</Sha256>
+      <Link>swresample-7.dll</Link>
+      <TargetPath>swresample-7.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/swscale-10.dll">
+      <RelativePath>swscale-10.dll</RelativePath>
+      <Sha256>AEE9B1C3E89D4770615ADB40F426C7FE016C3419FD18788D37115CBE7EB8F857</Sha256>
+      <Link>swscale-10.dll</Link>
+      <TargetPath>swscale-10.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/vulkan-1.dll">
+      <RelativePath>vulkan-1.dll</RelativePath>
+      <Sha256>31862137C4179DCDBBA782760F3E401F9FB526477947079D7F63987864F9B0EB</Sha256>
+      <Link>vulkan-1.dll</Link>
+      <TargetPath>vulkan-1.dll</TargetPath>
+    </ManiMpvFile>
+    <ManiMpvFile Include="$(MSBuildThisFileDirectory)..\native/mpv/mani-sup-msys2-ucrt64-20261101-r2/zlib1.dll">
+      <RelativePath>zlib1.dll</RelativePath>
+      <Sha256>8AE7AEB0467763A1E271CD831CA8E2F7FD101602ADB9923100EA26C6BE2A559B</Sha256>
+      <Link>zlib1.dll</Link>
+      <TargetPath>zlib1.dll</TargetPath>
+    </ManiMpvFile>
+  </ItemGroup>
+</Project>

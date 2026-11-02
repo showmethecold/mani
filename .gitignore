@@ -1,0 +1,42 @@
+**/bin/
+**/obj/
+.vs/
+.dotnet/
+artifacts/
+__pycache__/
+*.pyc
+native/
+tests/media/acquired/
+
+# Local documentation and milestone investigation material are not versioned.
+*.md
+!/README.md
+!/README.zh-CN.md
+/docs/
+/artifacts/
+/scripts/
+/config/baseline.json
+/config/m1-*.json
+
+# Track maintained unit tests and packaged media; keep local diagnostics ignored.
+/tests/*
+!/tests/Mani.UnitTests/
+!/tests/media/
+/tests/media/*
+!/tests/media/generated/
+/tests/media/generated/*
+!/tests/media/generated/m1/
+/tests/media/generated/m1/*
+!/tests/media/generated/m1/1080p-sdr.mkv
+!/tests/media/generated/m1/4k-sdr.mkv
+!/tests/media/generated/m1/hdr-pq-ramp.mkv
+!/tests/media/generated/m1/hdr-av-motion.mkv
+
+# Machine-local IDE, package identity and signing state.
+*.user
+*.suo
+*.pubxml.user
+.winapp/
+*.pfx
+*.p12
+**/TestResults/

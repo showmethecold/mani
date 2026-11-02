@@ -1,0 +1,25 @@
+Mani - a Windows media player
+Copyright (C) 2026 Mani contributors
+SPDX-License-Identifier: GPL-3.0-only
+
+Mani is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License, version 3, as published
+by the Free Software Foundation.
+
+Mani is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public
+License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Mani. If not, see <https://www.gnu.org/licenses/>.
+
+The full license is included in the application's LICENSE file and
+at the repository root. Commercial use and redistribution are allowed
+under its terms; no separate commercial permission is required.
+
+Third-party copyright and license notices remain applicable.
+See IINA-NOTICE.txt and IINA-GPL-3.0.txt for IINA-derived code.
+Original synthetic media explicitly marked CC0-1.0 in the asset
+manifests retain that dedication. External dependencies retain their
+own licenses and are not relicensed by this notice.

@@ -1,0 +1,256 @@
+{
+  "en": {
+    "lang": "en",
+    "title": "Mani — A little more cinema. For Windows.",
+    "description": "An IINA-inspired media player for Windows. A calm glass interface, dual subtitles, thoughtful audio controls, and the power of libmpv. Meet Mani Beta 0.1.",
+    "skip": "Skip to content",
+    "navLabel": "Main navigation",
+    "navExperience": "Experience",
+    "navFeatures": "Features",
+    "navStory": "Our story",
+    "navDownload": "Get Mani",
+    "languageLabel": "Choose language",
+    "badge": "INTRODUCING BETA 0.1",
+    "heroLine1": "A little more cinema.",
+    "heroLine2": "A lot less in the way.",
+    "heroDescription": "Your films. Your music. Your moment.<br>A thoughtfully crafted Windows player, inspired by IINA.",
+    "download": "Download Beta 0.1",
+    "explore": "Take a closer look",
+    "requirementsShort": "Windows 11 · x64 · Free to download",
+    "heroAlt": "Mani playing an original sunrise landscape, with translucent floating playback controls",
+    "screenshotCaption": "Real Mani. A little light, a little glass, and room for the picture.",
+    "strip1": "Built for Windows",
+    "strip2": "Powered by libmpv",
+    "strip3": "English & 简体中文",
+    "experienceEyebrow": "DESIGNED AROUND YOUR MOMENT",
+    "experienceTitle": "Everything within reach.<br>Nothing in the way.",
+    "experienceDescription": "Thoughtful controls for the details you care about. A quiet interface for everything else.",
+    "galleryLabel": "Explore Mani screenshots",
+    "playbackTab": "Playback",
+    "subtitlesTab": "Dual subtitles",
+    "audioTab": "Audio",
+    "playbackTitle": "Find your flow.",
+    "playbackDescription": "Float your controls over the picture, dock them at the top or bottom, and let them fade when it is time to watch.",
+    "subtitlesTitle": "Two languages. One story.",
+    "subtitlesDescription": "Choose two subtitle tracks, then adjust their timing, position, visibility, and ASS override levels independently. Shared text styles stay clearly shared.",
+    "audioTitle": "Make room for the sound.",
+    "audioDescription": "Choose an output device, load an external audio track, and shape the sound with a ten-band equalizer. Speed and audio delay stay close at hand.",
+    "subtitlesAlt": "Real Mani dual subtitle controls next to a landscape with English and Chinese subtitles",
+    "audioAlt": "Real Mani audio sidebar showing an external audio track and equalizer presets",
+    "viewImage": "View larger screenshot",
+    "close": "Close",
+    "imageNote": "Actual app captures. The landscape is an original AI-generated demonstration image.",
+    "featuresEyebrow": "SMALL DETAILS. EVERYDAY DIFFERENCE.",
+    "featuresTitle": "A player for the way you watch.",
+    "features": [
+      {
+        "icon": "folder",
+        "title": "Open. Drop. Play.",
+        "body": "Files, folders, and HTTP(S) media links. Drop something in and settle into your next watch."
+      },
+      {
+        "icon": "list",
+        "title": "Keep your place.",
+        "body": "Playlists, searchable history, playback resume, and chapters. Pick up where the story left off."
+      },
+      {
+        "icon": "captions",
+        "title": "Subtitles, considered.",
+        "body": "Automatic matching, encoding reload, ASS styling, and image subtitles. With room for a second language."
+      },
+      {
+        "icon": "sliders",
+        "title": "Get closer to a moment.",
+        "body": "Fine-tune playback speed, step through frames, repeat an A–B segment, or save a screenshot."
+      },
+      {
+        "icon": "window",
+        "title": "Your space. Your screen.",
+        "body": "Go fullscreen, float picture in picture, switch to music mode, or open another player window."
+      },
+      {
+        "icon": "globe",
+        "title": "Feels at home.",
+        "body": "A native Windows interface with keyboard, mouse, and gesture controls. Switch between English and Simplified Chinese."
+      }
+    ],
+    "storyEyebrow": "A FAMILIAR IDEA. A NEW HOME.",
+    "storyTitle": "Inspired by IINA.<br>Made for Windows.",
+    "storyIntro": "It started with a simple wish: bring the thoughtful experience of IINA to Windows.",
+    "storyBody": "Mani builds on ideas, interactions, and reusable work from IINA 1.5.1, adapting them to Windows with C#, WinUI 3, and libmpv. The result is a player with its own glass-inspired character and a familiar respect for the thing you came to watch.",
+    "storyCredit": "An independent project, with gratitude to IINA, mpv, and the open-source community. Mani is not an official IINA release.",
+    "storyLink": "Discover IINA",
+    "storyNode1": "The inspiration",
+    "storyNode2": "A new perspective",
+    "storyNode3": "Your Windows PC",
+    "downloadEyebrow": "YOUR NEXT WATCH STARTS HERE",
+    "downloadTitle": "Meet Mani.<br>Beta 0.1.",
+    "downloadDescription": "A fresh home for your films and music.<br>Available now as a Windows preview build.",
+    "downloadInfo": "Windows 11 24H2 or later · x64 · Setup installer",
+    "downloadRuntime": "App runtimes included. No developer tools needed.",
+    "installLink": "First time installing?",
+    "releaseLink": "Other downloads & source",
+    "packageVersion": "MSIX package version 0.5.6.0",
+    "previewNote": "Local preview: this download is a local test build.",
+    "installTitle": "A few things before you press play.",
+    "installIntro": "One installer contains the complete app and guides you through setup. This beta uses a test signing certificate; the wizard asks for your consent and Windows administrator approval when trust is needed.",
+    "installSteps": [
+      {
+        "title": "Check your Windows version.",
+        "body": "Windows 11 24H2 (build 26100) or later, on an x64 PC. ARM64 and older versions are not supported by this package."
+      },
+      {
+        "title": "Open the installer.",
+        "body": "Download and open Mani-Beta-0.1-Windows-x64-Setup.exe. The full app is included; no ZIP extraction or command-line steps are needed."
+      },
+      {
+        "title": "Review, approve, and install.",
+        "body": "If asked, agree to trust the Mani beta certificate, then choose Install and approve the Windows administrator prompt. Setup installs for your Windows account. Windows security prompts may still appear."
+      }
+    ],
+    "installFootnote": "Already using Mani Beta Test? Close it, then install this package to upgrade. If Windows reports that a newer version is installed, keep that version; do not uninstall just to downgrade.",
+    "footerLine": "A little more cinema. For Windows.",
+    "footerCredit": "Independent. IINA-inspired. Powered by libmpv.",
+    "credits": "Credits & licenses",
+    "backTop": "Back to top",
+    "creditsTitle": "Built on good work.",
+    "creditsBody": "Mani original code is GPL-3.0-only. IINA-derived work and third-party components retain their own notices. The installer includes these notices under More → About Mani. The matching application and native component sources accompany the release.",
+    "creditsImage": "App screenshots were captured from Mani 0.5.6.0 using an isolated profile. The scenic demo was generated with OpenAI image generation; it is not a movie still or a performance benchmark.",
+    "source": "Source downloads",
+    "checksum": "Setup SHA-256",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyFailed": "Select and copy the checksum below.",
+    "previewRelease": "Application and installer source downloads accompany the public release.",
+    "installEyebrow": "BEFORE THE FIRST PLAY",
+    "nativeSource": "Media engine sources",
+    "manualMsix": "MSIX (manual install)"
+  },
+  "zh": {
+    "lang": "zh-CN",
+    "title": "Mani — 让观影更纯粹的 Windows 播放器",
+    "description": "受 IINA 启发的 Windows 媒体播放器。通透的玻璃界面、双字幕、细致的音频控制，以及 libmpv 的播放能力。认识 Mani Beta 0.1。",
+    "skip": "跳到正文",
+    "navLabel": "主导航",
+    "navExperience": "体验",
+    "navFeatures": "功能",
+    "navStory": "起源",
+    "navDownload": "获取 Mani",
+    "languageLabel": "选择语言",
+    "badge": "初次见面，BETA 0.1",
+    "heroLine1": "把电影还给画面。",
+    "heroLine2": "把播放交给 Mani。",
+    "heroDescription": "你的电影，你的音乐，你的片刻。<br>一款受 IINA 启发、为 Windows 用心打造的播放器。",
+    "download": "下载 Beta 0.1",
+    "explore": "近一点，了解 Mani",
+    "requirementsShort": "Windows 11 · x64 · 免费下载",
+    "heroAlt": "Mani 播放原创日出风景样片，画面上方悬浮着半透明播放控制栏",
+    "screenshotCaption": "真实的 Mani。一点光，一层玻璃，把更多空间留给画面。",
+    "strip1": "为 Windows 打造",
+    "strip2": "由 libmpv 驱动",
+    "strip3": "English 与简体中文",
+    "experienceEyebrow": "让每一刻，都恰到好处",
+    "experienceTitle": "需要的，触手可及。<br>其余的，悄然隐去。",
+    "experienceDescription": "在意的细节，随手就能调整。专注看电影时，让界面退到幕后。",
+    "galleryLabel": "浏览 Mani 界面截图",
+    "playbackTab": "播放体验",
+    "subtitlesTab": "双字幕",
+    "audioTab": "音频控制",
+    "playbackTitle": "按你的节奏，看下去。",
+    "playbackDescription": "让控制栏悬浮在画面上，或放在顶部、底部。开始沉浸观看时，它会安静地淡出。",
+    "subtitlesTitle": "两种语言，同一个故事。",
+    "subtitlesDescription": "选择两条字幕，分别调整延迟、位置、显示状态和 ASS 覆盖级别。共用的文本样式，也有清楚的适用说明。",
+    "audioTitle": "为声音，多留一点空间。",
+    "audioDescription": "选择输出设备、加载外挂音轨，用十段均衡器调整音色。播放速度和音频延迟，也都近在手边。",
+    "subtitlesAlt": "真实 Mani 双字幕设置界面，旁边的风景画面同时显示英文和中文字幕",
+    "audioAlt": "真实 Mani 音频侧栏，展示外挂音轨选择和均衡器预设",
+    "viewImage": "放大查看截图",
+    "close": "关闭",
+    "imageNote": "界面来自实际应用截图；风景为原创 AI 生成演示素材。",
+    "featuresEyebrow": "日常的小细节，用起来的大不同",
+    "featuresTitle": "懂你的观看习惯。",
+    "features": [
+      {
+        "icon": "folder",
+        "title": "打开，拖入，播放。",
+        "body": "本地文件、文件夹、HTTP(S) 媒体链接。把想看的内容拖进来，准备好进入故事。"
+      },
+      {
+        "icon": "list",
+        "title": "记得你看到哪里。",
+        "body": "播放列表、可搜索的历史、断点续播和章节导航，让故事从离开的地方继续。"
+      },
+      {
+        "icon": "captions",
+        "title": "字幕，值得认真对待。",
+        "body": "自动匹配、编码重载、ASS 样式和图像字幕支持。还可以为另一种语言，再留一行。"
+      },
+      {
+        "icon": "sliders",
+        "title": "再靠近精彩一点。",
+        "body": "调整倍速、逐帧查看、A–B 循环，或者保存一张截图。把喜欢的片刻，多看几遍。"
+      },
+      {
+        "icon": "window",
+        "title": "你的屏幕，你的方式。",
+        "body": "全屏沉浸、画中画悬浮、切换音乐模式，或者打开另一个播放窗口，随你的节奏安排。"
+      },
+      {
+        "icon": "globe",
+        "title": "用起来，自然熟悉。",
+        "body": "原生 Windows 界面，支持键盘、鼠标与手势。英文和简体中文，可以随时切换。"
+      }
+    ],
+    "storyEyebrow": "熟悉的灵感，新的归属",
+    "storyTitle": "灵感来自 IINA。<br>为 Windows 而生。",
+    "storyIntro": "一切始于一个简单的愿望：把 IINA 那份细腻的播放体验，带到 Windows。",
+    "storyBody": "Mani 以 IINA 1.5.1 的交互理念和可复用成果为基础，通过 C#、WinUI 3 和 libmpv 适配 Windows。通透的玻璃视觉，是它自己的表达；把注意力还给内容，是始终不变的初心。",
+    "storyCredit": "这是一个独立项目，感谢 IINA、mpv 及开源社区。Mani 并非 IINA 官方发行版。",
+    "storyLink": "认识 IINA",
+    "storyNode1": "灵感的起点",
+    "storyNode2": "新的视角",
+    "storyNode3": "你的 Windows",
+    "downloadEyebrow": "下一段故事，从这里开始",
+    "downloadTitle": "你好，Mani。<br>Beta 0.1。",
+    "downloadDescription": "给电影与音乐，一个新的归属。<br>现在，以 Windows 预览版与你见面。",
+    "downloadInfo": "Windows 11 24H2 及以上 · x64 · 安装向导",
+    "downloadRuntime": "已包含应用运行时，无需开发工具。",
+    "installLink": "第一次安装？",
+    "releaseLink": "其他下载与源码",
+    "packageVersion": "MSIX 包版本 0.5.6.0",
+    "previewNote": "本地预览：此处下载的是本地测试构建。",
+    "installTitle": "播放之前，先做一点准备。",
+    "installIntro": "一个安装程序，内含完整应用并引导你完成安装。此 Beta 使用测试签名证书；需要信任证书时，向导会征得你的同意并请求 Windows 管理员批准。",
+    "installSteps": [
+      {
+        "title": "确认 Windows 版本。",
+        "body": "需要 Windows 11 24H2（内部版本 26100）或更新版本，以及 x64 电脑。此安装包不支持 ARM64 和更早的 Windows 版本。"
+      },
+      {
+        "title": "打开安装程序。",
+        "body": "下载并打开 Mani-Beta-0.1-Windows-x64-Setup.exe。已包含完整应用，无需解压 ZIP 或手动输入命令。"
+      },
+      {
+        "title": "确认后，开始安装。",
+        "body": "如有提示，同意信任 Mani Beta 证书，点击“安装”并批准 Windows 管理员提示。应用会安装到当前 Windows 账户；Windows 仍可能显示安全提示。"
+      }
+    ],
+    "installFootnote": "已在使用 Mani Beta Test？关闭应用，直接安装此包即可升级。如果 Windows 提示已安装更新版本，请保留该版本，不必为降级而卸载。",
+    "footerLine": "让观影更纯粹的 Windows 播放器。",
+    "footerCredit": "独立项目。灵感源自 IINA，由 libmpv 驱动。",
+    "credits": "致谢与许可",
+    "backTop": "回到顶部",
+    "creditsTitle": "好的体验，源于共同的创造。",
+    "creditsBody": "Mani 原创代码采用 GPL-3.0-only 许可。IINA 衍生成果和第三方组件保留各自的许可说明，可在应用的“更多 → 关于 Mani”中查看。应用与原生组件的对应源码随发行版提供。",
+    "creditsImage": "界面截图来自 Mani 0.5.6.0 的独立拍摄配置。风景素材使用 OpenAI 图像生成制作，并非影视作品截图，也不作为性能测试样片。",
+    "source": "下载对应源码",
+    "checksum": "安装程序 SHA-256",
+    "copy": "复制",
+    "copied": "已复制",
+    "copyFailed": "请选中并复制下方校验值。",
+    "previewRelease": "公开发行页同时提供应用与安装向导的对应源码。",
+    "installEyebrow": "在第一次播放之前",
+    "nativeSource": "播放引擎源码",
+    "manualMsix": "MSIX（手动安装）"
+  }
+}

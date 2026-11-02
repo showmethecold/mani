@@ -1,0 +1,17 @@
+{
+  "selected": "B2",
+  "master": "assets\\branding\\mani-b2-master.png",
+  "sha256": "4d6f00b5466853bb3e1e0b9ecedafcf5267705e7f430f970390db688e87241ff",
+  "source": "artifacts\\design\\20261027-mani-liquid-glass\\b2-moon-liquid-glass.png",
+  "generator": "built-in image_gen; existing user-selected output; no regeneration",
+  "transformation": "Windows asset packaging only",
+  "iinaReference": {
+    "version": "1.5.1 / build 180",
+    "readOnly": true,
+    "files": {
+      "iina\\Info.plist": "cd30c0dffc3030b39c68202241018116a158922627ff41e202b3c42b844af1b7",
+      "iina.xcodeproj\\project.pbxproj": "0fcc2ecdcf3978882de2e3b28e8f079cded6d19cf37594fd7a5eee67bcb161c2",
+      "iina\\iina.icon\\icon.json": "70d0027d08bf45de6c102dfd04ebe7e1253944e903da6f6278de6f8c74c3c540"
+    }
+  }
+}

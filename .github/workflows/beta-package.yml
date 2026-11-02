@@ -1,0 +1,106 @@
+name: Beta MSIX
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Initial package version (four parts; higher than any installed version)
+        required: true
+        type: string
+        default: '0.5.5.0'
+      upgrade_version:
+        description: Upgrade package version (higher than the initial version)
+        required: true
+        type: string
+        default: '0.5.5.1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: beta-package-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  unit-tests:
+    uses: ./.github/workflows/unit-tests.yml
+
+  package:
+    name: Build and sign Windows x64 MSIX
+    needs: unit-tests
+    # Signing is limited to an explicit run on the maintained branch.
+    if: github.ref == 'refs/heads/main'
+    runs-on: windows-2025
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      DOTNET_NOLOGO: '1'
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+          cache: true
+          cache-dependency-path: |
+            src/Mani.Playback/packages.lock.json
+            src/Mani.App/packages.lock.json
+
+      - name: Restore the pinned native dependency
+        env:
+          MANI_NATIVE_ARCHIVE_URL: ${{ vars.MANI_NATIVE_ARCHIVE_URL }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python build/restore_libmpv.py
+
+      - name: Build and sign Beta packages
+        env:
+          MANI_INTERNAL_PFX_BASE64: ${{ secrets.MANI_INTERNAL_PFX_BASE64 }}
+          MANI_SIGNING_PASSWORD: ${{ secrets.MANI_INTERNAL_PFX_PASSWORD }}
+          MANI_PACKAGE_VERSION: ${{ inputs.version }}
+          MANI_UPGRADE_VERSION: ${{ inputs.upgrade_version }}
+        run: |
+          if (!$env:MANI_INTERNAL_PFX_BASE64) {
+            throw 'Configure the MANI_INTERNAL_PFX_BASE64 Actions secret before building Beta packages.'
+          }
+          $keyPath = Join-Path $env:RUNNER_TEMP 'mani-internal-signing.pfx'
+          if (Test-Path -LiteralPath $keyPath) { throw 'The temporary signing key path is already occupied.' }
+          try {
+            [IO.File]::WriteAllBytes($keyPath, [Convert]::FromBase64String($env:MANI_INTERNAL_PFX_BASE64))
+            $env:MANI_INTERNAL_PFX_BASE64 = $null
+            ./build/Build-InternalPackage.ps1 -Beta -Version $env:MANI_PACKAGE_VERSION -UpgradeVersion $env:MANI_UPGRADE_VERSION -SigningKey $keyPath -RequireSigningKey -OutputDirectory artifacts/beta-package
+          } finally {
+            $env:MANI_INTERNAL_PFX_BASE64 = $null
+            $env:MANI_SIGNING_PASSWORD = $null
+            if (Test-Path -LiteralPath $keyPath) { Remove-Item -LiteralPath $keyPath -Force }
+          }
+
+      - name: Remove any remaining temporary signing key
+        if: ${{ always() }}
+        run: |
+          $keyPath = Join-Path $env:RUNNER_TEMP 'mani-internal-signing.pfx'
+          if (Test-Path -LiteralPath $keyPath) { Remove-Item -LiteralPath $keyPath -Force }
+
+      - name: Upload Beta installation packages
+        uses: actions/upload-artifact@v7
+        with:
+          name: mani-beta-x64-${{ github.run_number }}-${{ github.run_attempt }}
+          path: |
+            artifacts/beta-package/Mani.Beta.Test_*.msix
+            artifacts/beta-package/Mani.Beta.Test.cer
+            artifacts/beta-package/package-info.json
+            artifacts/beta-package/source-info.json
+            artifacts/beta-package/source-files.json
+            artifacts/beta-package/Mani-source.zip
+            artifacts/beta-package/INSTALL.txt
+            artifacts/beta-package/Verify-Downloads.ps1
+            artifacts/beta-package/SHA256SUMS.txt
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14

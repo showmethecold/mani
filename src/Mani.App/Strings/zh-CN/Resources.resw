@@ -1,0 +1,1463 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <!-- UI terminology adapted from fixed IINA 1.5.1 / build 180 en.lproj and zh-Hans.lproj resources. Copyright (c) 2016-2026 lhc and contributors. GPL-3.0; see licenses/IINA-NOTICE.txt. Windows-specific settings translations are Mani adaptations. -->
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <data name="VideoFocus.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>视频区域</value>
+  </data>
+  <data name="Welcome.Text" xml:space="preserve">
+    <value>准备播放</value>
+  </data>
+  <data name="DropHint.Text" xml:space="preserve">
+    <value>将媒体文件拖到此处，或打开文件或 URL。</value>
+  </data>
+  <data name="OpenFile.Content" xml:space="preserve">
+    <value>打开文件</value>
+  </data>
+  <data name="OpenFile.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>打开媒体文件</value>
+  </data>
+  <data name="OpenUrl.Content" xml:space="preserve">
+    <value>打开 URL</value>
+  </data>
+  <data name="CancelOpen.Content" xml:space="preserve">
+    <value>取消打开</value>
+  </data>
+  <data name="More.Content" xml:space="preserve">
+    <value>更多</value>
+  </data>
+  <data name="DragControls.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>拖动以移动控制栏</value>
+  </data>
+  <data name="Initializing.Text" xml:space="preserve">
+    <value>正在初始化播放器…</value>
+  </data>
+  <data name="Mute.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>静音 / 取消静音</value>
+  </data>
+  <data name="Mute.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>静音 / 取消静音</value>
+  </data>
+  <data name="Volume.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>音量</value>
+  </data>
+  <data name="Volume.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>音量</value>
+  </data>
+  <data name="SeekBack.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>后退 5 秒</value>
+  </data>
+  <data name="SeekBack.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>后退 5 秒</value>
+  </data>
+  <data name="SeekForward.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>前进 5 秒</value>
+  </data>
+  <data name="SeekForward.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>前进 5 秒</value>
+  </data>
+  <data name="PlayButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>播放</value>
+  </data>
+  <data name="PlayButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>播放</value>
+  </data>
+  <data name="FullscreenButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>全屏 (F11)</value>
+  </data>
+  <data name="FullscreenButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>全屏 (F11)</value>
+  </data>
+  <data name="MoreButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>更多</value>
+  </data>
+  <data name="MoreButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>更多</value>
+  </data>
+  <data name="Timeline.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>播放进度</value>
+  </data>
+  <data name="Timeline.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>播放进度</value>
+  </data>
+  <data name="OpenFileMenu.Text" xml:space="preserve">
+    <value>打开文件…</value>
+  </data>
+  <data name="PlaybackInfoMenu.Text" xml:space="preserve">
+    <value>播放信息</value>
+  </data>
+  <data name="OpenUrlMenu.Text" xml:space="preserve">
+    <value>打开 URL…</value>
+  </data>
+  <data name="PauseWhenOpenMenu.Text" xml:space="preserve">
+    <value>打开时暂停</value>
+  </data>
+  <data name="SpeedMenu.Text" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="HalfSpeed.Text" xml:space="preserve">
+    <value>0.5x</value>
+  </data>
+  <data name="NormalSpeed.Text" xml:space="preserve">
+    <value>1x</value>
+  </data>
+  <data name="DoubleSpeed.Text" xml:space="preserve">
+    <value>2x</value>
+  </data>
+  <data name="LoopFileMenu.Text" xml:space="preserve">
+    <value>循环播放当前文件</value>
+  </data>
+  <data name="LoopOffMenu.Text" xml:space="preserve">
+    <value>关闭循环播放</value>
+  </data>
+  <data name="NextFrameMenu.Text" xml:space="preserve">
+    <value>下一帧</value>
+  </data>
+  <data name="PreviousFrameMenu.Text" xml:space="preserve">
+    <value>上一帧</value>
+  </data>
+  <data name="AbLoopMenu.Text" xml:space="preserve">
+    <value>A–B 循环：设置 A / 设置 B / 清除</value>
+  </data>
+  <data name="ScreenshotMenu.Text" xml:space="preserve">
+    <value>保存截图</value>
+  </data>
+  <data name="FullscreenMenu.Text" xml:space="preserve">
+    <value>全屏</value>
+  </data>
+  <data name="ResetOscMenu.Text" xml:space="preserve">
+    <value>重置控制栏位置</value>
+  </data>
+  <data name="StopMenu.Text" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="AboutMenu.Text" xml:space="preserve">
+    <value>关于 Mani</value>
+  </data>
+  <data name="Text_Play" xml:space="preserve">
+    <value>播放</value>
+  </data>
+  <data name="Text_Pause" xml:space="preserve">
+    <value>暂停</value>
+  </data>
+  <data name="Text_Ready" xml:space="preserve">
+    <value>准备播放</value>
+  </data>
+  <data name="Text_DropHint" xml:space="preserve">
+    <value>将媒体文件拖到此处，或打开文件或 URL。</value>
+  </data>
+  <data name="Text_Loading" xml:space="preserve">
+    <value>正在打开媒体…</value>
+  </data>
+  <data name="Text_LoadingHint" xml:space="preserve">
+    <value>请稍候。你可以取消或打开其他文件。</value>
+  </data>
+  <data name="Text_Failed" xml:space="preserve">
+    <value>无法打开媒体</value>
+  </data>
+  <data name="Text_FailedHint" xml:space="preserve">
+    <value>请尝试其他文件，或检查媒体 URL。</value>
+  </data>
+  <data name="Text_Stopped" xml:space="preserve">
+    <value>已停止播放</value>
+  </data>
+  <data name="Text_Open" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="Text_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Text_OpenUrlTitle" xml:space="preserve">
+    <value>打开 URL</value>
+  </data>
+  <data name="Text_UrlHeader" xml:space="preserve">
+    <value>HTTP 或 HTTPS 媒体 URL</value>
+  </data>
+  <data name="Text_InvalidUrl" xml:space="preserve">
+    <value>请输入 HTTP 或 HTTPS 媒体 URL。</value>
+  </data>
+  <data name="Text_Initializing" xml:space="preserve">
+    <value>正在初始化播放器…</value>
+  </data>
+  <data name="Text_Buffering" xml:space="preserve">
+    <value>正在缓冲…</value>
+  </data>
+  <data name="Text_Seeking" xml:space="preserve">
+    <value>正在跳转…</value>
+  </data>
+  <data name="Text_Ended" xml:space="preserve">
+    <value>播放结束</value>
+  </data>
+  <data name="Text_Paused" xml:space="preserve">
+    <value>已暂停</value>
+  </data>
+  <data name="Text_Playing" xml:space="preserve">
+    <value>正在播放</value>
+  </data>
+  <data name="Text_OpenError" xml:space="preserve">
+    <value>无法打开文件选择器</value>
+  </data>
+  <data name="Text_OperationError" xml:space="preserve">
+    <value>操作失败</value>
+  </data>
+  <data name="Text_PauseError" xml:space="preserve">
+    <value>无法改变播放状态</value>
+  </data>
+  <data name="Text_ErrorFormat" xml:space="preserve">
+    <value>{0} (0x{1:X8})。详情见日志文件夹。</value>
+  </data>
+  <data name="Text_ScreenshotSaved" xml:space="preserve">
+    <value>截图已保存：{0}</value>
+  </data>
+  <data name="Text_SpeedFormat" xml:space="preserve">
+    <value>速度（{0:0.##}x）</value>
+  </data>
+  <data name="Text_Mute" xml:space="preserve">
+    <value>静音</value>
+  </data>
+  <data name="Text_Unmute" xml:space="preserve">
+    <value>取消静音</value>
+  </data>
+  <data name="VolumeMenu.Text" xml:space="preserve">
+    <value>音量</value>
+  </data>
+  <data name="VolumeUp.Text" xml:space="preserve">
+    <value>增大音量</value>
+  </data>
+  <data name="VolumeDown.Text" xml:space="preserve">
+    <value>减小音量</value>
+  </data>
+  <data name="MuteMenu.Text" xml:space="preserve">
+    <value>静音 / 取消静音</value>
+  </data>
+  <data name="OscPositionMenu.Text" xml:space="preserve">
+    <value>控制栏</value>
+  </data>
+  <data name="FloatingOscOption.Text" xml:space="preserve">
+    <value>悬浮</value>
+  </data>
+  <data name="TopOscOption.Text" xml:space="preserve">
+    <value>顶部</value>
+  </data>
+  <data name="BottomOscOption.Text" xml:space="preserve">
+    <value>底部</value>
+  </data>
+  <data name="EdgeToEdgeOption.Text" xml:space="preserve">
+    <value>视频延伸至窗口边缘</value>
+  </data>
+  <data name="DockControlsOption.Text" xml:space="preserve">
+    <value>停靠控制栏</value>
+  </data>
+  <data name="Text_OsdPause" xml:space="preserve">
+    <value>暂停</value>
+  </data>
+  <data name="Text_OsdResume" xml:space="preserve">
+    <value>继续播放</value>
+  </data>
+  <data name="Text_OsdVolume" xml:space="preserve">
+    <value>音量：{0:0}</value>
+  </data>
+  <data name="Text_OsdSpeed" xml:space="preserve">
+    <value>速度：{0:0.######}x</value>
+  </data>
+  <data name="Text_OsdMute" xml:space="preserve">
+    <value>静音</value>
+  </data>
+  <data name="Text_OsdUnmute" xml:space="preserve">
+    <value>取消静音</value>
+  </data>
+  <data name="Text_OsdStop" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="SeekBackMenu.Text" xml:space="preserve">
+    <value>后退 5 秒</value>
+  </data>
+  <data name="SeekForwardMenu.Text" xml:space="preserve">
+    <value>前进 5 秒</value>
+  </data>
+  <data name="WindowMenu.Text" xml:space="preserve">
+    <value>窗口</value>
+  </data>
+  <data name="WindowSizeMenu.Text" xml:space="preserve">
+    <value>设置大小</value>
+  </data>
+  <data name="LockWindowAspect.Text" xml:space="preserve">
+    <value>锁定视频宽高比</value>
+  </data>
+  <data name="PhysicalWindowSize.Text" xml:space="preserve">
+    <value>使用物理分辨率</value>
+  </data>
+  <data name="ResizeTimingMenu.Text" xml:space="preserve">
+    <value>自动调整大小</value>
+  </data>
+  <data name="OpeningSizeMenu.Text" xml:space="preserve">
+    <value>打开时的大小</value>
+  </data>
+  <data name="WindowScale0.Text" xml:space="preserve">
+    <value>适应屏幕</value>
+  </data>
+  <data name="WindowScale1.Text" xml:space="preserve">
+    <value>一半大小</value>
+  </data>
+  <data name="WindowScale2.Text" xml:space="preserve">
+    <value>原始大小</value>
+  </data>
+  <data name="WindowScale3.Text" xml:space="preserve">
+    <value>1.5 倍大小</value>
+  </data>
+  <data name="WindowScale4.Text" xml:space="preserve">
+    <value>两倍大小</value>
+  </data>
+  <data name="ResizeTiming0.Text" xml:space="preserve">
+    <value>始终</value>
+  </data>
+  <data name="ResizeTiming1.Text" xml:space="preserve">
+    <value>仅在打开时</value>
+  </data>
+  <data name="ResizeTiming2.Text" xml:space="preserve">
+    <value>从不</value>
+  </data>
+  <data name="LayoutMenu.Text" xml:space="preserve">
+    <value>布局</value>
+  </data>
+  <data name="LayoutSidebar.AutomationProperties.Name" xml:space="preserve">
+    <value>快捷设置</value>
+  </data>
+  <data name="LayoutHeading.Text" xml:space="preserve">
+    <value>布局</value>
+  </data>
+  <data name="SidebarClose.AutomationProperties.Name" xml:space="preserve">
+    <value>关闭设置</value>
+  </data>
+  <data name="SidebarClose.ToolTipService.ToolTip" xml:space="preserve">
+    <value>关闭设置</value>
+  </data>
+  <data name="LayoutVideoHeading.Text" xml:space="preserve">
+    <value>视频区域</value>
+  </data>
+  <data name="LayoutEdge.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>视频延伸至窗口边缘</value>
+  </data>
+  <data name="LayoutLock.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>锁定视频宽高比</value>
+  </data>
+  <data name="LayoutDock.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>停靠控制栏</value>
+  </data>
+  <data name="FitVideoButton.Content" xml:space="preserve">
+    <value>窗口适应视频</value>
+  </data>
+  <data name="LayoutOscMode.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>控制栏</value>
+  </data>
+  <data name="LayoutFloating.Content" xml:space="preserve">
+    <value>悬浮</value>
+  </data>
+  <data name="LayoutTop.Content" xml:space="preserve">
+    <value>顶部</value>
+  </data>
+  <data name="LayoutBottom.Content" xml:space="preserve">
+    <value>底部</value>
+  </data>
+  <data name="LayoutSide.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>设置侧栏位置</value>
+  </data>
+  <data name="LayoutLeft.Content" xml:space="preserve">
+    <value>左侧</value>
+  </data>
+  <data name="LayoutRight.Content" xml:space="preserve">
+    <value>右侧</value>
+  </data>
+  <data name="LayoutWidthHeading.Text" xml:space="preserve">
+    <value>侧栏宽度</value>
+  </data>
+  <data name="LayoutWidthSlider.AutomationProperties.Name" xml:space="preserve">
+    <value>侧栏宽度</value>
+  </data>
+  <data name="AlwaysOnTopOption.Text" xml:space="preserve">
+    <value>始终置顶</value>
+  </data>
+  <data name="FloatWhilePlayingOption.Text" xml:space="preserve">
+    <value>播放时置顶</value>
+  </data>
+  <data name="Text_PictureInPicture" xml:space="preserve">
+    <value>画中画</value>
+  </data>
+  <data name="Text_ReturnToMainWindow" xml:space="preserve">
+    <value>返回主窗口</value>
+  </data>
+  <data name="PipReturnButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>返回主窗口</value>
+  </data>
+  <data name="PipReturnButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>返回主窗口</value>
+  </data>
+  <data name="NewWindowMenu.Text" xml:space="preserve">
+    <value>新建窗口</value>
+  </data>
+  <data name="SwitchWindowMenu.Text" xml:space="preserve">
+    <value>切换窗口</value>
+  </data>
+  <data name="CloseWindowMenu.Text" xml:space="preserve">
+    <value>关闭窗口</value>
+  </data>
+  <data name="ExitMenu.Text" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="Text_MusicMode" xml:space="preserve">
+    <value>音乐模式</value>
+  </data>
+  <data name="Text_ExitMusicMode" xml:space="preserve">
+    <value>返回主窗口</value>
+  </data>
+  <data name="Text_HideMusicArtwork" xml:space="preserve">
+    <value>隐藏封面 / 视频</value>
+  </data>
+  <data name="Text_ShowMusicArtwork" xml:space="preserve">
+    <value>显示封面 / 视频</value>
+  </data>
+  <data name="Text_MusicVolumeFormat" xml:space="preserve">
+    <value>音量：{0:0}</value>
+  </data>
+  <data name="AutomaticMusicOption.Text" xml:space="preserve">
+    <value>播放音频时切换到音乐模式</value>
+  </data>
+  <data name="MusicArtworkOption.Text" xml:space="preserve">
+    <value>显示封面 / 视频</value>
+  </data>
+  <data name="MusicReturnButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>返回主窗口</value>
+  </data>
+  <data name="MusicReturnButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>返回主窗口</value>
+  </data>
+  <data name="MusicVolumeButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>音量</value>
+  </data>
+  <data name="MusicVolumeButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>音量</value>
+  </data>
+  <data name="MusicArtworkButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>隐藏封面 / 视频</value>
+  </data>
+  <data name="MusicBar.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>音乐控制栏</value>
+  </data>
+  <data name="InterfaceMenu.Text" xml:space="preserve">
+    <value>界面…</value>
+  </data>
+  <data name="Text_InterfaceTitle" xml:space="preserve">
+    <value>界面</value>
+  </data>
+  <data name="Text_Done" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="Text_InterfaceControlBar" xml:space="preserve">
+    <value>控制栏</value>
+  </data>
+  <data name="Text_ControlAutoHide" xml:space="preserve">
+    <value>自动隐藏控制栏</value>
+  </data>
+  <data name="Text_ControlHideDelay" xml:space="preserve">
+    <value>隐藏延时（秒）</value>
+  </data>
+  <data name="Text_InterfaceOsd" xml:space="preserve">
+    <value>屏幕提示</value>
+  </data>
+  <data name="Text_OsdEnabled" xml:space="preserve">
+    <value>显示屏幕提示</value>
+  </data>
+  <data name="Text_OsdHideDelay" xml:space="preserve">
+    <value>提示显示时长（秒）</value>
+  </data>
+  <data name="Text_OsdTextSize" xml:space="preserve">
+    <value>文字大小</value>
+  </data>
+  <data name="Text_OsdSuppress" xml:space="preserve">
+    <value>不显示以下提示</value>
+  </data>
+  <data name="Text_OsdSuppressFile" xml:space="preserve">
+    <value>开始播放文件</value>
+  </data>
+  <data name="Text_OsdSuppressPause" xml:space="preserve">
+    <value>暂停 / 继续播放</value>
+  </data>
+  <data name="Text_OsdSuppressSeek" xml:space="preserve">
+    <value>跳转</value>
+  </data>
+  <data name="Text_OsdSuppressSpeed" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="QuickSettingsMenu.Text" xml:space="preserve">
+    <value>快捷设置…</value>
+  </data>
+  <data name="QuickPage.AutomationProperties.Name" xml:space="preserve">
+    <value>设置页面</value>
+  </data>
+  <data name="QuickLayout.Content" xml:space="preserve">
+    <value>布局</value>
+  </data>
+  <data name="QuickVideo.Content" xml:space="preserve">
+    <value>视频</value>
+  </data>
+  <data name="QuickAudio.Content" xml:space="preserve">
+    <value>音频</value>
+  </data>
+  <data name="QuickSubtitles.Content" xml:space="preserve">
+    <value>字幕</value>
+  </data>
+  <data name="QuickVideoTrack.Header" xml:space="preserve">
+    <value>视频轨道</value>
+  </data>
+  <data name="QuickAudioTrack.Header" xml:space="preserve">
+    <value>音频轨道</value>
+  </data>
+  <data name="QuickPrimaryTrack.Header" xml:space="preserve">
+    <value>主字幕</value>
+  </data>
+  <data name="QuickSecondaryTrack.Header" xml:space="preserve">
+    <value>副字幕</value>
+  </data>
+  <data name="QuickSpeed.Header" xml:space="preserve">
+    <value>播放速度</value>
+  </data>
+  <data name="QuickSpeedSlider.AutomationProperties.Name" xml:space="preserve">
+    <value>播放速度档位</value>
+  </data>
+  <data name="QuickResetSpeed.Content" xml:space="preserve">
+    <value>重置速度</value>
+  </data>
+  <data name="QuickResetDelay.Content" xml:space="preserve">
+    <value>重置延迟</value>
+  </data>
+  <data name="QuickAudioDelay.Header" xml:space="preserve">
+    <value>音频延迟（秒）</value>
+  </data>
+  <data name="QuickPrimaryDelay.Header" xml:space="preserve">
+    <value>主字幕延迟（秒）</value>
+  </data>
+  <data name="QuickSecondaryDelay.Header" xml:space="preserve">
+    <value>副字幕延迟（秒）</value>
+  </data>
+  <data name="QuickPrimaryVisible.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>显示主字幕</value>
+  </data>
+  <data name="QuickSecondaryVisible.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>显示副字幕</value>
+  </data>
+  <data name="Text_TrackNone" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="Text_TrackNoTitle" xml:space="preserve">
+    <value>无标题</value>
+  </data>
+  <data name="Text_TrackDefault" xml:space="preserve">
+    <value>默认</value>
+  </data>
+  <data name="QuickAudioDelaySlider.AutomationProperties.Name" xml:space="preserve">
+    <value>音频延迟滑块（秒）</value>
+  </data>
+  <data name="QuickAudioDelaySlider.AutomationProperties.HelpText" xml:space="preserve">
+    <value>范围为 -5 至 +5 秒。拖动预览，松开应用。</value>
+  </data>
+  <data name="QuickPrimaryDelaySlider.AutomationProperties.Name" xml:space="preserve">
+    <value>主字幕延迟滑块（秒）</value>
+  </data>
+  <data name="QuickPrimaryDelaySlider.AutomationProperties.HelpText" xml:space="preserve">
+    <value>范围为 -5 至 +5 秒。拖动预览，松开应用。</value>
+  </data>
+  <data name="QuickSecondaryDelaySlider.AutomationProperties.Name" xml:space="preserve">
+    <value>副字幕延迟滑块（秒）</value>
+  </data>
+  <data name="QuickSecondaryDelaySlider.AutomationProperties.HelpText" xml:space="preserve">
+    <value>范围为 -5 至 +5 秒。拖动预览，松开应用。</value>
+  </data>
+  <data name="DelayScaleMinimum.Text" xml:space="preserve">
+    <value>-5s</value>
+  </data>
+  <data name="DelayScaleZero.Text" xml:space="preserve">
+    <value>0s</value>
+  </data>
+  <data name="DelayScaleMaximum.Text" xml:space="preserve">
+    <value>+5s</value>
+  </data>
+  <data name="Text_SubtitleUsedBySecondary" xml:space="preserve">
+    <value>轨道 #{0} 已用作副字幕。请先将副字幕设为“无”或其他轨道。</value>
+  </data>
+  <data name="Text_SubtitleUsedByPrimary" xml:space="preserve">
+    <value>轨道 #{0} 已用作主字幕。请先将主字幕设为“无”或其他轨道。</value>
+  </data>
+  <data name="Text_OsdTrackNone" xml:space="preserve">
+    <value>&lt;无&gt;</value>
+  </data>
+  <data name="Text_OsdVideoTrack" xml:space="preserve">
+    <value>视频：{0}</value>
+  </data>
+  <data name="Text_OsdAudioTrack" xml:space="preserve">
+    <value>音频：{0}</value>
+  </data>
+  <data name="Text_OsdSubtitleTrack" xml:space="preserve">
+    <value>字幕：{0}</value>
+  </data>
+  <data name="Text_OsdAudioDelayNone" xml:space="preserve">
+    <value>音频延迟：无</value>
+  </data>
+  <data name="Text_OsdAudioDelayLater" xml:space="preserve">
+    <value>音频延后 {0} 秒</value>
+  </data>
+  <data name="Text_OsdAudioDelayEarlier" xml:space="preserve">
+    <value>音频提前 {0} 秒</value>
+  </data>
+  <data name="Text_OsdSubDelayNone" xml:space="preserve">
+    <value>字幕延迟：无</value>
+  </data>
+  <data name="Text_OsdSubDelayLater" xml:space="preserve">
+    <value>字幕延后 {0} 秒</value>
+  </data>
+  <data name="Text_OsdSubDelayEarlier" xml:space="preserve">
+    <value>字幕提前 {0} 秒</value>
+  </data>
+  <data name="Text_OsdSecondarySubDelayNone" xml:space="preserve">
+    <value>副字幕延迟：无</value>
+  </data>
+  <data name="Text_OsdSecondarySubDelayLater" xml:space="preserve">
+    <value>副字幕延后 {0} 秒</value>
+  </data>
+  <data name="Text_OsdSecondarySubDelayEarlier" xml:space="preserve">
+    <value>副字幕提前 {0} 秒</value>
+  </data>
+  <data name="Text_OsdSubHidden" xml:space="preserve">
+    <value>已隐藏字幕</value>
+  </data>
+  <data name="Text_OsdSubVisible" xml:space="preserve">
+    <value>已显示字幕</value>
+  </data>
+  <data name="Text_OsdSecondarySubHidden" xml:space="preserve">
+    <value>已隐藏副字幕</value>
+  </data>
+  <data name="Text_OsdSecondarySubVisible" xml:space="preserve">
+    <value>已显示副字幕</value>
+  </data>
+  <data name="Text_OsdAbLoopA" xml:space="preserve">
+    <value>A–B 循环：A</value>
+  </data>
+  <data name="Text_OsdAbLoopB" xml:space="preserve">
+    <value>A–B 循环：B</value>
+  </data>
+  <data name="Text_OsdAbLoopClear" xml:space="preserve">
+    <value>已清除 A–B 循环</value>
+  </data>
+  <data name="Text_OsdFileLoop" xml:space="preserve">
+    <value>循环播放单个文件</value>
+  </data>
+  <data name="Text_OsdPlaylistLoop" xml:space="preserve">
+    <value>循环播放列表</value>
+  </data>
+  <data name="Text_OsdLoopOff" xml:space="preserve">
+    <value>关闭循环播放</value>
+  </data>
+  <data name="Text_OsdScreenshot" xml:space="preserve">
+    <value>已截图</value>
+  </data>
+  <data name="SmallerWindowMenu.Text" xml:space="preserve">
+    <value>缩小窗口</value>
+  </data>
+  <data name="BiggerWindowMenu.Text" xml:space="preserve">
+    <value>放大窗口</value>
+  </data>
+  <data name="RevealFileMenu.Text" xml:space="preserve">
+    <value>在文件资源管理器中显示</value>
+  </data>
+  <data name="Text_RevealFileError" xml:space="preserve">
+    <value>无法定位文件</value>
+  </data>
+  <data name="Text_RevealFileHint" xml:space="preserve">
+    <value>请确认文件仍然存在，且所在位置可以访问。</value>
+  </data>
+  <data name="LayoutEdgeLabel.Text" xml:space="preserve">
+    <value>视频延伸至窗口边缘</value>
+  </data>
+  <data name="LayoutLockLabel.Text" xml:space="preserve">
+    <value>锁定视频宽高比</value>
+  </data>
+  <data name="LayoutDockLabel.Text" xml:space="preserve">
+    <value>停靠控制栏</value>
+  </data>
+  <data name="QuickPrimaryVisibleLabel.Text" xml:space="preserve">
+    <value>显示主字幕</value>
+  </data>
+  <data name="QuickSecondaryVisibleLabel.Text" xml:space="preserve">
+    <value>显示副字幕</value>
+  </data>
+  <data name="ControlBarHeading.Text" xml:space="preserve">
+    <value>屏幕控制栏</value>
+  </data>
+  <data name="SidebarPositionHeading.Text" xml:space="preserve">
+    <value>设置侧栏位置</value>
+  </data>
+  <data name="SideLeft.Content" xml:space="preserve">
+    <value>左侧</value>
+  </data>
+  <data name="SideRight.Content" xml:space="preserve">
+    <value>右侧</value>
+  </data>
+  <data name="TabLayout.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>布局</value>
+  </data>
+  <data name="TabLayout.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>布局</value>
+  </data>
+  <data name="TabLayoutLabel.Text" xml:space="preserve">
+    <value>布局</value>
+  </data>
+  <data name="TabVideo.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>视频</value>
+  </data>
+  <data name="TabVideo.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>视频</value>
+  </data>
+  <data name="TabVideoLabel.Text" xml:space="preserve">
+    <value>视频</value>
+  </data>
+  <data name="TabAudio.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>音频</value>
+  </data>
+  <data name="TabAudio.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>音频</value>
+  </data>
+  <data name="TabAudioLabel.Text" xml:space="preserve">
+    <value>音频</value>
+  </data>
+  <data name="TabSubtitles.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>字幕</value>
+  </data>
+  <data name="TabSubtitles.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>字幕</value>
+  </data>
+  <data name="TabSubtitlesLabel.Text" xml:space="preserve">
+    <value>字幕</value>
+  </data>
+  <data name="ModeFloating.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>悬浮</value>
+  </data>
+  <data name="ModeFloating.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>悬浮</value>
+  </data>
+  <data name="ModeFloatingLabel.Text" xml:space="preserve">
+    <value>悬浮</value>
+  </data>
+  <data name="ModeTop.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>顶部</value>
+  </data>
+  <data name="ModeTop.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>顶部</value>
+  </data>
+  <data name="ModeTopLabel.Text" xml:space="preserve">
+    <value>顶部</value>
+  </data>
+  <data name="ModeBottom.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>底部</value>
+  </data>
+  <data name="ModeBottom.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>底部</value>
+  </data>
+  <data name="ModeBottomLabel.Text" xml:space="preserve">
+    <value>底部</value>
+  </data>
+  <data name="PipToolbarButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>画中画</value>
+  </data>
+  <data name="PipToolbarButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>画中画</value>
+  </data>
+  <data name="SettingsToolbarButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>快捷设置</value>
+  </data>
+  <data name="SettingsToolbarButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>快捷设置</value>
+  </data>
+  <data name="FileMenu.Text" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="PlaybackMenu.Text" xml:space="preserve">
+    <value>播放</value>
+  </data>
+  <data name="VideoMenu.Text" xml:space="preserve">
+    <value>视频</value>
+  </data>
+  <data name="AudioMenu.Text" xml:space="preserve">
+    <value>音频</value>
+  </data>
+  <data name="LoopMenu.Text" xml:space="preserve">
+    <value>循环</value>
+  </data>
+  <data name="VideoSettingsMenu.Text" xml:space="preserve">
+    <value>视频设置…</value>
+  </data>
+  <data name="AudioSettingsMenu.Text" xml:space="preserve">
+    <value>音频设置…</value>
+  </data>
+  <data name="SubtitlesSettingsMenu.Text" xml:space="preserve">
+    <value>字幕…</value>
+  </data>
+  <data name="SettingsMenu.Text" xml:space="preserve">
+    <value>设置…</value>
+  </data>
+  <data name="Text_SettingsTitle" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Text_SettingsCategory" xml:space="preserve">
+    <value>设置分类</value>
+  </data>
+  <data name="Text_SettingsGeneral" xml:space="preserve">
+    <value>通用</value>
+  </data>
+  <data name="Text_SettingsWindow" xml:space="preserve">
+    <value>窗口</value>
+  </data>
+  <data name="Text_SettingsInterface" xml:space="preserve">
+    <value>界面</value>
+  </data>
+  <data name="Text_SettingsOpening" xml:space="preserve">
+    <value>打开媒体时</value>
+  </data>
+  <data name="Text_PauseWhenOpen" xml:space="preserve">
+    <value>打开媒体时暂停播放</value>
+  </data>
+  <data name="Text_AutomaticMusic" xml:space="preserve">
+    <value>播放音频时自动切换到音乐模式</value>
+  </data>
+  <data name="Text_SettingsWindowBehavior" xml:space="preserve">
+    <value>窗口行为</value>
+  </data>
+  <data name="Text_SettingsWindowSize" xml:space="preserve">
+    <value>窗口大小</value>
+  </data>
+  <data name="Text_FloatWhilePlaying" xml:space="preserve">
+    <value>播放时保持窗口置顶</value>
+  </data>
+  <data name="Text_PhysicalResolution" xml:space="preserve">
+    <value>使用物理像素设置视频大小</value>
+  </data>
+  <data name="Text_ResizeTiming" xml:space="preserve">
+    <value>自动调整窗口大小</value>
+  </data>
+  <data name="Text_OpeningSize" xml:space="preserve">
+    <value>打开媒体时的窗口大小</value>
+  </data>
+  <data name="Text_ResizeAlways" xml:space="preserve">
+    <value>始终</value>
+  </data>
+  <data name="Text_ResizeWhenOpening" xml:space="preserve">
+    <value>仅在打开时</value>
+  </data>
+  <data name="Text_ResizeNever" xml:space="preserve">
+    <value>从不</value>
+  </data>
+  <data name="Text_SizeFitScreen" xml:space="preserve">
+    <value>适应屏幕</value>
+  </data>
+  <data name="Text_SizeHalf" xml:space="preserve">
+    <value>一半大小</value>
+  </data>
+  <data name="Text_SizeNormal" xml:space="preserve">
+    <value>原始大小</value>
+  </data>
+  <data name="Text_SizeOneAndHalf" xml:space="preserve">
+    <value>1.5 倍大小</value>
+  </data>
+  <data name="Text_SizeDouble" xml:space="preserve">
+    <value>两倍大小</value>
+  </data>
+  <data name="Text_Static103" xml:space="preserve">
+    <value>视频区域</value>
+  </data>
+  <data name="Text_Static104" xml:space="preserve">
+    <value>打开文件</value>
+  </data>
+  <data name="Text_Static105" xml:space="preserve">
+    <value>打开媒体文件</value>
+  </data>
+  <data name="Text_Static106" xml:space="preserve">
+    <value>取消打开</value>
+  </data>
+  <data name="Text_Static107" xml:space="preserve">
+    <value>更多</value>
+  </data>
+  <data name="Text_Static108" xml:space="preserve">
+    <value>拖动以移动控制栏</value>
+  </data>
+  <data name="Text_Static109" xml:space="preserve">
+    <value>静音 / 取消静音</value>
+  </data>
+  <data name="Text_Static110" xml:space="preserve">
+    <value>音量</value>
+  </data>
+  <data name="Text_Static111" xml:space="preserve">
+    <value>后退 5 秒</value>
+  </data>
+  <data name="Text_Static112" xml:space="preserve">
+    <value>前进 5 秒</value>
+  </data>
+  <data name="Text_Static113" xml:space="preserve">
+    <value>全屏 (F11)</value>
+  </data>
+  <data name="Text_Static114" xml:space="preserve">
+    <value>快捷设置</value>
+  </data>
+  <data name="Text_Static115" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="Text_Static116" xml:space="preserve">
+    <value>打开文件…</value>
+  </data>
+  <data name="Text_Static117" xml:space="preserve">
+    <value>打开 URL…</value>
+  </data>
+  <data name="Text_Static118" xml:space="preserve">
+    <value>在文件资源管理器中显示</value>
+  </data>
+  <data name="Text_Static119" xml:space="preserve">
+    <value>新建窗口</value>
+  </data>
+  <data name="Text_Static120" xml:space="preserve">
+    <value>关闭窗口</value>
+  </data>
+  <data name="Text_Static121" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="Text_Static122" xml:space="preserve">
+    <value>播放</value>
+  </data>
+  <data name="Text_Static123" xml:space="preserve">
+    <value>后退 5 秒</value>
+  </data>
+  <data name="Text_Static124" xml:space="preserve">
+    <value>前进 5 秒</value>
+  </data>
+  <data name="Text_Static125" xml:space="preserve">
+    <value>上一帧</value>
+  </data>
+  <data name="Text_Static126" xml:space="preserve">
+    <value>下一帧</value>
+  </data>
+  <data name="Text_Static127" xml:space="preserve">
+    <value>0.5x</value>
+  </data>
+  <data name="Text_Static128" xml:space="preserve">
+    <value>1x</value>
+  </data>
+  <data name="Text_Static129" xml:space="preserve">
+    <value>2x</value>
+  </data>
+  <data name="Text_Static130" xml:space="preserve">
+    <value>循环</value>
+  </data>
+  <data name="Text_Static131" xml:space="preserve">
+    <value>循环播放当前文件</value>
+  </data>
+  <data name="Text_Static132" xml:space="preserve">
+    <value>A–B 循环：设置 A / 设置 B / 清除</value>
+  </data>
+  <data name="Text_Static133" xml:space="preserve">
+    <value>关闭循环播放</value>
+  </data>
+  <data name="Text_Static134" xml:space="preserve">
+    <value>视频</value>
+  </data>
+  <data name="Text_Static135" xml:space="preserve">
+    <value>视频设置…</value>
+  </data>
+  <data name="Text_Static136" xml:space="preserve">
+    <value>布局</value>
+  </data>
+  <data name="Text_Static137" xml:space="preserve">
+    <value>悬浮</value>
+  </data>
+  <data name="Text_Static138" xml:space="preserve">
+    <value>顶部</value>
+  </data>
+  <data name="Text_Static139" xml:space="preserve">
+    <value>底部</value>
+  </data>
+  <data name="Text_Static140" xml:space="preserve">
+    <value>视频延伸至窗口边缘</value>
+  </data>
+  <data name="Text_Static141" xml:space="preserve">
+    <value>停靠控制栏</value>
+  </data>
+  <data name="Text_Static142" xml:space="preserve">
+    <value>重置控制栏位置</value>
+  </data>
+  <data name="Text_Static143" xml:space="preserve">
+    <value>设置大小</value>
+  </data>
+  <data name="Text_Static144" xml:space="preserve">
+    <value>缩小窗口</value>
+  </data>
+  <data name="Text_Static145" xml:space="preserve">
+    <value>放大窗口</value>
+  </data>
+  <data name="Text_Static146" xml:space="preserve">
+    <value>锁定视频宽高比</value>
+  </data>
+  <data name="Text_Static147" xml:space="preserve">
+    <value>全屏</value>
+  </data>
+  <data name="Text_Static148" xml:space="preserve">
+    <value>保存截图</value>
+  </data>
+  <data name="Text_Static149" xml:space="preserve">
+    <value>音频</value>
+  </data>
+  <data name="Text_Static150" xml:space="preserve">
+    <value>音频设置…</value>
+  </data>
+  <data name="Text_Static151" xml:space="preserve">
+    <value>增大音量</value>
+  </data>
+  <data name="Text_Static152" xml:space="preserve">
+    <value>减小音量</value>
+  </data>
+  <data name="Text_Static153" xml:space="preserve">
+    <value>字幕…</value>
+  </data>
+  <data name="Text_Static154" xml:space="preserve">
+    <value>切换窗口</value>
+  </data>
+  <data name="Text_Static155" xml:space="preserve">
+    <value>始终置顶</value>
+  </data>
+  <data name="Text_Static156" xml:space="preserve">
+    <value>播放信息</value>
+  </data>
+  <data name="Text_Static157" xml:space="preserve">
+    <value>设置…</value>
+  </data>
+  <data name="Text_Static158" xml:space="preserve">
+    <value>关于 Mani</value>
+  </data>
+  <data name="Text_Static159" xml:space="preserve">
+    <value>播放进度</value>
+  </data>
+  <data name="Text_Static160" xml:space="preserve">
+    <value>音乐控制栏</value>
+  </data>
+  <data name="Text_Static161" xml:space="preserve">
+    <value>关闭设置</value>
+  </data>
+  <data name="Text_Static162" xml:space="preserve">
+    <value>设置页面</value>
+  </data>
+  <data name="Text_Static163" xml:space="preserve">
+    <value>字幕</value>
+  </data>
+  <data name="Text_Static164" xml:space="preserve">
+    <value>窗口适应视频</value>
+  </data>
+  <data name="Text_Static165" xml:space="preserve">
+    <value>屏幕控制栏</value>
+  </data>
+  <data name="Text_Static166" xml:space="preserve">
+    <value>设置侧栏位置</value>
+  </data>
+  <data name="Text_Static167" xml:space="preserve">
+    <value>设置侧栏位置</value>
+  </data>
+  <data name="Text_Static168" xml:space="preserve">
+    <value>左侧</value>
+  </data>
+  <data name="Text_Static169" xml:space="preserve">
+    <value>右侧</value>
+  </data>
+  <data name="Text_Static170" xml:space="preserve">
+    <value>侧栏宽度</value>
+  </data>
+  <data name="Text_Static171" xml:space="preserve">
+    <value>视频轨道</value>
+  </data>
+  <data name="Text_Static172" xml:space="preserve">
+    <value>播放速度</value>
+  </data>
+  <data name="Text_Static173" xml:space="preserve">
+    <value>播放速度档位</value>
+  </data>
+  <data name="Text_Static174" xml:space="preserve">
+    <value>重置速度</value>
+  </data>
+  <data name="Text_Static175" xml:space="preserve">
+    <value>音频轨道</value>
+  </data>
+  <data name="Text_Static176" xml:space="preserve">
+    <value>音频延迟（秒）</value>
+  </data>
+  <data name="Text_Static177" xml:space="preserve">
+    <value>音频延迟滑块（秒）</value>
+  </data>
+  <data name="Text_Static178" xml:space="preserve">
+    <value>范围为 -5 至 +5 秒。拖动预览，松开应用。</value>
+  </data>
+  <data name="Text_Static179" xml:space="preserve">
+    <value>-5s</value>
+  </data>
+  <data name="Text_Static180" xml:space="preserve">
+    <value>0s</value>
+  </data>
+  <data name="Text_Static181" xml:space="preserve">
+    <value>+5s</value>
+  </data>
+  <data name="Text_Static182" xml:space="preserve">
+    <value>重置延迟</value>
+  </data>
+  <data name="Text_Static183" xml:space="preserve">
+    <value>主字幕</value>
+  </data>
+  <data name="Text_Static184" xml:space="preserve">
+    <value>显示主字幕</value>
+  </data>
+  <data name="Text_Static185" xml:space="preserve">
+    <value>主字幕延迟（秒）</value>
+  </data>
+  <data name="Text_Static186" xml:space="preserve">
+    <value>主字幕延迟滑块（秒）</value>
+  </data>
+  <data name="Text_Static187" xml:space="preserve">
+    <value>副字幕</value>
+  </data>
+  <data name="Text_Static188" xml:space="preserve">
+    <value>显示副字幕</value>
+  </data>
+  <data name="Text_Static189" xml:space="preserve">
+    <value>副字幕延迟（秒）</value>
+  </data>
+  <data name="Text_Static190" xml:space="preserve">
+    <value>副字幕延迟滑块（秒）</value>
+  </data>
+  <data name="Text_Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="Text_LanguageEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Text_LanguageChinese" xml:space="preserve">
+    <value>简体中文</value>
+  </data>
+  <data name="Text_Playlist" xml:space="preserve">
+    <value>播放列表</value>
+  </data>
+  <data name="Text_Chapters" xml:space="preserve">
+    <value>章节</value>
+  </data>
+  <data name="Text_History" xml:space="preserve">
+    <value>播放历史</value>
+  </data>
+  <data name="Text_OpenFolder" xml:space="preserve">
+    <value>打开文件夹…</value>
+  </data>
+  <data name="Text_AddFiles" xml:space="preserve">
+    <value>添加文件…</value>
+  </data>
+  <data name="Text_Remove" xml:space="preserve">
+    <value>移除所选项</value>
+  </data>
+  <data name="Text_ClearPlaylist" xml:space="preserve">
+    <value>清空列表（保留播放项）</value>
+  </data>
+  <data name="Text_Shuffle" xml:space="preserve">
+    <value>随机播放 / 恢复顺序</value>
+  </data>
+  <data name="Text_SortName" xml:space="preserve">
+    <value>按文件名排序</value>
+  </data>
+  <data name="Text_SortPath" xml:space="preserve">
+    <value>按路径升序</value>
+  </data>
+  <data name="Text_SortDescending" xml:space="preserve">
+    <value>按文件名降序</value>
+  </data>
+  <data name="Text_PreviousItem" xml:space="preserve">
+    <value>上一项</value>
+  </data>
+  <data name="Text_NextItem" xml:space="preserve">
+    <value>下一项</value>
+  </data>
+  <data name="Text_PreviousChapter" xml:space="preserve">
+    <value>上一章</value>
+  </data>
+  <data name="Text_NextChapter" xml:space="preserve">
+    <value>下一章</value>
+  </data>
+  <data name="Text_Edition" xml:space="preserve">
+    <value>媒体版本</value>
+  </data>
+  <data name="Text_EditionFormat" xml:space="preserve">
+    <value>版本 {0}</value>
+  </data>
+  <data name="Text_ChapterFormat" xml:space="preserve">
+    <value>第 {0} 章</value>
+  </data>
+  <data name="Text_NoChapters" xml:space="preserve">
+    <value>没有章节</value>
+  </data>
+  <data name="Text_NoPlaylist" xml:space="preserve">
+    <value>添加文件以创建播放列表。</value>
+  </data>
+  <data name="Text_NoPlayableFiles" xml:space="preserve">
+    <value>未找到可播放的文件。</value>
+  </data>
+  <data name="Text_PlayingMarker" xml:space="preserve">
+    <value>正在播放</value>
+  </data>
+  <data name="Text_MoveUp" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="Text_MoveDown" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="Text_LoopPlaylist" xml:space="preserve">
+    <value>循环播放列表</value>
+  </data>
+  <data name="Text_RecentFiles" xml:space="preserve">
+    <value>最近文件</value>
+  </data>
+  <data name="Text_ClearHistory" xml:space="preserve">
+    <value>清除播放历史</value>
+  </data>
+  <data name="Text_ResumeLast" xml:space="preserve">
+    <value>继续上次播放</value>
+  </data>
+  <data name="Text_MissingFile" xml:space="preserve">
+    <value>文件不存在或已移动。</value>
+  </data>
+  <data name="Text_HistoryEmpty" xml:space="preserve">
+    <value>暂无播放历史。</value>
+  </data>
+  <data name="Text_HistoryClearConfirm" xml:space="preserve">
+    <value>清除全部播放历史？</value>
+  </data>
+  <data name="Text_RecordHistory" xml:space="preserve">
+    <value>保存播放历史</value>
+  </data>
+  <data name="Text_ResumePosition" xml:space="preserve">
+    <value>恢复上次播放进度</value>
+  </data>
+  <data name="Text_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Text_LicenseError" xml:space="preserve">
+    <value>无法显示许可证信息</value>
+  </data>
+  <data name="Text_About" xml:space="preserve">
+    <value>关于 Mani</value>
+  </data>
+  <data name="Text_PlaybackInfoFormat" xml:space="preserve">
+    <value>{0}
+
+视频输出：{1}
+硬件解码：{2}
+格式：{3}
+色彩基色：{4}
+传递函数：{5}
+丢帧：{6}
+音频输出：{7}
+音频设备：{8}
+音频缓冲：{9}
+音画同步：{10}
+正在缓冲：{11}
+音量：{12:F0}%
+画面区域：{13:F0} x {14:F0} DIP
+缩放：{15:F2}
+
+{16}</value>
+  </data>
+  <data name="Text_Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="Text_No" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="Text_SortPathDescending" xml:space="preserve">
+    <value>按路径降序</value>
+  </data>
+  <data name="Text_OpenLogFolder" xml:space="preserve">
+    <value>打开日志文件夹</value>
+  </data>
+  <data name="Text_ShowChapterPositions" xml:space="preserve"><value>在进度条中显示章节</value></data>
+  <data name="Text_HistorySearch" xml:space="preserve"><value>搜索播放历史</value></data>
+  <data name="Text_HistorySearchIn" xml:space="preserve"><value>在…中搜索</value></data>
+  <data name="Text_HistoryFullPath" xml:space="preserve"><value>完整路径</value></data>
+  <data name="Text_HistoryFilename" xml:space="preserve"><value>文件名</value></data>
+  <data name="Text_HistoryGroupBy" xml:space="preserve"><value>分组依据</value></data>
+  <data name="Text_HistoryDate" xml:space="preserve"><value>日期</value></data>
+  <data name="Text_HistoryLocation" xml:space="preserve"><value>文件夹和网站</value></data>
+  <data name="Text_HistoryNoResults" xml:space="preserve"><value>没有匹配的播放历史</value></data>
+  <data name="Text_SavePlaylist" xml:space="preserve"><value>保存当前播放列表…</value></data>
+  <data name="Text_SavePlaylistError" xml:space="preserve"><value>无法保存播放列表。</value></data>
+  <data name="Text_ThumbnailPreview" xml:space="preserve"><value>缩略图预览</value></data>
+  <data name="Text_EnableThumbnailPreview" xml:space="preserve"><value>启用缩略图预览</value></data>
+  <data name="Text_ThumbnailCacheSize" xml:space="preserve"><value>已用 {0:F1} MiB · 上限 500 MiB</value></data>
+  <data name="Text_ClearThumbnailCache" xml:space="preserve"><value>清除缩略图缓存</value></data>
+  <data name="Text_ConfirmClearThumbnailCache" xml:space="preserve"><value>确认清除缩略图缓存</value></data>
+  <data name="Text_AddFolder" xml:space="preserve"><value>添加文件夹…</value></data>
+  <data name="Text_AddUrl" xml:space="preserve"><value>添加 URL…</value></data>
+  <data name="Text_AddUrlTitle" xml:space="preserve"><value>添加 URL</value></data>
+  <data name="Text_Add" xml:space="preserve"><value>添加</value></data>
+  <data name="Text_AddToPlaylist" xml:space="preserve"><value>添加到播放列表</value></data>
+  <data name="Text_SettingsUnavailable" xml:space="preserve"><value>无法加载设置。原有设置已保留；恢复有效的设置文件后，请重新启动应用。</value></data>
+  <data name="Text_SessionUnavailable" xml:space="preserve"><value>播放会话已停止。请新建窗口（Ctrl+N）继续使用，然后关闭此窗口。</value></data>
+  <data name="Text_M5Audio" xml:space="preserve"><value>音频</value></data>
+  <data name="Text_M5Subtitles" xml:space="preserve"><value>字幕</value></data>
+  <data name="Text_M5GroupAudio" xml:space="preserve"><value>音频输出</value></data>
+  <data name="Text_M5GroupEqualizer" xml:space="preserve"><value>均衡器</value></data>
+  <data name="Text_M5GroupSubtitleLoad" xml:space="preserve"><value>字幕加载</value></data>
+  <data name="Text_M5GroupSubtitleChannels" xml:space="preserve"><value>主字幕 / 副字幕</value></data>
+  <data name="Text_M5GroupSubtitleStyle" xml:space="preserve"><value>共享文字默认样式</value></data>
+  <data name="Text_M5MaximumVolume" xml:space="preserve"><value>最大音量（%）</value></data>
+  <data name="Text_M5AudioLanguage" xml:space="preserve"><value>偏好音频语言（如 eng,zho）</value></data>
+  <data name="Text_M5AudioDevice" xml:space="preserve"><value>偏好输出设备</value></data>
+  <data name="Text_M5SpdifAc3" xml:space="preserve"><value>AC3 直通</value></data>
+  <data name="Text_M5SpdifDts" xml:space="preserve"><value>DTS 直通</value></data>
+  <data name="Text_M5SpdifDtsHd" xml:space="preserve"><value>DTS-HD 直通</value></data>
+  <data name="Text_M5SpdifEac3" xml:space="preserve"><value>EAC3 直通</value></data>
+  <data name="Text_M5SpdifTrueHd" xml:space="preserve"><value>TrueHD 直通</value></data>
+  <data name="Text_M5EqualizerEnabled" xml:space="preserve"><value>启用均衡器</value></data>
+  <data name="Text_M5SubtitleMatching" xml:space="preserve"><value>自动加载字幕</value></data>
+  <data name="Text_M5SubtitleSearchPaths" xml:space="preserve"><value>附加目录（用分号分隔，./* 表示子目录）</value></data>
+  <data name="Text_M5SubtitlePriority" xml:space="preserve"><value>文件名优先关键字（用逗号分隔）</value></data>
+  <data name="Text_M5SubtitleLanguage" xml:space="preserve"><value>偏好字幕语言（如 zho,eng）</value></data>
+  <data name="Text_M5SubtitleEncoding" xml:space="preserve"><value>编码（重新加载外挂字幕）</value></data>
+  <data name="Text_M5PrimaryOverride" xml:space="preserve"><value>主字幕 ASS 覆盖级别</value></data>
+  <data name="Text_M5SecondaryOverride" xml:space="preserve"><value>副字幕 ASS 覆盖级别</value></data>
+  <data name="Text_M5PrimaryPosition" xml:space="preserve"><value>主字幕垂直位置（%）</value></data>
+  <data name="Text_M5SecondaryPosition" xml:space="preserve"><value>副字幕垂直位置（%）</value></data>
+  <data name="Text_M5PrimaryScale" xml:space="preserve"><value>主字幕缩放</value></data>
+  <data name="Text_M5SecondaryScale" xml:space="preserve"><value>副字幕缩放</value></data>
+  <data name="Text_M5Font" xml:space="preserve"><value>字体名称</value></data>
+  <data name="Text_M5FontSize" xml:space="preserve"><value>字号</value></data>
+  <data name="Text_M5Bold" xml:space="preserve"><value>粗体</value></data>
+  <data name="Text_M5Italic" xml:space="preserve"><value>斜体</value></data>
+  <data name="Text_M5TextColor" xml:space="preserve"><value>文字颜色（#AARRGGBB）</value></data>
+  <data name="Text_M5BorderStyle" xml:space="preserve"><value>边框样式</value></data>
+  <data name="Text_M5BorderSize" xml:space="preserve"><value>描边大小</value></data>
+  <data name="Text_M5BorderColor" xml:space="preserve"><value>描边颜色（#AARRGGBB）</value></data>
+  <data name="Text_M5ShadowOffset" xml:space="preserve"><value>阴影偏移</value></data>
+  <data name="Text_M5ShadowColor" xml:space="preserve"><value>阴影 / 背景框颜色（#AARRGGBB）</value></data>
+  <data name="Text_M5Blur" xml:space="preserve"><value>模糊</value></data>
+  <data name="Text_M5Spacing" xml:space="preserve"><value>字间距</value></data>
+  <data name="Text_M5MarginX" xml:space="preserve"><value>水平边距</value></data>
+  <data name="Text_M5MarginY" xml:space="preserve"><value>垂直边距</value></data>
+  <data name="Text_M5AlignX" xml:space="preserve"><value>水平对齐</value></data>
+  <data name="Text_M5AlignY" xml:space="preserve"><value>垂直对齐</value></data>
+  <data name="Text_M5ScaleWithWindow" xml:space="preserve"><value>字幕大小随窗口缩放</value></data>
+  <data name="Text_M5Letterbox" xml:space="preserve"><value>将字幕显示在黑边</value></data>
+  <data name="Text_M5LoadAudio" xml:space="preserve"><value>加载外挂音频…</value></data>
+  <data name="Text_M5LoadPrimary" xml:space="preserve"><value>加载主字幕…</value></data>
+  <data name="Text_M5LoadSecondary" xml:space="preserve"><value>加载副字幕…</value></data>
+  <data name="Text_M5Reload" xml:space="preserve"><value>重新加载外挂字幕</value></data>
+  <data name="Text_M5RefreshDevices" xml:space="preserve"><value>刷新设备</value></data>
+  <data name="Text_M5DefaultDevice" xml:space="preserve"><value>系统默认（自动选择）</value></data>
+  <data name="Text_M5MissingDevice" xml:space="preserve"><value>偏好设备不可用：</value></data>
+  <data name="Text_M5Auto" xml:space="preserve"><value>自动检测</value></data>
+  <data name="Text_M5Choiceno" xml:space="preserve"><value>关闭</value></data>
+  <data name="Text_M5Choiceyes" xml:space="preserve"><value>开启</value></data>
+  <data name="Text_M5Choiceleft" xml:space="preserve"><value>左</value></data>
+  <data name="Text_M5Choicecenter" xml:space="preserve"><value>居中</value></data>
+  <data name="Text_M5Choiceright" xml:space="preserve"><value>右</value></data>
+  <data name="Text_M5Choicetop" xml:space="preserve"><value>顶端</value></data>
+  <data name="Text_M5Choicebottom" xml:space="preserve"><value>底部</value></data>
+  <data name="Text_M5Choiceoutlineandshadow" xml:space="preserve"><value>描边和阴影</value></data>
+  <data name="Text_M5Choiceopaquebox" xml:space="preserve"><value>不透明背景框</value></data>
+  <data name="Text_M5Choicebackgroundbox" xml:space="preserve"><value>背景框</value></data>
+  <data name="Text_M5Overrideno" xml:space="preserve"><value>保留脚本样式</value></data>
+  <data name="Text_M5Overridescale" xml:space="preserve"><value>仅覆盖缩放</value></data>
+  <data name="Text_M5Overrideyes" xml:space="preserve"><value>覆盖普通对白样式</value></data>
+  <data name="Text_M5Overrideforce" xml:space="preserve"><value>强制覆盖全部样式</value></data>
+  <data name="Text_M5Overridestrip" xml:space="preserve"><value>纯文本（移除 ASS 标签）</value></data>
+  <data name="Text_M5Matchingno" xml:space="preserve"><value>不自动加载</value></data>
+  <data name="Text_M5Matchingname" xml:space="preserve"><value>文件名匹配（含近似补全）</value></data>
+  <data name="Text_M5Matchingiina" xml:space="preserve"><value>IINA 匹配（系列、文件名及近似补全）</value></data>
+  <data name="Text_M5HintAudio" xml:space="preserve"><value>语言偏好在下次打开文件时使用。自动输出跟随 Windows 默认设备。直通需要兼容接收设备；音量、倍速和均衡处理可能被绕过。</value></data>
+  <data name="Text_M5HintSubtitleLoad" xml:space="preserve"><value>打开时搜索媒体所在目录及附加目录。媒体语言偏好独立于界面语言。更改编码会重新加载外挂文字字幕。</value></data>
+  <data name="Text_M5HintSubtitleChannels" xml:space="preserve"><value>这些控件仅影响当前会话，不改变其他窗口或已保存的默认设置。字体和文字外观属于共享默认设置；ASS 覆盖适用于 ASS/SSA，不适用于图像字幕。</value></data>
+  <data name="Text_M5HintSubtitleStyle" xml:space="preserve"><value>以下样式由两套字幕共享。普通文字字幕可直接应用；ASS 需要覆盖模式。保留和仅缩放模式保留 ASS 字体及颜色。图像字幕保留原有图像，字体与文字样式不适用。内封字体由播放器加载。</value></data>
+  <data name="Text_M5InvalidValue" xml:space="preserve"><value>该值无效。请检查范围、语言列表或 #AARRGGBB 颜色格式。</value></data>
+  <data name="Text_M5Unsupported" xml:space="preserve"><value>当前引擎不支持的设置已禁用。</value></data>
+  <data name="Text_M5SettingsError" xml:space="preserve"><value>无法应用音频或字幕设置。</value></data>
+  <data name="Text_M5TrackLoaded" xml:space="preserve"><value>外挂轨道已加载；另一套字幕保持不变。</value></data>
+  <data name="Text_M5TrackConflict" xml:space="preserve"><value>另一套字幕正在使用此轨道。请先将另一套设为“无”，再在这里选择。</value></data>
+  <data name="Text_M5TrackFailed" xml:space="preserve"><value>无法加载此外挂轨道。仍可继续播放，请重新选择文件。</value></data>
+  <data name="Text_M5Reloaded" xml:space="preserve"><value>外挂字幕已重新加载；主副字幕选择已恢复。</value></data>
+  <data name="Text_M5ReloadFailed" xml:space="preserve"><value>部分字幕无法重新加载。仍可继续播放，请重新选择字幕文件。</value></data>
+  <data name="Text_M5MatchFailed" xml:space="preserve"><value>某个匹配的字幕无法加载，可手动选择字幕。</value></data>
+  <data name="Text_M5AudioStatus" xml:space="preserve"><value>当前输出：{0}
+驱动：{1} · 格式：{2}</value></data>
+  <data name="Text_M5NoOutput" xml:space="preserve"><value>尚未激活</value></data>
+  <data name="Text_M5DeviceFallback" xml:space="preserve"><value>所选设备已断开，已切换自动输出；暂停状态保持不变。</value></data>
+  <data name="Text_M5PassthroughActive" xml:space="preserve"><value>已启用编码输出。处理控件可能不会改变接收设备的输出。</value></data>
+  <data name="Text_M5PassthroughRequested" xml:space="preserve"><value>已请求直通，但当前输出尚未确认为编码直通，请检查接收设备。倍速或滤镜可能使输出改为解码音频。</value></data>
+  <data name="Text_M5PositionChanged" xml:space="preserve"><value>字幕位置：{0}%</value></data>
+  <data name="Text_M5ScaleChanged" xml:space="preserve"><value>字幕缩放：{0}×</value></data>
+  <data name="Text_M5Eq32" xml:space="preserve"><value>32 Hz 增益（dB）</value></data>
+  <data name="Text_M5Eq64" xml:space="preserve"><value>64 Hz 增益（dB）</value></data>
+  <data name="Text_M5Eq125" xml:space="preserve"><value>125 Hz 增益（dB）</value></data>
+  <data name="Text_M5Eq250" xml:space="preserve"><value>250 Hz 增益（dB）</value></data>
+  <data name="Text_M5Eq500" xml:space="preserve"><value>500 Hz 增益（dB）</value></data>
+  <data name="Text_M5Eq1000" xml:space="preserve"><value>1000 Hz 增益（dB）</value></data>
+  <data name="Text_M5Eq2000" xml:space="preserve"><value>2000 Hz 增益（dB）</value></data>
+  <data name="Text_M5Eq4000" xml:space="preserve"><value>4000 Hz 增益（dB）</value></data>
+  <data name="Text_M5Eq8000" xml:space="preserve"><value>8000 Hz 增益（dB）</value></data>
+  <data name="Text_M5Eq16000" xml:space="preserve"><value>16000 Hz 增益（dB）</value></data>
+  <data name="Text_OsdSubPosition" xml:space="preserve"><value>字幕位置：{0}%</value></data>
+  <data name="Text_OsdSubScale" xml:space="preserve"><value>字幕缩放：{0:0.0} 倍</value></data>
+  <data name="Text_M5EqProfile" xml:space="preserve"><value>均衡器预设</value></data>
+  <data name="Text_M5EqCustom" xml:space="preserve"><value>自定义</value></data>
+  <data name="Text_M5EqName" xml:space="preserve"><value>预设名称</value></data>
+  <data name="Text_M5EqSave" xml:space="preserve"><value>保存当前增益</value></data>
+  <data name="Text_M5EqDelete" xml:space="preserve"><value>删除所选预设</value></data>
+  <data name="Text_M5EqRename" xml:space="preserve"><value>重命名所选预设</value></data>
+  <data name="Text_M5EqInvalid" xml:space="preserve"><value>请输入不重复的名称（1–80 个字符）。</value></data>
+  <data name="Text_M5Presetflat" xml:space="preserve"><value>平坦</value></data>
+  <data name="Text_M5Presetacoustic" xml:space="preserve"><value>原声</value></data>
+  <data name="Text_M5Presetclassical" xml:space="preserve"><value>古典</value></data>
+  <data name="Text_M5Presetdance" xml:space="preserve"><value>舞曲</value></data>
+  <data name="Text_M5Presetdeep" xml:space="preserve"><value>深</value></data>
+  <data name="Text_M5Presetelectronic" xml:space="preserve"><value>电子乐</value></data>
+  <data name="Text_M5Presethip_hop" xml:space="preserve"><value>嘻哈</value></data>
+  <data name="Text_M5Presetincrease_bass" xml:space="preserve"><value>增加低音</value></data>
+  <data name="Text_M5Presetincrease_treble" xml:space="preserve"><value>增加高音</value></data>
+  <data name="Text_M5Presetincrease_vocal" xml:space="preserve"><value>增加人声</value></data>
+  <data name="Text_M5Presetjazz" xml:space="preserve"><value>爵士</value></data>
+  <data name="Text_M5Presetlatin" xml:space="preserve"><value>拉丁音乐</value></data>
+  <data name="Text_M5Presetloundness" xml:space="preserve"><value>响度</value></data>
+  <data name="Text_M5Presetlounge" xml:space="preserve"><value>驰放音乐</value></data>
+  <data name="Text_M5Presetpiano" xml:space="preserve"><value>钢琴音乐</value></data>
+  <data name="Text_M5Presetpop" xml:space="preserve"><value>流行音乐</value></data>
+  <data name="Text_M5Presetrnb" xml:space="preserve"><value>节奏蓝调</value></data>
+  <data name="Text_M5Presetreduce_bass" xml:space="preserve"><value>减少低音</value></data>
+  <data name="Text_M5Presetreduce_treble" xml:space="preserve"><value>减少高音</value></data>
+  <data name="Text_M5Presetrock" xml:space="preserve"><value>摇滚</value></data>
+  <data name="Text_M5Presetsmall_speaker" xml:space="preserve"><value>小型扬声器</value></data>
+  <data name="Text_M5Presetspoken_word" xml:space="preserve"><value>语音</value></data>
+  <data name="Text_M5StyleContext" xml:space="preserve"><value>当前主字幕：{0}
+当前副字幕：{1}</value></data>
+  <data name="Text_M5StyleNoTrack" xml:space="preserve"><value>未选择字幕</value></data>
+  <data name="Text_M5StyleBitmap" xml:space="preserve"><value>图像字幕 — 文字样式和 ASS 覆盖不适用</value></data>
+  <data name="Text_M5StyleText" xml:space="preserve"><value>文字字幕 — 应用共享默认样式</value></data>
+  <data name="Text_M5StylePreserved" xml:space="preserve"><value>ASS — 保留脚本字体和颜色</value></data>
+  <data name="Text_M5StyleOverridden" xml:space="preserve"><value>ASS — 按所选覆盖级别应用样式</value></data>
+  <data name="Text_M5DeviceRetry" xml:space="preserve"><value>输出设备暂时不可用，正在自动重试；原先暂停的播放会保持暂停。</value></data>
+  <data name="Text_M5GroupSubtitleDefaults" xml:space="preserve"><value>字幕默认设置</value></data>
+  <data name="Text_M5HintSubtitleDefaults" xml:space="preserve"><value>默认设置会保存并用于新窗口；修改默认值也会同步该项到已打开的窗口。快捷设置和快捷键仅调整当前会话。</value></data>
+  <data name="Text_M5DefaultPrimaryPosition" xml:space="preserve"><value>默认主字幕位置（%）</value></data>
+  <data name="Text_M5DefaultPrimaryOverride" xml:space="preserve"><value>默认主字幕 ASS 覆盖</value></data>
+  <data name="Text_M5DefaultSecondaryOverride" xml:space="preserve"><value>默认副字幕 ASS 覆盖</value></data>
+  <data name="Text_M5EqCount" xml:space="preserve"><value>已保存预设：{0} / {1}。名称可包含 1–80 个字符。</value></data>
+  <data name="Text_M5EqLimit" xml:space="preserve"><value>最多可保存 32 个预设。请先删除一个预设再添加。</value></data>
+  <data name="Text_M5EqCapacity" xml:space="preserve"><value>预设库超出存储容量。请缩短名称或删除一个预设。</value></data>
+  <data name="Text_M5EqData" xml:space="preserve"><value>预设包含无效均衡值。十个频段均须在 −12 至 +12 dB 之间。</value></data>
+</root>

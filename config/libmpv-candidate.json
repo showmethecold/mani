@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "purpose": "M1 integration probe only; not a replacement for the 0.41.0 stable target",
+  "repository": "shinchiro/mpv-winbuild-cmake",
+  "release_tag": "20261018",
+  "mpv_commit_prefix": "01e2533f31",
+  "recipe_commit_prefix": "1f8d2e7",
+  "architecture": "x86_64",
+  "kind": "git-snapshot",
+  "assets": {
+    "dev": "mpv-dev-x86_64-20261018-git-01e2533f31.7z",
+    "player": "mpv-x86_64-20261018-git-01e2533f31.7z"
+  }
+}

@@ -1,0 +1,96 @@
+name: Unit tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: unit-tests-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  unit-tests:
+    name: Windows x64 / .NET 10
+    runs-on: windows-2025
+    timeout-minutes: 10
+    env:
+      DOTNET_NOLOGO: '1'
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+      TESTINGPLATFORM_TELEMETRY_OPTOUT: '1'
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+          cache: true
+          cache-dependency-path: |
+            src/Mani.Playback/packages.lock.json
+            tests/Mani.UnitTests/packages.lock.json
+
+      - name: Restore locked test dependencies
+        run: dotnet restore Mani.Tests.slnf --locked-mode -p:Platform=x64
+
+      - name: Check packaging input and integrity guards
+        shell: pwsh
+        run: |
+          python -m unittest discover -s build/tests -v
+          if ($LASTEXITCODE) { throw 'Native dependency restore checks failed.' }
+          ./build/tests/Test-PackageInputs.ps1
+
+      - name: Run maintained unit tests
+        run: dotnet test --solution Mani.Tests.slnf --no-restore --configuration Release -p:Platform=x64 --report-trx --report-trx-filename unit-tests.trx --results-directory artifacts/test-results
+
+      - name: Verify test discovery
+        shell: pwsh
+        run: |
+          [xml]$results = Get-Content -LiteralPath artifacts/test-results/unit-tests.trx -Raw
+          if ([int]$results.TestRun.ResultSummary.Counters.total -lt 1) {
+            throw 'No unit tests were executed.'
+          }
+
+      - name: Save test results
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: unit-test-results
+          path: artifacts/test-results/*.trx
+          if-no-files-found: ignore
+          retention-days: 14
+
+  app-build:
+    name: Compile WinUI application / Windows x64 / ${{ matrix.configuration }}
+    strategy:
+      fail-fast: false
+      matrix:
+        configuration: [Debug, Release]
+    runs-on: windows-2025
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+      - name: Restore the pinned native dependency
+        env:
+          MANI_NATIVE_ARCHIVE_URL: ${{ vars.MANI_NATIVE_ARCHIVE_URL }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python build/restore_libmpv.py
+      - name: Restore locked application dependencies
+        run: dotnet restore src/Mani.App/Mani.App.csproj --locked-mode -p:Platform=x64
+      - name: Compile XAML and application
+        run: dotnet build src/Mani.App/Mani.App.csproj --no-restore -c ${{ matrix.configuration }} -p:Platform=x64

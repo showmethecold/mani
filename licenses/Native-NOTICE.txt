@@ -1,0 +1,24 @@
+Mani native playback runtime
+
+Baseline: mani-sup-msys2-ucrt64-20261101-r2 (Windows x64, UCRT64)
+mpv source: 01e2533f3143b8940857ca419b0b367f583e05ca
+FFmpeg source: 94cba3150c6b83057ed48b833689adc806715cc0
+FFmpeg modification: ffmpeg-sup-keyframes-flush.patch, included alongside this notice.
+The patch preserves SUP keyframe flags and clears stale PGS state on seek.
+The binaries retain their original experiment version strings for traceability.
+
+Upstream projects:
+https://github.com/mpv-player/mpv
+https://github.com/FFmpeg/FFmpeg
+https://github.com/msys2/MINGW-packages
+
+mpv and FFmpeg copyright/license texts are under licenses/native/engine.
+MSYS2 dependency notices are under licenses/native/dependencies.
+dependencies.lock.json records the exact build-package versions and hashes.
+These components retain their respective licenses and copyright notices.
+Mani's GPL license does not replace their original terms.
+
+This local candidate is not a public release. Before distributing binaries,
+the corresponding source and build material must accompany the release under
+the applicable licenses. The dependency lock and upstream links alone are not
+a complete corresponding-source distribution.

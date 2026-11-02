@@ -1,0 +1,36 @@
+{
+  "sdr": {
+    "file": "1080p-sdr.mkv",
+    "sha256": "1cddd96d13f26207a6d36b75c0a1c096d37d6287ddadbab3c95af2675e4aaf10",
+    "source": "Original M0 bars; CC0-1.0",
+    "limitation": "Synthetic content; not representative high-bitrate footage."
+  },
+  "hdr": {
+    "file": "hdr-pq-ramp.mkv",
+    "sha256": "a779e3422fd0ac434efe728c22843a28cf6fffaf578688742842aa93ec13f49d",
+    "source": "Original CC0-1.0 grayscale patches",
+    "nits_left_to_right": [
+      0,
+      0.1,
+      1,
+      10,
+      100,
+      203,
+      400,
+      1000
+    ],
+    "limitation": "Synthetic signal probe; metadata and tone mapping need validation. Not calibrated HDR display acceptance."
+  },
+  "hdr-av": {
+    "file": "hdr-av-motion.mkv",
+    "sha256": "5003ff2398c124713e6d28a724f600129a6617cccb0f37381a75ff7c25042e34",
+    "source": "Existing original CC0-1.0 PQ grayscale patches plus synthesized sine wave",
+    "source_sha256": "a779e3422fd0ac434efe728c22843a28cf6fffaf578688742842aa93ec13f49d",
+    "duration_seconds": 420,
+    "fps": 30,
+    "width": 640,
+    "height": 360,
+    "audio": "440 Hz continuous sine, 48 kHz stereo AAC; nominal peak about -24 dBFS before player volume",
+    "limitation": "Synthetic motion/audio continuity probe, not representative decode load, calibrated luminance, or audiovisual lip-sync reference."
+  }
+}

@@ -1,0 +1,22 @@
+Mani SUP Experiment — isolated local test runtime
+
+This package uses a separately pinned experimental dependency baseline, not
+the product runtime described by the original libmpv notice in licenses/.
+The original notice is retained as provenance for the normal Mani build.
+
+mpv source: 01e2533f3143b8940857ca419b0b367f583e05ca
+FFmpeg source: 94cba3150c6b83057ed48b833689adc806715cc0
+FFmpeg has the local SUP keyframe/PGS flush patch. Upstream copyright and
+license notices remain intact; no upstream acceptance is implied.
+
+The exact delivered files and hashes are in runtime-manifest.json.
+Third-party package licenses are in experimental-dependency-licenses/.
+mpv and FFmpeg source license texts are in experimental-engine-licenses/.
+
+On the development workstation, the corresponding fixed source archives,
+source verification, patch and build instructions are retained in the Mani
+repository under build/experimental-sup/ and artifacts/m5/sup-engine-*/.
+See docs/m5/sup-engine-integration.md for provenance and validation limits.
+
+This local experimental package is not a public release and does not update
+the normal Mani native dependency lock or existing application data.
